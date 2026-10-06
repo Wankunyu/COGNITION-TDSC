@@ -1,0 +1,221 @@
+{
+  "schema_version": "cognition.revision.baseline_coverage.v1",
+  "rows": [
+    {
+      "schema_version": "cognition.revision.baseline_coverage.v1",
+      "run_id": "sota_baselines",
+      "system_name": "Halligan",
+      "system_class": "specialized_solver",
+      "evidence_source_type": "validated-import",
+      "source_url": "https://www.usenix.org/system/files/usenixsecurity25-teoh.pdf",
+      "source_year": 2025,
+      "solver_architecture": "agentic VLM solver with search, ranking, and visual enhancement tools",
+      "threat_model": "offline benchmark solving of visual CAPTCHA challenges",
+      "dataset_scale": "2600 benchmark challenges across 26 visual CAPTCHA types",
+      "captcha_families": [
+        "visual reasoning",
+        "interaction",
+        "matching"
+      ],
+      "external_task_label": "arkose/dice_match",
+      "mapped_local_task_type": "Dice_Count",
+      "mapped_local_family": "Counting",
+      "mapping_confidence": "mechanism-level",
+      "new_or_supplemental_category_reason": "dice matching is a mechanism-related supplement to local counting tasks",
+      "reported_metric_name": "success_rate",
+      "reported_metric_value": 0.607,
+      "reported_metric_unit": "rate",
+      "artifact_availability": "public Zenodo artifact reported for benchmark and solver archive",
+      "license": "MIT",
+      "data_use_constraints": "offline benchmark artifact use only; no live service automation",
+      "latency_coverage": "reported in source paper",
+      "cost_coverage": "reported in source paper",
+      "failure_mode_analysis": "reported in source paper",
+      "defense_methodology_relevance": "larger benchmark and specialized solver baseline",
+      "primary_status": "adapter-run",
+      "caveat_tags": [
+        "dataset-mismatch"
+      ],
+      "status_reason": "",
+      "checked_sources": [
+        "USENIX paper",
+        "USENIX artifact appendix",
+        "Zenodo record"
+      ],
+      "missing_items": [],
+      "last_checked_date": "2026-05-19"
+    },
+    {
+      "schema_version": "cognition.revision.baseline_coverage.v1",
+      "run_id": "sota_baselines",
+      "system_name": "Halligan",
+      "system_class": "benchmark_dataset",
+      "evidence_source_type": "validated-import",
+      "source_url": "https://www.usenix.org/system/files/usenixsecurity25-teoh.pdf",
+      "source_year": 2025,
+      "solver_architecture": "agentic VLM solver with benchmark import row",
+      "threat_model": "offline benchmark solving of visual CAPTCHA challenges",
+      "dataset_scale": "2600 benchmark challenges across 26 visual CAPTCHA types",
+      "captcha_families": [
+        "interaction",
+        "temporal hold"
+      ],
+      "external_task_label": "OpenCaptchaWorld/Hold_Button",
+      "mapped_local_task_type": "Hold_Button(Not Used)",
+      "mapped_local_family": "Interaction",
+      "mapping_confidence": "mechanism-level",
+      "new_or_supplemental_category_reason": "hold-button interaction is a mechanism-different external smoke category",
+      "reported_metric_name": "success_rate",
+      "reported_metric_value": 0.607,
+      "reported_metric_unit": "rate",
+      "artifact_availability": "public Zenodo artifact reported for benchmark and solver archive",
+      "license": "MIT",
+      "data_use_constraints": "offline benchmark artifact use only; no live service automation",
+      "latency_coverage": "reported in source paper",
+      "cost_coverage": "reported in source paper",
+      "failure_mode_analysis": "reported in source paper",
+      "defense_methodology_relevance": "larger benchmark and mechanism-different smoke import",
+      "primary_status": "adapter-run",
+      "caveat_tags": [
+        "dataset-mismatch",
+        "threat-model-mismatch"
+      ],
+      "status_reason": "",
+      "checked_sources": [
+        "USENIX paper",
+        "USENIX artifact appendix",
+        "Zenodo record"
+      ],
+      "missing_items": [],
+      "last_checked_date": "2026-05-19"
+    },
+    {
+      "schema_version": "cognition.revision.baseline_coverage.v1",
+      "run_id": "sota_baselines",
+      "system_name": "Oedipus",
+      "system_class": "specialized_solver",
+      "evidence_source_type": "literature",
+      "source_url": "https://arxiv.org/abs/2405.07496",
+      "source_year": 2025,
+      "solver_architecture": "DSL-guided chain-of-thought multimodal reasoning solver",
+      "threat_model": "reasoning CAPTCHA benchmark solving",
+      "dataset_scale": "four reasoning CAPTCHA types with reported sample counts",
+      "captcha_families": [
+        "reasoning",
+        "logic"
+      ],
+      "external_task_label": "Oedipus/reasoning_captcha",
+      "mapped_local_task_type": "Connect_Icon",
+      "mapped_local_family": "Logic/Reasoning",
+      "mapping_confidence": "family-level",
+      "new_or_supplemental_category_reason": "literature-only reasoning CAPTCHA baseline",
+      "reported_metric_name": "average_success_rate",
+      "reported_metric_value": 0.635,
+      "reported_metric_unit": "rate",
+      "artifact_availability": "source code and dataset location not directly validated",
+      "license": "",
+      "data_use_constraints": "",
+      "latency_coverage": "not validated",
+      "cost_coverage": "reported or discussed in source paper",
+      "failure_mode_analysis": "reported in source paper",
+      "defense_methodology_relevance": "specialized reasoning CAPTCHA solver baseline",
+      "primary_status": "literature-only",
+      "caveat_tags": [
+        "artifact-unavailable",
+        "license-unclear",
+        "metric-mismatch"
+      ],
+      "status_reason": "",
+      "checked_sources": [
+        "arXiv record",
+        "author-hosted paper"
+      ],
+      "missing_items": [],
+      "last_checked_date": "2026-05-19"
+    },
+    {
+      "schema_version": "cognition.revision.baseline_coverage.v1",
+      "run_id": "sota_baselines",
+      "system_name": "VTTSolver",
+      "system_class": "specialized_solver",
+      "evidence_source_type": "literature",
+      "source_url": "https://www.usenix.org/system/files/usenixsecurity25-teoh.pdf",
+      "source_year": 2025,
+      "solver_architecture": "specialized visual reasoning CAPTCHA solver baseline",
+      "threat_model": "visual reasoning CAPTCHA solving",
+      "dataset_scale": "baseline reported through Halligan comparison context",
+      "captcha_families": [
+        "visual reasoning"
+      ],
+      "external_task_label": "VTTSolver/visual_reasoning",
+      "mapped_local_task_type": "Image_Matching",
+      "mapped_local_family": "Image Matching",
+      "mapping_confidence": "family-level",
+      "new_or_supplemental_category_reason": "Halligan comparison baseline for specialized solver context",
+      "reported_metric_name": "success_rate",
+      "reported_metric_value": null,
+      "reported_metric_unit": "rate",
+      "artifact_availability": "not independently validated in this phase",
+      "license": "",
+      "data_use_constraints": "",
+      "latency_coverage": "not validated",
+      "cost_coverage": "not validated",
+      "failure_mode_analysis": "not validated",
+      "defense_methodology_relevance": "specialized solver comparison baseline",
+      "primary_status": "literature-only",
+      "caveat_tags": [
+        "dataset-mismatch",
+        "license-unclear"
+      ],
+      "status_reason": "",
+      "checked_sources": [
+        "Halligan paper"
+      ],
+      "missing_items": [],
+      "last_checked_date": "2026-05-19"
+    },
+    {
+      "schema_version": "cognition.revision.baseline_coverage.v1",
+      "run_id": "sota_baselines",
+      "system_name": "PhishDecloaker",
+      "system_class": "specialized_solver",
+      "evidence_source_type": "literature",
+      "source_url": "https://www.usenix.org/system/files/usenixsecurity25-teoh.pdf",
+      "source_year": 2025,
+      "solver_architecture": "visual CAPTCHA and phishing-page solver baseline",
+      "threat_model": "visual CAPTCHA solving in phishing or web challenge context",
+      "dataset_scale": "baseline reported through Halligan comparison context",
+      "captcha_families": [
+        "visual matching",
+        "slider",
+        "rotation"
+      ],
+      "external_task_label": "PhishDecloaker/visual_captcha",
+      "mapped_local_task_type": "Rotation_Match",
+      "mapped_local_family": "Image Matching",
+      "mapping_confidence": "family-level",
+      "new_or_supplemental_category_reason": "Halligan comparison baseline for visual CAPTCHA context",
+      "reported_metric_name": "success_rate",
+      "reported_metric_value": null,
+      "reported_metric_unit": "rate",
+      "artifact_availability": "not independently validated in this phase",
+      "license": "",
+      "data_use_constraints": "",
+      "latency_coverage": "not validated",
+      "cost_coverage": "not validated",
+      "failure_mode_analysis": "not validated",
+      "defense_methodology_relevance": "specialized visual CAPTCHA comparison baseline",
+      "primary_status": "literature-only",
+      "caveat_tags": [
+        "threat-model-mismatch",
+        "license-unclear"
+      ],
+      "status_reason": "",
+      "checked_sources": [
+        "Halligan paper"
+      ],
+      "missing_items": [],
+      "last_checked_date": "2026-05-19"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+[project]
+name = "cognition-revision-experiments"
+version = "0.1.0"
+requires-python = ">=3.10"
+dependencies = [
+  "openai==2.6.1",
+  "anthropic==0.72.0",
+  "google-genai==1.39.1",
+  "Pillow==10.0.1",
+  "PyYAML==6.0.2",
+  "tqdm==4.65.0",
+  "numpy==1.24.3",
+  "pandas==1.5.3",
+  "matplotlib==3.7.1",
+  "seaborn==0.12.2",
+  "adjustText==1.3.0",
+  "pydantic==2.13.4",
+]
+
+[dependency-groups]
+dev = [
+  "pytest==9.0.3",
+  "ruff==0.15.13",
+]
+
+[tool.uv]
+package = false
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra -q"
+
+[tool.ruff]
+target-version = "py310"
+line-length = 100
+
+[tool.ruff.lint]
+select = ["E", "F"]
+
+[tool.ruff.lint.per-file-ignores]
+"cognition/exp2_to_exp3_predict.py" = ["E501"]
+"cognition/experiments_helper.py" = ["E501"]
+"cognition/few_shot_answers.py" = ["E501"]
+"cognition/prepare_few_shot_examples.py" = ["F401"]
+"cognition/run_eval.py" = ["E401", "E501", "E701", "E702", "E703", "F401", "F541", "F811"]
+"cognition/run_single_experiment.py" = ["E501", "F401", "F541"]
+"cognition/visualize_results.py" = ["E501", "F401", "F841"]
+"notebooks/*.ipynb" = ["E402", "E501", "F401", "F541", "F811", "F841"]

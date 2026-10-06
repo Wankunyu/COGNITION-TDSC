@@ -1,0 +1,162 @@
+{
+  "id": "captchabench/Click_Order/sample_1540",
+  "type": "Click_Order",
+  "source": "captchabench",
+  "module": "B",
+  "condition": "native_actions",
+  "solver": "C-I",
+  "puzzle_id": "sample_1540",
+  "group_id": "click_background:sample_1408",
+  "partition": "evaluation",
+  "model": "models/CaptchaMind-7B",
+  "started_at": "2026-09-13T20:49:45.297292+00:00",
+  "started_unix": 1789332585.2972832,
+  "budgets": {
+    "max_calls_per_episode": 30,
+    "max_output_tokens_per_call": 8192,
+    "max_output_tokens_per_episode": 65536,
+    "request_timeout_seconds": 600,
+    "episode_timeout_seconds": 1800
+  },
+  "protocol": "source_native",
+  "action_parser": "lossless_single_action_v1",
+  "steps": [
+    {
+      "step": 1,
+      "text": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [635, 630]}}</tool_call>",
+      "usage": {
+        "prompt_tokens": 1000,
+        "completion_tokens": 121,
+        "total_tokens": 1121,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "input_tokens": 1000,
+      "output_tokens": 121,
+      "finish_reason": "stop",
+      "truncated": false,
+      "returned_model": "models/CaptchaMind-7B",
+      "elapsed_seconds": 3.9192048749973765,
+      "raw_response": {
+        "id": "chatcmpl-18873020-7617-49e2-aa35-6403dd4c7dcb",
+        "object": "chat.completion",
+        "created": 1789332589,
+        "model": "models/CaptchaMind-7B",
+        "choices": [
+          {
+            "index": 0,
+            "finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [635, 630]}}</tool_call>",
+              "reasoning_content": "I need to refer to the icon order in the bottom left to determine the correct sequence: ×, </code>, </bell>, </air_conditioning>. Looking at the current image, the exact icons in this order are the 4th, 1st, 3rd, and 2nd icons from the top. I can see these icons are already in the correct order on the screen. So I will click the submit button to complete this captcha.",
+              "reasoning": "I need to refer to the icon order in the bottom left to determine the correct sequence: ×, </code>, </bell>, </air_conditioning>. Looking at the current image, the exact icons in this order are the 4th, 1st, 3rd, and 2nd icons from the top. I can see these icons are already in the correct order on the screen. So I will click the submit button to complete this captcha.",
+              "tool_calls": null,
+              "tool_call_id": null,
+              "name": null
+            },
+            "logprobs": null
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 1000,
+          "completion_tokens": 121,
+          "total_tokens": 1121,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "timings": {
+          "prompt_n": 1000,
+          "cache_n": 0,
+          "predicted_n": 123,
+          "prompt_ms": 836.5595839859451,
+          "prompt_per_token_ms": 0.8365595839859451,
+          "prompt_per_second": 1195.3721159170902,
+          "predicted_ms": 2839.5551058504784,
+          "predicted_per_token_ms": 23.085813868703077,
+          "predicted_per_second": 43.316644831641725,
+          "peak_memory": 19.988604016,
+          "draft_kind": null,
+          "draft_rounds": null,
+          "draft_n": null,
+          "draft_n_accepted": null
+        }
+      },
+      "response_file": "response_01.json",
+      "action": {
+        "name": "click",
+        "kwargs": {
+          "position": [
+            635,
+            630
+          ]
+        }
+      },
+      "done": true,
+      "reward": 0.0,
+      "observation": [],
+      "submitted": true
+    }
+  ],
+  "model_calls": 1,
+  "input_tokens": 1000,
+  "output_tokens": 121,
+  "reward": 0.0,
+  "done": true,
+  "correct": false,
+  "status": "incorrect",
+  "submitted": true,
+  "images": [
+    "data/external/captchabench/captcha/click_order/sample_1540/image.png"
+  ],
+  "cost_usd": null,
+  "source_revision": "960a521e842bd164b08344151b0a4253d23cfc2f",
+  "source_path": "captcha/click_order/sample_1540",
+  "training_exposure": "unknown",
+  "scorer": "ordered_boxes_v1",
+  "split_evidence": "paper_only",
+  "gt": {
+    "ordered_boxes": [
+      [
+        384,
+        217,
+        504,
+        337
+      ],
+      [
+        38,
+        7,
+        158,
+        127
+      ],
+      [
+        70,
+        317,
+        190,
+        437
+      ],
+      [
+        246,
+        204,
+        366,
+        324
+      ]
+    ]
+  },
+  "initial_observation": [
+    "./reports/solver_defense_v1/b_native/episodes/captchabench/Click_Order/sample_1540/observations/step_00_00.png"
+  ],
+  "elapsed_seconds": 3.941675901412964,
+  "final_answer": {
+    "answer_type": "click_order",
+    "points": []
+  },
+  "answer": {
+    "answer_type": "click_order",
+    "points": []
+  },
+  "stop_reason": "incorrect",
+  "finished_at": "2026-09-13T20:49:49.238843+00:00"
+}

@@ -1,0 +1,496 @@
+{
+  "id": "defense_v1/D2/image20",
+  "type": "Visible_Eye_Count",
+  "source": "conference_defense",
+  "module": "D",
+  "condition": "D2",
+  "solver": "C-I",
+  "puzzle_id": "image20.png",
+  "group_id": "defense_v1/image20",
+  "partition": "evaluation",
+  "model": "models/CaptchaMind-7B",
+  "started_at": "2026-09-14T15:27:49.755312+00:00",
+  "started_unix": 1789399669.755311,
+  "budgets": {
+    "max_calls_per_episode": 30,
+    "max_output_tokens_per_call": 8192,
+    "max_output_tokens_per_episode": 65536,
+    "request_timeout_seconds": 600,
+    "episode_timeout_seconds": 1800
+  },
+  "protocol": "adapted_native_agent",
+  "action_parser": "lossless_single_action_v1",
+  "steps": [
+    {
+      "step": 1,
+      "text": "<tool_call>{\"name\": \"enter_number\", \"arguments\": {\"number\": 2}}</tool_call>",
+      "usage": {
+        "prompt_tokens": 1894,
+        "completion_tokens": 36,
+        "total_tokens": 1930,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "input_tokens": 1894,
+      "output_tokens": 36,
+      "finish_reason": "stop",
+      "truncated": false,
+      "returned_model": "models/CaptchaMind-7B",
+      "elapsed_seconds": 2.5819692079967353,
+      "raw_response": {
+        "id": "chatcmpl-648ff1aa-2d9e-4d38-932b-e7ec6f09268e",
+        "object": "chat.completion",
+        "created": 1789399672,
+        "model": "models/CaptchaMind-7B",
+        "choices": [
+          {
+            "index": 0,
+            "finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "<tool_call>{\"name\": \"enter_number\", \"arguments\": {\"number\": 2}}</tool_call>",
+              "reasoning_content": "I need to count all actually visible eyes of the tiger in the image.",
+              "reasoning": "I need to count all actually visible eyes of the tiger in the image.",
+              "tool_calls": null,
+              "tool_call_id": null,
+              "name": null
+            },
+            "logprobs": null
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 1894,
+          "completion_tokens": 36,
+          "total_tokens": 1930,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "timings": {
+          "prompt_n": 1894,
+          "cache_n": 0,
+          "predicted_n": 38,
+          "prompt_ms": 1570.436251029605,
+          "prompt_per_token_ms": 0.8291638073017978,
+          "prompt_per_second": 1206.0343097392595,
+          "predicted_ms": 881.3267245564635,
+          "predicted_per_token_ms": 23.192808540959568,
+          "predicted_per_second": 43.11681348267736,
+          "peak_memory": 35.615165266,
+          "draft_kind": null,
+          "draft_rounds": null,
+          "draft_n": null,
+          "draft_n_accepted": null
+        }
+      },
+      "response_file": "response_01.json",
+      "action": {
+        "name": "enter_number",
+        "kwargs": {
+          "number": 2
+        }
+      },
+      "done": false,
+      "reward": 0.0,
+      "observation": [
+        "./reports/solver_defense_v1/d_native/episodes/defense_v1/D2/image20/observations/step_01_00.png"
+      ],
+      "submitted": false
+    },
+    {
+      "step": 2,
+      "text": "<tool_call>{\"name\": \"enter_number\", \"arguments\": {\"number\": 2}}</tool_call>",
+      "usage": {
+        "prompt_tokens": 3441,
+        "completion_tokens": 82,
+        "total_tokens": 3523,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "input_tokens": 3441,
+      "output_tokens": 82,
+      "finish_reason": "stop",
+      "truncated": false,
+      "returned_model": "models/CaptchaMind-7B",
+      "elapsed_seconds": 5.091854750004131,
+      "raw_response": {
+        "id": "chatcmpl-9baf46a3-62c5-4103-ad17-541ee88e0482",
+        "object": "chat.completion",
+        "created": 1789399677,
+        "model": "models/CaptchaMind-7B",
+        "choices": [
+          {
+            "index": 0,
+            "finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "<tool_call>{\"name\": \"enter_number\", \"arguments\": {\"number\": 2}}</tool_call>",
+              "reasoning_content": "I need to count all actually visible eyes of the tiger, ignoring hidden eyes. Looking at the image, I can see the tiger is in the bottom-left sub-image. Looking at the tiger in this sub-image, I can see both of its eyes are actually visible. So the answer is 2.",
+              "reasoning": "I need to count all actually visible eyes of the tiger, ignoring hidden eyes. Looking at the image, I can see the tiger is in the bottom-left sub-image. Looking at the tiger in this sub-image, I can see both of its eyes are actually visible. So the answer is 2.",
+              "tool_calls": null,
+              "tool_call_id": null,
+              "name": null
+            },
+            "logprobs": null
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 3441,
+          "completion_tokens": 82,
+          "total_tokens": 3523,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "timings": {
+          "prompt_n": 3441,
+          "cache_n": 0,
+          "predicted_n": 84,
+          "prompt_ms": 2957.110040966654,
+          "prompt_per_token_ms": 0.8593751935386964,
+          "prompt_per_second": 1163.6361015754308,
+          "predicted_ms": 1959.1952105072405,
+          "predicted_per_token_ms": 23.323752506038577,
+          "predicted_per_second": 42.874747523628436,
+          "peak_memory": 35.615165266,
+          "draft_kind": null,
+          "draft_rounds": null,
+          "draft_n": null,
+          "draft_n_accepted": null
+        }
+      },
+      "response_file": "response_02.json",
+      "action": {
+        "name": "enter_number",
+        "kwargs": {
+          "number": 2
+        }
+      },
+      "done": false,
+      "reward": 0.0,
+      "observation": [
+        "./reports/solver_defense_v1/d_native/episodes/defense_v1/D2/image20/observations/step_02_00.png"
+      ],
+      "submitted": false
+    },
+    {
+      "step": 3,
+      "text": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [182, 685]}}</tool_call>",
+      "usage": {
+        "prompt_tokens": 4988,
+        "completion_tokens": 46,
+        "total_tokens": 5034,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "input_tokens": 4988,
+      "output_tokens": 46,
+      "finish_reason": "stop",
+      "truncated": false,
+      "returned_model": "models/CaptchaMind-7B",
+      "elapsed_seconds": 5.801077250012895,
+      "raw_response": {
+        "id": "chatcmpl-f8491a44-03db-437b-b7e4-ba76aef5a4f9",
+        "object": "chat.completion",
+        "created": 1789399683,
+        "model": "models/CaptchaMind-7B",
+        "choices": [
+          {
+            "index": 0,
+            "finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [182, 685]}}</tool_call>",
+              "reasoning_content": "I need to count the number of actually visible eyes of the tiger in the MAIN puzzle.",
+              "reasoning": "I need to count the number of actually visible eyes of the tiger in the MAIN puzzle.",
+              "tool_calls": null,
+              "tool_call_id": null,
+              "name": null
+            },
+            "logprobs": null
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 4988,
+          "completion_tokens": 46,
+          "total_tokens": 5034,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "timings": {
+          "prompt_n": 4988,
+          "cache_n": 0,
+          "predicted_n": 48,
+          "prompt_ms": 4444.431707990589,
+          "prompt_per_token_ms": 0.8910248011208076,
+          "prompt_per_second": 1122.3032161867031,
+          "predicted_ms": 1130.8985535313,
+          "predicted_per_token_ms": 23.560386531902083,
+          "predicted_per_second": 42.44412538164194,
+          "peak_memory": 35.615165266,
+          "draft_kind": null,
+          "draft_rounds": null,
+          "draft_n": null,
+          "draft_n_accepted": null
+        }
+      },
+      "response_file": "response_03.json",
+      "action": {
+        "name": "click",
+        "kwargs": {
+          "position": [
+            182,
+            685
+          ]
+        }
+      },
+      "done": false,
+      "reward": 0.0,
+      "observation": [
+        "./reports/solver_defense_v1/d_native/episodes/defense_v1/D2/image20/observations/step_03_00.png"
+      ],
+      "submitted": false
+    },
+    {
+      "step": 4,
+      "text": "<tool_call>{\"name\": \"enter_number\", \"arguments\": {\"number\": 2}}</tool_call>",
+      "usage": {
+        "prompt_tokens": 6542,
+        "completion_tokens": 85,
+        "total_tokens": 6627,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "input_tokens": 6542,
+      "output_tokens": 85,
+      "finish_reason": "stop",
+      "truncated": false,
+      "returned_model": "models/CaptchaMind-7B",
+      "elapsed_seconds": 8.248504291987047,
+      "raw_response": {
+        "id": "chatcmpl-8df1fce2-067e-4ca3-a639-4d4fddfe7f7f",
+        "object": "chat.completion",
+        "created": 1789399692,
+        "model": "models/CaptchaMind-7B",
+        "choices": [
+          {
+            "index": 0,
+            "finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "<tool_call>{\"name\": \"enter_number\", \"arguments\": {\"number\": 2}}</tool_call>",
+              "reasoning_content": "I need to refer to the instruction to complete this captcha task. The goal is to count all actually visible eyes of the tiger, and not to count hidden eyes. Looking at the image, I can see there is only one tiger, and it has 2 visible eyes. So I will enter the number 2.",
+              "reasoning": "I need to refer to the instruction to complete this captcha task. The goal is to count all actually visible eyes of the tiger, and not to count hidden eyes. Looking at the image, I can see there is only one tiger, and it has 2 visible eyes. So I will enter the number 2.",
+              "tool_calls": null,
+              "tool_call_id": null,
+              "name": null
+            },
+            "logprobs": null
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 6542,
+          "completion_tokens": 85,
+          "total_tokens": 6627,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "timings": {
+          "prompt_n": 6542,
+          "cache_n": 0,
+          "predicted_n": 87,
+          "prompt_ms": 5910.135376005201,
+          "prompt_per_token_ms": 0.9034141510249466,
+          "prompt_per_second": 1106.912039030465,
+          "predicted_ms": 2064.5207485209794,
+          "predicted_per_token_ms": 23.730123546218152,
+          "predicted_per_second": 42.140530707829754,
+          "peak_memory": 35.615165266,
+          "draft_kind": null,
+          "draft_rounds": null,
+          "draft_n": null,
+          "draft_n_accepted": null
+        }
+      },
+      "response_file": "response_04.json",
+      "action": {
+        "name": "enter_number",
+        "kwargs": {
+          "number": 2
+        }
+      },
+      "done": false,
+      "reward": 0.0,
+      "observation": [
+        "./reports/solver_defense_v1/d_native/episodes/defense_v1/D2/image20/observations/step_04_00.png"
+      ],
+      "submitted": false
+    },
+    {
+      "step": 5,
+      "text": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [929, 1102]}}</tool_call>",
+      "usage": {
+        "prompt_tokens": 8089,
+        "completion_tokens": 56,
+        "total_tokens": 8145,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "input_tokens": 8089,
+      "output_tokens": 56,
+      "finish_reason": "stop",
+      "truncated": false,
+      "returned_model": "models/CaptchaMind-7B",
+      "elapsed_seconds": 9.110655791999307,
+      "raw_response": {
+        "id": "chatcmpl-54a0f6dd-7028-4b9f-8aac-7c4f208b34f9",
+        "object": "chat.completion",
+        "created": 1789399701,
+        "model": "models/CaptchaMind-7B",
+        "choices": [
+          {
+            "index": 0,
+            "finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [929, 1102]}}</tool_call>",
+              "reasoning_content": "I need to refer to the instruction to complete this captcha: Count all actually visible eyes of the tiger. Do not count hidden eyes.",
+              "reasoning": "I need to refer to the instruction to complete this captcha: Count all actually visible eyes of the tiger. Do not count hidden eyes.",
+              "tool_calls": null,
+              "tool_call_id": null,
+              "name": null
+            },
+            "logprobs": null
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 8089,
+          "completion_tokens": 56,
+          "total_tokens": 8145,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "timings": {
+          "prompt_n": 8089,
+          "cache_n": 0,
+          "predicted_n": 58,
+          "prompt_ms": 7403.280416037887,
+          "prompt_per_token_ms": 0.915228138958819,
+          "prompt_per_second": 1092.6237485853735,
+          "predicted_ms": 1392.9922741739765,
+          "predicted_per_token_ms": 24.017108175413387,
+          "predicted_per_second": 41.63698613073294,
+          "peak_memory": 35.615165266,
+          "draft_kind": null,
+          "draft_rounds": null,
+          "draft_n": null,
+          "draft_n_accepted": null
+        }
+      },
+      "response_file": "response_05.json",
+      "action": {
+        "name": "click",
+        "kwargs": {
+          "position": [
+            929,
+            1102
+          ]
+        }
+      },
+      "done": true,
+      "reward": 1.0,
+      "observation": [
+        "./reports/solver_defense_v1/d_native/episodes/defense_v1/D2/image20/observations/step_05_00.png"
+      ],
+      "submitted": true
+    }
+  ],
+  "model_calls": 5,
+  "input_tokens": 24954,
+  "output_tokens": 305,
+  "reward": 1.0,
+  "done": true,
+  "correct": true,
+  "status": "correct",
+  "submitted": true,
+  "images": [
+    "data/defense_v1/original/image20.png"
+  ],
+  "cost_usd": null,
+  "source_path": "../conference/captcha_data/Select_Animal/image20.png",
+  "training_exposure": "unknown; previously used conference material",
+  "scorer": "defense_v1_maximum_matching",
+  "split_evidence": "fixed_image_ids_before_new_model_calls",
+  "base_id": "image20",
+  "gt": {
+    "value": 2
+  },
+  "initial_observation": [
+    "./reports/solver_defense_v1/d_native/episodes/defense_v1/D2/image20/observations/step_00_00.png"
+  ],
+  "environment_metadata": {
+    "environment": "cognition_adapted_v1.1_numeric_input_box",
+    "main_image_index": 0,
+    "source_images": [
+      "./data/defense_v1/original/image20.png"
+    ],
+    "source_image_sizes": [
+      [
+        1024,
+        1024
+      ]
+    ],
+    "main_image_box": [
+      0,
+      0,
+      1024,
+      1024
+    ],
+    "observation_main_size": [
+      1024,
+      1152
+    ],
+    "coordinate_mapping": {
+      "scale": [
+        1,
+        1
+      ],
+      "offset": [
+        0,
+        0
+      ]
+    },
+    "controls": {
+      "submit": [
+        834,
+        1088,
+        1004,
+        1132
+      ]
+    },
+    "input_box": [
+      20,
+      1088,
+      814,
+      1132
+    ],
+    "grid": null
+  },
+  "elapsed_seconds": 31.800890922546387,
+  "final_answer": {
+    "value": 2
+  },
+  "answer": {
+    "value": 2
+  },
+  "stop_reason": "correct",
+  "finished_at": "2026-09-14T15:28:21.555816+00:00"
+}

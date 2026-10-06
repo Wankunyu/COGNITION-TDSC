@@ -1,0 +1,20 @@
+[
+  {
+    "file": "./.venv/lib/python3.14/site-packages/mlx_vlm/server/app.py",
+    "start_line": 152,
+    "end_line": 164,
+    "text": "def _server_runtime_snapshot() -> dict:\n    registry = _model_cache_registry()\n    default_cache = registry.for_kind(\"text_generation\")\n    processor = default_cache.get(\"processor\")\n    config = default_cache.get(\"config\")\n    text_config = getattr(config, \"text_config\", None)\n    native_context_size = getattr(text_config, \"max_position_embeddings\", None)\n    configured_context_limit = get_configured_context_limit()\n    effective_context_limit = (\n        min(native_context_size, configured_context_limit)\n        if native_context_size is not None and configured_context_limit is not None\n        else configured_context_limit or native_context_size\n    )"
+  },
+  {
+    "file": "./.venv/lib/python3.14/site-packages/mlx_vlm/server/generation.py",
+    "start_line": 270,
+    "end_line": 301,
+    "text": "def get_max_kv_size(model: str):\n    max_kv_tokens = int(os.environ.get(\"MAX_KV_SIZE\", 0))\n    if max_kv_tokens == 0:\n        return None\n    if get_quantized_kv_bits() is not None:\n        logger.warning(\"Model %s uses QuantizedKVCache; MAX_KV_SIZE is ignored.\", model)\n        return None\n    return max_kv_tokens\n\n\ndef get_configured_context_limit():\n    if runtime.config.max_kv_size is not None:\n        return runtime.config.max_kv_size or None\n    max_kv_tokens = int(os.environ.get(\"MAX_KV_SIZE\", 0))\n    return max_kv_tokens or None\n\n\ndef _count_prompt_tokens(raw_inputs: dict) -> int:\n    input_ids = raw_inputs[\"input_ids\"]\n    return input_ids.size if hasattr(input_ids, \"size\") else len(input_ids)\n\n\ndef _check_configured_context_budget(prompt_tokens: int, max_tokens: int):\n    context_limit = get_configured_context_limit()\n    requested_tokens = prompt_tokens + max(0, int(max_tokens or 0))\n    if context_limit is not None and requested_tokens > context_limit:\n        raise PromptTooLongError(\n            \"Request needs \"\n            f\"{requested_tokens} context tokens \"\n            f\"({prompt_tokens} prompt + {max_tokens} max generation), \"\n            f\"but MAX_KV_SIZE is {context_limit}.\"\n        )"
+  },
+  {
+    "file": "./.venv/lib/python3.14/site-packages/mlx_vlm/server/request_normalization.py",
+    "start_line": 137,
+    "end_line": 149,
+    "text": "def _build_gen_args(\n    request,\n    processor=None,\n    tenant_id: Optional[str] = None,\n    structured_logits_processor_builder=_build_structured_logits_processors,\n) -> GenerationArguments:\n    \"\"\"Build generation arguments from a compatible API request.\"\"\"\n    config = getattr(processor, \"config\", None) if processor is not None else None\n    max_tokens = getattr(request, \"max_tokens\", None)\n    if max_tokens is None:\n        max_tokens = getattr(request, \"max_output_tokens\", None)\n    if max_tokens is None:\n        max_tokens = get_server_max_tokens()"
+  }
+]

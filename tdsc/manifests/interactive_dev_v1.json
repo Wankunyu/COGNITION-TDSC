@@ -1,0 +1,792 @@
+[
+  {
+    "id": "interactive_dev_v1/Dice_Count/dev_01",
+    "source": "interactive_dev_v1",
+    "type": "Dice_Count",
+    "puzzle_id": "dev_01",
+    "images": [
+      "data/interactive_dev_v1/Dice_Count/dev_01_main.png"
+    ],
+    "image_sizes": [
+      [
+        400,
+        300
+      ]
+    ],
+    "prompt": "Sum the numbers on all dice TOP faces. These dice are viewed directly from above. Count the pips on each visible top face and return one integer total.",
+    "gt": {
+      "sum": 9
+    },
+    "schema": {
+      "type": "object",
+      "properties": {
+        "answer_type": {
+          "type": "string",
+          "enum": [
+            "number"
+          ]
+        },
+        "value": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "answer_type",
+        "value"
+      ]
+    },
+    "scorer": "conference_v1",
+    "group_id": "interactive_dev_v1:Dice_Count:dev_01",
+    "split_evidence": "new_vector_drawn_development_only",
+    "partition": "development",
+    "layout": {
+      "main_image_index": 0
+    },
+    "provenance": {
+      "generator": "data/interactive_dev_v1/generate.py",
+      "construction": "independent Pillow vector drawing; no source images loaded"
+    }
+  },
+  {
+    "id": "interactive_dev_v1/Dice_Count/dev_02",
+    "source": "interactive_dev_v1",
+    "type": "Dice_Count",
+    "puzzle_id": "dev_02",
+    "images": [
+      "data/interactive_dev_v1/Dice_Count/dev_02_main.png"
+    ],
+    "image_sizes": [
+      [
+        400,
+        300
+      ]
+    ],
+    "prompt": "Sum the numbers on all dice TOP faces. These dice are viewed directly from above. Count the pips on each visible top face and return one integer total.",
+    "gt": {
+      "sum": 12
+    },
+    "schema": {
+      "type": "object",
+      "properties": {
+        "answer_type": {
+          "type": "string",
+          "enum": [
+            "number"
+          ]
+        },
+        "value": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "answer_type",
+        "value"
+      ]
+    },
+    "scorer": "conference_v1",
+    "group_id": "interactive_dev_v1:Dice_Count:dev_02",
+    "split_evidence": "new_vector_drawn_development_only",
+    "partition": "development",
+    "layout": {
+      "main_image_index": 0
+    },
+    "provenance": {
+      "generator": "data/interactive_dev_v1/generate.py",
+      "construction": "independent Pillow vector drawing; no source images loaded"
+    }
+  },
+  {
+    "id": "interactive_dev_v1/Click_Order/dev_01",
+    "source": "interactive_dev_v1",
+    "type": "Click_Order",
+    "puzzle_id": "dev_01",
+    "images": [
+      "data/interactive_dev_v1/Click_Order/dev_01_reference.png",
+      "data/interactive_dev_v1/Click_Order/dev_01_main.png"
+    ],
+    "image_sizes": [
+      [
+        300,
+        100
+      ],
+      [
+        400,
+        300
+      ]
+    ],
+    "prompt": "Click the icons in the order shown in the reference image. Image 1 is the REFERENCE sequence, read from left to right. Image 2 is the MAIN puzzle. Click near the center of each matching icon in the MAIN image, preserving the reference order. Coordinates use the MAIN image's pixels, with origin at the top-left.",
+    "gt": {
+      "points_gt": [
+        {
+          "x": 290,
+          "y": 90
+        },
+        {
+          "x": 85,
+          "y": 75
+        },
+        {
+          "x": 100,
+          "y": 210
+        }
+      ],
+      "tolerance": 20.0
+    },
+    "schema": {
+      "type": "object",
+      "properties": {
+        "answer_type": {
+          "type": "string",
+          "enum": [
+            "click_order"
+          ]
+        },
+        "points": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "x": {
+                "type": "number"
+              },
+              "y": {
+                "type": "number"
+              }
+            },
+            "required": [
+              "x",
+              "y"
+            ]
+          }
+        }
+      },
+      "required": [
+        "answer_type",
+        "points"
+      ]
+    },
+    "scorer": "conference_v1",
+    "group_id": "interactive_dev_v1:Click_Order:dev_01",
+    "split_evidence": "new_vector_drawn_development_only",
+    "partition": "development",
+    "layout": {
+      "main_image_index": 1
+    },
+    "provenance": {
+      "generator": "data/interactive_dev_v1/generate.py",
+      "construction": "independent Pillow vector drawing; no source images loaded"
+    }
+  },
+  {
+    "id": "interactive_dev_v1/Click_Order/dev_02",
+    "source": "interactive_dev_v1",
+    "type": "Click_Order",
+    "puzzle_id": "dev_02",
+    "images": [
+      "data/interactive_dev_v1/Click_Order/dev_02_reference.png",
+      "data/interactive_dev_v1/Click_Order/dev_02_main.png"
+    ],
+    "image_sizes": [
+      [
+        300,
+        100
+      ],
+      [
+        400,
+        300
+      ]
+    ],
+    "prompt": "Click the icons in the order shown in the reference image. Image 1 is the REFERENCE sequence, read from left to right. Image 2 is the MAIN puzzle. Click near the center of each matching icon in the MAIN image, preserving the reference order. Coordinates use the MAIN image's pixels, with origin at the top-left.",
+    "gt": {
+      "points_gt": [
+        {
+          "x": 120,
+          "y": 90
+        },
+        {
+          "x": 300,
+          "y": 200
+        },
+        {
+          "x": 280,
+          "y": 70
+        }
+      ],
+      "tolerance": 20.0
+    },
+    "schema": {
+      "type": "object",
+      "properties": {
+        "answer_type": {
+          "type": "string",
+          "enum": [
+            "click_order"
+          ]
+        },
+        "points": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "x": {
+                "type": "number"
+              },
+              "y": {
+                "type": "number"
+              }
+            },
+            "required": [
+              "x",
+              "y"
+            ]
+          }
+        }
+      },
+      "required": [
+        "answer_type",
+        "points"
+      ]
+    },
+    "scorer": "conference_v1",
+    "group_id": "interactive_dev_v1:Click_Order:dev_02",
+    "split_evidence": "new_vector_drawn_development_only",
+    "partition": "development",
+    "layout": {
+      "main_image_index": 1
+    },
+    "provenance": {
+      "generator": "data/interactive_dev_v1/generate.py",
+      "construction": "independent Pillow vector drawing; no source images loaded"
+    }
+  },
+  {
+    "id": "interactive_dev_v1/Place_Dot/dev_01",
+    "source": "interactive_dev_v1",
+    "type": "Place_Dot",
+    "puzzle_id": "dev_01",
+    "images": [
+      "data/interactive_dev_v1/Place_Dot/dev_01_main.png"
+    ],
+    "image_sizes": [
+      [
+        400,
+        300
+      ]
+    ],
+    "prompt": "Place a dot at the end of the car's path. The large circular marker containing the car is the START. Follow only the continuous path connected to that marker; ignore unconnected lines. Click the center of the other endpoint, using image pixel coordinates with origin at the top-left.",
+    "gt": {
+      "targets_position": {
+        "x": 330,
+        "y": 210
+      },
+      "tolerance": 15.0
+    },
+    "schema": {
+      "type": "object",
+      "properties": {
+        "answer_type": {
+          "type": "string",
+          "enum": [
+            "single_point"
+          ]
+        },
+        "point": {
+          "type": "object",
+          "properties": {
+            "x": {
+              "type": "number"
+            },
+            "y": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "x",
+            "y"
+          ]
+        }
+      },
+      "required": [
+        "answer_type",
+        "point"
+      ]
+    },
+    "scorer": "conference_v1",
+    "group_id": "interactive_dev_v1:Place_Dot:dev_01",
+    "split_evidence": "new_vector_drawn_development_only",
+    "partition": "development",
+    "layout": {
+      "main_image_index": 0
+    },
+    "provenance": {
+      "generator": "data/interactive_dev_v1/generate.py",
+      "construction": "independent Pillow vector drawing; no source images loaded"
+    }
+  },
+  {
+    "id": "interactive_dev_v1/Place_Dot/dev_02",
+    "source": "interactive_dev_v1",
+    "type": "Place_Dot",
+    "puzzle_id": "dev_02",
+    "images": [
+      "data/interactive_dev_v1/Place_Dot/dev_02_main.png"
+    ],
+    "image_sizes": [
+      [
+        400,
+        300
+      ]
+    ],
+    "prompt": "Place a dot at the end of the car's path. The large circular marker containing the car is the START. Follow only the continuous path connected to that marker; ignore unconnected lines. Click the center of the other endpoint, using image pixel coordinates with origin at the top-left.",
+    "gt": {
+      "targets_position": {
+        "x": 260,
+        "y": 230
+      },
+      "tolerance": 15.0
+    },
+    "schema": {
+      "type": "object",
+      "properties": {
+        "answer_type": {
+          "type": "string",
+          "enum": [
+            "single_point"
+          ]
+        },
+        "point": {
+          "type": "object",
+          "properties": {
+            "x": {
+              "type": "number"
+            },
+            "y": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "x",
+            "y"
+          ]
+        }
+      },
+      "required": [
+        "answer_type",
+        "point"
+      ]
+    },
+    "scorer": "conference_v1",
+    "group_id": "interactive_dev_v1:Place_Dot:dev_02",
+    "split_evidence": "new_vector_drawn_development_only",
+    "partition": "development",
+    "layout": {
+      "main_image_index": 0
+    },
+    "provenance": {
+      "generator": "data/interactive_dev_v1/generate.py",
+      "construction": "independent Pillow vector drawing; no source images loaded"
+    }
+  },
+  {
+    "id": "interactive_dev_v1/Pick_Area/dev_01",
+    "source": "interactive_dev_v1",
+    "type": "Pick_Area",
+    "puzzle_id": "dev_01",
+    "images": [
+      "data/interactive_dev_v1/Pick_Area/dev_01_main.png"
+    ],
+    "image_sizes": [
+      [
+        400,
+        300
+      ]
+    ],
+    "prompt": "Click inside the LARGEST area outlined by dotted lines. Compare the enclosed areas and use the geometric center of the largest outlined region. Coordinates use image pixels with origin at the top-left.",
+    "gt": {
+      "area_box": [
+        [
+          30,
+          35
+        ],
+        [
+          250,
+          255
+        ]
+      ]
+    },
+    "schema": {
+      "type": "object",
+      "properties": {
+        "answer_type": {
+          "type": "string",
+          "enum": [
+            "single_point"
+          ]
+        },
+        "point": {
+          "type": "object",
+          "properties": {
+            "x": {
+              "type": "number"
+            },
+            "y": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "x",
+            "y"
+          ]
+        }
+      },
+      "required": [
+        "answer_type",
+        "point"
+      ]
+    },
+    "scorer": "conference_v1",
+    "group_id": "interactive_dev_v1:Pick_Area:dev_01",
+    "split_evidence": "new_vector_drawn_development_only",
+    "partition": "development",
+    "layout": {
+      "main_image_index": 0
+    },
+    "provenance": {
+      "generator": "data/interactive_dev_v1/generate.py",
+      "construction": "independent Pillow vector drawing; no source images loaded"
+    }
+  },
+  {
+    "id": "interactive_dev_v1/Pick_Area/dev_02",
+    "source": "interactive_dev_v1",
+    "type": "Pick_Area",
+    "puzzle_id": "dev_02",
+    "images": [
+      "data/interactive_dev_v1/Pick_Area/dev_02_main.png"
+    ],
+    "image_sizes": [
+      [
+        400,
+        300
+      ]
+    ],
+    "prompt": "Click inside the LARGEST area outlined by dotted lines. Compare the enclosed areas and use the geometric center of the largest outlined region. Coordinates use image pixels with origin at the top-left.",
+    "gt": {
+      "area_box": [
+        [
+          155,
+          30
+        ],
+        [
+          375,
+          260
+        ]
+      ]
+    },
+    "schema": {
+      "type": "object",
+      "properties": {
+        "answer_type": {
+          "type": "string",
+          "enum": [
+            "single_point"
+          ]
+        },
+        "point": {
+          "type": "object",
+          "properties": {
+            "x": {
+              "type": "number"
+            },
+            "y": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "x",
+            "y"
+          ]
+        }
+      },
+      "required": [
+        "answer_type",
+        "point"
+      ]
+    },
+    "scorer": "conference_v1",
+    "group_id": "interactive_dev_v1:Pick_Area:dev_02",
+    "split_evidence": "new_vector_drawn_development_only",
+    "partition": "development",
+    "layout": {
+      "main_image_index": 0
+    },
+    "provenance": {
+      "generator": "data/interactive_dev_v1/generate.py",
+      "construction": "independent Pillow vector drawing; no source images loaded"
+    }
+  },
+  {
+    "id": "interactive_dev_v1/Patch_Select/dev_01",
+    "source": "interactive_dev_v1",
+    "type": "Patch_Select",
+    "puzzle_id": "dev_01",
+    "images": [
+      "data/interactive_dev_v1/Patch_Select/dev_01_main.png"
+    ],
+    "image_sizes": [
+      [
+        360,
+        360
+      ]
+    ],
+    "prompt": "Select ALL grid cells containing a circle. The grid has 3 rows and 3 columns. Cell indices are zero-based and row-major: index 0 is the top-left cell, index 1 is immediately to its right. Return a unique ascending set of all matching cell indices.",
+    "gt": {
+      "grid_size": [
+        3,
+        3
+      ],
+      "correct_patches": [
+        0,
+        4,
+        8
+      ]
+    },
+    "schema": {
+      "type": "object",
+      "properties": {
+        "answer_type": {
+          "type": "string",
+          "enum": [
+            "multi_select"
+          ]
+        },
+        "indices": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        }
+      },
+      "required": [
+        "answer_type",
+        "indices"
+      ]
+    },
+    "scorer": "conference_v1",
+    "group_id": "interactive_dev_v1:Patch_Select:dev_01",
+    "split_evidence": "new_vector_drawn_development_only",
+    "partition": "development",
+    "layout": {
+      "main_image_index": 0,
+      "rows": 3,
+      "cols": 3,
+      "grid_box": [
+        0,
+        0,
+        360,
+        360
+      ]
+    },
+    "provenance": {
+      "generator": "data/interactive_dev_v1/generate.py",
+      "construction": "independent Pillow vector drawing; no source images loaded"
+    }
+  },
+  {
+    "id": "interactive_dev_v1/Patch_Select/dev_02",
+    "source": "interactive_dev_v1",
+    "type": "Patch_Select",
+    "puzzle_id": "dev_02",
+    "images": [
+      "data/interactive_dev_v1/Patch_Select/dev_02_main.png"
+    ],
+    "image_sizes": [
+      [
+        400,
+        400
+      ]
+    ],
+    "prompt": "Select ALL grid cells containing a circle. The grid has 5 rows and 5 columns. Cell indices are zero-based and row-major: index 0 is the top-left cell, index 1 is immediately to its right. Return a unique ascending set of all matching cell indices.",
+    "gt": {
+      "grid_size": [
+        5,
+        5
+      ],
+      "correct_patches": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24
+      ]
+    },
+    "schema": {
+      "type": "object",
+      "properties": {
+        "answer_type": {
+          "type": "string",
+          "enum": [
+            "multi_select"
+          ]
+        },
+        "indices": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        }
+      },
+      "required": [
+        "answer_type",
+        "indices"
+      ]
+    },
+    "scorer": "conference_v1",
+    "group_id": "interactive_dev_v1:Patch_Select:dev_02",
+    "split_evidence": "new_vector_drawn_development_only",
+    "partition": "development",
+    "layout": {
+      "main_image_index": 0,
+      "rows": 5,
+      "cols": 5,
+      "grid_box": [
+        0,
+        0,
+        400,
+        400
+      ]
+    },
+    "provenance": {
+      "generator": "data/interactive_dev_v1/generate.py",
+      "construction": "independent Pillow vector drawing; no source images loaded"
+    }
+  },
+  {
+    "id": "interactive_dev_v1/Rotation_Match/dev_01",
+    "source": "interactive_dev_v1",
+    "type": "Rotation_Match",
+    "puzzle_id": "dev_01",
+    "images": [
+      "data/interactive_dev_v1/Rotation_Match/dev_01_reference.png",
+      "data/interactive_dev_v1/Rotation_Match/dev_01_main.png"
+    ],
+    "image_sizes": [
+      [
+        300,
+        300
+      ],
+      [
+        300,
+        300
+      ]
+    ],
+    "prompt": "Image 1 is the REFERENCE direction. Image 2 is the CURRENT object. Give the additional CLOCKWISE rotation in degrees, in the range [0, 360), needed to make the current object's facing direction match the reference. The arrow tip defines the facing direction.",
+    "gt": {
+      "correct_angle": 90.0,
+      "angle_tol_deg": 5.0
+    },
+    "schema": {
+      "type": "object",
+      "properties": {
+        "answer_type": {
+          "type": "string",
+          "enum": [
+            "rotation"
+          ]
+        },
+        "angle": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "answer_type",
+        "angle"
+      ]
+    },
+    "scorer": "conference_v1",
+    "group_id": "interactive_dev_v1:Rotation_Match:dev_01",
+    "split_evidence": "new_vector_drawn_development_only",
+    "partition": "development",
+    "layout": {
+      "main_image_index": 1
+    },
+    "provenance": {
+      "generator": "data/interactive_dev_v1/generate.py",
+      "construction": "independent Pillow vector drawing; no source images loaded"
+    }
+  },
+  {
+    "id": "interactive_dev_v1/Rotation_Match/dev_02",
+    "source": "interactive_dev_v1",
+    "type": "Rotation_Match",
+    "puzzle_id": "dev_02",
+    "images": [
+      "data/interactive_dev_v1/Rotation_Match/dev_02_reference.png",
+      "data/interactive_dev_v1/Rotation_Match/dev_02_main.png"
+    ],
+    "image_sizes": [
+      [
+        300,
+        300
+      ],
+      [
+        300,
+        300
+      ]
+    ],
+    "prompt": "Image 1 is the REFERENCE direction. Image 2 is the CURRENT object. Give the additional CLOCKWISE rotation in degrees, in the range [0, 360), needed to make the current object's facing direction match the reference. The arrow tip defines the facing direction.",
+    "gt": {
+      "correct_angle": 270.0,
+      "angle_tol_deg": 5.0
+    },
+    "schema": {
+      "type": "object",
+      "properties": {
+        "answer_type": {
+          "type": "string",
+          "enum": [
+            "rotation"
+          ]
+        },
+        "angle": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "answer_type",
+        "angle"
+      ]
+    },
+    "scorer": "conference_v1",
+    "group_id": "interactive_dev_v1:Rotation_Match:dev_02",
+    "split_evidence": "new_vector_drawn_development_only",
+    "partition": "development",
+    "layout": {
+      "main_image_index": 1
+    },
+    "provenance": {
+      "generator": "data/interactive_dev_v1/generate.py",
+      "construction": "independent Pillow vector drawing; no source images loaded"
+    }
+  }
+]

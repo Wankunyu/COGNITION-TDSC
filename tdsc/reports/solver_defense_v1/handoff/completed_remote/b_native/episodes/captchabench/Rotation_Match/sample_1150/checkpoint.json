@@ -1,0 +1,545 @@
+{
+  "id": "captchabench/Rotation_Match/sample_1150",
+  "type": "Rotation_Match",
+  "source": "captchabench",
+  "module": "B",
+  "condition": "native_actions",
+  "solver": "C-I",
+  "puzzle_id": "sample_1150",
+  "group_id": "shared_material:captchabench/Rotation_Match/sample_1150",
+  "partition": "evaluation",
+  "model": "models/CaptchaMind-7B",
+  "started_at": "2026-09-13T21:38:44.665524+00:00",
+  "started_unix": 1789335524.6655202,
+  "budgets": {
+    "max_calls_per_episode": 30,
+    "max_output_tokens_per_call": 8192,
+    "max_output_tokens_per_episode": 65536,
+    "request_timeout_seconds": 600,
+    "episode_timeout_seconds": 1800
+  },
+  "protocol": "source_native",
+  "action_parser": "lossless_single_action_v1",
+  "steps": [
+    {
+      "step": 1,
+      "text": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [785, 706]}}</tool_call>",
+      "usage": {
+        "prompt_tokens": 1317,
+        "completion_tokens": 94,
+        "total_tokens": 1411,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "input_tokens": 1317,
+      "output_tokens": 94,
+      "finish_reason": "stop",
+      "truncated": false,
+      "returned_model": "models/CaptchaMind-7B",
+      "elapsed_seconds": 3.7097870420111576,
+      "raw_response": {
+        "id": "chatcmpl-67f4f2c3-3a17-4f94-baee-4e4acb2d1ada",
+        "object": "chat.completion",
+        "created": 1789335528,
+        "model": "models/CaptchaMind-7B",
+        "choices": [
+          {
+            "index": 0,
+            "finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [785, 706]}}</tool_call>",
+              "reasoning_content": "I need to find the candidate image where the target object faces the same direction as indicated by the finger in the reference image.\n\nThe reference finger is pointing left. Looking at the current candidate image, the target object is facing upper-right.\n\nThe directions do not match. I should click the right arrow to check the next candidate image.",
+              "reasoning": "I need to find the candidate image where the target object faces the same direction as indicated by the finger in the reference image.\n\nThe reference finger is pointing left. Looking at the current candidate image, the target object is facing upper-right.\n\nThe directions do not match. I should click the right arrow to check the next candidate image.",
+              "tool_calls": null,
+              "tool_call_id": null,
+              "name": null
+            },
+            "logprobs": null
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 1317,
+          "completion_tokens": 94,
+          "total_tokens": 1411,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "timings": {
+          "prompt_n": 1317,
+          "cache_n": 0,
+          "predicted_n": 96,
+          "prompt_ms": 1104.9417080066632,
+          "prompt_per_token_ms": 0.838983832958742,
+          "prompt_per_second": 1191.9180807971256,
+          "predicted_ms": 2221.1823582257093,
+          "predicted_per_token_ms": 23.137316231517804,
+          "predicted_per_second": 43.220224419882946,
+          "peak_memory": 22.422571738,
+          "draft_kind": null,
+          "draft_rounds": null,
+          "draft_n": null,
+          "draft_n_accepted": null
+        }
+      },
+      "response_file": "response_01.json",
+      "action": {
+        "name": "click",
+        "kwargs": {
+          "position": [
+            785,
+            706
+          ]
+        }
+      },
+      "done": false,
+      "reward": 0.0,
+      "observation": [
+        "./reports/solver_defense_v1/b_native/episodes/captchabench/Rotation_Match/sample_1150/observations/step_01_00.png"
+      ],
+      "submitted": false
+    },
+    {
+      "step": 2,
+      "text": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [785, 706]}}</tool_call>",
+      "usage": {
+        "prompt_tokens": 2398,
+        "completion_tokens": 91,
+        "total_tokens": 2489,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "input_tokens": 2398,
+      "output_tokens": 91,
+      "finish_reason": "stop",
+      "truncated": false,
+      "returned_model": "models/CaptchaMind-7B",
+      "elapsed_seconds": 4.523665290995268,
+      "raw_response": {
+        "id": "chatcmpl-b88bb334-8e30-4083-bee0-f91752d1850e",
+        "object": "chat.completion",
+        "created": 1789335532,
+        "model": "models/CaptchaMind-7B",
+        "choices": [
+          {
+            "index": 0,
+            "finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [785, 706]}}</tool_call>",
+              "reasoning_content": "I need to find the candidate image where the object faces the same direction as indicated by the finger in the reference image.\n\nThe reference finger is pointing left. Looking at the current candidate image, the object is facing right.\n\nThe directions do not match. I should click the right arrow to check the next candidate image.",
+              "reasoning": "I need to find the candidate image where the object faces the same direction as indicated by the finger in the reference image.\n\nThe reference finger is pointing left. Looking at the current candidate image, the object is facing right.\n\nThe directions do not match. I should click the right arrow to check the next candidate image.",
+              "tool_calls": null,
+              "tool_call_id": null,
+              "name": null
+            },
+            "logprobs": null
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 2398,
+          "completion_tokens": 91,
+          "total_tokens": 2489,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "timings": {
+          "prompt_n": 2398,
+          "cache_n": 0,
+          "predicted_n": 93,
+          "prompt_ms": 2063.5038750479,
+          "prompt_per_token_ms": 0.8605103732476647,
+          "prompt_per_second": 1162.1010403696653,
+          "predicted_ms": 2164.233031919613,
+          "predicted_per_token_ms": 23.27132292386681,
+          "predicted_per_second": 42.97134302469806,
+          "peak_memory": 22.422571738,
+          "draft_kind": null,
+          "draft_rounds": null,
+          "draft_n": null,
+          "draft_n_accepted": null
+        }
+      },
+      "response_file": "response_02.json",
+      "action": {
+        "name": "click",
+        "kwargs": {
+          "position": [
+            785,
+            706
+          ]
+        }
+      },
+      "done": false,
+      "reward": 0.0,
+      "observation": [
+        "./reports/solver_defense_v1/b_native/episodes/captchabench/Rotation_Match/sample_1150/observations/step_02_00.png"
+      ],
+      "submitted": false
+    },
+    {
+      "step": 3,
+      "text": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [785, 706]}}</tool_call>",
+      "usage": {
+        "prompt_tokens": 3479,
+        "completion_tokens": 91,
+        "total_tokens": 3570,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "input_tokens": 3479,
+      "output_tokens": 91,
+      "finish_reason": "stop",
+      "truncated": false,
+      "returned_model": "models/CaptchaMind-7B",
+      "elapsed_seconds": 5.553754749998916,
+      "raw_response": {
+        "id": "chatcmpl-d5e92396-c452-41b9-8c0a-0db723032edd",
+        "object": "chat.completion",
+        "created": 1789335538,
+        "model": "models/CaptchaMind-7B",
+        "choices": [
+          {
+            "index": 0,
+            "finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [785, 706]}}</tool_call>",
+              "reasoning_content": "I need to find the candidate image where the object faces the same direction as indicated by the finger in the reference image.\n\nThe reference finger is pointing left. Looking at the current candidate image, the object is facing upward.\n\nThe directions do not match. I should click the right arrow to check the next candidate image.",
+              "reasoning": "I need to find the candidate image where the object faces the same direction as indicated by the finger in the reference image.\n\nThe reference finger is pointing left. Looking at the current candidate image, the object is facing upward.\n\nThe directions do not match. I should click the right arrow to check the next candidate image.",
+              "tool_calls": null,
+              "tool_call_id": null,
+              "name": null
+            },
+            "logprobs": null
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 3479,
+          "completion_tokens": 91,
+          "total_tokens": 3570,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "timings": {
+          "prompt_n": 3479,
+          "cache_n": 0,
+          "predicted_n": 93,
+          "prompt_ms": 3005.397749977419,
+          "prompt_per_token_ms": 0.8638682811087723,
+          "prompt_per_second": 1157.5838838723225,
+          "predicted_ms": 2181.7246548987737,
+          "predicted_per_token_ms": 23.459404891384665,
+          "predicted_per_second": 42.626827263092444,
+          "peak_memory": 22.422571738,
+          "draft_kind": null,
+          "draft_rounds": null,
+          "draft_n": null,
+          "draft_n_accepted": null
+        }
+      },
+      "response_file": "response_03.json",
+      "action": {
+        "name": "click",
+        "kwargs": {
+          "position": [
+            785,
+            706
+          ]
+        }
+      },
+      "done": false,
+      "reward": 0.0,
+      "observation": [
+        "./reports/solver_defense_v1/b_native/episodes/captchabench/Rotation_Match/sample_1150/observations/step_03_00.png"
+      ],
+      "submitted": false
+    },
+    {
+      "step": 4,
+      "text": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [785, 706]}}</tool_call>",
+      "usage": {
+        "prompt_tokens": 4560,
+        "completion_tokens": 92,
+        "total_tokens": 4652,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "input_tokens": 4560,
+      "output_tokens": 92,
+      "finish_reason": "stop",
+      "truncated": false,
+      "returned_model": "models/CaptchaMind-7B",
+      "elapsed_seconds": 6.82049458300753,
+      "raw_response": {
+        "id": "chatcmpl-542064c5-aca6-498b-b51f-efee81071f64",
+        "object": "chat.completion",
+        "created": 1789335545,
+        "model": "models/CaptchaMind-7B",
+        "choices": [
+          {
+            "index": 0,
+            "finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [785, 706]}}</tool_call>",
+              "reasoning_content": "I need to find the candidate image where the object faces the same direction as indicated by the finger in the reference image.\n\nThe reference finger is pointing left. Looking at the current candidate image, the object is facing upper-right.\n\nThe directions do not match. I should click the right arrow to check the next candidate image.",
+              "reasoning": "I need to find the candidate image where the object faces the same direction as indicated by the finger in the reference image.\n\nThe reference finger is pointing left. Looking at the current candidate image, the object is facing upper-right.\n\nThe directions do not match. I should click the right arrow to check the next candidate image.",
+              "tool_calls": null,
+              "tool_call_id": null,
+              "name": null
+            },
+            "logprobs": null
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 4560,
+          "completion_tokens": 92,
+          "total_tokens": 4652,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "timings": {
+          "prompt_n": 4560,
+          "cache_n": 0,
+          "predicted_n": 94,
+          "prompt_ms": 4071.0057089745533,
+          "prompt_per_token_ms": 0.8927644098628407,
+          "prompt_per_second": 1120.116336350857,
+          "predicted_ms": 2220.895548383655,
+          "predicted_per_token_ms": 23.626548387060158,
+          "predicted_per_second": 42.32526832178678,
+          "peak_memory": 22.422571738,
+          "draft_kind": null,
+          "draft_rounds": null,
+          "draft_n": null,
+          "draft_n_accepted": null
+        }
+      },
+      "response_file": "response_04.json",
+      "action": {
+        "name": "click",
+        "kwargs": {
+          "position": [
+            785,
+            706
+          ]
+        }
+      },
+      "done": false,
+      "reward": 0.0,
+      "observation": [
+        "./reports/solver_defense_v1/b_native/episodes/captchabench/Rotation_Match/sample_1150/observations/step_04_00.png"
+      ],
+      "submitted": false
+    },
+    {
+      "step": 5,
+      "text": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [785, 706]}}</tool_call>",
+      "usage": {
+        "prompt_tokens": 5641,
+        "completion_tokens": 92,
+        "total_tokens": 5733,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "input_tokens": 5641,
+      "output_tokens": 92,
+      "finish_reason": "stop",
+      "truncated": false,
+      "returned_model": "models/CaptchaMind-7B",
+      "elapsed_seconds": 7.9642500420013675,
+      "raw_response": {
+        "id": "chatcmpl-cafc9192-24d8-489b-8f1f-a3c9de5ffd3f",
+        "object": "chat.completion",
+        "created": 1789335553,
+        "model": "models/CaptchaMind-7B",
+        "choices": [
+          {
+            "index": 0,
+            "finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [785, 706]}}</tool_call>",
+              "reasoning_content": "I need to find the candidate image where the object faces the same direction as indicated by the finger in the reference image.\n\nThe reference finger is pointing left. Looking at the current candidate image, the object is facing upper-right.\n\nThe directions do not match. I should click the right arrow to check the next candidate image.",
+              "reasoning": "I need to find the candidate image where the object faces the same direction as indicated by the finger in the reference image.\n\nThe reference finger is pointing left. Looking at the current candidate image, the object is facing upper-right.\n\nThe directions do not match. I should click the right arrow to check the next candidate image.",
+              "tool_calls": null,
+              "tool_call_id": null,
+              "name": null
+            },
+            "logprobs": null
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 5641,
+          "completion_tokens": 92,
+          "total_tokens": 5733,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "timings": {
+          "prompt_n": 5641,
+          "cache_n": 0,
+          "predicted_n": 94,
+          "prompt_ms": 5030.174000043189,
+          "prompt_per_token_ms": 0.891716716901824,
+          "prompt_per_second": 1121.4323798643081,
+          "predicted_ms": 2235.4513139423907,
+          "predicted_per_token_ms": 23.781396956833945,
+          "predicted_per_second": 42.04967444995425,
+          "peak_memory": 22.422571738,
+          "draft_kind": null,
+          "draft_rounds": null,
+          "draft_n": null,
+          "draft_n_accepted": null
+        }
+      },
+      "response_file": "response_05.json",
+      "action": {
+        "name": "click",
+        "kwargs": {
+          "position": [
+            785,
+            706
+          ]
+        }
+      },
+      "done": false,
+      "reward": 0.0,
+      "observation": [
+        "./reports/solver_defense_v1/b_native/episodes/captchabench/Rotation_Match/sample_1150/observations/step_05_00.png"
+      ],
+      "submitted": false
+    },
+    {
+      "step": 6,
+      "text": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [235, 696]}}</tool_call>",
+      "usage": {
+        "prompt_tokens": 6722,
+        "completion_tokens": 89,
+        "total_tokens": 6811,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "input_tokens": 6722,
+      "output_tokens": 89,
+      "finish_reason": "stop",
+      "truncated": false,
+      "returned_model": "models/CaptchaMind-7B",
+      "elapsed_seconds": 8.837520459012012,
+      "raw_response": {
+        "id": "chatcmpl-0d0eb049-63ff-4fa9-8cd7-c9b45d56e8fa",
+        "object": "chat.completion",
+        "created": 1789335562,
+        "model": "models/CaptchaMind-7B",
+        "choices": [
+          {
+            "index": 0,
+            "finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [235, 696]}}</tool_call>",
+              "reasoning_content": "I need to find the candidate image where the object faces the same direction as indicated by the finger in the reference image.\n\nThe reference finger is pointing left. Looking at the current candidate image, the object is facing left.\n\nPerfect! The directions match. I should click the submit button to complete this captcha.",
+              "reasoning": "I need to find the candidate image where the object faces the same direction as indicated by the finger in the reference image.\n\nThe reference finger is pointing left. Looking at the current candidate image, the object is facing left.\n\nPerfect! The directions match. I should click the submit button to complete this captcha.",
+              "tool_calls": null,
+              "tool_call_id": null,
+              "name": null
+            },
+            "logprobs": null
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 6722,
+          "completion_tokens": 89,
+          "total_tokens": 6811,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "timings": {
+          "prompt_n": 6722,
+          "cache_n": 0,
+          "predicted_n": 91,
+          "prompt_ms": 6069.985166977858,
+          "prompt_per_token_ms": 0.9030028513802228,
+          "prompt_per_second": 1107.416215210748,
+          "predicted_ms": 2175.9669749858504,
+          "predicted_per_token_ms": 23.91172499984451,
+          "predicted_per_second": 41.82048764806816,
+          "peak_memory": 22.422571738,
+          "draft_kind": null,
+          "draft_rounds": null,
+          "draft_n": null,
+          "draft_n_accepted": null
+        }
+      },
+      "response_file": "response_06.json",
+      "action": {
+        "name": "click",
+        "kwargs": {
+          "position": [
+            235,
+            696
+          ]
+        }
+      },
+      "done": true,
+      "reward": 1.0,
+      "observation": [
+        "./reports/solver_defense_v1/b_native/episodes/captchabench/Rotation_Match/sample_1150/observations/step_06_00.png"
+      ],
+      "submitted": true
+    }
+  ],
+  "model_calls": 6,
+  "input_tokens": 24117,
+  "output_tokens": 549,
+  "reward": 1.0,
+  "done": true,
+  "correct": true,
+  "status": "correct",
+  "submitted": true,
+  "images": [
+    "data/external/captchabench/captcha/rotation match/sample_1150/image_1.png"
+  ],
+  "cost_usd": null,
+  "source_revision": "960a521e842bd164b08344151b0a4253d23cfc2f",
+  "source_path": "captcha/rotation match/sample_1150",
+  "training_exposure": "unknown",
+  "source_assets": [
+    "柯基.png"
+  ],
+  "scorer": "conference_v1",
+  "split_evidence": "paper_only",
+  "gt": {
+    "correct_angle": 315,
+    "angle_tol_deg": 5
+  },
+  "initial_observation": [
+    "./reports/solver_defense_v1/b_native/episodes/captchabench/Rotation_Match/sample_1150/observations/step_00_00.png"
+  ],
+  "elapsed_seconds": 37.66775465011597,
+  "final_answer": {
+    "answer_type": "candidate_selection",
+    "image_index_zero_based": 5,
+    "image_filename": "image_6.png"
+  },
+  "answer": {
+    "answer_type": "candidate_selection",
+    "image_index_zero_based": 5,
+    "image_filename": "image_6.png"
+  },
+  "stop_reason": "correct",
+  "finished_at": "2026-09-13T21:39:22.333115+00:00"
+}

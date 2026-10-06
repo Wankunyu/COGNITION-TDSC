@@ -1,0 +1,436 @@
+{
+  "id": "defense_v1/D0/image25",
+  "type": "Select_Animal",
+  "source": "conference_defense",
+  "module": "D",
+  "condition": "D0",
+  "solver": "C-I",
+  "puzzle_id": "image25.png",
+  "group_id": "defense_v1/image25",
+  "partition": "evaluation",
+  "model": "models/CaptchaMind-7B",
+  "started_at": "2026-09-14T15:32:33.152600+00:00",
+  "started_unix": 1789399953.152597,
+  "budgets": {
+    "max_calls_per_episode": 30,
+    "max_output_tokens_per_call": 8192,
+    "max_output_tokens_per_episode": 65536,
+    "request_timeout_seconds": 600,
+    "episode_timeout_seconds": 1800
+  },
+  "protocol": "adapted_native_agent",
+  "action_parser": "lossless_single_action_v1",
+  "steps": [
+    {
+      "step": 1,
+      "text": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [855, 225]}}</tool_call>",
+      "usage": {
+        "prompt_tokens": 1900,
+        "completion_tokens": 84,
+        "total_tokens": 1984,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "input_tokens": 1900,
+      "output_tokens": 84,
+      "finish_reason": "stop",
+      "truncated": false,
+      "returned_model": "models/CaptchaMind-7B",
+      "elapsed_seconds": 3.6781184589781333,
+      "raw_response": {
+        "id": "chatcmpl-9490dff8-529d-4f96-9276-6e4d0889e4e5",
+        "object": "chat.completion",
+        "created": 1789399956,
+        "model": "models/CaptchaMind-7B",
+        "choices": [
+          {
+            "index": 0,
+            "finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [855, 225]}}</tool_call>",
+              "reasoning_content": "I need to refer to the task requirement: Select all grid cells containing the pig. Looking at the image, I can see there is only one cell in the grid that has a pig, which is in the first row and third column. So I will click on this cell.",
+              "reasoning": "I need to refer to the task requirement: Select all grid cells containing the pig. Looking at the image, I can see there is only one cell in the grid that has a pig, which is in the first row and third column. So I will click on this cell.",
+              "tool_calls": null,
+              "tool_call_id": null,
+              "name": null
+            },
+            "logprobs": null
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 1900,
+          "completion_tokens": 84,
+          "total_tokens": 1984,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "timings": {
+          "prompt_n": 1900,
+          "cache_n": 0,
+          "predicted_n": 86,
+          "prompt_ms": 1567.6992500084452,
+          "prompt_per_token_ms": 0.8251048684254975,
+          "prompt_per_second": 1211.9671550456917,
+          "predicted_ms": 1986.063385284369,
+          "predicted_per_token_ms": 23.09376029400429,
+          "predicted_per_second": 43.30173983227949,
+          "peak_memory": 35.615165266,
+          "draft_kind": null,
+          "draft_rounds": null,
+          "draft_n": null,
+          "draft_n_accepted": null
+        }
+      },
+      "response_file": "response_01.json",
+      "action": {
+        "name": "click",
+        "kwargs": {
+          "position": [
+            855,
+            225
+          ]
+        }
+      },
+      "done": false,
+      "reward": 0.0,
+      "observation": [
+        "./reports/solver_defense_v1/d_native/episodes/defense_v1/D0/image25/observations/step_01_00.png"
+      ],
+      "submitted": false
+    },
+    {
+      "step": 2,
+      "text": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [855, 225]}}</tool_call>",
+      "usage": {
+        "prompt_tokens": 3454,
+        "completion_tokens": 77,
+        "total_tokens": 3531,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "input_tokens": 3454,
+      "output_tokens": 77,
+      "finish_reason": "stop",
+      "truncated": false,
+      "returned_model": "models/CaptchaMind-7B",
+      "elapsed_seconds": 4.9733959160221275,
+      "raw_response": {
+        "id": "chatcmpl-a06c760c-005d-4ab8-a84c-19af11247d97",
+        "object": "chat.completion",
+        "created": 1789399962,
+        "model": "models/CaptchaMind-7B",
+        "choices": [
+          {
+            "index": 0,
+            "finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [855, 225]}}</tool_call>",
+              "reasoning_content": "I need to select all grid cells containing the pig. Looking at the image, I can see there is one cell with a pig in it, which is the cell at row 1, column 3. I have successfully selected this cell.",
+              "reasoning": "I need to select all grid cells containing the pig. Looking at the image, I can see there is one cell with a pig in it, which is the cell at row 1, column 3. I have successfully selected this cell.",
+              "tool_calls": null,
+              "tool_call_id": null,
+              "name": null
+            },
+            "logprobs": null
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 3454,
+          "completion_tokens": 77,
+          "total_tokens": 3531,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "timings": {
+          "prompt_n": 3454,
+          "cache_n": 0,
+          "predicted_n": 79,
+          "prompt_ms": 2954.584083025111,
+          "prompt_per_token_ms": 0.8554094044658688,
+          "prompt_per_second": 1169.030869638867,
+          "predicted_ms": 1843.2249615456947,
+          "predicted_per_token_ms": 23.3319615385531,
+          "predicted_per_second": 42.859662628348985,
+          "peak_memory": 35.615165266,
+          "draft_kind": null,
+          "draft_rounds": null,
+          "draft_n": null,
+          "draft_n_accepted": null
+        }
+      },
+      "response_file": "response_02.json",
+      "action": {
+        "name": "click",
+        "kwargs": {
+          "position": [
+            855,
+            225
+          ]
+        }
+      },
+      "done": false,
+      "reward": 0.0,
+      "observation": [
+        "./reports/solver_defense_v1/d_native/episodes/defense_v1/D0/image25/observations/step_02_00.png"
+      ],
+      "submitted": false
+    },
+    {
+      "step": 3,
+      "text": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [855, 225]}}</tool_call>",
+      "usage": {
+        "prompt_tokens": 5008,
+        "completion_tokens": 76,
+        "total_tokens": 5084,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "input_tokens": 5008,
+      "output_tokens": 76,
+      "finish_reason": "stop",
+      "truncated": false,
+      "returned_model": "models/CaptchaMind-7B",
+      "elapsed_seconds": 6.482400292006787,
+      "raw_response": {
+        "id": "chatcmpl-68de0b4e-69f9-4c56-bcce-76bbc749e36b",
+        "object": "chat.completion",
+        "created": 1789399968,
+        "model": "models/CaptchaMind-7B",
+        "choices": [
+          {
+            "index": 0,
+            "finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [855, 225]}}</tool_call>",
+              "reasoning_content": "I need to select all grid cells containing the pig. Looking at the image, I can see there is one cell with a pig in it, which is in the third column of the first row. So I will click on this cell.",
+              "reasoning": "I need to select all grid cells containing the pig. Looking at the image, I can see there is one cell with a pig in it, which is in the third column of the first row. So I will click on this cell.",
+              "tool_calls": null,
+              "tool_call_id": null,
+              "name": null
+            },
+            "logprobs": null
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 5008,
+          "completion_tokens": 76,
+          "total_tokens": 5084,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "timings": {
+          "prompt_n": 5008,
+          "cache_n": 0,
+          "predicted_n": 78,
+          "prompt_ms": 4428.105833998416,
+          "prompt_per_token_ms": 0.8842064365012811,
+          "prompt_per_second": 1130.9576120672712,
+          "predicted_ms": 1835.3588668933417,
+          "predicted_per_token_ms": 23.53024188324797,
+          "predicted_per_second": 42.49850065128044,
+          "peak_memory": 35.615165266,
+          "draft_kind": null,
+          "draft_rounds": null,
+          "draft_n": null,
+          "draft_n_accepted": null
+        }
+      },
+      "response_file": "response_03.json",
+      "action": {
+        "name": "click",
+        "kwargs": {
+          "position": [
+            855,
+            225
+          ]
+        }
+      },
+      "done": false,
+      "reward": 0.0,
+      "observation": [
+        "./reports/solver_defense_v1/d_native/episodes/defense_v1/D0/image25/observations/step_03_00.png"
+      ],
+      "submitted": false
+    },
+    {
+      "step": 4,
+      "text": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [929, 1102]}}</tool_call>",
+      "usage": {
+        "prompt_tokens": 6562,
+        "completion_tokens": 55,
+        "total_tokens": 6617,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "input_tokens": 6562,
+      "output_tokens": 55,
+      "finish_reason": "stop",
+      "truncated": false,
+      "returned_model": "models/CaptchaMind-7B",
+      "elapsed_seconds": 7.540101207996486,
+      "raw_response": {
+        "id": "chatcmpl-62eddd14-c811-4a1b-b345-dd0ef122dfcb",
+        "object": "chat.completion",
+        "created": 1789399976,
+        "model": "models/CaptchaMind-7B",
+        "choices": [
+          {
+            "index": 0,
+            "finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [929, 1102]}}</tool_call>",
+              "reasoning_content": "I need to refer to the target description to determine if the current selection is correct, and then decide whether to perform an operation.",
+              "reasoning": "I need to refer to the target description to determine if the current selection is correct, and then decide whether to perform an operation.",
+              "tool_calls": null,
+              "tool_call_id": null,
+              "name": null
+            },
+            "logprobs": null
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 6562,
+          "completion_tokens": 55,
+          "total_tokens": 6617,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "timings": {
+          "prompt_n": 6562,
+          "cache_n": 0,
+          "predicted_n": 57,
+          "prompt_ms": 5925.916584004881,
+          "prompt_per_token_ms": 0.9030656178001952,
+          "prompt_per_second": 1107.3392456640418,
+          "predicted_ms": 1356.2876450845838,
+          "predicted_per_token_ms": 23.794520089203225,
+          "predicted_per_second": 42.02648325123189,
+          "peak_memory": 35.615165266,
+          "draft_kind": null,
+          "draft_rounds": null,
+          "draft_n": null,
+          "draft_n_accepted": null
+        }
+      },
+      "response_file": "response_04.json",
+      "action": {
+        "name": "click",
+        "kwargs": {
+          "position": [
+            929,
+            1102
+          ]
+        }
+      },
+      "done": true,
+      "reward": 1.0,
+      "observation": [
+        "./reports/solver_defense_v1/d_native/episodes/defense_v1/D0/image25/observations/step_04_00.png"
+      ],
+      "submitted": true
+    }
+  ],
+  "model_calls": 4,
+  "input_tokens": 16924,
+  "output_tokens": 292,
+  "reward": 1.0,
+  "done": true,
+  "correct": true,
+  "status": "correct",
+  "submitted": true,
+  "images": [
+    "data/defense_v1/original/image25.png"
+  ],
+  "cost_usd": null,
+  "source_path": "../conference/captcha_data/Select_Animal/image25.png",
+  "training_exposure": "unknown; previously used conference material",
+  "scorer": "defense_v1_maximum_matching",
+  "split_evidence": "fixed_image_ids_before_new_model_calls",
+  "base_id": "image25",
+  "gt": {
+    "indices": [
+      2
+    ]
+  },
+  "initial_observation": [
+    "./reports/solver_defense_v1/d_native/episodes/defense_v1/D0/image25/observations/step_00_00.png"
+  ],
+  "environment_metadata": {
+    "environment": "cognition_adapted_v1.1_numeric_input_box",
+    "main_image_index": 0,
+    "source_images": [
+      "./data/defense_v1/original/image25.png"
+    ],
+    "source_image_sizes": [
+      [
+        1024,
+        1024
+      ]
+    ],
+    "main_image_box": [
+      0,
+      0,
+      1024,
+      1024
+    ],
+    "observation_main_size": [
+      1024,
+      1152
+    ],
+    "coordinate_mapping": {
+      "scale": [
+        1,
+        1
+      ],
+      "offset": [
+        0,
+        0
+      ]
+    },
+    "controls": {
+      "submit": [
+        834,
+        1088,
+        1004,
+        1132
+      ]
+    },
+    "input_box": null,
+    "grid": {
+      "rows": 2,
+      "cols": 3,
+      "grid_box": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "source": "manifest.layout"
+    }
+  },
+  "elapsed_seconds": 23.457924127578735,
+  "final_answer": {
+    "indices": [
+      2
+    ]
+  },
+  "answer": {
+    "indices": [
+      2
+    ]
+  },
+  "stop_reason": "correct",
+  "finished_at": "2026-09-14T15:32:56.610116+00:00"
+}

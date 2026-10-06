@@ -1,0 +1,50 @@
+{
+  "raw_response": {
+    "id": "chatcmpl-b15dbec3-f634-4da2-8ba4-85826929b466",
+    "object": "chat.completion",
+    "created": 1789355390,
+    "model": "models/CaptchaMind-7B",
+    "choices": [
+      {
+        "index": 0,
+        "finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "<tool_call>{\"name\": \"enter_number\", \"arguments\": {\"number\": 225}}</tool_call>",
+          "reasoning_content": "I need to determine the additional clockwise rotation in degrees required for the current object to match the reference object's facing direction.\n\nThe reference object is the first image, where the MAIN puzzle is the hand, located at x=300, y=600. The reference direction is facing lower-right.\n\nThe current object is the second image, where the MAIN puzzle is the stack of gold bars, located at x=640, y=602. The current direction is facing upward.\n\nThe reference direction in the reference object is at an angle of 225 degrees (lower-right). The current direction in the current object is at an angle of 0 degrees (upward).\n\nThe difference between the two angles is 225 - 0 = 225 degrees. Since this value is already in the range [0, 360), no additional rotation is needed.",
+          "reasoning": "I need to determine the additional clockwise rotation in degrees required for the current object to match the reference object's facing direction.\n\nThe reference object is the first image, where the MAIN puzzle is the hand, located at x=300, y=600. The reference direction is facing lower-right.\n\nThe current object is the second image, where the MAIN puzzle is the stack of gold bars, located at x=640, y=602. The current direction is facing upward.\n\nThe reference direction in the reference object is at an angle of 225 degrees (lower-right). The current direction in the current object is at an angle of 0 degrees (upward).\n\nThe difference between the two angles is 225 - 0 = 225 degrees. Since this value is already in the range [0, 360), no additional rotation is needed.",
+          "tool_calls": null,
+          "tool_call_id": null,
+          "name": null
+        },
+        "logprobs": null
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 4536,
+      "completion_tokens": 208,
+      "total_tokens": 4744,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "timings": {
+      "prompt_n": 4536,
+      "cache_n": 0,
+      "predicted_n": 210,
+      "prompt_ms": 4030.5824170063715,
+      "prompt_per_token_ms": 0.8885763705922336,
+      "prompt_per_second": 1125.3956700801114,
+      "predicted_ms": 4946.751961740498,
+      "predicted_per_token_ms": 23.555961722573798,
+      "predicted_per_second": 42.45209818972047,
+      "peak_memory": 31.813945158,
+      "draft_kind": null,
+      "draft_rounds": null,
+      "draft_n": null,
+      "draft_n_accepted": null
+    }
+  },
+  "elapsed_seconds": 9.170939584000735,
+  "received_at": "2026-09-14T03:09:50.387738+00:00"
+}

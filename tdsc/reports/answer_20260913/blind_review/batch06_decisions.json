@@ -1,0 +1,85 @@
+{
+  "case_001": {
+    "answer": {
+      "answer_type": "multi_select",
+      "indices": []
+    },
+    "classification": "representation_only",
+    "evidence": [
+      "I can see there are no bus-containing cells in this grid. Therefore, the answer is an empty array.",
+      "<answer>YOUR FINAL ANSWER</answer>"
+    ],
+    "reason": "The prose explicitly commits to an empty array as the complete final answer. The tags retain placeholder text, but converting the stated empty array to an empty indices list does not add information or require image interpretation."
+  },
+  "case_002": {
+    "answer": {
+      "answer_type": "multi_select",
+      "indices": [
+        1
+      ]
+    },
+    "classification": "representation_only",
+    "evidence": [
+      "I can see that the returned list contains the single element: 1.",
+      "<answer>YOUR FINAL ANSWER</answer>[1]"
+    ],
+    "reason": "The response explicitly states a complete one-element list and repeats [1] after the placeholder tags. The stated index is preserved exactly; the earlier inconsistent row/column arithmetic is not corrected or recomputed."
+  },
+  "case_003": {
+    "answer": null,
+    "classification": "no_answer",
+    "evidence": [
+      "WHAT IF THE TOP OF THE HEAD IS NOT AT 135°?",
+      "Wait! What if the head is NOT upright at 0° or 135°?",
+      "One ear at x=692, y=650 (bottom).\nOne ear at x=925, y=360 (right).\nWAIT!"
+    ],
+    "reason": "The response is reconsidering facial landmarks and the current orientation. It never gives a committed additional clockwise rotation as the answer. The mentioned orientation angles and landmark coordinates cannot be repurposed as a final rotation."
+  },
+  "case_004": {
+    "answer": null,
+    "classification": "no_answer",
+    "evidence": [
+      "This vector points at angle 135° (down and left).",
+      "To rotate from 7:30 / 8 o'clock to 12 o'clock CLOCKWISE:",
+      "3 o'clock: (1, 0).\n6 o'clock: (0, "
+    ],
+    "reason": "The text analyzes the current vector and compares coordinate conventions, then stops during that check. It does not state the requested additional clockwise angle. Computing that angle from its intermediate directions would complete the solution rather than read an existing answer."
+  },
+  "case_005": {
+    "answer": null,
+    "classification": "no_answer",
+    "evidence": [
+      "Let's consider two possibilities for the object's upright direction:",
+      "Now, which side is \"UP\" (forehead) and which side is \"DOWN\" (chin)?",
+      "Vector from eyes to mouth = (756 - 735.5, 365.5 - 386.5) = (+20.5, -2"
+    ],
+    "reason": "The response remains in landmark and vector analysis and ends before completing a component. No additional clockwise rotation is committed to as a final answer; deriving one would require further solving."
+  },
+  "case_006": {
+    "answer": null,
+    "classification": "incomplete",
+    "evidence": [
+      "270 DEGREES!",
+      "WAIT! OR is the reference asking to rotate the object so its upright direction matches the reference?",
+      "OR what if the quadruped's front is LEFT, but wait:",
+      "Wait! Look at the prompt of"
+    ],
+    "reason": "A 270-degree candidate is computed under an upright-back interpretation, but the response then explicitly reopens the task interpretation and considers the animal facing direction instead. That reconsideration ends unfinished, with no settled final rotation. The earlier candidate is not selected on the model's behalf."
+  },
+  "case_007": {
+    "answer": null,
+    "classification": "no_answer",
+    "evidence": [],
+    "reason": "The supplied response is exactly empty, so it contains no number, final answer, or original text to quote."
+  },
+  "case_008": {
+    "answer": null,
+    "classification": "no_answer",
+    "evidence": [
+      "Wait, why is the blue shape rotated by 45 degrees?",
+      "LET ME MEASURE THE CIRCLE BUTTONS AGAIN!",
+      "The slope of the top-right edge is (375-75)/(940-700) = 300/240 = 1."
+    ],
+    "reason": "The response investigates shape proportions, resizing, and edge slopes without giving a final additional clockwise rotation. Its 45-degree mention is a question about the observed shape orientation, not a committed answer."
+  }
+}

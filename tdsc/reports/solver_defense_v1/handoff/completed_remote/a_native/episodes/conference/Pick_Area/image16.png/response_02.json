@@ -1,0 +1,50 @@
+{
+  "raw_response": {
+    "id": "chatcmpl-daab3ead-125a-46d0-9ed3-0db6b41b03ac",
+    "object": "chat.completion",
+    "created": 1789340860,
+    "model": "models/CaptchaMind-7B",
+    "choices": [
+      {
+        "index": 0,
+        "finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "I will compare the areas one by one. Area 1 is at the upper left, area 2 is at the lower left, area 3 is at the lower right. I can see that the three areas do not overlap, so I will compare their sizes. I can see that area 1 is the smallest, area 3 is the largest, and area 2 is in between. The target area is the largest, so I will click inside area 3.</think>\n<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [437, 225]}}</tool_call>",
+          "reasoning_content": "I need to click strictly inside the LARGEST explicitly outlined area, near its geometric center. So I need to refer to the selected area and the reference image to find the largest one, then determine if the click point is inside it and near the center. So I will analyze the areas one by one.",
+          "reasoning": "I need to click strictly inside the LARGEST explicitly outlined area, near its geometric center. So I need to refer to the selected area and the reference image to find the largest one, then determine if the click point is inside it and near the center. So I will analyze the areas one by one.",
+          "tool_calls": null,
+          "tool_call_id": null,
+          "name": null
+        },
+        "logprobs": null
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1222,
+      "completion_tokens": 188,
+      "total_tokens": 1410,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "timings": {
+      "prompt_n": 1222,
+      "cache_n": 0,
+      "predicted_n": 190,
+      "prompt_ms": 988.2082499680109,
+      "prompt_per_token_ms": 0.8086810556203036,
+      "prompt_per_second": 1236.581459464194,
+      "predicted_ms": 4381.985875572172,
+      "predicted_per_token_ms": 23.063083555643008,
+      "predicted_per_second": 43.35933647325849,
+      "peak_memory": 22.422571738,
+      "draft_kind": null,
+      "draft_rounds": null,
+      "draft_n": null,
+      "draft_n_accepted": null
+    }
+  },
+  "elapsed_seconds": 5.487463708996074,
+  "received_at": "2026-09-13T23:07:40.693184+00:00"
+}

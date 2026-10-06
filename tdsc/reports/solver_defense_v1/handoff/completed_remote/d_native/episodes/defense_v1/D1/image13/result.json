@@ -1,0 +1,373 @@
+{
+  "id": "defense_v1/D1/image13",
+  "type": "Select_Animal_Optimized",
+  "source": "conference_defense",
+  "module": "D",
+  "condition": "D1",
+  "solver": "C-I",
+  "puzzle_id": "image13.png",
+  "group_id": "defense_v1/image13",
+  "partition": "evaluation",
+  "model": "models/CaptchaMind-7B",
+  "started_at": "2026-09-14T15:14:19.923723+00:00",
+  "started_unix": 1789398859.923721,
+  "budgets": {
+    "max_calls_per_episode": 30,
+    "max_output_tokens_per_call": 8192,
+    "max_output_tokens_per_episode": 65536,
+    "request_timeout_seconds": 600,
+    "episode_timeout_seconds": 1800
+  },
+  "protocol": "adapted_native_agent",
+  "action_parser": "lossless_single_action_v1",
+  "steps": [
+    {
+      "step": 1,
+      "text": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [820, 146]}}</tool_call>",
+      "usage": {
+        "prompt_tokens": 1928,
+        "completion_tokens": 92,
+        "total_tokens": 2020,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "input_tokens": 1928,
+      "output_tokens": 92,
+      "finish_reason": "stop",
+      "truncated": false,
+      "returned_model": "models/CaptchaMind-7B",
+      "elapsed_seconds": 3.9087347500026226,
+      "raw_response": {
+        "id": "chatcmpl-d4064008-310f-4faf-afd5-dc0816456260",
+        "object": "chat.completion",
+        "created": 1789398863,
+        "model": "models/CaptchaMind-7B",
+        "choices": [
+          {
+            "index": 0,
+            "finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [820, 146]}}</tool_call>",
+              "reasoning_content": "I need to refer to the definition to complete this captcha task. The target is to mark all the actually visible eyes of the lion in the MAIN puzzle. Looking at the MAIN puzzle, I can see there are 2 eyes of the lion that are actually visible. So I will click to mark these 2 eyes.",
+              "reasoning": "I need to refer to the definition to complete this captcha task. The target is to mark all the actually visible eyes of the lion in the MAIN puzzle. Looking at the MAIN puzzle, I can see there are 2 eyes of the lion that are actually visible. So I will click to mark these 2 eyes.",
+              "tool_calls": null,
+              "tool_call_id": null,
+              "name": null
+            },
+            "logprobs": null
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 1928,
+          "completion_tokens": 92,
+          "total_tokens": 2020,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "timings": {
+          "prompt_n": 1928,
+          "cache_n": 0,
+          "predicted_n": 94,
+          "prompt_ms": 1602.4481669592205,
+          "prompt_per_token_ms": 0.8311453148128737,
+          "prompt_per_second": 1203.1590411180296,
+          "predicted_ms": 2172.144040340803,
+          "predicted_per_token_ms": 23.1079153227745,
+          "predicted_per_second": 43.27521483577658,
+          "peak_memory": 35.615165266,
+          "draft_kind": null,
+          "draft_rounds": null,
+          "draft_n": null,
+          "draft_n_accepted": null
+        }
+      },
+      "response_file": "response_01.json",
+      "action": {
+        "name": "click",
+        "kwargs": {
+          "position": [
+            820,
+            146
+          ]
+        }
+      },
+      "done": false,
+      "reward": 0.0,
+      "observation": [
+        "./reports/solver_defense_v1/d_native/episodes/defense_v1/D1/image13/observations/step_01_00.png"
+      ],
+      "submitted": false
+    },
+    {
+      "step": 2,
+      "text": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [830, 174]}}</tool_call>",
+      "usage": {
+        "prompt_tokens": 3482,
+        "completion_tokens": 124,
+        "total_tokens": 3606,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "input_tokens": 3482,
+      "output_tokens": 124,
+      "finish_reason": "stop",
+      "truncated": false,
+      "returned_model": "models/CaptchaMind-7B",
+      "elapsed_seconds": 6.117265000008047,
+      "raw_response": {
+        "id": "chatcmpl-aa579a77-0ccb-414b-a151-d08c1085b16c",
+        "object": "chat.completion",
+        "created": 1789398870,
+        "model": "models/CaptchaMind-7B",
+        "choices": [
+          {
+            "index": 0,
+            "finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [830, 174]}}</tool_call>",
+              "reasoning_content": "I need to refer to the instruction to complete this captcha task. The goal is to identify all actually visible eyes of the lion, and mark one point for each visible eye, without marking hidden eyes. Looking at the MAIN puzzle, I can see there is an image of a lion in the top-right sub-image. Looking at this sub-image, I can see there is one actually visible eye of the lion, which is on the right. So I will click on this eye.",
+              "reasoning": "I need to refer to the instruction to complete this captcha task. The goal is to identify all actually visible eyes of the lion, and mark one point for each visible eye, without marking hidden eyes. Looking at the MAIN puzzle, I can see there is an image of a lion in the top-right sub-image. Looking at this sub-image, I can see there is one actually visible eye of the lion, which is on the right. So I will click on this eye.",
+              "tool_calls": null,
+              "tool_call_id": null,
+              "name": null
+            },
+            "logprobs": null
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 3482,
+          "completion_tokens": 124,
+          "total_tokens": 3606,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "timings": {
+          "prompt_n": 3482,
+          "cache_n": 0,
+          "predicted_n": 126,
+          "prompt_ms": 2991.0090010380372,
+          "prompt_per_token_ms": 0.8589916717513031,
+          "prompt_per_second": 1164.1556407190894,
+          "predicted_ms": 2940.999600658659,
+          "predicted_per_token_ms": 23.341266671894118,
+          "predicted_per_second": 42.84257637157834,
+          "peak_memory": 35.615165266,
+          "draft_kind": null,
+          "draft_rounds": null,
+          "draft_n": null,
+          "draft_n_accepted": null
+        }
+      },
+      "response_file": "response_02.json",
+      "action": {
+        "name": "click",
+        "kwargs": {
+          "position": [
+            830,
+            174
+          ]
+        }
+      },
+      "done": false,
+      "reward": 0.0,
+      "observation": [
+        "./reports/solver_defense_v1/d_native/episodes/defense_v1/D1/image13/observations/step_02_00.png"
+      ],
+      "submitted": false
+    },
+    {
+      "step": 3,
+      "text": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [919, 1103]}}</tool_call>",
+      "usage": {
+        "prompt_tokens": 5036,
+        "completion_tokens": 88,
+        "total_tokens": 5124,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "input_tokens": 5036,
+      "output_tokens": 88,
+      "finish_reason": "stop",
+      "truncated": false,
+      "returned_model": "models/CaptchaMind-7B",
+      "elapsed_seconds": 6.79172091599321,
+      "raw_response": {
+        "id": "chatcmpl-440d957e-22af-4c9a-817a-e2da02adad71",
+        "object": "chat.completion",
+        "created": 1789398877,
+        "model": "models/CaptchaMind-7B",
+        "choices": [
+          {
+            "index": 0,
+            "finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [919, 1103]}}</tool_call>",
+              "reasoning_content": "I need to refer to the instruction to complete this captcha task. The goal is to identify all actually visible eyes of the lion, and mark one point for each visible eye, without marking hidden eyes. Looking at the image, I can see there are 2 actually visible eyes of the lion.",
+              "reasoning": "I need to refer to the instruction to complete this captcha task. The goal is to identify all actually visible eyes of the lion, and mark one point for each visible eye, without marking hidden eyes. Looking at the image, I can see there are 2 actually visible eyes of the lion.",
+              "tool_calls": null,
+              "tool_call_id": null,
+              "name": null
+            },
+            "logprobs": null
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 5036,
+          "completion_tokens": 88,
+          "total_tokens": 5124,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "timings": {
+          "prompt_n": 5036,
+          "cache_n": 0,
+          "predicted_n": 90,
+          "prompt_ms": 4435.6520409928635,
+          "prompt_per_token_ms": 0.8807887293472724,
+          "prompt_per_second": 1135.3460446083043,
+          "predicted_ms": 2121.4209690891475,
+          "predicted_per_token_ms": 23.57134410099053,
+          "predicted_per_second": 42.42439445606232,
+          "peak_memory": 35.615165266,
+          "draft_kind": null,
+          "draft_rounds": null,
+          "draft_n": null,
+          "draft_n_accepted": null
+        }
+      },
+      "response_file": "response_03.json",
+      "action": {
+        "name": "click",
+        "kwargs": {
+          "position": [
+            919,
+            1103
+          ]
+        }
+      },
+      "done": true,
+      "reward": 0.0,
+      "observation": [
+        "./reports/solver_defense_v1/d_native/episodes/defense_v1/D1/image13/observations/step_03_00.png"
+      ],
+      "submitted": true
+    }
+  ],
+  "model_calls": 3,
+  "input_tokens": 10446,
+  "output_tokens": 304,
+  "reward": 0.0,
+  "done": true,
+  "correct": false,
+  "status": "incorrect",
+  "submitted": true,
+  "images": [
+    "data/defense_v1/original/image13.png"
+  ],
+  "cost_usd": null,
+  "source_path": "../conference/captcha_data/Select_Animal/image13.png",
+  "training_exposure": "unknown; previously used conference material",
+  "scorer": "defense_v1_maximum_matching",
+  "split_evidence": "fixed_image_ids_before_new_model_calls",
+  "base_id": "image13",
+  "gt": {
+    "points": [
+      {
+        "x": 772,
+        "y": 148
+      },
+      {
+        "x": 812,
+        "y": 150
+      }
+    ]
+  },
+  "initial_observation": [
+    "./reports/solver_defense_v1/d_native/episodes/defense_v1/D1/image13/observations/step_00_00.png"
+  ],
+  "environment_metadata": {
+    "environment": "cognition_adapted_v1.1_numeric_input_box",
+    "main_image_index": 0,
+    "source_images": [
+      "./data/defense_v1/original/image13.png"
+    ],
+    "source_image_sizes": [
+      [
+        1024,
+        1024
+      ]
+    ],
+    "main_image_box": [
+      0,
+      0,
+      1024,
+      1024
+    ],
+    "observation_main_size": [
+      1024,
+      1152
+    ],
+    "coordinate_mapping": {
+      "scale": [
+        1,
+        1
+      ],
+      "offset": [
+        0,
+        0
+      ]
+    },
+    "controls": {
+      "submit": [
+        834,
+        1088,
+        1004,
+        1132
+      ],
+      "undo": [
+        20,
+        1088,
+        190,
+        1132
+      ]
+    },
+    "input_box": null,
+    "grid": null
+  },
+  "elapsed_seconds": 17.37895178794861,
+  "final_answer": {
+    "points": [
+      {
+        "x": 820,
+        "y": 146
+      },
+      {
+        "x": 830,
+        "y": 174
+      }
+    ]
+  },
+  "answer": {
+    "points": [
+      {
+        "x": 820,
+        "y": 146
+      },
+      {
+        "x": 830,
+        "y": 174
+      }
+    ]
+  },
+  "stop_reason": "incorrect",
+  "finished_at": "2026-09-14T15:14:37.302272+00:00"
+}

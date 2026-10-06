@@ -1,0 +1,317 @@
+{
+  "id": "captchabench/Patch_Select/sample_1842",
+  "type": "Patch_Select",
+  "source": "captchabench",
+  "module": "B",
+  "condition": "native_actions",
+  "solver": "C-I",
+  "puzzle_id": "sample_1842",
+  "group_id": "captchabench:Patch_Select:sample_1842",
+  "partition": "evaluation",
+  "model": "models/CaptchaMind-7B",
+  "started_at": "2026-09-13T21:05:20.006768+00:00",
+  "started_unix": 1789333520.006764,
+  "budgets": {
+    "max_calls_per_episode": 30,
+    "max_output_tokens_per_call": 8192,
+    "max_output_tokens_per_episode": 65536,
+    "request_timeout_seconds": 600,
+    "episode_timeout_seconds": 1800
+  },
+  "protocol": "source_native",
+  "action_parser": "lossless_single_action_v1",
+  "steps": [
+    {
+      "step": 1,
+      "text": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [310, 185]}}</tool_call>",
+      "usage": {
+        "prompt_tokens": 639,
+        "completion_tokens": 105,
+        "total_tokens": 744,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "input_tokens": 639,
+      "output_tokens": 105,
+      "finish_reason": "stop",
+      "truncated": false,
+      "returned_model": "models/CaptchaMind-7B",
+      "elapsed_seconds": 3.3789567920030095,
+      "raw_response": {
+        "id": "chatcmpl-a7e71ec5-71f2-4d0d-a1a2-f013d2134b4c",
+        "object": "chat.completion",
+        "created": 1789333523,
+        "model": "models/CaptchaMind-7B",
+        "choices": [
+          {
+            "index": 0,
+            "finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [310, 185]}}</tool_call>",
+              "reasoning_content": "I need to refer to the target description to understand what elements I need to select. The task is to select all the squares containing motorcycles.\n\nI can see the image is a 3x4 grid. Looking at it, I can identify 2 squares that have motorcycles: the 3rd column, 2nd row and the 3rd column, 3rd row.",
+              "reasoning": "I need to refer to the target description to understand what elements I need to select. The task is to select all the squares containing motorcycles.\n\nI can see the image is a 3x4 grid. Looking at it, I can identify 2 squares that have motorcycles: the 3rd column, 2nd row and the 3rd column, 3rd row.",
+              "tool_calls": null,
+              "tool_call_id": null,
+              "name": null
+            },
+            "logprobs": null
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 639,
+          "completion_tokens": 105,
+          "total_tokens": 744,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "timings": {
+          "prompt_n": 639,
+          "cache_n": 0,
+          "predicted_n": 107,
+          "prompt_ms": 534.3693339964375,
+          "prompt_per_token_ms": 0.8362587386485719,
+          "prompt_per_second": 1195.80215283136,
+          "predicted_ms": 2460.776451767537,
+          "predicted_per_token_ms": 22.99791076418259,
+          "predicted_per_second": 43.48221063442947,
+          "peak_memory": 19.988604016,
+          "draft_kind": null,
+          "draft_rounds": null,
+          "draft_n": null,
+          "draft_n_accepted": null
+        }
+      },
+      "response_file": "response_01.json",
+      "action": {
+        "name": "click",
+        "kwargs": {
+          "position": [
+            310,
+            185
+          ]
+        }
+      },
+      "done": false,
+      "reward": 0.0,
+      "observation": [
+        "./reports/solver_defense_v1/b_native/episodes/captchabench/Patch_Select/sample_1842/observations/step_01_00.png"
+      ],
+      "submitted": false
+    },
+    {
+      "step": 2,
+      "text": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [310, 310]}}</tool_call>",
+      "usage": {
+        "prompt_tokens": 1054,
+        "completion_tokens": 74,
+        "total_tokens": 1128,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "input_tokens": 1054,
+      "output_tokens": 74,
+      "finish_reason": "stop",
+      "truncated": false,
+      "returned_model": "models/CaptchaMind-7B",
+      "elapsed_seconds": 2.92335945800005,
+      "raw_response": {
+        "id": "chatcmpl-424fb116-0c90-475f-8dc3-358bc9211a3c",
+        "object": "chat.completion",
+        "created": 1789333526,
+        "model": "models/CaptchaMind-7B",
+        "choices": [
+          {
+            "index": 0,
+            "finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [310, 310]}}</tool_call>",
+              "reasoning_content": "I need to refer to the target label to understand what elements the captcha task requires me to mark. Looking at the first square of the target label, there is a motorcycle in it, so I will click on this sub-image.",
+              "reasoning": "I need to refer to the target label to understand what elements the captcha task requires me to mark. Looking at the first square of the target label, there is a motorcycle in it, so I will click on this sub-image.",
+              "tool_calls": null,
+              "tool_call_id": null,
+              "name": null
+            },
+            "logprobs": null
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 1054,
+          "completion_tokens": 74,
+          "total_tokens": 1128,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "timings": {
+          "prompt_n": 1054,
+          "cache_n": 0,
+          "predicted_n": 76,
+          "prompt_ms": 881.6763750219253,
+          "prompt_per_token_ms": 0.8365050996412954,
+          "prompt_per_second": 1195.449974457793,
+          "predicted_ms": 1753.1541517780472,
+          "predicted_per_token_ms": 23.067817786553253,
+          "predicted_per_second": 43.35043779403019,
+          "peak_memory": 19.988604016,
+          "draft_kind": null,
+          "draft_rounds": null,
+          "draft_n": null,
+          "draft_n_accepted": null
+        }
+      },
+      "response_file": "response_02.json",
+      "action": {
+        "name": "click",
+        "kwargs": {
+          "position": [
+            310,
+            310
+          ]
+        }
+      },
+      "done": false,
+      "reward": 0.0,
+      "observation": [
+        "./reports/solver_defense_v1/b_native/episodes/captchabench/Patch_Select/sample_1842/observations/step_02_00.png"
+      ],
+      "submitted": false
+    },
+    {
+      "step": 3,
+      "text": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [198, 540]}}</tool_call>",
+      "usage": {
+        "prompt_tokens": 1469,
+        "completion_tokens": 44,
+        "total_tokens": 1513,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "input_tokens": 1469,
+      "output_tokens": 44,
+      "finish_reason": "stop",
+      "truncated": false,
+      "returned_model": "models/CaptchaMind-7B",
+      "elapsed_seconds": 2.4715649579884484,
+      "raw_response": {
+        "id": "chatcmpl-12fb91d9-f745-43b6-8d4c-70d5a085c306",
+        "object": "chat.completion",
+        "created": 1789333529,
+        "model": "models/CaptchaMind-7B",
+        "choices": [
+          {
+            "index": 0,
+            "finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [198, 540]}}</tool_call>",
+              "reasoning_content": "I have successfully selected all the squares containing motorcycles. Now I will click submit.",
+              "reasoning": "I have successfully selected all the squares containing motorcycles. Now I will click submit.",
+              "tool_calls": null,
+              "tool_call_id": null,
+              "name": null
+            },
+            "logprobs": null
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 1469,
+          "completion_tokens": 44,
+          "total_tokens": 1513,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "timings": {
+          "prompt_n": 1469,
+          "cache_n": 0,
+          "predicted_n": 46,
+          "prompt_ms": 1195.7681660132948,
+          "prompt_per_token_ms": 0.8140014744814805,
+          "prompt_per_second": 1228.4990031952962,
+          "predicted_ms": 1067.082700023376,
+          "predicted_per_token_ms": 23.197450000508173,
+          "predicted_per_second": 43.10818645920537,
+          "peak_memory": 19.988604016,
+          "draft_kind": null,
+          "draft_rounds": null,
+          "draft_n": null,
+          "draft_n_accepted": null
+        }
+      },
+      "response_file": "response_03.json",
+      "action": {
+        "name": "click",
+        "kwargs": {
+          "position": [
+            198,
+            540
+          ]
+        }
+      },
+      "done": true,
+      "reward": 0.0,
+      "observation": [
+        "./reports/solver_defense_v1/b_native/episodes/captchabench/Patch_Select/sample_1842/observations/step_03_00.png"
+      ],
+      "submitted": true
+    }
+  ],
+  "model_calls": 3,
+  "input_tokens": 3162,
+  "output_tokens": 223,
+  "reward": 0.0,
+  "done": true,
+  "correct": false,
+  "status": "incorrect",
+  "submitted": true,
+  "images": [
+    "data/external/captchabench/captcha/patch_select/sample_1842/sample_1842_step_0.png"
+  ],
+  "cost_usd": null,
+  "source_revision": "960a521e842bd164b08344151b0a4253d23cfc2f",
+  "source_path": "captcha/patch_select/sample_1842",
+  "training_exposure": "unknown",
+  "scorer": "conference_v1",
+  "split_evidence": "upstream_eval_range",
+  "gt": {
+    "correct_patches": [
+      2,
+      3,
+      5,
+      6,
+      10,
+      11,
+      14
+    ],
+    "grid_size": [
+      4,
+      4
+    ]
+  },
+  "initial_observation": [
+    "./reports/solver_defense_v1/b_native/episodes/captchabench/Patch_Select/sample_1842/observations/step_00_00.png"
+  ],
+  "elapsed_seconds": 9.611102104187012,
+  "final_answer": {
+    "answer_type": "multi_select",
+    "indices": [
+      6,
+      10
+    ]
+  },
+  "answer": {
+    "answer_type": "multi_select",
+    "indices": [
+      6,
+      10
+    ]
+  },
+  "stop_reason": "incorrect",
+  "finished_at": "2026-09-13T21:05:29.617759+00:00"
+}

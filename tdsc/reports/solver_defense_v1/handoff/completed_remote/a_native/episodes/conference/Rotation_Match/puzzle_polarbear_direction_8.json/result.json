@@ -1,0 +1,505 @@
+{
+  "id": "conference/Rotation_Match/puzzle_polarbear_direction_8.json",
+  "type": "Rotation_Match",
+  "source": "conference",
+  "module": "A",
+  "condition": "native_actions",
+  "solver": "C-I",
+  "puzzle_id": "puzzle_polarbear_direction_8.json",
+  "group_id": "conference:Rotation_Match:polarbear.png",
+  "partition": "evaluation",
+  "model": "models/CaptchaMind-7B",
+  "started_at": "2026-09-14T11:21:32.159200+00:00",
+  "started_unix": 1789384892.159198,
+  "budgets": {
+    "max_calls_per_episode": 30,
+    "max_output_tokens_per_call": 8192,
+    "max_output_tokens_per_episode": 65536,
+    "request_timeout_seconds": 600,
+    "episode_timeout_seconds": 1800
+  },
+  "protocol": "adapted_native_agent",
+  "action_parser": "lossless_single_action_v1",
+  "steps": [
+    {
+      "step": 1,
+      "text": "<tool_call>{\"name\": \"enter_number\", \"arguments\": {\"number\": 45.0}}</tool_call>",
+      "usage": {
+        "prompt_tokens": 3936,
+        "completion_tokens": 144,
+        "total_tokens": 4080,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "input_tokens": 3936,
+      "output_tokens": 144,
+      "finish_reason": "stop",
+      "truncated": false,
+      "returned_model": "models/CaptchaMind-7B",
+      "elapsed_seconds": 7.04919154199888,
+      "raw_response": {
+        "id": "chatcmpl-0aba8a97-bc07-4a33-9706-30b8b7b28ed0",
+        "object": "chat.completion",
+        "created": 1789384899,
+        "model": "models/CaptchaMind-7B",
+        "choices": [
+          {
+            "index": 0,
+            "finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "<tool_call>{\"name\": \"enter_number\", \"arguments\": {\"number\": 45.0}}</tool_call>",
+              "reasoning_content": "I need to determine the additional clockwise rotation in degrees, within the range [0, 360), required to align the current object's facing direction with the reference direction.\n\nThe reference direction is indicated by the finger in image 1, which is pointing downward. Therefore, the target angle is 270 degrees.\n\nThe current object is the larger polar bear in image 2. Looking at its facing direction, the target angle is 315 degrees.\n\nNow I need to calculate the additional clockwise rotation: 315 - 270 = 45 degrees.",
+              "reasoning": "I need to determine the additional clockwise rotation in degrees, within the range [0, 360), required to align the current object's facing direction with the reference direction.\n\nThe reference direction is indicated by the finger in image 1, which is pointing downward. Therefore, the target angle is 270 degrees.\n\nThe current object is the larger polar bear in image 2. Looking at its facing direction, the target angle is 315 degrees.\n\nNow I need to calculate the additional clockwise rotation: 315 - 270 = 45 degrees.",
+              "tool_calls": null,
+              "tool_call_id": null,
+              "name": null
+            },
+            "logprobs": null
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 3936,
+          "completion_tokens": 144,
+          "total_tokens": 4080,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "timings": {
+          "prompt_n": 3936,
+          "cache_n": 0,
+          "predicted_n": 146,
+          "prompt_ms": 3428.822835005121,
+          "prompt_per_token_ms": 0.8711440129586181,
+          "prompt_per_second": 1147.9158269179345,
+          "predicted_ms": 3429.2349103272186,
+          "predicted_per_token_ms": 23.487910344706975,
+          "predicted_per_second": 42.5750943921391,
+          "peak_memory": 35.615165266,
+          "draft_kind": null,
+          "draft_rounds": null,
+          "draft_n": null,
+          "draft_n_accepted": null
+        }
+      },
+      "response_file": "response_01.json",
+      "action": {
+        "name": "enter_number",
+        "kwargs": {
+          "number": 45.0
+        }
+      },
+      "done": false,
+      "reward": 0.0,
+      "observation": [
+        "./reports/solver_defense_v1/a_native/episodes/conference/Rotation_Match/puzzle_polarbear_direction_8.json/observations/step_01_00.png",
+        "./reports/solver_defense_v1/a_native/episodes/conference/Rotation_Match/puzzle_polarbear_direction_8.json/observations/step_01_01.png"
+      ],
+      "submitted": false
+    },
+    {
+      "step": 2,
+      "text": "<tool_call>{\"name\": \"enter_number\", \"arguments\": {\"number\": 45.0}}</tool_call>",
+      "usage": {
+        "prompt_tokens": 7478,
+        "completion_tokens": 119,
+        "total_tokens": 7597,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "input_tokens": 7478,
+      "output_tokens": 119,
+      "finish_reason": "stop",
+      "truncated": false,
+      "returned_model": "models/CaptchaMind-7B",
+      "elapsed_seconds": 10.055817374988692,
+      "raw_response": {
+        "id": "chatcmpl-1c268bb3-e781-4fce-9d5d-cf875d0f7bbc",
+        "object": "chat.completion",
+        "created": 1789384909,
+        "model": "models/CaptchaMind-7B",
+        "choices": [
+          {
+            "index": 0,
+            "finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "<tool_call>{\"name\": \"enter_number\", \"arguments\": {\"number\": 45.0}}</tool_call>",
+              "reasoning_content": "I need to determine the additional clockwise angle in degrees, relative to the reference image, that aligns the target object's facing direction with the reference direction.\n\nThe reference direction is indicated by the finger in image 1, pointing downward. The target object in image 2 is facing upward.\n\nThe reference direction (finger in image 1) and the target object's facing direction (upward in image 2) have a clockwise angle of 45.0 degrees.",
+              "reasoning": "I need to determine the additional clockwise angle in degrees, relative to the reference image, that aligns the target object's facing direction with the reference direction.\n\nThe reference direction is indicated by the finger in image 1, pointing downward. The target object in image 2 is facing upward.\n\nThe reference direction (finger in image 1) and the target object's facing direction (upward in image 2) have a clockwise angle of 45.0 degrees.",
+              "tool_calls": null,
+              "tool_call_id": null,
+              "name": null
+            },
+            "logprobs": null
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 7478,
+          "completion_tokens": 119,
+          "total_tokens": 7597,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "timings": {
+          "prompt_n": 7478,
+          "cache_n": 0,
+          "predicted_n": 121,
+          "prompt_ms": 6850.347666011658,
+          "prompt_per_token_ms": 0.9160668181347497,
+          "prompt_per_second": 1091.6234276841847,
+          "predicted_ms": 2901.1254524101482,
+          "predicted_per_token_ms": 23.97624340834833,
+          "predicted_per_second": 41.707951615631664,
+          "peak_memory": 35.615165266,
+          "draft_kind": null,
+          "draft_rounds": null,
+          "draft_n": null,
+          "draft_n_accepted": null
+        }
+      },
+      "response_file": "response_02.json",
+      "action": {
+        "name": "enter_number",
+        "kwargs": {
+          "number": 45.0
+        }
+      },
+      "done": false,
+      "reward": 0.0,
+      "observation": [
+        "./reports/solver_defense_v1/a_native/episodes/conference/Rotation_Match/puzzle_polarbear_direction_8.json/observations/step_02_00.png",
+        "./reports/solver_defense_v1/a_native/episodes/conference/Rotation_Match/puzzle_polarbear_direction_8.json/observations/step_02_01.png"
+      ],
+      "submitted": false
+    },
+    {
+      "step": 3,
+      "text": "<tool_call>{\"name\": \"enter_number\", \"arguments\": {\"number\": 0.0}}</tool_call>",
+      "usage": {
+        "prompt_tokens": 11020,
+        "completion_tokens": 179,
+        "total_tokens": 11199,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "input_tokens": 11020,
+      "output_tokens": 179,
+      "finish_reason": "stop",
+      "truncated": false,
+      "returned_model": "models/CaptchaMind-7B",
+      "elapsed_seconds": 15.43341254198458,
+      "raw_response": {
+        "id": "chatcmpl-684551c5-a2bc-4538-8edb-0038caf9c899",
+        "object": "chat.completion",
+        "created": 1789384925,
+        "model": "models/CaptchaMind-7B",
+        "choices": [
+          {
+            "index": 0,
+            "finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "<tool_call>{\"name\": \"enter_number\", \"arguments\": {\"number\": 0.0}}</tool_call>",
+              "reasoning_content": "I need to determine the additional clockwise rotation in degrees, within the range [0, 360), required to align the CURRENT object's facing direction with the REFERENCE direction.\n\nThe reference direction is indicated by the finger in image 1, pointing downward. The current object's facing direction is indicated by the orientation of the MAIN puzzle in image 2, which is facing upper-right.\n\nThe reference direction as an angle from the upward direction is 225.0 degrees. The current object's facing direction as an angle from the upward direction is 45.0 degrees.\n\nThe difference is 180.0 degrees. Since 180.0 degrees is within the range [0, 360), no additional rotation is needed.",
+              "reasoning": "I need to determine the additional clockwise rotation in degrees, within the range [0, 360), required to align the CURRENT object's facing direction with the REFERENCE direction.\n\nThe reference direction is indicated by the finger in image 1, pointing downward. The current object's facing direction is indicated by the orientation of the MAIN puzzle in image 2, which is facing upper-right.\n\nThe reference direction as an angle from the upward direction is 225.0 degrees. The current object's facing direction as an angle from the upward direction is 45.0 degrees.\n\nThe difference is 180.0 degrees. Since 180.0 degrees is within the range [0, 360), no additional rotation is needed.",
+              "tool_calls": null,
+              "tool_call_id": null,
+              "name": null
+            },
+            "logprobs": null
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 11020,
+          "completion_tokens": 179,
+          "total_tokens": 11199,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "timings": {
+          "prompt_n": 11020,
+          "cache_n": 0,
+          "predicted_n": 181,
+          "prompt_ms": 10601.198418036802,
+          "prompt_per_token_ms": 0.9619962266821054,
+          "prompt_per_second": 1039.5051168225143,
+          "predicted_ms": 4426.127995828573,
+          "predicted_per_token_ms": 24.453745833307035,
+          "predicted_per_second": 40.893530456097146,
+          "peak_memory": 35.615165266,
+          "draft_kind": null,
+          "draft_rounds": null,
+          "draft_n": null,
+          "draft_n_accepted": null
+        }
+      },
+      "response_file": "response_03.json",
+      "action": {
+        "name": "enter_number",
+        "kwargs": {
+          "number": 0.0
+        }
+      },
+      "done": false,
+      "reward": 0.0,
+      "observation": [
+        "./reports/solver_defense_v1/a_native/episodes/conference/Rotation_Match/puzzle_polarbear_direction_8.json/observations/step_03_00.png",
+        "./reports/solver_defense_v1/a_native/episodes/conference/Rotation_Match/puzzle_polarbear_direction_8.json/observations/step_03_01.png"
+      ],
+      "submitted": false
+    },
+    {
+      "step": 4,
+      "text": "<tool_call>{\"name\": \"enter_number\", \"arguments\": {\"number\": 0.0}}</tool_call>",
+      "usage": {
+        "prompt_tokens": 14561,
+        "completion_tokens": 140,
+        "total_tokens": 14701,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "input_tokens": 14561,
+      "output_tokens": 140,
+      "finish_reason": "stop",
+      "truncated": false,
+      "returned_model": "models/CaptchaMind-7B",
+      "elapsed_seconds": 18.55985679200967,
+      "raw_response": {
+        "id": "chatcmpl-b83b8d1a-0a19-4a25-8d3f-f2604a55353a",
+        "object": "chat.completion",
+        "created": 1789384944,
+        "model": "models/CaptchaMind-7B",
+        "choices": [
+          {
+            "index": 0,
+            "finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "<tool_call>{\"name\": \"enter_number\", \"arguments\": {\"number\": 0.0}}</tool_call>",
+              "reasoning_content": "I need to determine the additional clockwise rotation in degrees, within the range [0, 360), required to align the current object's facing direction with the reference direction.\n\nThe reference direction is indicated by the finger in image 1, pointing downward. The current object's facing direction is indicated by the orientation of the main puzzle in image 2, which is facing upward.\n\nThe angle difference between facing downward and facing upward is 180 degrees. Since 180 degrees is within the range [0, 360), no additional rotation is needed.",
+              "reasoning": "I need to determine the additional clockwise rotation in degrees, within the range [0, 360), required to align the current object's facing direction with the reference direction.\n\nThe reference direction is indicated by the finger in image 1, pointing downward. The current object's facing direction is indicated by the orientation of the main puzzle in image 2, which is facing upward.\n\nThe angle difference between facing downward and facing upward is 180 degrees. Since 180 degrees is within the range [0, 360), no additional rotation is needed.",
+              "tool_calls": null,
+              "tool_call_id": null,
+              "name": null
+            },
+            "logprobs": null
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 14561,
+          "completion_tokens": 140,
+          "total_tokens": 14701,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "timings": {
+          "prompt_n": 14561,
+          "cache_n": 0,
+          "predicted_n": 142,
+          "prompt_ms": 14499.115833052201,
+          "prompt_per_token_ms": 0.995750005703743,
+          "prompt_per_second": 1004.2681338407358,
+          "predicted_ms": 3547.775920471821,
+          "predicted_per_token_ms": 24.984337468111416,
+          "predicted_per_second": 40.025075761018,
+          "peak_memory": 35.615165266,
+          "draft_kind": null,
+          "draft_rounds": null,
+          "draft_n": null,
+          "draft_n_accepted": null
+        }
+      },
+      "response_file": "response_04.json",
+      "action": {
+        "name": "enter_number",
+        "kwargs": {
+          "number": 0.0
+        }
+      },
+      "done": false,
+      "reward": 0.0,
+      "observation": [
+        "./reports/solver_defense_v1/a_native/episodes/conference/Rotation_Match/puzzle_polarbear_direction_8.json/observations/step_04_00.png",
+        "./reports/solver_defense_v1/a_native/episodes/conference/Rotation_Match/puzzle_polarbear_direction_8.json/observations/step_04_01.png"
+      ],
+      "submitted": false
+    },
+    {
+      "step": 5,
+      "text": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [1154, 866]}}</tool_call>",
+      "usage": {
+        "prompt_tokens": 18102,
+        "completion_tokens": 147,
+        "total_tokens": 18249,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "input_tokens": 18102,
+      "output_tokens": 147,
+      "finish_reason": "stop",
+      "truncated": false,
+      "returned_model": "models/CaptchaMind-7B",
+      "elapsed_seconds": 23.098184250004124,
+      "raw_response": {
+        "id": "chatcmpl-150f3353-13bb-47e8-8ea1-ce1174191d99",
+        "object": "chat.completion",
+        "created": 1789384967,
+        "model": "models/CaptchaMind-7B",
+        "choices": [
+          {
+            "index": 0,
+            "finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [1154, 866]}}</tool_call>",
+              "reasoning_content": "I need to determine the additional clockwise rotation in degrees, within the range [0, 360), required to align the CURRENT object's facing direction with the REFERENCE direction.\n\nThe reference image is at the upper-left, the x-axis is horizontal, and the y-axis is vertical. The reference direction is indicated by a yellow finger pointing downward.\n\nThe current object is the large polar bear in the main puzzle. Its facing direction is upper-right.\n\nThe reference direction and the current object's facing direction are the same. Therefore, the required clockwise rotation is 0.0 degrees.",
+              "reasoning": "I need to determine the additional clockwise rotation in degrees, within the range [0, 360), required to align the CURRENT object's facing direction with the REFERENCE direction.\n\nThe reference image is at the upper-left, the x-axis is horizontal, and the y-axis is vertical. The reference direction is indicated by a yellow finger pointing downward.\n\nThe current object is the large polar bear in the main puzzle. Its facing direction is upper-right.\n\nThe reference direction and the current object's facing direction are the same. Therefore, the required clockwise rotation is 0.0 degrees.",
+              "tool_calls": null,
+              "tool_call_id": null,
+              "name": null
+            },
+            "logprobs": null
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 18102,
+          "completion_tokens": 147,
+          "total_tokens": 18249,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "timings": {
+          "prompt_n": 18102,
+          "cache_n": 0,
+          "predicted_n": 149,
+          "prompt_ms": 18582.64496002812,
+          "prompt_per_token_ms": 1.026552036240643,
+          "prompt_per_second": 974.1347391040402,
+          "predicted_ms": 3882.7629366616648,
+          "predicted_per_token_ms": 26.058811655447414,
+          "predicted_per_second": 38.374735318790215,
+          "peak_memory": 35.615165266,
+          "draft_kind": null,
+          "draft_rounds": null,
+          "draft_n": null,
+          "draft_n_accepted": null
+        }
+      },
+      "response_file": "response_05.json",
+      "action": {
+        "name": "click",
+        "kwargs": {
+          "position": [
+            1154,
+            866
+          ]
+        }
+      },
+      "done": true,
+      "reward": 0.0,
+      "observation": [
+        "./reports/solver_defense_v1/a_native/episodes/conference/Rotation_Match/puzzle_polarbear_direction_8.json/observations/step_05_00.png",
+        "./reports/solver_defense_v1/a_native/episodes/conference/Rotation_Match/puzzle_polarbear_direction_8.json/observations/step_05_01.png"
+      ],
+      "submitted": true
+    }
+  ],
+  "model_calls": 5,
+  "input_tokens": 55097,
+  "output_tokens": 729,
+  "reward": 0.0,
+  "done": true,
+  "correct": false,
+  "status": "incorrect",
+  "submitted": true,
+  "images": [
+    "data/conference/Rotation_Match/direction_8.png",
+    "data/conference/Rotation_Match/polarbear.png"
+  ],
+  "cost_usd": null,
+  "scorer": "conference_v1",
+  "split_evidence": "historical_benchmark",
+  "gt": {
+    "correct_angle": 180.0,
+    "angle_tol_deg": 5.0
+  },
+  "initial_observation": [
+    "./reports/solver_defense_v1/a_native/episodes/conference/Rotation_Match/puzzle_polarbear_direction_8.json/observations/step_00_00.png",
+    "./reports/solver_defense_v1/a_native/episodes/conference/Rotation_Match/puzzle_polarbear_direction_8.json/observations/step_00_01.png"
+  ],
+  "environment_metadata": {
+    "environment": "cognition_adapted_v1.1_numeric_input_box",
+    "main_image_index": 1,
+    "source_images": [
+      "./data/conference/Rotation_Match/direction_8.png",
+      "./data/conference/Rotation_Match/polarbear.png"
+    ],
+    "source_image_sizes": [
+      [
+        1024,
+        1536
+      ],
+      [
+        1280,
+        732
+      ]
+    ],
+    "main_image_box": [
+      0,
+      0,
+      1280,
+      732
+    ],
+    "observation_main_size": [
+      1280,
+      892
+    ],
+    "coordinate_mapping": {
+      "scale": [
+        1,
+        1
+      ],
+      "offset": [
+        0,
+        0
+      ]
+    },
+    "controls": {
+      "submit": [
+        1042,
+        812,
+        1255,
+        867
+      ]
+    },
+    "input_box": [
+      25,
+      812,
+      1017,
+      867
+    ],
+    "grid": null
+  },
+  "elapsed_seconds": 75.99156904220581,
+  "final_answer": {
+    "answer_type": "rotation",
+    "angle": 0.0
+  },
+  "answer": {
+    "answer_type": "rotation",
+    "angle": 0.0
+  },
+  "stop_reason": "incorrect",
+  "finished_at": "2026-09-14T11:22:48.150339+00:00"
+}

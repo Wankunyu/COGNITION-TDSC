@@ -1,0 +1,276 @@
+{
+  "id": "defense_v1/D0/image12",
+  "type": "Select_Animal",
+  "source": "conference_defense",
+  "module": "D",
+  "condition": "D0",
+  "solver": "C-I",
+  "puzzle_id": "image12.png",
+  "group_id": "defense_v1/image12",
+  "partition": "evaluation",
+  "model": "models/CaptchaMind-7B",
+  "started_at": "2026-09-14T15:09:47.624575+00:00",
+  "started_unix": 1789398587.624573,
+  "budgets": {
+    "max_calls_per_episode": 30,
+    "max_output_tokens_per_call": 8192,
+    "max_output_tokens_per_episode": 65536,
+    "request_timeout_seconds": 600,
+    "episode_timeout_seconds": 1800
+  },
+  "protocol": "adapted_native_agent",
+  "action_parser": "lossless_single_action_v1",
+  "steps": [
+    {
+      "step": 1,
+      "text": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [498, 256]}}</tool_call>",
+      "usage": {
+        "prompt_tokens": 1901,
+        "completion_tokens": 77,
+        "total_tokens": 1978,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "input_tokens": 1901,
+      "output_tokens": 77,
+      "finish_reason": "stop",
+      "truncated": false,
+      "returned_model": "models/CaptchaMind-7B",
+      "elapsed_seconds": 3.536504874995444,
+      "raw_response": {
+        "id": "chatcmpl-1b4b8547-ae14-4ca9-a490-b958a05dde3e",
+        "object": "chat.completion",
+        "created": 1789398591,
+        "model": "models/CaptchaMind-7B",
+        "choices": [
+          {
+            "index": 0,
+            "finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [498, 256]}}</tool_call>",
+              "reasoning_content": "I need to refer to the task requirement: Select all grid cells containing the penguin. Looking at the image, the penguin is located in the grid cell at row 1, column 1. So I will click on this cell.",
+              "reasoning": "I need to refer to the task requirement: Select all grid cells containing the penguin. Looking at the image, the penguin is located in the grid cell at row 1, column 1. So I will click on this cell.",
+              "tool_calls": null,
+              "tool_call_id": null,
+              "name": null
+            },
+            "logprobs": null
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 1901,
+          "completion_tokens": 77,
+          "total_tokens": 1978,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "timings": {
+          "prompt_n": 1901,
+          "cache_n": 0,
+          "predicted_n": 79,
+          "prompt_ms": 1570.5710839829408,
+          "prompt_per_token_ms": 0.8261815276080698,
+          "prompt_per_second": 1210.387749645242,
+          "predicted_ms": 1827.439394245933,
+          "predicted_per_token_ms": 23.132144230961178,
+          "predicted_per_second": 43.229887813925686,
+          "peak_memory": 35.615165266,
+          "draft_kind": null,
+          "draft_rounds": null,
+          "draft_n": null,
+          "draft_n_accepted": null
+        }
+      },
+      "response_file": "response_01.json",
+      "action": {
+        "name": "click",
+        "kwargs": {
+          "position": [
+            498,
+            256
+          ]
+        }
+      },
+      "done": false,
+      "reward": 0.0,
+      "observation": [
+        "./reports/solver_defense_v1/d_native/episodes/defense_v1/D0/image12/observations/step_01_00.png"
+      ],
+      "submitted": false
+    },
+    {
+      "step": 2,
+      "text": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [930, 1102]}}</tool_call>",
+      "usage": {
+        "prompt_tokens": 3455,
+        "completion_tokens": 74,
+        "total_tokens": 3529,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "input_tokens": 3455,
+      "output_tokens": 74,
+      "finish_reason": "stop",
+      "truncated": false,
+      "returned_model": "models/CaptchaMind-7B",
+      "elapsed_seconds": 4.911864708003122,
+      "raw_response": {
+        "id": "chatcmpl-03808468-54c6-40f6-9699-227b9ae43a3b",
+        "object": "chat.completion",
+        "created": 1789398596,
+        "model": "models/CaptchaMind-7B",
+        "choices": [
+          {
+            "index": 0,
+            "finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [930, 1102]}}</tool_call>",
+              "reasoning_content": "I need to select all grid cells containing the penguin. Looking at the image, the penguin is in the second row, first column. I can see that this cell is already selected. So I will click submit.",
+              "reasoning": "I need to select all grid cells containing the penguin. Looking at the image, the penguin is in the second row, first column. I can see that this cell is already selected. So I will click submit.",
+              "tool_calls": null,
+              "tool_call_id": null,
+              "name": null
+            },
+            "logprobs": null
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 3455,
+          "completion_tokens": 74,
+          "total_tokens": 3529,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "timings": {
+          "prompt_n": 3455,
+          "cache_n": 0,
+          "predicted_n": 76,
+          "prompt_ms": 2955.684959044447,
+          "prompt_per_token_ms": 0.8554804512429659,
+          "prompt_per_second": 1168.9337828199991,
+          "predicted_ms": 1775.295822547438,
+          "predicted_per_token_ms": 23.35915555983471,
+          "predicted_per_second": 42.80976670746894,
+          "peak_memory": 35.615165266,
+          "draft_kind": null,
+          "draft_rounds": null,
+          "draft_n": null,
+          "draft_n_accepted": null
+        }
+      },
+      "response_file": "response_02.json",
+      "action": {
+        "name": "click",
+        "kwargs": {
+          "position": [
+            930,
+            1102
+          ]
+        }
+      },
+      "done": true,
+      "reward": 1.0,
+      "observation": [
+        "./reports/solver_defense_v1/d_native/episodes/defense_v1/D0/image12/observations/step_02_00.png"
+      ],
+      "submitted": true
+    }
+  ],
+  "model_calls": 2,
+  "input_tokens": 5356,
+  "output_tokens": 151,
+  "reward": 1.0,
+  "done": true,
+  "correct": true,
+  "status": "correct",
+  "submitted": true,
+  "images": [
+    "data/defense_v1/original/image12.png"
+  ],
+  "cost_usd": null,
+  "source_path": "../conference/captcha_data/Select_Animal/image12.png",
+  "training_exposure": "unknown; previously used conference material",
+  "scorer": "defense_v1_maximum_matching",
+  "split_evidence": "fixed_image_ids_before_new_model_calls",
+  "base_id": "image12",
+  "gt": {
+    "indices": [
+      1
+    ]
+  },
+  "initial_observation": [
+    "./reports/solver_defense_v1/d_native/episodes/defense_v1/D0/image12/observations/step_00_00.png"
+  ],
+  "environment_metadata": {
+    "environment": "cognition_adapted_v1.1_numeric_input_box",
+    "main_image_index": 0,
+    "source_images": [
+      "./data/defense_v1/original/image12.png"
+    ],
+    "source_image_sizes": [
+      [
+        1024,
+        1024
+      ]
+    ],
+    "main_image_box": [
+      0,
+      0,
+      1024,
+      1024
+    ],
+    "observation_main_size": [
+      1024,
+      1152
+    ],
+    "coordinate_mapping": {
+      "scale": [
+        1,
+        1
+      ],
+      "offset": [
+        0,
+        0
+      ]
+    },
+    "controls": {
+      "submit": [
+        834,
+        1088,
+        1004,
+        1132
+      ]
+    },
+    "input_box": null,
+    "grid": {
+      "rows": 2,
+      "cols": 3,
+      "grid_box": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "source": "manifest.layout"
+    }
+  },
+  "elapsed_seconds": 8.82265305519104,
+  "final_answer": {
+    "indices": [
+      1
+    ]
+  },
+  "answer": {
+    "indices": [
+      1
+    ]
+  },
+  "stop_reason": "correct",
+  "finished_at": "2026-09-14T15:09:56.446729+00:00"
+}

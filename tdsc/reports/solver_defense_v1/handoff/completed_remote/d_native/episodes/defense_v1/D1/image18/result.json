@@ -1,0 +1,281 @@
+{
+  "id": "defense_v1/D1/image18",
+  "type": "Select_Animal_Optimized",
+  "source": "conference_defense",
+  "module": "D",
+  "condition": "D1",
+  "solver": "C-I",
+  "puzzle_id": "image18.png",
+  "group_id": "defense_v1/image18",
+  "partition": "evaluation",
+  "model": "models/CaptchaMind-7B",
+  "started_at": "2026-09-14T15:24:19.729974+00:00",
+  "started_unix": 1789399459.729972,
+  "budgets": {
+    "max_calls_per_episode": 30,
+    "max_output_tokens_per_call": 8192,
+    "max_output_tokens_per_episode": 65536,
+    "request_timeout_seconds": 600,
+    "episode_timeout_seconds": 1800
+  },
+  "protocol": "adapted_native_agent",
+  "action_parser": "lossless_single_action_v1",
+  "steps": [
+    {
+      "step": 1,
+      "text": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [480, 135]}}</tool_call><tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [555, 135]}}</tool_call>",
+      "usage": {
+        "prompt_tokens": 1928,
+        "completion_tokens": 137,
+        "total_tokens": 2065,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "input_tokens": 1928,
+      "output_tokens": 137,
+      "finish_reason": "stop",
+      "truncated": false,
+      "returned_model": "models/CaptchaMind-7B",
+      "elapsed_seconds": 4.94409158299095,
+      "raw_response": {
+        "id": "chatcmpl-ca8133d8-3ae2-4bb3-b9b8-e2da414b2213",
+        "object": "chat.completion",
+        "created": 1789399464,
+        "model": "models/CaptchaMind-7B",
+        "choices": [
+          {
+            "index": 0,
+            "finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [480, 135]}}</tool_call><tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [555, 135]}}</tool_call>",
+              "reasoning_content": "I need to refer to the definition to complete this captcha task. The target is to mark all the actually visible eyes of the fox in the MAIN puzzle. Looking at the image, I can see there is only one fox, and it is located in the second column of the first row. Looking at the fox in the target, I can see both of its eyes are actually visible. So I will mark two points.",
+              "reasoning": "I need to refer to the definition to complete this captcha task. The target is to mark all the actually visible eyes of the fox in the MAIN puzzle. Looking at the image, I can see there is only one fox, and it is located in the second column of the first row. Looking at the fox in the target, I can see both of its eyes are actually visible. So I will mark two points.",
+              "tool_calls": null,
+              "tool_call_id": null,
+              "name": null
+            },
+            "logprobs": null
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 1928,
+          "completion_tokens": 137,
+          "total_tokens": 2065,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "timings": {
+          "prompt_n": 1928,
+          "cache_n": 0,
+          "predicted_n": 139,
+          "prompt_ms": 1596.2371669884305,
+          "prompt_per_token_ms": 0.8279238417989785,
+          "prompt_per_second": 1207.8405639667542,
+          "predicted_ms": 3213.6477681224405,
+          "predicted_per_token_ms": 23.11976811598878,
+          "predicted_per_second": 43.25302896565112,
+          "peak_memory": 35.615165266,
+          "draft_kind": null,
+          "draft_rounds": null,
+          "draft_n": null,
+          "draft_n_accepted": null
+        }
+      },
+      "response_file": "response_01.json",
+      "action": {
+        "name": "click",
+        "kwargs": {
+          "position": [
+            480,
+            135
+          ]
+        }
+      },
+      "done": false,
+      "reward": 0.0,
+      "observation": [
+        "./reports/solver_defense_v1/d_native/episodes/defense_v1/D1/image18/observations/step_01_00.png"
+      ],
+      "submitted": false
+    },
+    {
+      "step": 2,
+      "text": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [919, 1102]}}</tool_call>",
+      "usage": {
+        "prompt_tokens": 3507,
+        "completion_tokens": 79,
+        "total_tokens": 3586,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "input_tokens": 3507,
+      "output_tokens": 79,
+      "finish_reason": "stop",
+      "truncated": false,
+      "returned_model": "models/CaptchaMind-7B",
+      "elapsed_seconds": 5.077857166994363,
+      "raw_response": {
+        "id": "chatcmpl-fc0f2f9c-f44a-4631-a3c3-d06382497641",
+        "object": "chat.completion",
+        "created": 1789399469,
+        "model": "models/CaptchaMind-7B",
+        "choices": [
+          {
+            "index": 0,
+            "finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [919, 1102]}}</tool_call>",
+              "reasoning_content": "I need to refer to the definition of the task to complete it: 1. Identify all actually visible eyes of the fox. 2. Include one point per visible eye; do not include hidden eyes. 3. Order does not matter.",
+              "reasoning": "I need to refer to the definition of the task to complete it: 1. Identify all actually visible eyes of the fox. 2. Include one point per visible eye; do not include hidden eyes. 3. Order does not matter.",
+              "tool_calls": null,
+              "tool_call_id": null,
+              "name": null
+            },
+            "logprobs": null
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 3507,
+          "completion_tokens": 79,
+          "total_tokens": 3586,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "timings": {
+          "prompt_n": 3507,
+          "cache_n": 0,
+          "predicted_n": 81,
+          "prompt_ms": 2999.4731249753386,
+          "prompt_per_token_ms": 0.8552817579057139,
+          "prompt_per_second": 1169.2053416977471,
+          "predicted_ms": 1894.3822268996885,
+          "predicted_per_token_ms": 23.387434899996155,
+          "predicted_per_second": 42.7580025033085,
+          "peak_memory": 35.615165266,
+          "draft_kind": null,
+          "draft_rounds": null,
+          "draft_n": null,
+          "draft_n_accepted": null
+        }
+      },
+      "response_file": "response_02.json",
+      "action": {
+        "name": "click",
+        "kwargs": {
+          "position": [
+            919,
+            1102
+          ]
+        }
+      },
+      "done": true,
+      "reward": 1.0,
+      "observation": [
+        "./reports/solver_defense_v1/d_native/episodes/defense_v1/D1/image18/observations/step_02_00.png"
+      ],
+      "submitted": true
+    }
+  ],
+  "model_calls": 2,
+  "input_tokens": 5435,
+  "output_tokens": 216,
+  "reward": 1.0,
+  "done": true,
+  "correct": true,
+  "status": "correct",
+  "submitted": true,
+  "images": [
+    "data/defense_v1/original/image18.png"
+  ],
+  "cost_usd": null,
+  "source_path": "../conference/captcha_data/Select_Animal/image18.png",
+  "training_exposure": "unknown; previously used conference material",
+  "scorer": "defense_v1_maximum_matching",
+  "split_evidence": "fixed_image_ids_before_new_model_calls",
+  "base_id": "image18",
+  "gt": {
+    "points": [
+      {
+        "x": 487,
+        "y": 128
+      }
+    ]
+  },
+  "initial_observation": [
+    "./reports/solver_defense_v1/d_native/episodes/defense_v1/D1/image18/observations/step_00_00.png"
+  ],
+  "environment_metadata": {
+    "environment": "cognition_adapted_v1.1_numeric_input_box",
+    "main_image_index": 0,
+    "source_images": [
+      "./data/defense_v1/original/image18.png"
+    ],
+    "source_image_sizes": [
+      [
+        1024,
+        1024
+      ]
+    ],
+    "main_image_box": [
+      0,
+      0,
+      1024,
+      1024
+    ],
+    "observation_main_size": [
+      1024,
+      1152
+    ],
+    "coordinate_mapping": {
+      "scale": [
+        1,
+        1
+      ],
+      "offset": [
+        0,
+        0
+      ]
+    },
+    "controls": {
+      "submit": [
+        834,
+        1088,
+        1004,
+        1132
+      ],
+      "undo": [
+        20,
+        1088,
+        190,
+        1132
+      ]
+    },
+    "input_box": null,
+    "grid": null
+  },
+  "elapsed_seconds": 10.399269104003906,
+  "final_answer": {
+    "points": [
+      {
+        "x": 480,
+        "y": 135
+      }
+    ]
+  },
+  "answer": {
+    "points": [
+      {
+        "x": 480,
+        "y": 135
+      }
+    ]
+  },
+  "stop_reason": "correct",
+  "finished_at": "2026-09-14T15:24:30.128764+00:00"
+}

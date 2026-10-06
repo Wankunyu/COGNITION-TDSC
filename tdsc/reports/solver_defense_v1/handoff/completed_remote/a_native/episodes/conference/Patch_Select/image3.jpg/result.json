@@ -1,0 +1,281 @@
+{
+  "id": "conference/Patch_Select/image3.jpg",
+  "type": "Patch_Select",
+  "source": "conference",
+  "module": "A",
+  "condition": "native_actions",
+  "solver": "C-I",
+  "puzzle_id": "image3.jpg",
+  "group_id": "conference:Patch_Select:image3.jpg",
+  "partition": "evaluation",
+  "model": "models/CaptchaMind-7B",
+  "started_at": "2026-09-13T23:53:27.446503+00:00",
+  "started_unix": 1789343607.4465,
+  "budgets": {
+    "max_calls_per_episode": 30,
+    "max_output_tokens_per_call": 8192,
+    "max_output_tokens_per_episode": 65536,
+    "request_timeout_seconds": 600,
+    "episode_timeout_seconds": 1800
+  },
+  "protocol": "adapted_native_agent",
+  "action_parser": "lossless_single_action_v1",
+  "steps": [
+    {
+      "step": 1,
+      "text": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [166, 166]}}</tool_call>",
+      "usage": {
+        "prompt_tokens": 669,
+        "completion_tokens": 104,
+        "total_tokens": 773,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "input_tokens": 669,
+      "output_tokens": 104,
+      "finish_reason": "stop",
+      "truncated": false,
+      "returned_model": "models/CaptchaMind-7B",
+      "elapsed_seconds": 3.0493878750130534,
+      "raw_response": {
+        "id": "chatcmpl-69159cec-c3e1-447c-a36b-564d96d86268",
+        "object": "chat.completion",
+        "created": 1789343610,
+        "model": "models/CaptchaMind-7B",
+        "choices": [
+          {
+            "index": 0,
+            "finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [166, 166]}}</tool_call>",
+              "reasoning_content": "I need to refer to the target pattern to select all the squares containing the hourglass. Looking at the reference images, the target pattern has the hourglass as the key part, and it is a transparent hourglass with a light brown color. Looking at the current image, there is one square in the 2nd row and 2nd column that matches this target pattern.",
+              "reasoning": "I need to refer to the target pattern to select all the squares containing the hourglass. Looking at the reference images, the target pattern has the hourglass as the key part, and it is a transparent hourglass with a light brown color. Looking at the current image, there is one square in the 2nd row and 2nd column that matches this target pattern.",
+              "tool_calls": null,
+              "tool_call_id": null,
+              "name": null
+            },
+            "logprobs": null
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 669,
+          "completion_tokens": 104,
+          "total_tokens": 773,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "timings": {
+          "prompt_n": 669,
+          "cache_n": 0,
+          "predicted_n": 106,
+          "prompt_ms": 523.1573340133764,
+          "prompt_per_token_ms": 0.7819990045042995,
+          "prompt_per_second": 1278.774006411797,
+          "predicted_ms": 2443.5884300486314,
+          "predicted_per_token_ms": 23.052721038194637,
+          "predicted_per_second": 43.37882709564573,
+          "peak_memory": 30.161962916,
+          "draft_kind": null,
+          "draft_rounds": null,
+          "draft_n": null,
+          "draft_n_accepted": null
+        }
+      },
+      "response_file": "response_01.json",
+      "action": {
+        "name": "click",
+        "kwargs": {
+          "position": [
+            166,
+            166
+          ]
+        }
+      },
+      "done": false,
+      "reward": 0.0,
+      "observation": [
+        "./reports/solver_defense_v1/a_native/episodes/conference/Patch_Select/image3.jpg/observations/step_01_00.png"
+      ],
+      "submitted": false
+    },
+    {
+      "step": 2,
+      "text": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [332, 466]}}</tool_call>",
+      "usage": {
+        "prompt_tokens": 958,
+        "completion_tokens": 94,
+        "total_tokens": 1052,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "input_tokens": 958,
+      "output_tokens": 94,
+      "finish_reason": "stop",
+      "truncated": false,
+      "returned_model": "models/CaptchaMind-7B",
+      "elapsed_seconds": 3.0518405420007184,
+      "raw_response": {
+        "id": "chatcmpl-0a212de9-651c-485c-8977-73170f415330",
+        "object": "chat.completion",
+        "created": 1789343613,
+        "model": "models/CaptchaMind-7B",
+        "choices": [
+          {
+            "index": 0,
+            "finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [332, 466]}}</tool_call>",
+              "reasoning_content": "I need to refer to the target pattern to select all the squares containing the hourglass. Looking at the reference image, the target pattern is located at the 3rd column and 2nd row in the MAIN puzzle. I can see that this exact location in the current image is already selected. So I will click submit.",
+              "reasoning": "I need to refer to the target pattern to select all the squares containing the hourglass. Looking at the reference image, the target pattern is located at the 3rd column and 2nd row in the MAIN puzzle. I can see that this exact location in the current image is already selected. So I will click submit.",
+              "tool_calls": null,
+              "tool_call_id": null,
+              "name": null
+            },
+            "logprobs": null
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 958,
+          "completion_tokens": 94,
+          "total_tokens": 1052,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "timings": {
+          "prompt_n": 958,
+          "cache_n": 0,
+          "predicted_n": 96,
+          "prompt_ms": 740.9804170019925,
+          "prompt_per_token_ms": 0.7734659885198251,
+          "prompt_per_second": 1292.8816713889269,
+          "predicted_ms": 2218.9893473724,
+          "predicted_per_token_ms": 23.1144723684625,
+          "predicted_per_second": 43.262938649830694,
+          "peak_memory": 30.161962916,
+          "draft_kind": null,
+          "draft_rounds": null,
+          "draft_n": null,
+          "draft_n_accepted": null
+        }
+      },
+      "response_file": "response_02.json",
+      "action": {
+        "name": "click",
+        "kwargs": {
+          "position": [
+            332,
+            466
+          ]
+        }
+      },
+      "done": true,
+      "reward": 0.0,
+      "observation": [
+        "./reports/solver_defense_v1/a_native/episodes/conference/Patch_Select/image3.jpg/observations/step_02_00.png"
+      ],
+      "submitted": true
+    }
+  ],
+  "model_calls": 2,
+  "input_tokens": 1627,
+  "output_tokens": 198,
+  "reward": 0.0,
+  "done": true,
+  "correct": false,
+  "status": "incorrect",
+  "submitted": true,
+  "images": [
+    "data/conference/Patch_Select/image3.jpg"
+  ],
+  "cost_usd": null,
+  "scorer": "conference_v1",
+  "split_evidence": "historical_benchmark",
+  "gt": {
+    "grid_size": [
+      5,
+      5
+    ],
+    "correct_patches": [
+      7,
+      12,
+      17
+    ]
+  },
+  "initial_observation": [
+    "./reports/solver_defense_v1/a_native/episodes/conference/Patch_Select/image3.jpg/observations/step_00_00.png"
+  ],
+  "environment_metadata": {
+    "environment": "cognition_adapted_v1.1_numeric_input_box",
+    "main_image_index": 0,
+    "source_images": [
+      "./data/conference/Patch_Select/image3.jpg"
+    ],
+    "source_image_sizes": [
+      [
+        382,
+        382
+      ]
+    ],
+    "main_image_box": [
+      0,
+      0,
+      382,
+      382
+    ],
+    "observation_main_size": [
+      382,
+      502
+    ],
+    "coordinate_mapping": {
+      "scale": [
+        1,
+        1
+      ],
+      "offset": [
+        0,
+        0
+      ]
+    },
+    "controls": {
+      "submit": [
+        270,
+        442,
+        370,
+        490
+      ]
+    },
+    "input_box": null,
+    "grid": {
+      "rows": 5,
+      "cols": 5,
+      "grid_box": [
+        0,
+        0,
+        382,
+        382
+      ],
+      "source": "public_prompt_grid_dimensions"
+    }
+  },
+  "elapsed_seconds": 6.255952835083008,
+  "final_answer": {
+    "indices": [
+      12
+    ],
+    "answer_type": "multi_select"
+  },
+  "answer": {
+    "indices": [
+      12
+    ],
+    "answer_type": "multi_select"
+  },
+  "stop_reason": "incorrect",
+  "finished_at": "2026-09-13T23:53:33.701911+00:00"
+}

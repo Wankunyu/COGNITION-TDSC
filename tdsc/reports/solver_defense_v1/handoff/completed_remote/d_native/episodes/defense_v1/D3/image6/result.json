@@ -1,0 +1,276 @@
+{
+  "id": "defense_v1/D3/image6",
+  "type": "Select_Animal",
+  "source": "conference_defense",
+  "module": "D",
+  "condition": "D3",
+  "solver": "C-I",
+  "puzzle_id": "image6.png",
+  "group_id": "defense_v1/image6",
+  "partition": "evaluation",
+  "model": "models/CaptchaMind-7B",
+  "started_at": "2026-09-14T15:05:34.773657+00:00",
+  "started_unix": 1789398334.773654,
+  "budgets": {
+    "max_calls_per_episode": 30,
+    "max_output_tokens_per_call": 8192,
+    "max_output_tokens_per_episode": 65536,
+    "request_timeout_seconds": 600,
+    "episode_timeout_seconds": 1800
+  },
+  "protocol": "adapted_native_agent",
+  "action_parser": "lossless_single_action_v1",
+  "steps": [
+    {
+      "step": 1,
+      "text": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [840, 705]}}</tool_call>",
+      "usage": {
+        "prompt_tokens": 1900,
+        "completion_tokens": 77,
+        "total_tokens": 1977,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "input_tokens": 1900,
+      "output_tokens": 77,
+      "finish_reason": "stop",
+      "truncated": false,
+      "returned_model": "models/CaptchaMind-7B",
+      "elapsed_seconds": 3.5133473750029225,
+      "raw_response": {
+        "id": "chatcmpl-8439a7c8-9929-4e26-8311-127990973ff3",
+        "object": "chat.completion",
+        "created": 1789398338,
+        "model": "models/CaptchaMind-7B",
+        "choices": [
+          {
+            "index": 0,
+            "finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [840, 705]}}</tool_call>",
+              "reasoning_content": "I need to refer to the task requirement to complete this captcha: Select all grid cells containing the star.\n\nI can see in the MAIN puzzle that there is one star located in the bottom-right grid cell. So I will click on this cell.",
+              "reasoning": "I need to refer to the task requirement to complete this captcha: Select all grid cells containing the star.\n\nI can see in the MAIN puzzle that there is one star located in the bottom-right grid cell. So I will click on this cell.",
+              "tool_calls": null,
+              "tool_call_id": null,
+              "name": null
+            },
+            "logprobs": null
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 1900,
+          "completion_tokens": 77,
+          "total_tokens": 1977,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "timings": {
+          "prompt_n": 1900,
+          "cache_n": 0,
+          "predicted_n": 79,
+          "prompt_ms": 1568.9833330106921,
+          "prompt_per_token_ms": 0.8257807015845748,
+          "prompt_per_second": 1210.9752602369117,
+          "predicted_ms": 1826.9254719104936,
+          "predicted_per_token_ms": 23.125638884942955,
+          "predicted_per_second": 43.24204857540595,
+          "peak_memory": 35.615165266,
+          "draft_kind": null,
+          "draft_rounds": null,
+          "draft_n": null,
+          "draft_n_accepted": null
+        }
+      },
+      "response_file": "response_01.json",
+      "action": {
+        "name": "click",
+        "kwargs": {
+          "position": [
+            840,
+            705
+          ]
+        }
+      },
+      "done": false,
+      "reward": 0.0,
+      "observation": [
+        "./reports/solver_defense_v1/d_native/episodes/defense_v1/D3/image6/observations/step_01_00.png"
+      ],
+      "submitted": false
+    },
+    {
+      "step": 2,
+      "text": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [919, 1103]}}</tool_call>",
+      "usage": {
+        "prompt_tokens": 3454,
+        "completion_tokens": 70,
+        "total_tokens": 3524,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "input_tokens": 3454,
+      "output_tokens": 70,
+      "finish_reason": "stop",
+      "truncated": false,
+      "returned_model": "models/CaptchaMind-7B",
+      "elapsed_seconds": 4.806949999998324,
+      "raw_response": {
+        "id": "chatcmpl-3875d459-4c76-4383-81e5-549577c9aa4b",
+        "object": "chat.completion",
+        "created": 1789398343,
+        "model": "models/CaptchaMind-7B",
+        "choices": [
+          {
+            "index": 0,
+            "finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [919, 1103]}}</tool_call>",
+              "reasoning_content": "I need to refer to the target description: Select all grid cells containing the star. Looking at the current candidate solution, I have not yet selected all the target cells, so I will continue to select.",
+              "reasoning": "I need to refer to the target description: Select all grid cells containing the star. Looking at the current candidate solution, I have not yet selected all the target cells, so I will continue to select.",
+              "tool_calls": null,
+              "tool_call_id": null,
+              "name": null
+            },
+            "logprobs": null
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 3454,
+          "completion_tokens": 70,
+          "total_tokens": 3524,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "timings": {
+          "prompt_n": 3454,
+          "cache_n": 0,
+          "predicted_n": 72,
+          "prompt_ms": 2955.5735000467394,
+          "prompt_per_token_ms": 0.8556958598861434,
+          "prompt_per_second": 1168.6395212114937,
+          "predicted_ms": 1680.4651264265233,
+          "predicted_per_token_ms": 23.339793422590603,
+          "predicted_per_second": 42.845280671254756,
+          "peak_memory": 35.615165266,
+          "draft_kind": null,
+          "draft_rounds": null,
+          "draft_n": null,
+          "draft_n_accepted": null
+        }
+      },
+      "response_file": "response_02.json",
+      "action": {
+        "name": "click",
+        "kwargs": {
+          "position": [
+            919,
+            1103
+          ]
+        }
+      },
+      "done": true,
+      "reward": 1.0,
+      "observation": [
+        "./reports/solver_defense_v1/d_native/episodes/defense_v1/D3/image6/observations/step_02_00.png"
+      ],
+      "submitted": true
+    }
+  ],
+  "model_calls": 2,
+  "input_tokens": 5354,
+  "output_tokens": 147,
+  "reward": 1.0,
+  "done": true,
+  "correct": true,
+  "status": "correct",
+  "submitted": true,
+  "images": [
+    "data/defense_v1/blur_radius2/image6.png"
+  ],
+  "cost_usd": null,
+  "source_path": "../conference/captcha_data/Select_Animal/image6.png",
+  "training_exposure": "unknown; previously used conference material",
+  "scorer": "defense_v1_maximum_matching",
+  "split_evidence": "fixed_image_ids_before_new_model_calls",
+  "base_id": "image6",
+  "gt": {
+    "indices": [
+      5
+    ]
+  },
+  "initial_observation": [
+    "./reports/solver_defense_v1/d_native/episodes/defense_v1/D3/image6/observations/step_00_00.png"
+  ],
+  "environment_metadata": {
+    "environment": "cognition_adapted_v1.1_numeric_input_box",
+    "main_image_index": 0,
+    "source_images": [
+      "./data/defense_v1/blur_radius2/image6.png"
+    ],
+    "source_image_sizes": [
+      [
+        1024,
+        1024
+      ]
+    ],
+    "main_image_box": [
+      0,
+      0,
+      1024,
+      1024
+    ],
+    "observation_main_size": [
+      1024,
+      1152
+    ],
+    "coordinate_mapping": {
+      "scale": [
+        1,
+        1
+      ],
+      "offset": [
+        0,
+        0
+      ]
+    },
+    "controls": {
+      "submit": [
+        834,
+        1088,
+        1004,
+        1132
+      ]
+    },
+    "input_box": null,
+    "grid": {
+      "rows": 2,
+      "cols": 3,
+      "grid_box": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "source": "manifest.layout"
+    }
+  },
+  "elapsed_seconds": 8.67333722114563,
+  "final_answer": {
+    "indices": [
+      5
+    ]
+  },
+  "answer": {
+    "indices": [
+      5
+    ]
+  },
+  "stop_reason": "correct",
+  "finished_at": "2026-09-14T15:05:43.446483+00:00"
+}

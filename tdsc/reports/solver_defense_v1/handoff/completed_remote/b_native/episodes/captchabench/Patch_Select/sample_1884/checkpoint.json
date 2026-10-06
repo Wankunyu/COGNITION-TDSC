@@ -1,0 +1,314 @@
+{
+  "id": "captchabench/Patch_Select/sample_1884",
+  "type": "Patch_Select",
+  "source": "captchabench",
+  "module": "B",
+  "condition": "native_actions",
+  "solver": "C-I",
+  "puzzle_id": "sample_1884",
+  "group_id": "captchabench:Patch_Select:sample_1884",
+  "partition": "evaluation",
+  "model": "models/CaptchaMind-7B",
+  "started_at": "2026-09-13T21:06:58.353395+00:00",
+  "started_unix": 1789333618.3533912,
+  "budgets": {
+    "max_calls_per_episode": 30,
+    "max_output_tokens_per_call": 8192,
+    "max_output_tokens_per_episode": 65536,
+    "request_timeout_seconds": 600,
+    "episode_timeout_seconds": 1800
+  },
+  "protocol": "source_native",
+  "action_parser": "lossless_single_action_v1",
+  "steps": [
+    {
+      "step": 1,
+      "text": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [185, 185]}}</tool_call>",
+      "usage": {
+        "prompt_tokens": 641,
+        "completion_tokens": 184,
+        "total_tokens": 825,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "input_tokens": 641,
+      "output_tokens": 184,
+      "finish_reason": "stop",
+      "truncated": false,
+      "returned_model": "models/CaptchaMind-7B",
+      "elapsed_seconds": 5.181449958996382,
+      "raw_response": {
+        "id": "chatcmpl-c5f8d5f2-3933-4cf5-a027-934292e466d7",
+        "object": "chat.completion",
+        "created": 1789333623,
+        "model": "models/CaptchaMind-7B",
+        "choices": [
+          {
+            "index": 0,
+            "finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [185, 185]}}</tool_call>",
+              "reasoning_content": "I need to refer to the task to understand that I need to mark all the places containing traffic lights. Looking at the nine images one by one: Image 1 doesn't have traffic lights, I won't mark it. Image 2 has traffic lights, I will mark it. Image 3 doesn't have traffic lights, I won't mark it. Image 4 doesn't have traffic lights, I won't mark it. Image 5 has traffic lights, I will mark it. Image 6 doesn't have traffic lights, I won't mark it. Image 7 doesn't have traffic lights, I won't mark it. Image 8 has traffic lights, I will mark it. Image 9 doesn't have traffic lights, I won't mark it.",
+              "reasoning": "I need to refer to the task to understand that I need to mark all the places containing traffic lights. Looking at the nine images one by one: Image 1 doesn't have traffic lights, I won't mark it. Image 2 has traffic lights, I will mark it. Image 3 doesn't have traffic lights, I won't mark it. Image 4 doesn't have traffic lights, I won't mark it. Image 5 has traffic lights, I will mark it. Image 6 doesn't have traffic lights, I won't mark it. Image 7 doesn't have traffic lights, I won't mark it. Image 8 has traffic lights, I will mark it. Image 9 doesn't have traffic lights, I won't mark it.",
+              "tool_calls": null,
+              "tool_call_id": null,
+              "name": null
+            },
+            "logprobs": null
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 641,
+          "completion_tokens": 184,
+          "total_tokens": 825,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "timings": {
+          "prompt_n": 641,
+          "cache_n": 0,
+          "predicted_n": 186,
+          "prompt_ms": 530.3875000099652,
+          "prompt_per_token_ms": 0.8274375975194465,
+          "prompt_per_second": 1208.5503523140283,
+          "predicted_ms": 4292.364101353215,
+          "predicted_per_token_ms": 23.07722635136137,
+          "predicted_per_second": 43.33276385881651,
+          "peak_memory": 19.988604016,
+          "draft_kind": null,
+          "draft_rounds": null,
+          "draft_n": null,
+          "draft_n_accepted": null
+        }
+      },
+      "response_file": "response_01.json",
+      "action": {
+        "name": "click",
+        "kwargs": {
+          "position": [
+            185,
+            185
+          ]
+        }
+      },
+      "done": false,
+      "reward": 0.0,
+      "observation": [
+        "./reports/solver_defense_v1/b_native/episodes/captchabench/Patch_Select/sample_1884/observations/step_01_00.png"
+      ],
+      "submitted": false
+    },
+    {
+      "step": 2,
+      "text": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [310, 185]}}</tool_call>",
+      "usage": {
+        "prompt_tokens": 1056,
+        "completion_tokens": 91,
+        "total_tokens": 1147,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "input_tokens": 1056,
+      "output_tokens": 91,
+      "finish_reason": "stop",
+      "truncated": false,
+      "returned_model": "models/CaptchaMind-7B",
+      "elapsed_seconds": 3.238063875003718,
+      "raw_response": {
+        "id": "chatcmpl-1ed4151d-399a-4697-8360-431e3998b4f8",
+        "object": "chat.completion",
+        "created": 1789333626,
+        "model": "models/CaptchaMind-7B",
+        "choices": [
+          {
+            "index": 0,
+            "finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [310, 185]}}</tool_call>",
+              "reasoning_content": "First, I need to select all the squares containing traffic lights. Looking at the image, I can see there are 9 sub-squares in total. The traffic lights are located in the middle column, from the second row to the fourth row. So I will click on these 6 sub-squares.",
+              "reasoning": "First, I need to select all the squares containing traffic lights. Looking at the image, I can see there are 9 sub-squares in total. The traffic lights are located in the middle column, from the second row to the fourth row. So I will click on these 6 sub-squares.",
+              "tool_calls": null,
+              "tool_call_id": null,
+              "name": null
+            },
+            "logprobs": null
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 1056,
+          "completion_tokens": 91,
+          "total_tokens": 1147,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "timings": {
+          "prompt_n": 1056,
+          "cache_n": 0,
+          "predicted_n": 93,
+          "prompt_ms": 882.1397500287276,
+          "prompt_per_token_ms": 0.8353596117696284,
+          "prompt_per_second": 1197.0892366720925,
+          "predicted_ms": 2145.8972893862824,
+          "predicted_per_token_ms": 23.074164402003035,
+          "predicted_per_second": 43.338514131120235,
+          "peak_memory": 19.988604016,
+          "draft_kind": null,
+          "draft_rounds": null,
+          "draft_n": null,
+          "draft_n_accepted": null
+        }
+      },
+      "response_file": "response_02.json",
+      "action": {
+        "name": "click",
+        "kwargs": {
+          "position": [
+            310,
+            185
+          ]
+        }
+      },
+      "done": false,
+      "reward": 0.0,
+      "observation": [
+        "./reports/solver_defense_v1/b_native/episodes/captchabench/Patch_Select/sample_1884/observations/step_02_00.png"
+      ],
+      "submitted": false
+    },
+    {
+      "step": 3,
+      "text": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [228, 540]}}</tool_call>",
+      "usage": {
+        "prompt_tokens": 1471,
+        "completion_tokens": 45,
+        "total_tokens": 1516,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "input_tokens": 1471,
+      "output_tokens": 45,
+      "finish_reason": "stop",
+      "truncated": false,
+      "returned_model": "models/CaptchaMind-7B",
+      "elapsed_seconds": 2.507904583006166,
+      "raw_response": {
+        "id": "chatcmpl-03e70e49-e2a7-40b9-b593-004255d4ca1f",
+        "object": "chat.completion",
+        "created": 1789333629,
+        "model": "models/CaptchaMind-7B",
+        "choices": [
+          {
+            "index": 0,
+            "finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [228, 540]}}</tool_call>",
+              "reasoning_content": "I have successfully selected all the squares containing traffic lights. Now I will click submit.",
+              "reasoning": "I have successfully selected all the squares containing traffic lights. Now I will click submit.",
+              "tool_calls": null,
+              "tool_call_id": null,
+              "name": null
+            },
+            "logprobs": null
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 1471,
+          "completion_tokens": 45,
+          "total_tokens": 1516,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "timings": {
+          "prompt_n": 1471,
+          "cache_n": 0,
+          "predicted_n": 47,
+          "prompt_ms": 1193.0376670206897,
+          "prompt_per_token_ms": 0.8110385227876884,
+          "prompt_per_second": 1232.9870553655285,
+          "predicted_ms": 1092.1633082085148,
+          "predicted_per_token_ms": 23.237517195925847,
+          "predicted_per_second": 43.033857342355255,
+          "peak_memory": 19.988604016,
+          "draft_kind": null,
+          "draft_rounds": null,
+          "draft_n": null,
+          "draft_n_accepted": null
+        }
+      },
+      "response_file": "response_03.json",
+      "action": {
+        "name": "click",
+        "kwargs": {
+          "position": [
+            228,
+            540
+          ]
+        }
+      },
+      "done": true,
+      "reward": 0.0,
+      "observation": [
+        "./reports/solver_defense_v1/b_native/episodes/captchabench/Patch_Select/sample_1884/observations/step_03_00.png"
+      ],
+      "submitted": true
+    }
+  ],
+  "model_calls": 3,
+  "input_tokens": 3168,
+  "output_tokens": 320,
+  "reward": 0.0,
+  "done": true,
+  "correct": false,
+  "status": "incorrect",
+  "submitted": true,
+  "images": [
+    "data/external/captchabench/captcha/patch_select/sample_1884/sample_1884_step_0.png"
+  ],
+  "cost_usd": null,
+  "source_revision": "960a521e842bd164b08344151b0a4253d23cfc2f",
+  "source_path": "captcha/patch_select/sample_1884",
+  "training_exposure": "unknown",
+  "scorer": "conference_v1",
+  "split_evidence": "upstream_eval_range",
+  "gt": {
+    "correct_patches": [
+      2,
+      5,
+      6,
+      10
+    ],
+    "grid_size": [
+      4,
+      4
+    ]
+  },
+  "initial_observation": [
+    "./reports/solver_defense_v1/b_native/episodes/captchabench/Patch_Select/sample_1884/observations/step_00_00.png"
+  ],
+  "elapsed_seconds": 11.676379919052124,
+  "final_answer": {
+    "answer_type": "multi_select",
+    "indices": [
+      5,
+      6
+    ]
+  },
+  "answer": {
+    "answer_type": "multi_select",
+    "indices": [
+      5,
+      6
+    ]
+  },
+  "stop_reason": "incorrect",
+  "finished_at": "2026-09-13T21:07:10.029669+00:00"
+}

@@ -1,0 +1,18 @@
+--- openai.py.original
++++ openai.py.solver_defense_v1
+@@ -1657,7 +1657,14 @@
+                             video = _extract_video_reference(item)
+                             if video:
+                                 videos.append(video)
+-                msg["content"] = extract_text_from_content(message.content)
++                # Task-local calibration: retain originating image markers.
++                if message.role == "user" and any(
++                    isinstance(item, dict) and item.get("type") in ("image_url", "input_image")
++                    for item in message.content
++                ):
++                    msg["content"] = message.content
++                else:
++                    msg["content"] = extract_text_from_content(message.content)
+             else:
+                 msg["content"] = message.content
+ 

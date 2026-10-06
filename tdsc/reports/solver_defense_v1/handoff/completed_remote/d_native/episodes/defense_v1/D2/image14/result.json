@@ -1,0 +1,570 @@
+{
+  "id": "defense_v1/D2/image14",
+  "type": "Visible_Eye_Count",
+  "source": "conference_defense",
+  "module": "D",
+  "condition": "D2",
+  "solver": "C-I",
+  "puzzle_id": "image14.png",
+  "group_id": "defense_v1/image14",
+  "partition": "evaluation",
+  "model": "models/CaptchaMind-7B",
+  "started_at": "2026-09-14T15:16:30.706947+00:00",
+  "started_unix": 1789398990.7069461,
+  "budgets": {
+    "max_calls_per_episode": 30,
+    "max_output_tokens_per_call": 8192,
+    "max_output_tokens_per_episode": 65536,
+    "request_timeout_seconds": 600,
+    "episode_timeout_seconds": 1800
+  },
+  "protocol": "adapted_native_agent",
+  "action_parser": "lossless_single_action_v1",
+  "steps": [
+    {
+      "step": 1,
+      "text": "<tool_call>{\"name\": \"enter_number\", \"arguments\": {\"number\": 2}}</tool_call>",
+      "usage": {
+        "prompt_tokens": 1895,
+        "completion_tokens": 68,
+        "total_tokens": 1963,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "input_tokens": 1895,
+      "output_tokens": 68,
+      "finish_reason": "stop",
+      "truncated": false,
+      "returned_model": "models/CaptchaMind-7B",
+      "elapsed_seconds": 3.318409208994126,
+      "raw_response": {
+        "id": "chatcmpl-f3eee36b-0409-49a9-91f7-6df4a8eb0515",
+        "object": "chat.completion",
+        "created": 1789398994,
+        "model": "models/CaptchaMind-7B",
+        "choices": [
+          {
+            "index": 0,
+            "finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "<tool_call>{\"name\": \"enter_number\", \"arguments\": {\"number\": 2}}</tool_call>",
+              "reasoning_content": "I need to count all actually visible eyes of the giraffe in the image. Looking at the image, I can see there is one giraffe, and it has 2 eyes. Both eyes of the giraffe are actually visible.",
+              "reasoning": "I need to count all actually visible eyes of the giraffe in the image. Looking at the image, I can see there is one giraffe, and it has 2 eyes. Both eyes of the giraffe are actually visible.",
+              "tool_calls": null,
+              "tool_call_id": null,
+              "name": null
+            },
+            "logprobs": null
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 1895,
+          "completion_tokens": 68,
+          "total_tokens": 1963,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "timings": {
+          "prompt_n": 1895,
+          "cache_n": 0,
+          "predicted_n": 70,
+          "prompt_ms": 1571.676750027109,
+          "prompt_per_token_ms": 0.8293808707267065,
+          "prompt_per_second": 1205.7186695465937,
+          "predicted_ms": 1620.0887073890942,
+          "predicted_per_token_ms": 23.144124391272776,
+          "predicted_per_second": 43.20751060157116,
+          "peak_memory": 35.615165266,
+          "draft_kind": null,
+          "draft_rounds": null,
+          "draft_n": null,
+          "draft_n_accepted": null
+        }
+      },
+      "response_file": "response_01.json",
+      "action": {
+        "name": "enter_number",
+        "kwargs": {
+          "number": 2
+        }
+      },
+      "done": false,
+      "reward": 0.0,
+      "observation": [
+        "./reports/solver_defense_v1/d_native/episodes/defense_v1/D2/image14/observations/step_01_00.png"
+      ],
+      "submitted": false
+    },
+    {
+      "step": 2,
+      "text": "<tool_call>{\"name\": \"enter_number\", \"arguments\": {\"number\": 2}}</tool_call>",
+      "usage": {
+        "prompt_tokens": 3442,
+        "completion_tokens": 57,
+        "total_tokens": 3499,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "input_tokens": 3442,
+      "output_tokens": 57,
+      "finish_reason": "stop",
+      "truncated": false,
+      "returned_model": "models/CaptchaMind-7B",
+      "elapsed_seconds": 4.520328208018327,
+      "raw_response": {
+        "id": "chatcmpl-5fafbf20-de7f-49f3-894f-a7ec2101d25d",
+        "object": "chat.completion",
+        "created": 1789398998,
+        "model": "models/CaptchaMind-7B",
+        "choices": [
+          {
+            "index": 0,
+            "finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "<tool_call>{\"name\": \"enter_number\", \"arguments\": {\"number\": 2}}</tool_call>",
+              "reasoning_content": "I need to count all actually visible eyes of the giraffe in the main puzzle. Looking at the giraffe in the image, I can see 2 eyes are actually visible.",
+              "reasoning": "I need to count all actually visible eyes of the giraffe in the main puzzle. Looking at the giraffe in the image, I can see 2 eyes are actually visible.",
+              "tool_calls": null,
+              "tool_call_id": null,
+              "name": null
+            },
+            "logprobs": null
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 3442,
+          "completion_tokens": 57,
+          "total_tokens": 3499,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "timings": {
+          "prompt_n": 3442,
+          "cache_n": 0,
+          "predicted_n": 59,
+          "prompt_ms": 2957.9483330016956,
+          "prompt_per_token_ms": 0.8593690682747518,
+          "prompt_per_second": 1163.644395541924,
+          "predicted_ms": 1379.8132909663575,
+          "predicted_per_token_ms": 23.38666594858233,
+          "predicted_per_second": 42.75940838247697,
+          "peak_memory": 35.615165266,
+          "draft_kind": null,
+          "draft_rounds": null,
+          "draft_n": null,
+          "draft_n_accepted": null
+        }
+      },
+      "response_file": "response_02.json",
+      "action": {
+        "name": "enter_number",
+        "kwargs": {
+          "number": 2
+        }
+      },
+      "done": false,
+      "reward": 0.0,
+      "observation": [
+        "./reports/solver_defense_v1/d_native/episodes/defense_v1/D2/image14/observations/step_02_00.png"
+      ],
+      "submitted": false
+    },
+    {
+      "step": 3,
+      "text": "<tool_call>{\"name\": \"enter_number\", \"arguments\": {\"number\": 2}}</tool_call>",
+      "usage": {
+        "prompt_tokens": 4989,
+        "completion_tokens": 97,
+        "total_tokens": 5086,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "input_tokens": 4989,
+      "output_tokens": 97,
+      "finish_reason": "stop",
+      "truncated": false,
+      "returned_model": "models/CaptchaMind-7B",
+      "elapsed_seconds": 6.960777041997062,
+      "raw_response": {
+        "id": "chatcmpl-cf427228-4286-44c4-9671-de40f44f751d",
+        "object": "chat.completion",
+        "created": 1789399005,
+        "model": "models/CaptchaMind-7B",
+        "choices": [
+          {
+            "index": 0,
+            "finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "<tool_call>{\"name\": \"enter_number\", \"arguments\": {\"number\": 2}}</tool_call>",
+              "reasoning_content": "I need to refer to the instruction to complete this captcha task. The goal is to count all actually visible eyes of the giraffe in the MAIN puzzle, without counting hidden eyes.\n\nI can see in the MAIN puzzle that there is only one giraffe, located in the bottom-left cell. Looking at the giraffe, I can count a total of 2 actually visible eyes.",
+              "reasoning": "I need to refer to the instruction to complete this captcha task. The goal is to count all actually visible eyes of the giraffe in the MAIN puzzle, without counting hidden eyes.\n\nI can see in the MAIN puzzle that there is only one giraffe, located in the bottom-left cell. Looking at the giraffe, I can count a total of 2 actually visible eyes.",
+              "tool_calls": null,
+              "tool_call_id": null,
+              "name": null
+            },
+            "logprobs": null
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 4989,
+          "completion_tokens": 97,
+          "total_tokens": 5086,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "timings": {
+          "prompt_n": 4989,
+          "cache_n": 0,
+          "predicted_n": 99,
+          "prompt_ms": 4399.669792008353,
+          "prompt_per_token_ms": 0.8818740813807082,
+          "prompt_per_second": 1133.948736121542,
+          "predicted_ms": 2331.374739795954,
+          "predicted_per_token_ms": 23.54923979591873,
+          "predicted_per_second": 42.464215773678944,
+          "peak_memory": 35.615165266,
+          "draft_kind": null,
+          "draft_rounds": null,
+          "draft_n": null,
+          "draft_n_accepted": null
+        }
+      },
+      "response_file": "response_03.json",
+      "action": {
+        "name": "enter_number",
+        "kwargs": {
+          "number": 2
+        }
+      },
+      "done": false,
+      "reward": 0.0,
+      "observation": [
+        "./reports/solver_defense_v1/d_native/episodes/defense_v1/D2/image14/observations/step_03_00.png"
+      ],
+      "submitted": false
+    },
+    {
+      "step": 4,
+      "text": "<tool_call>{\"name\": \"enter_number\", \"arguments\": {\"number\": 2}}</tool_call>",
+      "usage": {
+        "prompt_tokens": 6536,
+        "completion_tokens": 123,
+        "total_tokens": 6659,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "input_tokens": 6536,
+      "output_tokens": 123,
+      "finish_reason": "stop",
+      "truncated": false,
+      "returned_model": "models/CaptchaMind-7B",
+      "elapsed_seconds": 9.17291708299308,
+      "raw_response": {
+        "id": "chatcmpl-941431c3-8cb2-405c-825d-bd802accc043",
+        "object": "chat.completion",
+        "created": 1789399015,
+        "model": "models/CaptchaMind-7B",
+        "choices": [
+          {
+            "index": 0,
+            "finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "<tool_call>{\"name\": \"enter_number\", \"arguments\": {\"number\": 2}}</tool_call>",
+              "reasoning_content": "I need to refer to the instruction to complete this captcha task. The goal is to count all actually visible eyes of the giraffe in the MAIN puzzle, and then submit the answer.\n\nI can see there is one giraffe in the MAIN puzzle, located in the first row and fourth column. Looking at the giraffe, I can count a total of 2 visible eyes.\n\nNow I have successfully counted the target eyes. The next step is to find the answer input box and enter the number 2.",
+              "reasoning": "I need to refer to the instruction to complete this captcha task. The goal is to count all actually visible eyes of the giraffe in the MAIN puzzle, and then submit the answer.\n\nI can see there is one giraffe in the MAIN puzzle, located in the first row and fourth column. Looking at the giraffe, I can count a total of 2 visible eyes.\n\nNow I have successfully counted the target eyes. The next step is to find the answer input box and enter the number 2.",
+              "tool_calls": null,
+              "tool_call_id": null,
+              "name": null
+            },
+            "logprobs": null
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 6536,
+          "completion_tokens": 123,
+          "total_tokens": 6659,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "timings": {
+          "prompt_n": 6536,
+          "cache_n": 0,
+          "predicted_n": 125,
+          "prompt_ms": 5918.510040966794,
+          "prompt_per_token_ms": 0.9055247920695829,
+          "prompt_per_second": 1104.3319948363792,
+          "predicted_ms": 2969.3876854693253,
+          "predicted_per_token_ms": 23.755101483754604,
+          "predicted_per_second": 42.096220918435975,
+          "peak_memory": 35.615165266,
+          "draft_kind": null,
+          "draft_rounds": null,
+          "draft_n": null,
+          "draft_n_accepted": null
+        }
+      },
+      "response_file": "response_04.json",
+      "action": {
+        "name": "enter_number",
+        "kwargs": {
+          "number": 2
+        }
+      },
+      "done": false,
+      "reward": 0.0,
+      "observation": [
+        "./reports/solver_defense_v1/d_native/episodes/defense_v1/D2/image14/observations/step_04_00.png"
+      ],
+      "submitted": false
+    },
+    {
+      "step": 5,
+      "text": "<tool_call>{\"name\": \"enter_number\", \"arguments\": {\"number\": 2}}</tool_call>",
+      "usage": {
+        "prompt_tokens": 8083,
+        "completion_tokens": 64,
+        "total_tokens": 8147,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "input_tokens": 8083,
+      "output_tokens": 64,
+      "finish_reason": "stop",
+      "truncated": false,
+      "returned_model": "models/CaptchaMind-7B",
+      "elapsed_seconds": 9.360652083007153,
+      "raw_response": {
+        "id": "chatcmpl-32c9b244-cddc-4bd1-af14-01f84422f59c",
+        "object": "chat.completion",
+        "created": 1789399024,
+        "model": "models/CaptchaMind-7B",
+        "choices": [
+          {
+            "index": 0,
+            "finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "<tool_call>{\"name\": \"enter_number\", \"arguments\": {\"number\": 2}}</tool_call>",
+              "reasoning_content": "I need to refer to the instruction to complete this captcha task. The goal is to count all the actually visible eyes of the giraffe in the main puzzle image, and then enter this number in the answer box.",
+              "reasoning": "I need to refer to the instruction to complete this captcha task. The goal is to count all the actually visible eyes of the giraffe in the main puzzle image, and then enter this number in the answer box.",
+              "tool_calls": null,
+              "tool_call_id": null,
+              "name": null
+            },
+            "logprobs": null
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 8083,
+          "completion_tokens": 64,
+          "total_tokens": 8147,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "timings": {
+          "prompt_n": 8083,
+          "cache_n": 0,
+          "predicted_n": 66,
+          "prompt_ms": 7445.909583970205,
+          "prompt_per_token_ms": 0.9211814405505635,
+          "prompt_per_second": 1085.5624700844264,
+          "predicted_ms": 1583.6456734302024,
+          "predicted_per_token_ms": 23.994631415609128,
+          "predicted_per_second": 41.67598921104803,
+          "peak_memory": 35.615165266,
+          "draft_kind": null,
+          "draft_rounds": null,
+          "draft_n": null,
+          "draft_n_accepted": null
+        }
+      },
+      "response_file": "response_05.json",
+      "action": {
+        "name": "enter_number",
+        "kwargs": {
+          "number": 2
+        }
+      },
+      "done": false,
+      "reward": 0.0,
+      "observation": [
+        "./reports/solver_defense_v1/d_native/episodes/defense_v1/D2/image14/observations/step_05_00.png"
+      ],
+      "submitted": false
+    },
+    {
+      "step": 6,
+      "text": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [930, 1103]}}</tool_call>",
+      "usage": {
+        "prompt_tokens": 9630,
+        "completion_tokens": 61,
+        "total_tokens": 9691,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "input_tokens": 9630,
+      "output_tokens": 61,
+      "finish_reason": "stop",
+      "truncated": false,
+      "returned_model": "models/CaptchaMind-7B",
+      "elapsed_seconds": 10.901970499980962,
+      "raw_response": {
+        "id": "chatcmpl-70b887b5-9d9e-4b0c-82f5-336812efbb8d",
+        "object": "chat.completion",
+        "created": 1789399035,
+        "model": "models/CaptchaMind-7B",
+        "choices": [
+          {
+            "index": 0,
+            "finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [930, 1103]}}</tool_call>",
+              "reasoning_content": "I need to refer to the task description to understand what I need to do: Count all actually visible eyes of the giraffe. Do not count hidden eyes.",
+              "reasoning": "I need to refer to the task description to understand what I need to do: Count all actually visible eyes of the giraffe. Do not count hidden eyes.",
+              "tool_calls": null,
+              "tool_call_id": null,
+              "name": null
+            },
+            "logprobs": null
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 9630,
+          "completion_tokens": 61,
+          "total_tokens": 9691,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "timings": {
+          "prompt_n": 9630,
+          "cache_n": 0,
+          "predicted_n": 63,
+          "prompt_ms": 8996.632417023648,
+          "prompt_per_token_ms": 0.9342297421623725,
+          "prompt_per_second": 1070.4005180625006,
+          "predicted_ms": 1523.9540813256037,
+          "predicted_per_token_ms": 24.18974732262863,
+          "predicted_per_second": 41.33982826122934,
+          "peak_memory": 35.615165266,
+          "draft_kind": null,
+          "draft_rounds": null,
+          "draft_n": null,
+          "draft_n_accepted": null
+        }
+      },
+      "response_file": "response_06.json",
+      "action": {
+        "name": "click",
+        "kwargs": {
+          "position": [
+            930,
+            1103
+          ]
+        }
+      },
+      "done": true,
+      "reward": 0.0,
+      "observation": [
+        "./reports/solver_defense_v1/d_native/episodes/defense_v1/D2/image14/observations/step_06_00.png"
+      ],
+      "submitted": true
+    }
+  ],
+  "model_calls": 6,
+  "input_tokens": 34575,
+  "output_tokens": 470,
+  "reward": 0.0,
+  "done": true,
+  "correct": false,
+  "status": "incorrect",
+  "submitted": true,
+  "images": [
+    "data/defense_v1/original/image14.png"
+  ],
+  "cost_usd": null,
+  "source_path": "../conference/captcha_data/Select_Animal/image14.png",
+  "training_exposure": "unknown; previously used conference material",
+  "scorer": "defense_v1_maximum_matching",
+  "split_evidence": "fixed_image_ids_before_new_model_calls",
+  "base_id": "image14",
+  "gt": {
+    "value": 1
+  },
+  "initial_observation": [
+    "./reports/solver_defense_v1/d_native/episodes/defense_v1/D2/image14/observations/step_00_00.png"
+  ],
+  "environment_metadata": {
+    "environment": "cognition_adapted_v1.1_numeric_input_box",
+    "main_image_index": 0,
+    "source_images": [
+      "./data/defense_v1/original/image14.png"
+    ],
+    "source_image_sizes": [
+      [
+        1024,
+        1024
+      ]
+    ],
+    "main_image_box": [
+      0,
+      0,
+      1024,
+      1024
+    ],
+    "observation_main_size": [
+      1024,
+      1152
+    ],
+    "coordinate_mapping": {
+      "scale": [
+        1,
+        1
+      ],
+      "offset": [
+        0,
+        0
+      ]
+    },
+    "controls": {
+      "submit": [
+        834,
+        1088,
+        1004,
+        1132
+      ]
+    },
+    "input_box": [
+      20,
+      1088,
+      814,
+      1132
+    ],
+    "grid": null
+  },
+  "elapsed_seconds": 45.33012890815735,
+  "final_answer": {
+    "value": 2
+  },
+  "answer": {
+    "value": 2
+  },
+  "stop_reason": "incorrect",
+  "finished_at": "2026-09-14T15:17:16.036658+00:00"
+}

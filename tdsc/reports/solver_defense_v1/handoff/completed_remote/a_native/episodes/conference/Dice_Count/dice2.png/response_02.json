@@ -1,0 +1,50 @@
+{
+  "raw_response": {
+    "id": "chatcmpl-1a0b1564-df9e-4373-a767-ce6164c14a48",
+    "object": "chat.completion",
+    "created": 1789336350,
+    "model": "models/CaptchaMind-7B",
+    "choices": [
+      {
+        "index": 0,
+        "finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "<tool_call>{\"name\": \"enter_number\", \"arguments\": {\"number\": 86}}</tool_call>",
+          "reasoning_content": "I need to refer to the documentation to understand how to perform this captcha task. The goal is to sum up all the values on the top faces of the dice across all the small images.\n\nI can see there are 6 images arranged in a grid. Let me count the top faces values in each image:\n\nImage 1 has 4 dice, the top faces values are 1, 4, 5, 0, sum = 10. \nImage 2 has 6 dice, the top faces values are 3, 2, 5, 4, 2, 3, sum = 21. \nImage 3 has 4 dice, the top faces values are 5, 6, 5, 6, sum = 22. \nImage 4 has 2 dice, the top faces values are 2, 1, sum = 3. \nImage 5 has 3 dice, the top faces values are 4, 4, 4, sum = 12. \nImage 6 has 4 dice, the top faces values are 6, 3, 6, 3, sum = 18. \n\nNow I need to calculate the total sum: 10 + 21 + 22 + 3 + 12 + 18 = 86.\n\nI can see there is an answer box in the interface, so I will enter the number 86.",
+          "reasoning": "I need to refer to the documentation to understand how to perform this captcha task. The goal is to sum up all the values on the top faces of the dice across all the small images.\n\nI can see there are 6 images arranged in a grid. Let me count the top faces values in each image:\n\nImage 1 has 4 dice, the top faces values are 1, 4, 5, 0, sum = 10. \nImage 2 has 6 dice, the top faces values are 3, 2, 5, 4, 2, 3, sum = 21. \nImage 3 has 4 dice, the top faces values are 5, 6, 5, 6, sum = 22. \nImage 4 has 2 dice, the top faces values are 2, 1, sum = 3. \nImage 5 has 3 dice, the top faces values are 4, 4, 4, sum = 12. \nImage 6 has 4 dice, the top faces values are 6, 3, 6, 3, sum = 18. \n\nNow I need to calculate the total sum: 10 + 21 + 22 + 3 + 12 + 18 = 86.\n\nI can see there is an answer box in the interface, so I will enter the number 86.",
+          "tool_calls": null,
+          "tool_call_id": null,
+          "name": null
+        },
+        "logprobs": null
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 5186,
+      "completion_tokens": 330,
+      "total_tokens": 5516,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "timings": {
+      "prompt_n": 5186,
+      "cache_n": 0,
+      "predicted_n": 332,
+      "prompt_ms": 4682.992874993943,
+      "prompt_per_token_ms": 0.9030067248349292,
+      "prompt_per_second": 1107.4114649398666,
+      "predicted_ms": 7857.603229586179,
+      "predicted_per_token_ms": 23.667479607187285,
+      "predicted_per_second": 42.252069785086974,
+      "peak_memory": 22.422571738,
+      "draft_kind": null,
+      "draft_rounds": null,
+      "draft_n": null,
+      "draft_n_accepted": null
+    }
+  },
+  "elapsed_seconds": 13.274006457999349,
+  "received_at": "2026-09-13T21:52:30.514120+00:00"
+}

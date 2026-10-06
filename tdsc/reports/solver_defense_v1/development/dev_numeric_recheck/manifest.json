@@ -1,0 +1,578 @@
+[
+  {
+    "id": "interactive_dev_v1/Dice_Count/dev_01",
+    "source": "interactive_dev_v1",
+    "type": "Dice_Count",
+    "puzzle_id": "dev_01",
+    "images": [
+      "data/interactive_dev_v1/Dice_Count/dev_01_main.png"
+    ],
+    "image_sizes": [
+      [
+        400,
+        300
+      ]
+    ],
+    "prompt": "Sum the numbers on all dice TOP faces. These dice are viewed directly from above. Count the pips on each visible top face and return one integer total.",
+    "gt": {
+      "sum": 9
+    },
+    "schema": {
+      "type": "object",
+      "properties": {
+        "answer_type": {
+          "type": "string",
+          "enum": [
+            "number"
+          ]
+        },
+        "value": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "answer_type",
+        "value"
+      ]
+    },
+    "scorer": "conference_v1",
+    "group_id": "interactive_dev_v1:Dice_Count:dev_01",
+    "split_evidence": "new_vector_drawn_development_only",
+    "partition": "development",
+    "layout": {
+      "main_image_index": 0
+    },
+    "provenance": {
+      "generator": "data/interactive_dev_v1/generate.py",
+      "construction": "independent Pillow vector drawing; no source images loaded"
+    }
+  },
+  {
+    "id": "interactive_dev_v1/Dice_Count/dev_02",
+    "source": "interactive_dev_v1",
+    "type": "Dice_Count",
+    "puzzle_id": "dev_02",
+    "images": [
+      "data/interactive_dev_v1/Dice_Count/dev_02_main.png"
+    ],
+    "image_sizes": [
+      [
+        400,
+        300
+      ]
+    ],
+    "prompt": "Sum the numbers on all dice TOP faces. These dice are viewed directly from above. Count the pips on each visible top face and return one integer total.",
+    "gt": {
+      "sum": 12
+    },
+    "schema": {
+      "type": "object",
+      "properties": {
+        "answer_type": {
+          "type": "string",
+          "enum": [
+            "number"
+          ]
+        },
+        "value": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "answer_type",
+        "value"
+      ]
+    },
+    "scorer": "conference_v1",
+    "group_id": "interactive_dev_v1:Dice_Count:dev_02",
+    "split_evidence": "new_vector_drawn_development_only",
+    "partition": "development",
+    "layout": {
+      "main_image_index": 0
+    },
+    "provenance": {
+      "generator": "data/interactive_dev_v1/generate.py",
+      "construction": "independent Pillow vector drawing; no source images loaded"
+    }
+  },
+  {
+    "id": "interactive_dev_v1/Rotation_Match/dev_01",
+    "source": "interactive_dev_v1",
+    "type": "Rotation_Match",
+    "puzzle_id": "dev_01",
+    "images": [
+      "data/interactive_dev_v1/Rotation_Match/dev_01_reference.png",
+      "data/interactive_dev_v1/Rotation_Match/dev_01_main.png"
+    ],
+    "image_sizes": [
+      [
+        300,
+        300
+      ],
+      [
+        300,
+        300
+      ]
+    ],
+    "prompt": "Image 1 is the REFERENCE direction. Image 2 is the CURRENT object. Give the additional CLOCKWISE rotation in degrees, in the range [0, 360), needed to make the current object's facing direction match the reference. The arrow tip defines the facing direction.",
+    "gt": {
+      "correct_angle": 90.0,
+      "angle_tol_deg": 5.0
+    },
+    "schema": {
+      "type": "object",
+      "properties": {
+        "answer_type": {
+          "type": "string",
+          "enum": [
+            "rotation"
+          ]
+        },
+        "angle": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "answer_type",
+        "angle"
+      ]
+    },
+    "scorer": "conference_v1",
+    "group_id": "interactive_dev_v1:Rotation_Match:dev_01",
+    "split_evidence": "new_vector_drawn_development_only",
+    "partition": "development",
+    "layout": {
+      "main_image_index": 1
+    },
+    "provenance": {
+      "generator": "data/interactive_dev_v1/generate.py",
+      "construction": "independent Pillow vector drawing; no source images loaded"
+    }
+  },
+  {
+    "id": "interactive_dev_v1/Rotation_Match/dev_02",
+    "source": "interactive_dev_v1",
+    "type": "Rotation_Match",
+    "puzzle_id": "dev_02",
+    "images": [
+      "data/interactive_dev_v1/Rotation_Match/dev_02_reference.png",
+      "data/interactive_dev_v1/Rotation_Match/dev_02_main.png"
+    ],
+    "image_sizes": [
+      [
+        300,
+        300
+      ],
+      [
+        300,
+        300
+      ]
+    ],
+    "prompt": "Image 1 is the REFERENCE direction. Image 2 is the CURRENT object. Give the additional CLOCKWISE rotation in degrees, in the range [0, 360), needed to make the current object's facing direction match the reference. The arrow tip defines the facing direction.",
+    "gt": {
+      "correct_angle": 270.0,
+      "angle_tol_deg": 5.0
+    },
+    "schema": {
+      "type": "object",
+      "properties": {
+        "answer_type": {
+          "type": "string",
+          "enum": [
+            "rotation"
+          ]
+        },
+        "angle": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "answer_type",
+        "angle"
+      ]
+    },
+    "scorer": "conference_v1",
+    "group_id": "interactive_dev_v1:Rotation_Match:dev_02",
+    "split_evidence": "new_vector_drawn_development_only",
+    "partition": "development",
+    "layout": {
+      "main_image_index": 1
+    },
+    "provenance": {
+      "generator": "data/interactive_dev_v1/generate.py",
+      "construction": "independent Pillow vector drawing; no source images loaded"
+    }
+  },
+  {
+    "id": "defense_v1/D2/image1",
+    "source": "conference_defense",
+    "module": "D",
+    "condition": "D2",
+    "base_id": "image1",
+    "target": "fox",
+    "type": "Visible_Eye_Count",
+    "puzzle_id": "image1.png",
+    "images": [
+      "data/defense_v1/original/image1.png"
+    ],
+    "image_sizes": [
+      [
+        1024,
+        1024
+      ]
+    ],
+    "prompt": "Count all actually visible eyes of the fox. Do not count hidden eyes.",
+    "gt": {
+      "value": 1
+    },
+    "schema": {
+      "type": "object",
+      "properties": {
+        "answer_type": {
+          "type": "string",
+          "enum": [
+            "number"
+          ]
+        },
+        "value": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "answer_type",
+        "value"
+      ]
+    },
+    "scorer": "defense_v1_maximum_matching",
+    "group_id": "defense_v1/image1",
+    "partition": "development",
+    "split_evidence": "fixed_image_ids_before_new_model_calls",
+    "training_exposure": "unknown; previously used conference material",
+    "layout": {
+      "rows": 2,
+      "cols": 3,
+      "main_image_index": 0,
+      "grid_box": [
+        0,
+        0,
+        1024,
+        1024
+      ]
+    },
+    "source_path": "../conference/captcha_data/Select_Animal/image1.png",
+    "label_provenance": "data/defense_v1/annotations.json",
+    "image_transform": {
+      "name": "identity"
+    }
+  },
+  {
+    "id": "defense_v1/D2/image7",
+    "source": "conference_defense",
+    "module": "D",
+    "condition": "D2",
+    "base_id": "image7",
+    "target": "panda",
+    "type": "Visible_Eye_Count",
+    "puzzle_id": "image7.png",
+    "images": [
+      "data/defense_v1/original/image7.png"
+    ],
+    "image_sizes": [
+      [
+        1024,
+        1024
+      ]
+    ],
+    "prompt": "Count all actually visible eyes of the panda. Do not count hidden eyes.",
+    "gt": {
+      "value": 2
+    },
+    "schema": {
+      "type": "object",
+      "properties": {
+        "answer_type": {
+          "type": "string",
+          "enum": [
+            "number"
+          ]
+        },
+        "value": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "answer_type",
+        "value"
+      ]
+    },
+    "scorer": "defense_v1_maximum_matching",
+    "group_id": "defense_v1/image7",
+    "partition": "development",
+    "split_evidence": "fixed_image_ids_before_new_model_calls",
+    "training_exposure": "unknown; previously used conference material",
+    "layout": {
+      "rows": 2,
+      "cols": 3,
+      "main_image_index": 0,
+      "grid_box": [
+        0,
+        0,
+        1024,
+        1024
+      ]
+    },
+    "source_path": "../conference/captcha_data/Select_Animal/image7.png",
+    "label_provenance": "data/defense_v1/annotations.json",
+    "image_transform": {
+      "name": "identity"
+    }
+  },
+  {
+    "id": "defense_v1/D2/image8",
+    "source": "conference_defense",
+    "module": "D",
+    "condition": "D2",
+    "base_id": "image8",
+    "target": "squirrel",
+    "type": "Visible_Eye_Count",
+    "puzzle_id": "image8.png",
+    "images": [
+      "data/defense_v1/original/image8.png"
+    ],
+    "image_sizes": [
+      [
+        1024,
+        1024
+      ]
+    ],
+    "prompt": "Count all actually visible eyes of the squirrel. Do not count hidden eyes.",
+    "gt": {
+      "value": 1
+    },
+    "schema": {
+      "type": "object",
+      "properties": {
+        "answer_type": {
+          "type": "string",
+          "enum": [
+            "number"
+          ]
+        },
+        "value": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "answer_type",
+        "value"
+      ]
+    },
+    "scorer": "defense_v1_maximum_matching",
+    "group_id": "defense_v1/image8",
+    "partition": "development",
+    "split_evidence": "fixed_image_ids_before_new_model_calls",
+    "training_exposure": "unknown; previously used conference material",
+    "layout": {
+      "rows": 2,
+      "cols": 3,
+      "main_image_index": 0,
+      "grid_box": [
+        0,
+        0,
+        1024,
+        1024
+      ]
+    },
+    "source_path": "../conference/captcha_data/Select_Animal/image8.png",
+    "label_provenance": "data/defense_v1/annotations.json",
+    "image_transform": {
+      "name": "identity"
+    }
+  },
+  {
+    "id": "defense_v1/D2/image23",
+    "source": "conference_defense",
+    "module": "D",
+    "condition": "D2",
+    "base_id": "image23",
+    "target": "elephant",
+    "type": "Visible_Eye_Count",
+    "puzzle_id": "image23.png",
+    "images": [
+      "data/defense_v1/original/image23.png"
+    ],
+    "image_sizes": [
+      [
+        1024,
+        1024
+      ]
+    ],
+    "prompt": "Count all actually visible eyes of the elephant. Do not count hidden eyes.",
+    "gt": {
+      "value": 2
+    },
+    "schema": {
+      "type": "object",
+      "properties": {
+        "answer_type": {
+          "type": "string",
+          "enum": [
+            "number"
+          ]
+        },
+        "value": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "answer_type",
+        "value"
+      ]
+    },
+    "scorer": "defense_v1_maximum_matching",
+    "group_id": "defense_v1/image23",
+    "partition": "development",
+    "split_evidence": "fixed_image_ids_before_new_model_calls",
+    "training_exposure": "unknown; previously used conference material",
+    "layout": {
+      "rows": 2,
+      "cols": 3,
+      "main_image_index": 0,
+      "grid_box": [
+        0,
+        0,
+        1024,
+        1024
+      ]
+    },
+    "source_path": "../conference/captcha_data/Select_Animal/image23.png",
+    "label_provenance": "data/defense_v1/annotations.json",
+    "image_transform": {
+      "name": "identity"
+    }
+  },
+  {
+    "id": "defense_v1/D2/image27",
+    "source": "conference_defense",
+    "module": "D",
+    "condition": "D2",
+    "base_id": "image27",
+    "target": "tiger",
+    "type": "Visible_Eye_Count",
+    "puzzle_id": "image27.png",
+    "images": [
+      "data/defense_v1/original/image27.png"
+    ],
+    "image_sizes": [
+      [
+        1024,
+        1024
+      ]
+    ],
+    "prompt": "Count all actually visible eyes of the tiger. Do not count hidden eyes.",
+    "gt": {
+      "value": 2
+    },
+    "schema": {
+      "type": "object",
+      "properties": {
+        "answer_type": {
+          "type": "string",
+          "enum": [
+            "number"
+          ]
+        },
+        "value": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "answer_type",
+        "value"
+      ]
+    },
+    "scorer": "defense_v1_maximum_matching",
+    "group_id": "defense_v1/image27",
+    "partition": "development",
+    "split_evidence": "fixed_image_ids_before_new_model_calls",
+    "training_exposure": "unknown; previously used conference material",
+    "layout": {
+      "rows": 2,
+      "cols": 3,
+      "main_image_index": 0,
+      "grid_box": [
+        0,
+        0,
+        1024,
+        1024
+      ]
+    },
+    "source_path": "../conference/captcha_data/Select_Animal/image27.png",
+    "label_provenance": "data/defense_v1/annotations.json",
+    "image_transform": {
+      "name": "identity"
+    }
+  },
+  {
+    "id": "defense_v1/D2/image30",
+    "source": "conference_defense",
+    "module": "D",
+    "condition": "D2",
+    "base_id": "image30",
+    "target": "monkey",
+    "type": "Visible_Eye_Count",
+    "puzzle_id": "image30.png",
+    "images": [
+      "data/defense_v1/original/image30.png"
+    ],
+    "image_sizes": [
+      [
+        1024,
+        1024
+      ]
+    ],
+    "prompt": "Count all actually visible eyes of the monkey. Do not count hidden eyes.",
+    "gt": {
+      "value": 2
+    },
+    "schema": {
+      "type": "object",
+      "properties": {
+        "answer_type": {
+          "type": "string",
+          "enum": [
+            "number"
+          ]
+        },
+        "value": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "answer_type",
+        "value"
+      ]
+    },
+    "scorer": "defense_v1_maximum_matching",
+    "group_id": "defense_v1/image30",
+    "partition": "development",
+    "split_evidence": "fixed_image_ids_before_new_model_calls",
+    "training_exposure": "unknown; previously used conference material",
+    "layout": {
+      "rows": 2,
+      "cols": 3,
+      "main_image_index": 0,
+      "grid_box": [
+        0,
+        0,
+        1024,
+        1024
+      ]
+    },
+    "source_path": "../conference/captcha_data/Select_Animal/image30.png",
+    "label_provenance": "data/defense_v1/annotations.json",
+    "image_transform": {
+      "name": "identity"
+    }
+  }
+]

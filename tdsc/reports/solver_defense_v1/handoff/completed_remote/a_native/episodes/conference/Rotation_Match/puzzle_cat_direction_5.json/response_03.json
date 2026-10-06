@@ -1,0 +1,50 @@
+{
+  "raw_response": {
+    "id": "chatcmpl-c99d3ba4-9ccc-4d59-9177-7e0c27cce157",
+    "object": "chat.completion",
+    "created": 1789348628,
+    "model": "models/CaptchaMind-7B",
+    "choices": [
+      {
+        "index": 0,
+        "finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "<tool_call>{\"name\": \"enter_number\", \"arguments\": {\"number\": 225}}</tool_call>",
+          "reasoning_content": "I need to determine the additional clockwise rotation in degrees, within the range [0, 360), required to align the CURRENT object's facing direction with the REFERENCE direction.\n\nThe reference direction is indicated by the finger in image 1, pointing lower-right. Looking at the current object in image 2, its facing direction is upward.\n\nThe difference between facing downward (which is 270 degrees) and facing upward (which is 0 degrees) is 270 degrees. This is the clockwise angle from the reference direction.\n\nI can see that the current angle of 45 degrees is less than 270 degrees. Therefore, I need to calculate the additional clockwise rotation: 270 - 45 = 225 degrees.",
+          "reasoning": "I need to determine the additional clockwise rotation in degrees, within the range [0, 360), required to align the CURRENT object's facing direction with the REFERENCE direction.\n\nThe reference direction is indicated by the finger in image 1, pointing lower-right. Looking at the current object in image 2, its facing direction is upward.\n\nThe difference between facing downward (which is 270 degrees) and facing upward (which is 0 degrees) is 270 degrees. This is the clockwise angle from the reference direction.\n\nI can see that the current angle of 45 degrees is less than 270 degrees. Therefore, I need to calculate the additional clockwise rotation: 270 - 45 = 225 degrees.",
+          "tool_calls": null,
+          "tool_call_id": null,
+          "name": null
+        },
+        "logprobs": null
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 6045,
+      "completion_tokens": 181,
+      "total_tokens": 6226,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "timings": {
+      "prompt_n": 6045,
+      "cache_n": 0,
+      "predicted_n": 183,
+      "prompt_ms": 5422.062500001631,
+      "prompt_per_token_ms": 0.8969499586437768,
+      "prompt_per_second": 1114.8893986371759,
+      "predicted_ms": 4341.257133578228,
+      "predicted_per_token_ms": 23.722716576930207,
+      "predicted_per_second": 42.15368829101457,
+      "peak_memory": 30.161962916,
+      "draft_kind": null,
+      "draft_rounds": null,
+      "draft_n": null,
+      "draft_n_accepted": null
+    }
+  },
+  "elapsed_seconds": 10.036211084021488,
+  "received_at": "2026-09-14T01:17:08.194298+00:00"
+}

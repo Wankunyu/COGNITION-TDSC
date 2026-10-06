@@ -1,0 +1,316 @@
+{
+  "id": "captchabench/Patch_Select/sample_1886",
+  "type": "Patch_Select",
+  "source": "captchabench",
+  "module": "B",
+  "condition": "native_actions",
+  "solver": "C-I",
+  "puzzle_id": "sample_1886",
+  "group_id": "captchabench:Patch_Select:sample_1886",
+  "partition": "evaluation",
+  "model": "models/CaptchaMind-7B",
+  "started_at": "2026-09-13T21:07:18.707951+00:00",
+  "started_unix": 1789333638.7079449,
+  "budgets": {
+    "max_calls_per_episode": 30,
+    "max_output_tokens_per_call": 8192,
+    "max_output_tokens_per_episode": 65536,
+    "request_timeout_seconds": 600,
+    "episode_timeout_seconds": 1800
+  },
+  "protocol": "source_native",
+  "action_parser": "lossless_single_action_v1",
+  "steps": [
+    {
+      "step": 1,
+      "text": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [310, 185]}}</tool_call>",
+      "usage": {
+        "prompt_tokens": 639,
+        "completion_tokens": 178,
+        "total_tokens": 817,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "input_tokens": 639,
+      "output_tokens": 178,
+      "finish_reason": "stop",
+      "truncated": false,
+      "returned_model": "models/CaptchaMind-7B",
+      "elapsed_seconds": 4.896150417000172,
+      "raw_response": {
+        "id": "chatcmpl-cc4907c3-a115-4885-84ee-6a77287dfeed",
+        "object": "chat.completion",
+        "created": 1789333643,
+        "model": "models/CaptchaMind-7B",
+        "choices": [
+          {
+            "index": 0,
+            "finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [310, 185]}}</tool_call>",
+              "reasoning_content": "I need to refer to the task to understand that I need to mark all the places containing bicycles. Looking at the nine small images one by one: Image 1 doesn't have a bicycle, I won't mark it. Image 2 doesn't have a bicycle, I won't mark it. Image 3 doesn't have a bicycle, I won't mark it. Image 4 doesn't have a bicycle, I won't mark it. Image 5 has a bicycle, I will mark it. Image 6 has a bicycle, I will mark it. Image 7 has a bicycle, I will mark it. Image 8 has a bicycle, I will mark it. Image 9 has a bicycle, I will mark it.",
+              "reasoning": "I need to refer to the task to understand that I need to mark all the places containing bicycles. Looking at the nine small images one by one: Image 1 doesn't have a bicycle, I won't mark it. Image 2 doesn't have a bicycle, I won't mark it. Image 3 doesn't have a bicycle, I won't mark it. Image 4 doesn't have a bicycle, I won't mark it. Image 5 has a bicycle, I will mark it. Image 6 has a bicycle, I will mark it. Image 7 has a bicycle, I will mark it. Image 8 has a bicycle, I will mark it. Image 9 has a bicycle, I will mark it.",
+              "tool_calls": null,
+              "tool_call_id": null,
+              "name": null
+            },
+            "logprobs": null
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 639,
+          "completion_tokens": 178,
+          "total_tokens": 817,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "timings": {
+          "prompt_n": 639,
+          "cache_n": 0,
+          "predicted_n": 180,
+          "prompt_ms": 532.3213749798015,
+          "prompt_per_token_ms": 0.8330537949605656,
+          "prompt_per_second": 1200.4026703309562,
+          "predicted_ms": 4140.620739543914,
+          "predicted_per_token_ms": 23.003448553021745,
+          "predicted_per_second": 43.471742843037305,
+          "peak_memory": 19.988604016,
+          "draft_kind": null,
+          "draft_rounds": null,
+          "draft_n": null,
+          "draft_n_accepted": null
+        }
+      },
+      "response_file": "response_01.json",
+      "action": {
+        "name": "click",
+        "kwargs": {
+          "position": [
+            310,
+            185
+          ]
+        }
+      },
+      "done": false,
+      "reward": 0.0,
+      "observation": [
+        "./reports/solver_defense_v1/b_native/episodes/captchabench/Patch_Select/sample_1886/observations/step_01_00.png"
+      ],
+      "submitted": false
+    },
+    {
+      "step": 2,
+      "text": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [185, 310]}}</tool_call>",
+      "usage": {
+        "prompt_tokens": 1054,
+        "completion_tokens": 78,
+        "total_tokens": 1132,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "input_tokens": 1054,
+      "output_tokens": 78,
+      "finish_reason": "stop",
+      "truncated": false,
+      "returned_model": "models/CaptchaMind-7B",
+      "elapsed_seconds": 3.0724690839997493,
+      "raw_response": {
+        "id": "chatcmpl-0bb0e1e4-d1df-4a42-96f4-d606b28e456c",
+        "object": "chat.completion",
+        "created": 1789333646,
+        "model": "models/CaptchaMind-7B",
+        "choices": [
+          {
+            "index": 0,
+            "finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [185, 310]}}</tool_call>",
+              "reasoning_content": "I need to select all the squares containing bicycles. Looking at the image, I can see there is a bicycle in the 3rd, 4th, 6th, and 7th columns. So I will click on these squares.",
+              "reasoning": "I need to select all the squares containing bicycles. Looking at the image, I can see there is a bicycle in the 3rd, 4th, 6th, and 7th columns. So I will click on these squares.",
+              "tool_calls": null,
+              "tool_call_id": null,
+              "name": null
+            },
+            "logprobs": null
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 1054,
+          "completion_tokens": 78,
+          "total_tokens": 1132,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "timings": {
+          "prompt_n": 1054,
+          "cache_n": 0,
+          "predicted_n": 80,
+          "prompt_ms": 877.9788319952786,
+          "prompt_per_token_ms": 0.8329969943029208,
+          "prompt_per_second": 1200.4845237608963,
+          "predicted_ms": 1846.3740506374477,
+          "predicted_per_token_ms": 23.079675632968097,
+          "predicted_per_second": 43.328165261194265,
+          "peak_memory": 19.988604016,
+          "draft_kind": null,
+          "draft_rounds": null,
+          "draft_n": null,
+          "draft_n_accepted": null
+        }
+      },
+      "response_file": "response_02.json",
+      "action": {
+        "name": "click",
+        "kwargs": {
+          "position": [
+            185,
+            310
+          ]
+        }
+      },
+      "done": false,
+      "reward": 0.0,
+      "observation": [
+        "./reports/solver_defense_v1/b_native/episodes/captchabench/Patch_Select/sample_1886/observations/step_02_00.png"
+      ],
+      "submitted": false
+    },
+    {
+      "step": 3,
+      "text": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [166, 540]}}</tool_call>",
+      "usage": {
+        "prompt_tokens": 1469,
+        "completion_tokens": 44,
+        "total_tokens": 1513,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "input_tokens": 1469,
+      "output_tokens": 44,
+      "finish_reason": "stop",
+      "truncated": false,
+      "returned_model": "models/CaptchaMind-7B",
+      "elapsed_seconds": 2.600910917011788,
+      "raw_response": {
+        "id": "chatcmpl-95fdd656-efe6-4b74-9a2e-f73ddb449f50",
+        "object": "chat.completion",
+        "created": 1789333649,
+        "model": "models/CaptchaMind-7B",
+        "choices": [
+          {
+            "index": 0,
+            "finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [166, 540]}}</tool_call>",
+              "reasoning_content": "I have successfully selected all the squares containing bicycles. Now I will click submit.",
+              "reasoning": "I have successfully selected all the squares containing bicycles. Now I will click submit.",
+              "tool_calls": null,
+              "tool_call_id": null,
+              "name": null
+            },
+            "logprobs": null
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 1469,
+          "completion_tokens": 44,
+          "total_tokens": 1513,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "timings": {
+          "prompt_n": 1469,
+          "cache_n": 0,
+          "predicted_n": 46,
+          "prompt_ms": 1194.753750023665,
+          "prompt_per_token_ms": 0.8133109258159734,
+          "prompt_per_second": 1229.5420708835632,
+          "predicted_ms": 1067.1534888860253,
+          "predicted_per_token_ms": 23.198988888826637,
+          "predicted_per_second": 43.105326908520205,
+          "peak_memory": 19.988604016,
+          "draft_kind": null,
+          "draft_rounds": null,
+          "draft_n": null,
+          "draft_n_accepted": null
+        }
+      },
+      "response_file": "response_03.json",
+      "action": {
+        "name": "click",
+        "kwargs": {
+          "position": [
+            166,
+            540
+          ]
+        }
+      },
+      "done": true,
+      "reward": 0.0,
+      "observation": [
+        "./reports/solver_defense_v1/b_native/episodes/captchabench/Patch_Select/sample_1886/observations/step_03_00.png"
+      ],
+      "submitted": true
+    }
+  ],
+  "model_calls": 3,
+  "input_tokens": 3162,
+  "output_tokens": 300,
+  "reward": 0.0,
+  "done": true,
+  "correct": false,
+  "status": "incorrect",
+  "submitted": true,
+  "images": [
+    "data/external/captchabench/captcha/patch_select/sample_1886/sample_1886_step_0.png"
+  ],
+  "cost_usd": null,
+  "source_revision": "960a521e842bd164b08344151b0a4253d23cfc2f",
+  "source_path": "captcha/patch_select/sample_1886",
+  "training_exposure": "unknown",
+  "scorer": "conference_v1",
+  "split_evidence": "upstream_eval_range",
+  "gt": {
+    "correct_patches": [
+      9,
+      10,
+      11,
+      13,
+      14,
+      15
+    ],
+    "grid_size": [
+      4,
+      4
+    ]
+  },
+  "initial_observation": [
+    "./reports/solver_defense_v1/b_native/episodes/captchabench/Patch_Select/sample_1886/observations/step_00_00.png"
+  ],
+  "elapsed_seconds": 11.2019681930542,
+  "final_answer": {
+    "answer_type": "multi_select",
+    "indices": [
+      6,
+      9
+    ]
+  },
+  "answer": {
+    "answer_type": "multi_select",
+    "indices": [
+      6,
+      9
+    ]
+  },
+  "stop_reason": "incorrect",
+  "finished_at": "2026-09-13T21:07:29.909813+00:00"
+}

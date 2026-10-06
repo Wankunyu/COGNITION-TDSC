@@ -1,0 +1,318 @@
+{
+  "id": "captchabench/Patch_Select/sample_1928",
+  "type": "Patch_Select",
+  "source": "captchabench",
+  "module": "B",
+  "condition": "native_actions",
+  "solver": "C-I",
+  "puzzle_id": "sample_1928",
+  "group_id": "captchabench:Patch_Select:sample_1928",
+  "partition": "evaluation",
+  "model": "models/CaptchaMind-7B",
+  "started_at": "2026-09-13T21:08:58.725712+00:00",
+  "started_unix": 1789333738.725708,
+  "budgets": {
+    "max_calls_per_episode": 30,
+    "max_output_tokens_per_call": 8192,
+    "max_output_tokens_per_episode": 65536,
+    "request_timeout_seconds": 600,
+    "episode_timeout_seconds": 1800
+  },
+  "protocol": "source_native",
+  "action_parser": "lossless_single_action_v1",
+  "steps": [
+    {
+      "step": 1,
+      "text": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [185, 310]}}</tool_call>",
+      "usage": {
+        "prompt_tokens": 639,
+        "completion_tokens": 79,
+        "total_tokens": 718,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "input_tokens": 639,
+      "output_tokens": 79,
+      "finish_reason": "stop",
+      "truncated": false,
+      "returned_model": "models/CaptchaMind-7B",
+      "elapsed_seconds": 2.6263398340088315,
+      "raw_response": {
+        "id": "chatcmpl-bc6c7d8c-3d5b-4207-97c4-41f5c2dc66ea",
+        "object": "chat.completion",
+        "created": 1789333741,
+        "model": "models/CaptchaMind-7B",
+        "choices": [
+          {
+            "index": 0,
+            "finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [185, 310]}}</tool_call>",
+              "reasoning_content": "First, I need to select all the squares containing stairs. Looking at the image, I can see there are 3 rows of squares, and the 3rd row has 3 squares with stairs. So I will select these 3 squares.",
+              "reasoning": "First, I need to select all the squares containing stairs. Looking at the image, I can see there are 3 rows of squares, and the 3rd row has 3 squares with stairs. So I will select these 3 squares.",
+              "tool_calls": null,
+              "tool_call_id": null,
+              "name": null
+            },
+            "logprobs": null
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 639,
+          "completion_tokens": 79,
+          "total_tokens": 718,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "timings": {
+          "prompt_n": 639,
+          "cache_n": 0,
+          "predicted_n": 81,
+          "prompt_ms": 532.0414169982541,
+          "prompt_per_token_ms": 0.8326156760536059,
+          "prompt_per_second": 1201.034317225151,
+          "predicted_ms": 1874.279797757845,
+          "predicted_per_token_ms": 23.139256762442532,
+          "predicted_per_second": 43.216599835786695,
+          "peak_memory": 19.988604016,
+          "draft_kind": null,
+          "draft_rounds": null,
+          "draft_n": null,
+          "draft_n_accepted": null
+        }
+      },
+      "response_file": "response_01.json",
+      "action": {
+        "name": "click",
+        "kwargs": {
+          "position": [
+            185,
+            310
+          ]
+        }
+      },
+      "done": false,
+      "reward": 0.0,
+      "observation": [
+        "./reports/solver_defense_v1/b_native/episodes/captchabench/Patch_Select/sample_1928/observations/step_01_00.png"
+      ],
+      "submitted": false
+    },
+    {
+      "step": 2,
+      "text": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [310, 310]}}</tool_call>",
+      "usage": {
+        "prompt_tokens": 1054,
+        "completion_tokens": 38,
+        "total_tokens": 1092,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "input_tokens": 1054,
+      "output_tokens": 38,
+      "finish_reason": "stop",
+      "truncated": false,
+      "returned_model": "models/CaptchaMind-7B",
+      "elapsed_seconds": 2.0865578340017237,
+      "raw_response": {
+        "id": "chatcmpl-b93d87f1-085b-4401-946e-ed336d604388",
+        "object": "chat.completion",
+        "created": 1789333743,
+        "model": "models/CaptchaMind-7B",
+        "choices": [
+          {
+            "index": 0,
+            "finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [310, 310]}}</tool_call>",
+              "reasoning_content": "I have successfully selected the first square of stairs.",
+              "reasoning": "I have successfully selected the first square of stairs.",
+              "tool_calls": null,
+              "tool_call_id": null,
+              "name": null
+            },
+            "logprobs": null
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 1054,
+          "completion_tokens": 38,
+          "total_tokens": 1092,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "timings": {
+          "prompt_n": 1054,
+          "cache_n": 0,
+          "predicted_n": 40,
+          "prompt_ms": 883.5643749916926,
+          "prompt_per_token_ms": 0.8382963709598602,
+          "prompt_per_second": 1192.8955374755913,
+          "predicted_ms": 927.0315384492277,
+          "predicted_per_token_ms": 23.17578846123069,
+          "predicted_per_second": 43.14847806247613,
+          "peak_memory": 19.988604016,
+          "draft_kind": null,
+          "draft_rounds": null,
+          "draft_n": null,
+          "draft_n_accepted": null
+        }
+      },
+      "response_file": "response_02.json",
+      "action": {
+        "name": "click",
+        "kwargs": {
+          "position": [
+            310,
+            310
+          ]
+        }
+      },
+      "done": false,
+      "reward": 0.0,
+      "observation": [
+        "./reports/solver_defense_v1/b_native/episodes/captchabench/Patch_Select/sample_1928/observations/step_02_00.png"
+      ],
+      "submitted": false
+    },
+    {
+      "step": 3,
+      "text": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [187, 540]}}</tool_call>",
+      "usage": {
+        "prompt_tokens": 1469,
+        "completion_tokens": 45,
+        "total_tokens": 1514,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "input_tokens": 1469,
+      "output_tokens": 45,
+      "finish_reason": "stop",
+      "truncated": false,
+      "returned_model": "models/CaptchaMind-7B",
+      "elapsed_seconds": 2.5794892080011778,
+      "raw_response": {
+        "id": "chatcmpl-1e3f1c3d-2703-47d9-ab1f-3e09cba6903b",
+        "object": "chat.completion",
+        "created": 1789333746,
+        "model": "models/CaptchaMind-7B",
+        "choices": [
+          {
+            "index": 0,
+            "finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [187, 540]}}</tool_call>",
+              "reasoning_content": "I have successfully selected all the squares containing the stairs. Now I will click submit.",
+              "reasoning": "I have successfully selected all the squares containing the stairs. Now I will click submit.",
+              "tool_calls": null,
+              "tool_call_id": null,
+              "name": null
+            },
+            "logprobs": null
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 1469,
+          "completion_tokens": 45,
+          "total_tokens": 1514,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "timings": {
+          "prompt_n": 1469,
+          "cache_n": 0,
+          "predicted_n": 47,
+          "prompt_ms": 1193.4963329986203,
+          "prompt_per_token_ms": 0.8124549577934788,
+          "prompt_per_second": 1230.8374641664677,
+          "predicted_ms": 1090.6163951320036,
+          "predicted_per_token_ms": 23.204604151744757,
+          "predicted_per_second": 43.09489588620325,
+          "peak_memory": 19.988604016,
+          "draft_kind": null,
+          "draft_rounds": null,
+          "draft_n": null,
+          "draft_n_accepted": null
+        }
+      },
+      "response_file": "response_03.json",
+      "action": {
+        "name": "click",
+        "kwargs": {
+          "position": [
+            187,
+            540
+          ]
+        }
+      },
+      "done": true,
+      "reward": 0.0,
+      "observation": [
+        "./reports/solver_defense_v1/b_native/episodes/captchabench/Patch_Select/sample_1928/observations/step_03_00.png"
+      ],
+      "submitted": true
+    }
+  ],
+  "model_calls": 3,
+  "input_tokens": 3162,
+  "output_tokens": 162,
+  "reward": 0.0,
+  "done": true,
+  "correct": false,
+  "status": "incorrect",
+  "submitted": true,
+  "images": [
+    "data/external/captchabench/captcha/patch_select/sample_1928/sample_1928_step_0.png"
+  ],
+  "cost_usd": null,
+  "source_revision": "960a521e842bd164b08344151b0a4253d23cfc2f",
+  "source_path": "captcha/patch_select/sample_1928",
+  "training_exposure": "unknown",
+  "scorer": "conference_v1",
+  "split_evidence": "upstream_eval_range",
+  "gt": {
+    "correct_patches": [
+      5,
+      6,
+      9,
+      10,
+      11,
+      13,
+      14,
+      15
+    ],
+    "grid_size": [
+      4,
+      4
+    ]
+  },
+  "initial_observation": [
+    "./reports/solver_defense_v1/b_native/episodes/captchabench/Patch_Select/sample_1928/observations/step_00_00.png"
+  ],
+  "elapsed_seconds": 8.01694393157959,
+  "final_answer": {
+    "answer_type": "multi_select",
+    "indices": [
+      9,
+      10
+    ]
+  },
+  "answer": {
+    "answer_type": "multi_select",
+    "indices": [
+      9,
+      10
+    ]
+  },
+  "stop_reason": "incorrect",
+  "finished_at": "2026-09-13T21:09:06.742542+00:00"
+}

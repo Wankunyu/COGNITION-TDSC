@@ -1,0 +1,572 @@
+{
+  "created_at": "2026-09-13T06:28:21.955029+00:00",
+  "spec": {
+    "provider": "gemini",
+    "model": "gemini-3.8-flash",
+    "config": {
+      "experiment": "cognition_tdsc_answer_20260913",
+      "seed": 20260911,
+      "task_types": [
+        "Dice_Count",
+        "Click_Order",
+        "Place_Dot",
+        "Pick_Area",
+        "Patch_Select",
+        "Rotation_Match"
+      ],
+      "max_output_tokens": 16384,
+      "request_timeout_seconds": 600,
+      "max_model_calls_per_puzzle": 1,
+      "session_memory": false,
+      "model_tools": false,
+      "response_format": "complete_answer_with_label_blind_extraction",
+      "gemini": {
+        "model": "gemini-3.8-flash",
+        "thinking_level": "MEDIUM",
+        "temperature": 0,
+        "input_usd_per_million": 0.75,
+        "output_usd_per_million": 3.75,
+        "price_verified": "2026-09-11"
+      },
+      "captchamind": {
+        "model": "models/CaptchaMind-7B",
+        "checkpoint_repo": "ATH-MaaS/CaptchaMind-7B",
+        "checkpoint_revision": "b46c7a18f7647b0f4dbc4a2a10821e48239ca93a",
+        "runtime": "mlx-vlm 0.7.0, original BF16 weights",
+        "base_url_env": "CAPTCHAMIND_BASE_URL",
+        "api_key_env": "CAPTCHAMIND_API_KEY",
+        "temperature": 0
+      },
+      "presentation_stability": {
+        "enabled": false,
+        "status": "deferred_by_author_2026-09-11"
+      },
+      "rationale": "Evaluate complete answers from one generation, preserving reasoning freedom and accepting unambiguous equivalent answer representations. No interactive actions or new observations.",
+      "engineering_changes": [
+        "Remove JSON-only/schema instructions",
+        "Retain task semantics and original images",
+        "Increase output cap from 8192 to 16384 before runs",
+        "Separate source annotation defects from model errors",
+        "Separate unclear/incomplete answers from automatic parsing failures"
+      ]
+    },
+    "manifest": [
+      {
+        "id": "captchabench/Dice_Count/sample_0001",
+        "source": "captchabench",
+        "type": "Dice_Count",
+        "puzzle_id": "sample_0001",
+        "images": [
+          "data/external/captchabench/captcha/dice counting/sample_0001/image.png"
+        ],
+        "image_sizes": [
+          [
+            1000,
+            800
+          ]
+        ],
+        "schema": {
+          "type": "object",
+          "properties": {
+            "answer_type": {
+              "type": "string",
+              "enum": [
+                "number"
+              ]
+            },
+            "value": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "answer_type",
+            "value"
+          ]
+        },
+        "source_revision": "960a521e842bd164b08344151b0a4253d23cfc2f",
+        "source_path": "captcha/dice counting/sample_0001",
+        "partition": "development_calibration",
+        "group_id": "captchabench:Dice_Count:sample_0001",
+        "split_evidence": "paper_only",
+        "training_exposure": "unknown",
+        "scorer": "conference_v1",
+        "gt": {
+          "sum": 25
+        },
+        "prompt": "Sum the values shown on all dice in all six panels of the image. Count every visible die once. A numeral face contributes its number; a pip face contributes its visible pip count. Ignore the empty input field and submit button. Return JSON {\"answer_type\":\"number\",\"value\":N}.",
+        "source_assets": [
+          "composite_dice_014.png",
+          "composite_dice_070.png",
+          "composite_dice_192.png",
+          "composite_dice_138.png",
+          "composite_dice_049.png",
+          "composite_dice_096.png"
+        ]
+      },
+      {
+        "id": "captchabench/Dice_Count/sample_0500",
+        "source": "captchabench",
+        "type": "Dice_Count",
+        "puzzle_id": "sample_0500",
+        "images": [
+          "data/external/captchabench/captcha/dice counting/sample_0500/image.png"
+        ],
+        "image_sizes": [
+          [
+            1000,
+            800
+          ]
+        ],
+        "schema": {
+          "type": "object",
+          "properties": {
+            "answer_type": {
+              "type": "string",
+              "enum": [
+                "number"
+              ]
+            },
+            "value": {
+              "type": "integer"
+            }
+          },
+          "required": [
+            "answer_type",
+            "value"
+          ]
+        },
+        "source_revision": "960a521e842bd164b08344151b0a4253d23cfc2f",
+        "source_path": "captcha/dice counting/sample_0500",
+        "partition": "development_calibration",
+        "group_id": "captchabench:Dice_Count:sample_0500",
+        "split_evidence": "paper_only",
+        "training_exposure": "unknown",
+        "scorer": "conference_v1",
+        "gt": {
+          "sum": 24
+        },
+        "prompt": "Sum the values shown on all dice in all six panels of the image. Count every visible die once. A numeral face contributes its number; a pip face contributes its visible pip count. Ignore the empty input field and submit button. Return JSON {\"answer_type\":\"number\",\"value\":N}.",
+        "source_assets": [
+          "composite_dice_006.png",
+          "composite_dice_012.png",
+          "composite_dice_200.png",
+          "composite_dice_155.png",
+          "composite_dice_031.png",
+          "composite_dice_108.png"
+        ]
+      },
+      {
+        "id": "captchabench/Click_Order/sample_0001",
+        "source": "captchabench",
+        "type": "Click_Order",
+        "puzzle_id": "sample_0001",
+        "images": [
+          "data/external/captchabench/captcha/click_order/sample_0001/image.png"
+        ],
+        "image_sizes": [
+          [
+            800,
+            700
+          ]
+        ],
+        "schema": {
+          "type": "object",
+          "properties": {
+            "answer_type": {
+              "type": "string",
+              "enum": [
+                "click_order"
+              ]
+            },
+            "points": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "x": {
+                    "type": "number"
+                  },
+                  "y": {
+                    "type": "number"
+                  }
+                },
+                "required": [
+                  "x",
+                  "y"
+                ]
+              }
+            }
+          },
+          "required": [
+            "answer_type",
+            "points"
+          ]
+        },
+        "source_revision": "960a521e842bd164b08344151b0a4253d23cfc2f",
+        "source_path": "captcha/click_order/sample_0001",
+        "partition": "development_calibration",
+        "group_id": "captchabench:Click_Order:sample_0001",
+        "split_evidence": "paper_only",
+        "training_exposure": "unknown",
+        "scorer": "ordered_boxes_v1",
+        "gt": {
+          "ordered_boxes": [
+            [
+              544,
+              241,
+              664,
+              361
+            ],
+            [
+              323,
+              11,
+              443,
+              131
+            ],
+            [
+              536,
+              411,
+              656,
+              531
+            ],
+            [
+              84,
+              352,
+              204,
+              472
+            ]
+          ]
+        },
+        "prompt": "This is one composite image. Follow the reference icons at the bottom from left to right. Locate the matching icons in the upper puzzle region and return their centers in that order, using pixel coordinates in the full image. Do not include the reference icons or Submit button as answer locations. Return JSON {\"answer_type\":\"click_order\",\"points\":[{\"x\":X,\"y\":Y},...]}."
+      },
+      {
+        "id": "captchabench/Click_Order/sample_0500",
+        "source": "captchabench",
+        "type": "Click_Order",
+        "puzzle_id": "sample_0500",
+        "images": [
+          "data/external/captchabench/captcha/click_order/sample_0500/image.png"
+        ],
+        "image_sizes": [
+          [
+            800,
+            700
+          ]
+        ],
+        "schema": {
+          "type": "object",
+          "properties": {
+            "answer_type": {
+              "type": "string",
+              "enum": [
+                "click_order"
+              ]
+            },
+            "points": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "x": {
+                    "type": "number"
+                  },
+                  "y": {
+                    "type": "number"
+                  }
+                },
+                "required": [
+                  "x",
+                  "y"
+                ]
+              }
+            }
+          },
+          "required": [
+            "answer_type",
+            "points"
+          ]
+        },
+        "source_revision": "960a521e842bd164b08344151b0a4253d23cfc2f",
+        "source_path": "captcha/click_order/sample_0500",
+        "partition": "development_calibration",
+        "group_id": "captchabench:Click_Order:sample_0500",
+        "split_evidence": "paper_only",
+        "training_exposure": "unknown",
+        "scorer": "ordered_boxes_v1",
+        "gt": {
+          "ordered_boxes": [
+            [
+              579,
+              253,
+              699,
+              373
+            ],
+            [
+              458,
+              26,
+              578,
+              146
+            ],
+            [
+              210,
+              199,
+              330,
+              319
+            ],
+            [
+              182,
+              34,
+              302,
+              154
+            ]
+          ]
+        },
+        "prompt": "This is one composite image. Follow the reference icons at the bottom from left to right. Locate the matching icons in the upper puzzle region and return their centers in that order, using pixel coordinates in the full image. Do not include the reference icons or Submit button as answer locations. Return JSON {\"answer_type\":\"click_order\",\"points\":[{\"x\":X,\"y\":Y},...]}."
+      },
+      {
+        "id": "captchabench/Patch_Select/sample_1801",
+        "source": "captchabench",
+        "type": "Patch_Select",
+        "puzzle_id": "sample_1801",
+        "images": [
+          "data/external/captchabench/captcha/patch_select/sample_1801/sample_1801_step_0.png"
+        ],
+        "image_sizes": [
+          [
+            495,
+            580
+          ]
+        ],
+        "schema": {
+          "type": "object",
+          "properties": {
+            "answer_type": {
+              "type": "string",
+              "enum": [
+                "multi_select"
+              ]
+            },
+            "indices": {
+              "type": "array",
+              "items": {
+                "type": "integer"
+              }
+            }
+          },
+          "required": [
+            "answer_type",
+            "indices"
+          ]
+        },
+        "source_revision": "960a521e842bd164b08344151b0a4253d23cfc2f",
+        "source_path": "captcha/patch_select/sample_1801",
+        "partition": "development_calibration",
+        "group_id": "captchabench:Patch_Select:sample_1801",
+        "split_evidence": "upstream_eval_range",
+        "training_exposure": "unknown",
+        "scorer": "conference_v1",
+        "gt": {
+          "correct_patches": [
+            8,
+            12
+          ],
+          "grid_size": [
+            4,
+            4
+          ]
+        },
+        "prompt": "Select ALL cells containing bicycles in the 4x4 grid. Indices are zero-based, row-major: row*4+column. Ignore the Submit button. Return unique ascending cell indices; return an empty array if none match. JSON: {\"answer_type\":\"multi_select\",\"indices\":[...]}."
+      },
+      {
+        "id": "captchabench/Patch_Select/sample_1802",
+        "source": "captchabench",
+        "type": "Patch_Select",
+        "puzzle_id": "sample_1802",
+        "images": [
+          "data/external/captchabench/captcha/patch_select/sample_1802/sample_1802_step_0.png"
+        ],
+        "image_sizes": [
+          [
+            495,
+            580
+          ]
+        ],
+        "schema": {
+          "type": "object",
+          "properties": {
+            "answer_type": {
+              "type": "string",
+              "enum": [
+                "multi_select"
+              ]
+            },
+            "indices": {
+              "type": "array",
+              "items": {
+                "type": "integer"
+              }
+            }
+          },
+          "required": [
+            "answer_type",
+            "indices"
+          ]
+        },
+        "source_revision": "960a521e842bd164b08344151b0a4253d23cfc2f",
+        "source_path": "captcha/patch_select/sample_1802",
+        "partition": "development_calibration",
+        "group_id": "captchabench:Patch_Select:sample_1802",
+        "split_evidence": "upstream_eval_range",
+        "training_exposure": "unknown",
+        "scorer": "conference_v1",
+        "gt": {
+          "correct_patches": [
+            10,
+            13,
+            14,
+            15
+          ],
+          "grid_size": [
+            4,
+            4
+          ]
+        },
+        "prompt": "Select ALL cells containing motorcycles in the 4x4 grid. Indices are zero-based, row-major: row*4+column. Ignore the Submit button. Return unique ascending cell indices; return an empty array if none match. JSON: {\"answer_type\":\"multi_select\",\"indices\":[...]}."
+      },
+      {
+        "id": "captchabench/Rotation_Match/sample_0001",
+        "source": "captchabench",
+        "type": "Rotation_Match",
+        "puzzle_id": "sample_0001",
+        "images": [
+          "data/external/captchabench/captcha/rotation match/sample_0001/image_1.png"
+        ],
+        "image_sizes": [
+          [
+            1000,
+            800
+          ]
+        ],
+        "schema": {
+          "type": "object",
+          "properties": {
+            "answer_type": {
+              "type": "string",
+              "enum": [
+                "rotation"
+              ]
+            },
+            "angle": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "answer_type",
+            "angle"
+          ]
+        },
+        "source_revision": "960a521e842bd164b08344151b0a4253d23cfc2f",
+        "source_path": "captcha/rotation match/sample_0001",
+        "partition": "development_calibration",
+        "group_id": "captchabench:Rotation_Match:1.png",
+        "split_evidence": "paper_only",
+        "training_exposure": "unknown",
+        "scorer": "conference_v1",
+        "gt": {
+          "correct_angle": 180,
+          "angle_tol_deg": 5
+        },
+        "source_assets": [
+          "1.png"
+        ],
+        "angle_mapping": {
+          "initial_clockwise_angle": 180,
+          "target_clockwise_angle": 0
+        },
+        "prompt": "The composite image shows a reference direction on the left and a rotated object on the right. Return the additional CLOCKWISE rotation, in degrees from 0 to less than 360, needed to make the object's upright direction match the reference. Ignore the buttons. Return JSON {\"answer_type\":\"rotation\",\"angle\":N}.",
+        "native_candidate_images": [
+          "data/external/captchabench/captcha/rotation match/sample_0001/image_1.png",
+          "data/external/captchabench/captcha/rotation match/sample_0001/image_2.png",
+          "data/external/captchabench/captcha/rotation match/sample_0001/image_3.png",
+          "data/external/captchabench/captcha/rotation match/sample_0001/image_4.png",
+          "data/external/captchabench/captcha/rotation match/sample_0001/image_5.png",
+          "data/external/captchabench/captcha/rotation match/sample_0001/image_6.png",
+          "data/external/captchabench/captcha/rotation match/sample_0001/image_7.png",
+          "data/external/captchabench/captcha/rotation match/sample_0001/image_8.png"
+        ]
+      },
+      {
+        "id": "captchabench/Rotation_Match/sample_0037",
+        "source": "captchabench",
+        "type": "Rotation_Match",
+        "puzzle_id": "sample_0037",
+        "images": [
+          "data/external/captchabench/captcha/rotation match/sample_0037/image_1.png"
+        ],
+        "image_sizes": [
+          [
+            1000,
+            800
+          ]
+        ],
+        "schema": {
+          "type": "object",
+          "properties": {
+            "answer_type": {
+              "type": "string",
+              "enum": [
+                "rotation"
+              ]
+            },
+            "angle": {
+              "type": "number"
+            }
+          },
+          "required": [
+            "answer_type",
+            "angle"
+          ]
+        },
+        "source_revision": "960a521e842bd164b08344151b0a4253d23cfc2f",
+        "source_path": "captcha/rotation match/sample_0037",
+        "partition": "development_calibration",
+        "group_id": "captchabench:Rotation_Match:changjing.png",
+        "split_evidence": "paper_only",
+        "training_exposure": "unknown",
+        "scorer": "conference_v1",
+        "gt": {
+          "correct_angle": 270,
+          "angle_tol_deg": 5
+        },
+        "source_assets": [
+          "changjing.png"
+        ],
+        "angle_mapping": {
+          "initial_clockwise_angle": 180,
+          "target_clockwise_angle": 90
+        },
+        "prompt": "The composite image shows a reference direction on the left and a rotated object on the right. Return the additional CLOCKWISE rotation, in degrees from 0 to less than 360, needed to make the object's upright direction match the reference. Ignore the buttons. Return JSON {\"answer_type\":\"rotation\",\"angle\":N}.",
+        "native_candidate_images": [
+          "data/external/captchabench/captcha/rotation match/sample_0037/image_1.png",
+          "data/external/captchabench/captcha/rotation match/sample_0037/image_2.png",
+          "data/external/captchabench/captcha/rotation match/sample_0037/image_3.png",
+          "data/external/captchabench/captcha/rotation match/sample_0037/image_4.png",
+          "data/external/captchabench/captcha/rotation match/sample_0037/image_5.png",
+          "data/external/captchabench/captcha/rotation match/sample_0037/image_6.png",
+          "data/external/captchabench/captcha/rotation match/sample_0037/image_7.png",
+          "data/external/captchabench/captcha/rotation match/sample_0037/image_8.png"
+        ]
+      }
+    ],
+    "prompts": {
+      "captchabench/Dice_Count/sample_0001": "Solve this visual puzzle carefully. You may reason before answering. Give the complete solution in this one response; no actions will be executed and no additional observations will be provided.\n\nSum the values shown on all dice in all six panels of the image. Count every visible die once. A numeral face contributes its number; a pip face contributes its visible pip count. Ignore the empty input field and submit button.\n\nInput dimensions: image 1: 1000 x 800 pixels\nFor clarity, end with <answer>YOUR FINAL ANSWER</answer>. Your final answer should contain the integer total.",
+      "captchabench/Dice_Count/sample_0500": "Solve this visual puzzle carefully. You may reason before answering. Give the complete solution in this one response; no actions will be executed and no additional observations will be provided.\n\nSum the values shown on all dice in all six panels of the image. Count every visible die once. A numeral face contributes its number; a pip face contributes its visible pip count. Ignore the empty input field and submit button.\n\nInput dimensions: image 1: 1000 x 800 pixels\nFor clarity, end with <answer>YOUR FINAL ANSWER</answer>. Your final answer should contain the integer total.",
+      "captchabench/Click_Order/sample_0001": "Solve this visual puzzle carefully. You may reason before answering. Give the complete solution in this one response; no actions will be executed and no additional observations will be provided.\n\nThis is one composite image. Follow the reference icons at the bottom from left to right. Locate the matching icons in the upper puzzle region and return their centers in that order, using pixel coordinates in the full image. Do not include the reference icons or Submit button as answer locations.\n\nInput dimensions: image 1: 800 x 700 pixels\nFor clarity, end with <answer>YOUR FINAL ANSWER</answer>. Your final answer should contain the complete ordered list of (x, y) pixel coordinates in the MAIN puzzle image.",
+      "captchabench/Click_Order/sample_0500": "Solve this visual puzzle carefully. You may reason before answering. Give the complete solution in this one response; no actions will be executed and no additional observations will be provided.\n\nThis is one composite image. Follow the reference icons at the bottom from left to right. Locate the matching icons in the upper puzzle region and return their centers in that order, using pixel coordinates in the full image. Do not include the reference icons or Submit button as answer locations.\n\nInput dimensions: image 1: 800 x 700 pixels\nFor clarity, end with <answer>YOUR FINAL ANSWER</answer>. Your final answer should contain the complete ordered list of (x, y) pixel coordinates in the MAIN puzzle image.",
+      "captchabench/Patch_Select/sample_1801": "Solve this visual puzzle carefully. You may reason before answering. Give the complete solution in this one response; no actions will be executed and no additional observations will be provided.\n\nSelect ALL cells containing bicycles in the 4x4 grid. Indices are zero-based, row-major: row*4+column. Ignore the Submit button. Return unique ascending cell indices; return an empty array if none match.\n\nInput dimensions: image 1: 495 x 580 pixels\nFor clarity, end with <answer>YOUR FINAL ANSWER</answer>. Your final answer should contain the complete list of zero-based row-major cell indices.",
+      "captchabench/Patch_Select/sample_1802": "Solve this visual puzzle carefully. You may reason before answering. Give the complete solution in this one response; no actions will be executed and no additional observations will be provided.\n\nSelect ALL cells containing motorcycles in the 4x4 grid. Indices are zero-based, row-major: row*4+column. Ignore the Submit button. Return unique ascending cell indices; return an empty array if none match.\n\nInput dimensions: image 1: 495 x 580 pixels\nFor clarity, end with <answer>YOUR FINAL ANSWER</answer>. Your final answer should contain the complete list of zero-based row-major cell indices.",
+      "captchabench/Rotation_Match/sample_0001": "Solve this visual puzzle carefully. You may reason before answering. Give the complete solution in this one response; no actions will be executed and no additional observations will be provided.\n\nThe composite image shows a reference direction on the left and a rotated object on the right. Return the additional CLOCKWISE rotation, in degrees from 0 to less than 360, needed to make the object's upright direction match the reference. Ignore the buttons.\n\nInput dimensions: image 1: 1000 x 800 pixels\nFor clarity, end with <answer>YOUR FINAL ANSWER</answer>. Your final answer should contain one rotation angle in degrees, as specified by the task.",
+      "captchabench/Rotation_Match/sample_0037": "Solve this visual puzzle carefully. You may reason before answering. Give the complete solution in this one response; no actions will be executed and no additional observations will be provided.\n\nThe composite image shows a reference direction on the left and a rotated object on the right. Return the additional CLOCKWISE rotation, in degrees from 0 to less than 360, needed to make the object's upright direction match the reference. Ignore the buttons.\n\nInput dimensions: image 1: 1000 x 800 pixels\nFor clarity, end with <answer>YOUR FINAL ANSWER</answer>. Your final answer should contain one rotation angle in degrees, as specified by the task."
+    }
+  }
+}

@@ -1,0 +1,140 @@
+{
+  "at": "2026-09-13T20:34:27.303514+00:00",
+  "runs": {
+    "dev_a_native": {
+      "run": "dev_a_native",
+      "solver": "C-I",
+      "planned": 12,
+      "saved": 12,
+      "complete": true,
+      "missing": [],
+      "unresolved": [],
+      "model_calls": 320,
+      "correct": 0,
+      "statuses": {
+        "protocol_failure": 1,
+        "action_budget_exhausted": 9,
+        "incorrect": 2
+      },
+      "raw_statuses": {
+        "protocol_failure": 1,
+        "action_budget_exhausted": 9,
+        "incorrect": 2
+      },
+      "answer_readings": null,
+      "cost_usd": null
+    },
+    "dev_b_native": {
+      "run": "dev_b_native",
+      "solver": "C-I",
+      "planned": 8,
+      "saved": 8,
+      "complete": true,
+      "missing": [],
+      "unresolved": [],
+      "model_calls": 27,
+      "correct": 6,
+      "statuses": {
+        "correct": 6,
+        "incorrect": 2
+      },
+      "raw_statuses": {
+        "correct": 6,
+        "incorrect": 2
+      },
+      "answer_readings": null,
+      "cost_usd": null
+    },
+    "dev_d_gemini": {
+      "run": "dev_d_gemini",
+      "solver": "G-V",
+      "planned": 24,
+      "saved": 24,
+      "complete": true,
+      "missing": [],
+      "unresolved": [],
+      "model_calls": 24,
+      "correct": 20,
+      "statuses": {
+        "correct": 20,
+        "incorrect": 4
+      },
+      "raw_statuses": {
+        "correct": 20,
+        "incorrect": 4
+      },
+      "answer_readings": null,
+      "cost_usd": 0.07223775
+    },
+    "dev_d_static": {
+      "run": "dev_d_static",
+      "solver": "C-S",
+      "planned": 24,
+      "saved": 24,
+      "complete": true,
+      "missing": [],
+      "unresolved": [],
+      "model_calls": 24,
+      "correct": 15,
+      "statuses": {
+        "correct": 15,
+        "format_reading_resolved": 6,
+        "incorrect": 3
+      },
+      "raw_statuses": {
+        "correct": 15,
+        "needs_answer_review": 6,
+        "incorrect": 3
+      },
+      "answer_readings": "./reports/solver_defense_v1/dev_d_static/answer_readings.json",
+      "cost_usd": null
+    },
+    "dev_d_native": {
+      "run": "dev_d_native",
+      "solver": "C-I",
+      "planned": 24,
+      "saved": 24,
+      "complete": true,
+      "missing": [],
+      "unresolved": [],
+      "model_calls": 91,
+      "correct": 9,
+      "statuses": {
+        "incorrect": 15,
+        "correct": 9
+      },
+      "raw_statuses": {
+        "incorrect": 15,
+        "correct": 9
+      },
+      "answer_readings": null,
+      "cost_usd": null
+    },
+    "dev_numeric_recheck": {
+      "run": "dev_numeric_recheck",
+      "solver": "C-I",
+      "planned": 10,
+      "saved": 10,
+      "complete": true,
+      "missing": [],
+      "unresolved": [],
+      "model_calls": 110,
+      "correct": 3,
+      "statuses": {
+        "protocol_failure": 3,
+        "action_budget_exhausted": 1,
+        "incorrect": 3,
+        "correct": 3
+      },
+      "raw_statuses": {
+        "protocol_failure": 3,
+        "action_budget_exhausted": 1,
+        "incorrect": 3,
+        "correct": 3
+      },
+      "answer_readings": null,
+      "cost_usd": null
+    }
+  },
+  "selection": "all fixed development items; correctness is not a gate for formal runs"
+}

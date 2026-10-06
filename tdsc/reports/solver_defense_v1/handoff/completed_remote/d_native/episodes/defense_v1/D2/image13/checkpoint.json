@@ -1,0 +1,339 @@
+{
+  "id": "defense_v1/D2/image13",
+  "type": "Visible_Eye_Count",
+  "source": "conference_defense",
+  "module": "D",
+  "condition": "D2",
+  "solver": "C-I",
+  "puzzle_id": "image13.png",
+  "group_id": "defense_v1/image13",
+  "partition": "evaluation",
+  "model": "models/CaptchaMind-7B",
+  "started_at": "2026-09-14T15:14:37.338788+00:00",
+  "started_unix": 1789398877.3387861,
+  "budgets": {
+    "max_calls_per_episode": 30,
+    "max_output_tokens_per_call": 8192,
+    "max_output_tokens_per_episode": 65536,
+    "request_timeout_seconds": 600,
+    "episode_timeout_seconds": 1800
+  },
+  "protocol": "adapted_native_agent",
+  "action_parser": "lossless_single_action_v1",
+  "steps": [
+    {
+      "step": 1,
+      "text": "<tool_call>{\"name\": \"enter_number\", \"arguments\": {\"number\": 2}}</tool_call>",
+      "usage": {
+        "prompt_tokens": 1894,
+        "completion_tokens": 36,
+        "total_tokens": 1930,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "input_tokens": 1894,
+      "output_tokens": 36,
+      "finish_reason": "stop",
+      "truncated": false,
+      "returned_model": "models/CaptchaMind-7B",
+      "elapsed_seconds": 2.5798230419750325,
+      "raw_response": {
+        "id": "chatcmpl-d36d26d1-38fe-47ef-a0c0-2b5260be5f96",
+        "object": "chat.completion",
+        "created": 1789398880,
+        "model": "models/CaptchaMind-7B",
+        "choices": [
+          {
+            "index": 0,
+            "finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "<tool_call>{\"name\": \"enter_number\", \"arguments\": {\"number\": 2}}</tool_call>",
+              "reasoning_content": "I need to count all actually visible eyes of the lion in the image.",
+              "reasoning": "I need to count all actually visible eyes of the lion in the image.",
+              "tool_calls": null,
+              "tool_call_id": null,
+              "name": null
+            },
+            "logprobs": null
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 1894,
+          "completion_tokens": 36,
+          "total_tokens": 1930,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "timings": {
+          "prompt_n": 1894,
+          "cache_n": 0,
+          "predicted_n": 38,
+          "prompt_ms": 1564.6809170139022,
+          "prompt_per_token_ms": 0.8261250881805186,
+          "prompt_per_second": 1210.4704412287351,
+          "predicted_ms": 880.720521840959,
+          "predicted_per_token_ms": 23.176855837919973,
+          "predicted_per_second": 43.14649092151171,
+          "peak_memory": 35.615165266,
+          "draft_kind": null,
+          "draft_rounds": null,
+          "draft_n": null,
+          "draft_n_accepted": null
+        }
+      },
+      "response_file": "response_01.json",
+      "action": {
+        "name": "enter_number",
+        "kwargs": {
+          "number": 2
+        }
+      },
+      "done": false,
+      "reward": 0.0,
+      "observation": [
+        "./reports/solver_defense_v1/d_native/episodes/defense_v1/D2/image13/observations/step_01_00.png"
+      ],
+      "submitted": false
+    },
+    {
+      "step": 2,
+      "text": "<tool_call>{\"name\": \"enter_number\", \"arguments\": {\"number\": 2}}</tool_call>",
+      "usage": {
+        "prompt_tokens": 3441,
+        "completion_tokens": 53,
+        "total_tokens": 3494,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "input_tokens": 3441,
+      "output_tokens": 53,
+      "finish_reason": "stop",
+      "truncated": false,
+      "returned_model": "models/CaptchaMind-7B",
+      "elapsed_seconds": 4.420457875006832,
+      "raw_response": {
+        "id": "chatcmpl-57a2a234-605c-4cf6-964b-7baf616c78e3",
+        "object": "chat.completion",
+        "created": 1789398884,
+        "model": "models/CaptchaMind-7B",
+        "choices": [
+          {
+            "index": 0,
+            "finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "<tool_call>{\"name\": \"enter_number\", \"arguments\": {\"number\": 2}}</tool_call>",
+              "reasoning_content": "I need to count all actually visible eyes of the lion in the main puzzle. Looking at the lion in the main puzzle, I can see 2 eyes.",
+              "reasoning": "I need to count all actually visible eyes of the lion in the main puzzle. Looking at the lion in the main puzzle, I can see 2 eyes.",
+              "tool_calls": null,
+              "tool_call_id": null,
+              "name": null
+            },
+            "logprobs": null
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 3441,
+          "completion_tokens": 53,
+          "total_tokens": 3494,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "timings": {
+          "prompt_n": 3441,
+          "cache_n": 0,
+          "predicted_n": 55,
+          "prompt_ms": 2955.6085009826347,
+          "prompt_per_token_ms": 0.8589388262082635,
+          "prompt_per_second": 1164.2272644891873,
+          "predicted_ms": 1285.7281249846521,
+          "predicted_per_token_ms": 23.376874999720947,
+          "predicted_per_second": 42.777317327997736,
+          "peak_memory": 35.615165266,
+          "draft_kind": null,
+          "draft_rounds": null,
+          "draft_n": null,
+          "draft_n_accepted": null
+        }
+      },
+      "response_file": "response_02.json",
+      "action": {
+        "name": "enter_number",
+        "kwargs": {
+          "number": 2
+        }
+      },
+      "done": false,
+      "reward": 0.0,
+      "observation": [
+        "./reports/solver_defense_v1/d_native/episodes/defense_v1/D2/image13/observations/step_02_00.png"
+      ],
+      "submitted": false
+    },
+    {
+      "step": 3,
+      "text": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [919, 1102]}}</tool_call>",
+      "usage": {
+        "prompt_tokens": 4988,
+        "completion_tokens": 45,
+        "total_tokens": 5033,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "input_tokens": 4988,
+      "output_tokens": 45,
+      "finish_reason": "stop",
+      "truncated": false,
+      "returned_model": "models/CaptchaMind-7B",
+      "elapsed_seconds": 5.744240791012999,
+      "raw_response": {
+        "id": "chatcmpl-a3c0537f-9639-4a84-82b1-9f7df6181b0c",
+        "object": "chat.completion",
+        "created": 1789398890,
+        "model": "models/CaptchaMind-7B",
+        "choices": [
+          {
+            "index": 0,
+            "finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [919, 1102]}}</tool_call>",
+              "reasoning_content": "I need to count all actually visible eyes of the lion in the main puzzle.",
+              "reasoning": "I need to count all actually visible eyes of the lion in the main puzzle.",
+              "tool_calls": null,
+              "tool_call_id": null,
+              "name": null
+            },
+            "logprobs": null
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 4988,
+          "completion_tokens": 45,
+          "total_tokens": 5033,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "timings": {
+          "prompt_n": 4988,
+          "cache_n": 0,
+          "predicted_n": 47,
+          "prompt_ms": 4398.280916007934,
+          "prompt_per_token_ms": 0.881772437050508,
+          "prompt_per_second": 1134.079449506222,
+          "predicted_ms": 1108.0795353494898,
+          "predicted_per_token_ms": 23.57616032658489,
+          "predicted_per_second": 42.41572784319686,
+          "peak_memory": 35.615165266,
+          "draft_kind": null,
+          "draft_rounds": null,
+          "draft_n": null,
+          "draft_n_accepted": null
+        }
+      },
+      "response_file": "response_03.json",
+      "action": {
+        "name": "click",
+        "kwargs": {
+          "position": [
+            919,
+            1102
+          ]
+        }
+      },
+      "done": true,
+      "reward": 1.0,
+      "observation": [
+        "./reports/solver_defense_v1/d_native/episodes/defense_v1/D2/image13/observations/step_03_00.png"
+      ],
+      "submitted": true
+    }
+  ],
+  "model_calls": 3,
+  "input_tokens": 10323,
+  "output_tokens": 134,
+  "reward": 1.0,
+  "done": true,
+  "correct": true,
+  "status": "correct",
+  "submitted": true,
+  "images": [
+    "data/defense_v1/original/image13.png"
+  ],
+  "cost_usd": null,
+  "source_path": "../conference/captcha_data/Select_Animal/image13.png",
+  "training_exposure": "unknown; previously used conference material",
+  "scorer": "defense_v1_maximum_matching",
+  "split_evidence": "fixed_image_ids_before_new_model_calls",
+  "base_id": "image13",
+  "gt": {
+    "value": 2
+  },
+  "initial_observation": [
+    "./reports/solver_defense_v1/d_native/episodes/defense_v1/D2/image13/observations/step_00_00.png"
+  ],
+  "environment_metadata": {
+    "environment": "cognition_adapted_v1.1_numeric_input_box",
+    "main_image_index": 0,
+    "source_images": [
+      "./data/defense_v1/original/image13.png"
+    ],
+    "source_image_sizes": [
+      [
+        1024,
+        1024
+      ]
+    ],
+    "main_image_box": [
+      0,
+      0,
+      1024,
+      1024
+    ],
+    "observation_main_size": [
+      1024,
+      1152
+    ],
+    "coordinate_mapping": {
+      "scale": [
+        1,
+        1
+      ],
+      "offset": [
+        0,
+        0
+      ]
+    },
+    "controls": {
+      "submit": [
+        834,
+        1088,
+        1004,
+        1132
+      ]
+    },
+    "input_box": [
+      20,
+      1088,
+      814,
+      1132
+    ],
+    "grid": null
+  },
+  "elapsed_seconds": 13.300870895385742,
+  "final_answer": {
+    "value": 2
+  },
+  "answer": {
+    "value": 2
+  },
+  "stop_reason": "correct",
+  "finished_at": "2026-09-14T15:14:50.639260+00:00"
+}

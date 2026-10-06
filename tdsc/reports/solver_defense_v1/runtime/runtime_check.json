@@ -1,0 +1,191 @@
+{
+  "checked_at_utc": "2026-09-13T19:28:33.065628+00:00",
+  "result": "all offline assertions passed",
+  "versions": {
+    "mlx-vlm": "0.7.0",
+    "mlx": "0.32.2",
+    "mlx-metal": "0.32.2",
+    "transformers": "5.17.0",
+    "tokenizers": "0.23.2",
+    "Pillow": "12.3.0"
+  },
+  "python": "3.14.7 (main, Aug  5 2026, 10:29:49) [Clang 21.0.0 (clang-2100.1.1.101)]",
+  "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O",
+  "checkpoint": "models/CaptchaMind-7B",
+  "checkpoint_source": {
+    "repo_id": "ATH-MaaS/CaptchaMind-7B",
+    "revision": "b46c7a18f7647b0f4dbc4a2a10821e48239ca93a",
+    "quantized": false
+  },
+  "safetensors_tensor_dtypes": {
+    "BF16": 729
+  },
+  "max_position_embeddings": 128000,
+  "text_max_position_embeddings": 128000,
+  "tokenizer_model_max_length": 131072,
+  "processor_class": "mlx_vlm.models.qwen2_5_vl.processing_qwen2_5_vl.Qwen2_5_VLProcessor",
+  "image_processor_class": "mlx_vlm.models.qwen3_vl.processing_qwen3_vl.Qwen3VLImageProcessor",
+  "resolved_image_config": {
+    "patch_size": 14,
+    "temporal_patch_size": 2,
+    "merge_size": 2,
+    "min_pixels": 3136,
+    "max_pixels": 12845056,
+    "do_rescale": true,
+    "rescale_factor": 0.00392156862745098,
+    "do_normalize": true,
+    "image_mean": [
+      0.48145466,
+      0.4578275,
+      0.40821073
+    ],
+    "image_std": [
+      0.26862954,
+      0.26130258,
+      0.27577711
+    ],
+    "do_convert_rgb": true
+  },
+  "loaded_template_equals_file": true,
+  "single_round_checks": [
+    {
+      "item_type": "image_url",
+      "explicit_system": false,
+      "image_count": 1,
+      "rendered_prompt_utf8_byte_equal": true,
+      "image_reference_order_equal": true,
+      "original_user_image_marker_counts": [
+        1
+      ],
+      "candidate_user_image_marker_counts": [
+        1
+      ]
+    },
+    {
+      "item_type": "image_url",
+      "explicit_system": false,
+      "image_count": 2,
+      "rendered_prompt_utf8_byte_equal": true,
+      "image_reference_order_equal": true,
+      "original_user_image_marker_counts": [
+        2
+      ],
+      "candidate_user_image_marker_counts": [
+        2
+      ]
+    },
+    {
+      "item_type": "image_url",
+      "explicit_system": true,
+      "image_count": 1,
+      "rendered_prompt_utf8_byte_equal": true,
+      "image_reference_order_equal": true,
+      "original_user_image_marker_counts": [
+        1
+      ],
+      "candidate_user_image_marker_counts": [
+        1
+      ]
+    },
+    {
+      "item_type": "image_url",
+      "explicit_system": true,
+      "image_count": 2,
+      "rendered_prompt_utf8_byte_equal": true,
+      "image_reference_order_equal": true,
+      "original_user_image_marker_counts": [
+        2
+      ],
+      "candidate_user_image_marker_counts": [
+        2
+      ]
+    },
+    {
+      "item_type": "input_image",
+      "explicit_system": false,
+      "image_count": 1,
+      "rendered_prompt_utf8_byte_equal": true,
+      "image_reference_order_equal": true,
+      "original_user_image_marker_counts": [
+        1
+      ],
+      "candidate_user_image_marker_counts": [
+        1
+      ]
+    },
+    {
+      "item_type": "input_image",
+      "explicit_system": false,
+      "image_count": 2,
+      "rendered_prompt_utf8_byte_equal": true,
+      "image_reference_order_equal": true,
+      "original_user_image_marker_counts": [
+        2
+      ],
+      "candidate_user_image_marker_counts": [
+        2
+      ]
+    },
+    {
+      "item_type": "input_image",
+      "explicit_system": true,
+      "image_count": 1,
+      "rendered_prompt_utf8_byte_equal": true,
+      "image_reference_order_equal": true,
+      "original_user_image_marker_counts": [
+        1
+      ],
+      "candidate_user_image_marker_counts": [
+        1
+      ]
+    },
+    {
+      "item_type": "input_image",
+      "explicit_system": true,
+      "image_count": 2,
+      "rendered_prompt_utf8_byte_equal": true,
+      "image_reference_order_equal": true,
+      "original_user_image_marker_counts": [
+        2
+      ],
+      "candidate_user_image_marker_counts": [
+        2
+      ]
+    }
+  ],
+  "multi_round_checks": [
+    {
+      "rounds": 2,
+      "original_user_image_marker_counts": [
+        0,
+        2
+      ],
+      "candidate_user_image_marker_counts": [
+        1,
+        1
+      ],
+      "image_reference_order_equal": true,
+      "assistant_action_text_preserved": true
+    },
+    {
+      "rounds": 3,
+      "original_user_image_marker_counts": [
+        0,
+        0,
+        3
+      ],
+      "candidate_user_image_marker_counts": [
+        1,
+        1,
+        1
+      ],
+      "image_reference_order_equal": true,
+      "assistant_action_text_preserved": true
+    }
+  ],
+  "method": "Executed the actual original/patched endpoint normalization slice; rendered with deployed processor and MLX apply_chat_template; no model inference or model weight loading.",
+  "source_file": "./.venv/lib/python3.14/site-packages/mlx_vlm/server/openai.py",
+  "backup": "./runtime/solver_defense_v1/openai.py.original",
+  "patch_applied": true,
+  "server_started": false
+}

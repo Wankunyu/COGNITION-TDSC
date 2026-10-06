@@ -1,0 +1,26 @@
+[
+  {
+    "change": "Recognize exact deployed MLX context-budget error as context_budget_exhausted, not infrastructure_failure",
+    "evidence": "runtime/context_source_evidence.json generation.py:292-301",
+    "scope": "All runs started after dev_a_native; dev_a_native already running under its frozen pre-change code. No prompt/action/scorer/budget values changed.",
+    "generation_calls_added": 0
+  },
+  {
+    "change": "D-only explicit-final flat xy and grouped-point normalization",
+    "evidence": "dev_d_static/blind_reading_input.json and independently blinded answer_readings.json",
+    "scope": "Static D formal runs; all six development readings preserved in an external overlay. Frozen A/B extractor and prior raw outputs unchanged.",
+    "rules": "Preserve all coordinate values, pair order and duplicates; no box centers, invented points or subset selection; reject malformed/mixed structures.",
+    "generation_calls_added": 0,
+    "tests": "tests/test_defense_eval.py: 12 passed; all six readings match blinded overlay."
+  },
+  {
+    "change": "Add visible bordered numeric input box to satisfy native enter_number precondition",
+    "evidence": "Source prompt states enter_number(if there is an input box in the image); initial adapted numeric footer showed only ordinary value text. Actual screenshot inspected.",
+    "scope": "A Dice/Rotation and D2 adapted interfaces; no changes to puzzle pixels, Submit geometry, numeric action values or scoring.",
+    "version": "cognition_adapted_v1.1_numeric_input_box",
+    "development_recheck": "manifests/interactive_numeric_recheck_v1.json: all 4 A numeric and 6 D2 development items, in a separate output directory; original 92 development episodes retained",
+    "additional_call_ceiling": 300,
+    "actual_added_calls": "recorded in dev_numeric_recheck/attempts.jsonl",
+    "tests": "22 focused tests passed, 32 unrelated tests deselected; 300px Rotation interface visually checked."
+  }
+]

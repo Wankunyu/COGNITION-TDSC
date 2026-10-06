@@ -1,0 +1,50 @@
+{
+  "raw_response": {
+    "id": "chatcmpl-4a7e8eae-48cf-46bf-8194-7de0e8492360",
+    "object": "chat.completion",
+    "created": 1789371033,
+    "model": "models/CaptchaMind-7B",
+    "choices": [
+      {
+        "index": 0,
+        "finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "<tool_call>{\"name\": \"enter_number\", \"arguments\": {\"number\": 225}}</tool_call>",
+          "reasoning_content": "I need to determine the additional clockwise angle required for the current object to match the reference direction.\n\nThe reference direction is indicated by the finger in image 1, which is pointing upward. Looking at the current object in image 2, the direction the object is facing is lower-right.\n\nI can see that the reference finger is at the 12 o'clock position. The current object is at a lower-right direction. To calculate the angle, I'll use the formula: abs( reference_angle - current_angle ) % 360. I need to find the clockwise angle in degrees.",
+          "reasoning": "I need to determine the additional clockwise angle required for the current object to match the reference direction.\n\nThe reference direction is indicated by the finger in image 1, which is pointing upward. Looking at the current object in image 2, the direction the object is facing is lower-right.\n\nI can see that the reference finger is at the 12 o'clock position. The current object is at a lower-right direction. To calculate the angle, I'll use the formula: abs( reference_angle - current_angle ) % 360. I need to find the clockwise angle in degrees.",
+          "tool_calls": null,
+          "tool_call_id": null,
+          "name": null
+        },
+        "logprobs": null
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 7736,
+      "completion_tokens": 142,
+      "total_tokens": 7878,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "timings": {
+      "prompt_n": 7736,
+      "cache_n": 0,
+      "predicted_n": 144,
+      "prompt_ms": 7094.209874980152,
+      "prompt_per_token_ms": 0.9170385050387994,
+      "prompt_per_second": 1090.4667519470086,
+      "predicted_ms": 3454.0434961624023,
+      "predicted_per_token_ms": 23.98641316779446,
+      "predicted_per_second": 41.69026827832089,
+      "peak_memory": 35.615165266,
+      "draft_kind": null,
+      "draft_rounds": null,
+      "draft_n": null,
+      "draft_n_accepted": null
+    }
+  },
+  "elapsed_seconds": 10.873123917001067,
+  "received_at": "2026-09-14T07:30:33.631500+00:00"
+}

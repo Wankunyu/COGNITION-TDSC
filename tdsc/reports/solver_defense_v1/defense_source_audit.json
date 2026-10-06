@@ -1,0 +1,1950 @@
+{
+  "version": "defense_v1",
+  "audit_date": "2026-09-13",
+  "method": "Actual full-image visual inspection of all 30 source images before new model requests; existing eye points retained where they identify a visible eye.",
+  "source_grid_labels": "../conference/captcha_data/Select_Animal/ground_truth.json",
+  "source_eye_labels": "../conference/captcha_data/Select_Animal_Optimized/ground_truth.json",
+  "development_ids": [
+    "image1",
+    "image7",
+    "image8",
+    "image23",
+    "image27",
+    "image30"
+  ],
+  "candidate_base_images": 30,
+  "included_base_images": 30,
+  "evaluation_base_images": 24,
+  "evaluation_rows": 96,
+  "excluded": [],
+  "changes": [
+    {
+      "base_id": "image8",
+      "target": "squirrel",
+      "indices": [
+        4
+      ],
+      "points": [
+        {
+          "x": 465,
+          "y": 615
+        }
+      ],
+      "partition": "development",
+      "include": true,
+      "visual_status": "verified",
+      "visual_method": "view_image full 1024x1024 original",
+      "visual_note": "Squirrel in cell 4 is side-facing with one visible eye. The old first point is in cell 0 and does not belong to the squirrel.",
+      "source_grid_entry": {
+        "target_object": "squirrel",
+        "grid_size": [
+          2,
+          3
+        ],
+        "correct_patches": [
+          4
+        ],
+        "prompt": "Pick a squirrel.\nIndexing Rules:\n- Indices are 0-based (starting from 0, not 1) and row-major\n- Index 0 is the first cell, index 1 is the second cell, etc.\n- Deduplicate and sort ascending",
+        "description": "A grid of 2x3 images containing different animals on buildings"
+      },
+      "source_eye_entry": {
+        "target_object": "squirrel",
+        "target_position": [
+          [
+            192,
+            148
+          ],
+          [
+            465,
+            615
+          ]
+        ],
+        "tolerance": 15,
+        "prompt": "Click on all of the squirrel's visible eyes.",
+        "description": "A grid of 2x3 images containing different animals on buildings"
+      },
+      "changes": [
+        "Removed non-target point [192,148]; visible-eye count changes from 2 to 1."
+      ]
+    },
+    {
+      "base_id": "image23",
+      "target": "elephant",
+      "indices": [
+        0
+      ],
+      "points": [
+        {
+          "x": 190,
+          "y": 128
+        },
+        {
+          "x": 237,
+          "y": 128
+        }
+      ],
+      "partition": "development",
+      "include": true,
+      "visual_status": "verified",
+      "visual_method": "view_image full 1024x1024 original",
+      "visual_note": "Elephant in cell 0 has two visible eyes. The second old point lies away from the head; image inspection identifies the second eye at approximately (237,128).",
+      "source_grid_entry": {
+        "target_object": "elephant",
+        "grid_size": [
+          2,
+          3
+        ],
+        "correct_patches": [
+          0
+        ],
+        "prompt": "Pick an elephant.\nIndexing Rules:\n- Indices are 0-based (starting from 0, not 1) and row-major\n- Index 0 is the first cell, index 1 is the second cell, etc.\n- Deduplicate and sort ascending",
+        "description": "A grid of 2x3 images containing different animals on buildings"
+      },
+      "source_eye_entry": {
+        "target_object": "elephant",
+        "target_position": [
+          [
+            190,
+            128
+          ],
+          [
+            128,
+            237
+          ]
+        ],
+        "tolerance": 15,
+        "prompt": "Click on all of the elephant's visible eyes.",
+        "description": "A grid of 2x3 images containing different animals on buildings"
+      },
+      "changes": [
+        "Replaced second eye [128,237] with visually verified [237,128]."
+      ]
+    },
+    {
+      "base_id": "image27",
+      "target": "tiger",
+      "indices": [
+        4
+      ],
+      "points": [
+        {
+          "x": 413,
+          "y": 583
+        },
+        {
+          "x": 444,
+          "y": 584
+        }
+      ],
+      "partition": "development",
+      "include": true,
+      "visual_status": "verified",
+      "visual_method": "view_image full 1024x1024 original",
+      "visual_note": "The original target is the tiger in cell 4, with two visible eyes at approximately (413,583) and (444,584). Prior optimized labels refer instead to the lion in cell 2.",
+      "source_grid_entry": {
+        "target_object": "tiger",
+        "grid_size": [
+          2,
+          3
+        ],
+        "correct_patches": [
+          4
+        ],
+        "prompt": "Pick a tiger.\nIndexing Rules:\n- Indices are 0-based (starting from 0, not 1) and row-major\n- Index 0 is the first cell, index 1 is the second cell, etc.\n- Deduplicate and sort ascending",
+        "description": "A grid of 2x3 images containing different animals on buildings"
+      },
+      "source_eye_entry": {
+        "target_object": "lion",
+        "target_position": [
+          [
+            754,
+            110
+          ],
+          [
+            790,
+            110
+          ]
+        ],
+        "tolerance": 15,
+        "prompt": "Click on all of the lion's visible eyes.",
+        "description": "A grid of 2x3 images containing different animals on buildings"
+      },
+      "changes": [
+        "Aligned target with original grid task: lion -> tiger.",
+        "Replaced lion eye points [[754,110],[790,110]] with tiger eye points [[413,583],[444,584]]."
+      ]
+    }
+  ],
+  "image_checks": [
+    {
+      "base_id": "image1",
+      "original_optimized_bytes_equal": false,
+      "original_optimized_pixels_equal": true,
+      "journal_original_bytes_equal": true,
+      "size": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "base_id": "image2",
+      "original_optimized_bytes_equal": true,
+      "original_optimized_pixels_equal": true,
+      "journal_original_bytes_equal": true,
+      "size": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "base_id": "image3",
+      "original_optimized_bytes_equal": true,
+      "original_optimized_pixels_equal": true,
+      "journal_original_bytes_equal": true,
+      "size": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "base_id": "image4",
+      "original_optimized_bytes_equal": true,
+      "original_optimized_pixels_equal": true,
+      "journal_original_bytes_equal": true,
+      "size": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "base_id": "image5",
+      "original_optimized_bytes_equal": true,
+      "original_optimized_pixels_equal": true,
+      "journal_original_bytes_equal": true,
+      "size": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "base_id": "image6",
+      "original_optimized_bytes_equal": true,
+      "original_optimized_pixels_equal": true,
+      "journal_original_bytes_equal": true,
+      "size": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "base_id": "image7",
+      "original_optimized_bytes_equal": true,
+      "original_optimized_pixels_equal": true,
+      "journal_original_bytes_equal": true,
+      "size": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "base_id": "image8",
+      "original_optimized_bytes_equal": true,
+      "original_optimized_pixels_equal": true,
+      "journal_original_bytes_equal": true,
+      "size": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "base_id": "image9",
+      "original_optimized_bytes_equal": true,
+      "original_optimized_pixels_equal": true,
+      "journal_original_bytes_equal": true,
+      "size": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "base_id": "image10",
+      "original_optimized_bytes_equal": true,
+      "original_optimized_pixels_equal": true,
+      "journal_original_bytes_equal": true,
+      "size": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "base_id": "image11",
+      "original_optimized_bytes_equal": true,
+      "original_optimized_pixels_equal": true,
+      "journal_original_bytes_equal": true,
+      "size": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "base_id": "image12",
+      "original_optimized_bytes_equal": true,
+      "original_optimized_pixels_equal": true,
+      "journal_original_bytes_equal": true,
+      "size": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "base_id": "image13",
+      "original_optimized_bytes_equal": true,
+      "original_optimized_pixels_equal": true,
+      "journal_original_bytes_equal": true,
+      "size": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "base_id": "image14",
+      "original_optimized_bytes_equal": true,
+      "original_optimized_pixels_equal": true,
+      "journal_original_bytes_equal": true,
+      "size": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "base_id": "image15",
+      "original_optimized_bytes_equal": true,
+      "original_optimized_pixels_equal": true,
+      "journal_original_bytes_equal": true,
+      "size": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "base_id": "image16",
+      "original_optimized_bytes_equal": true,
+      "original_optimized_pixels_equal": true,
+      "journal_original_bytes_equal": true,
+      "size": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "base_id": "image17",
+      "original_optimized_bytes_equal": true,
+      "original_optimized_pixels_equal": true,
+      "journal_original_bytes_equal": true,
+      "size": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "base_id": "image18",
+      "original_optimized_bytes_equal": true,
+      "original_optimized_pixels_equal": true,
+      "journal_original_bytes_equal": true,
+      "size": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "base_id": "image19",
+      "original_optimized_bytes_equal": true,
+      "original_optimized_pixels_equal": true,
+      "journal_original_bytes_equal": true,
+      "size": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "base_id": "image20",
+      "original_optimized_bytes_equal": true,
+      "original_optimized_pixels_equal": true,
+      "journal_original_bytes_equal": true,
+      "size": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "base_id": "image21",
+      "original_optimized_bytes_equal": true,
+      "original_optimized_pixels_equal": true,
+      "journal_original_bytes_equal": true,
+      "size": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "base_id": "image22",
+      "original_optimized_bytes_equal": true,
+      "original_optimized_pixels_equal": true,
+      "journal_original_bytes_equal": true,
+      "size": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "base_id": "image23",
+      "original_optimized_bytes_equal": true,
+      "original_optimized_pixels_equal": true,
+      "journal_original_bytes_equal": true,
+      "size": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "base_id": "image24",
+      "original_optimized_bytes_equal": true,
+      "original_optimized_pixels_equal": true,
+      "journal_original_bytes_equal": true,
+      "size": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "base_id": "image25",
+      "original_optimized_bytes_equal": true,
+      "original_optimized_pixels_equal": true,
+      "journal_original_bytes_equal": true,
+      "size": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "base_id": "image26",
+      "original_optimized_bytes_equal": true,
+      "original_optimized_pixels_equal": true,
+      "journal_original_bytes_equal": true,
+      "size": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "base_id": "image27",
+      "original_optimized_bytes_equal": true,
+      "original_optimized_pixels_equal": true,
+      "journal_original_bytes_equal": true,
+      "size": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "base_id": "image28",
+      "original_optimized_bytes_equal": true,
+      "original_optimized_pixels_equal": true,
+      "journal_original_bytes_equal": true,
+      "size": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "base_id": "image29",
+      "original_optimized_bytes_equal": true,
+      "original_optimized_pixels_equal": true,
+      "journal_original_bytes_equal": true,
+      "size": [
+        1024,
+        1024
+      ]
+    },
+    {
+      "base_id": "image30",
+      "original_optimized_bytes_equal": true,
+      "original_optimized_pixels_equal": true,
+      "journal_original_bytes_equal": true,
+      "size": [
+        1024,
+        1024
+      ]
+    }
+  ],
+  "visual_audit": [
+    {
+      "base_id": "image1",
+      "target": "fox",
+      "indices": [
+        5
+      ],
+      "points": [
+        {
+          "x": 792,
+          "y": 652
+        }
+      ],
+      "partition": "development",
+      "include": true,
+      "visual_status": "verified",
+      "visual_method": "view_image full 1024x1024 original",
+      "visual_note": "Fox in cell 5 is side-facing; one eye is actually drawn.",
+      "source_grid_entry": {
+        "target_object": "fox",
+        "grid_size": [
+          2,
+          3
+        ],
+        "correct_patches": [
+          5
+        ],
+        "prompt": "Pick a fox.\nIndexing Rules:\n- Indices are 0-based (starting from 0, not 1) and row-major\n- Index 0 is the first cell, index 1 is the second cell, etc.\n- Deduplicate and sort ascending",
+        "description": "A grid of 2x3 images containing different animals on buildings"
+      },
+      "source_eye_entry": {
+        "target_object": "fox",
+        "target_position": [
+          [
+            792,
+            652
+          ]
+        ],
+        "tolerance": 15,
+        "prompt": "Click on all of the fox's visible eyes.",
+        "description": "A grid of 2x3 images containing different animals on buildings"
+      },
+      "changes": []
+    },
+    {
+      "base_id": "image2",
+      "target": "lion",
+      "indices": [
+        4
+      ],
+      "points": [
+        {
+          "x": 390,
+          "y": 666
+        },
+        {
+          "x": 435,
+          "y": 670
+        }
+      ],
+      "partition": "evaluation",
+      "include": true,
+      "visual_status": "verified",
+      "visual_method": "view_image full 1024x1024 original",
+      "visual_note": "Lion in cell 4 has two visible eyes.",
+      "source_grid_entry": {
+        "target_object": "lion",
+        "grid_size": [
+          2,
+          3
+        ],
+        "correct_patches": [
+          4
+        ],
+        "prompt": "Pick a lion.\nIndexing Rules:\n- Indices are 0-based (starting from 0, not 1) and row-major\n- Index 0 is the first cell, index 1 is the second cell, etc.\n- Deduplicate and sort ascending",
+        "description": "A grid of 2x3 images containing different animals on buildings"
+      },
+      "source_eye_entry": {
+        "target_object": "lion",
+        "target_position": [
+          [
+            390,
+            666
+          ],
+          [
+            435,
+            670
+          ]
+        ],
+        "tolerance": 15,
+        "prompt": "Click on all of the lion's visible eyes.",
+        "description": "A grid of 2x3 images containing different animals on buildings"
+      },
+      "changes": []
+    },
+    {
+      "base_id": "image3",
+      "target": "flamingo",
+      "indices": [
+        1
+      ],
+      "points": [
+        {
+          "x": 475,
+          "y": 68
+        }
+      ],
+      "partition": "evaluation",
+      "include": true,
+      "visual_status": "verified",
+      "visual_method": "view_image full 1024x1024 original",
+      "visual_note": "Flamingo in cell 1 is side-facing; one eye is visible.",
+      "source_grid_entry": {
+        "target_object": "flamingo",
+        "grid_size": [
+          2,
+          3
+        ],
+        "correct_patches": [
+          1
+        ],
+        "prompt": "Pick a flamingo.\nIndexing Rules:\n- Indices are 0-based (starting from 0, not 1) and row-major\n- Index 0 is the first cell, index 1 is the second cell, etc.\n- Deduplicate and sort ascending",
+        "description": "A grid of 2x3 images containing different animals on buildings"
+      },
+      "source_eye_entry": {
+        "target_object": "flamingo",
+        "target_position": [
+          [
+            475,
+            68
+          ]
+        ],
+        "tolerance": 15,
+        "prompt": "Click on all of the flamingo's visible eyes.",
+        "description": "A grid of 2x3 images containing different animals on buildings"
+      },
+      "changes": []
+    },
+    {
+      "base_id": "image4",
+      "target": "tiger",
+      "indices": [
+        2
+      ],
+      "points": [
+        {
+          "x": 746,
+          "y": 132
+        },
+        {
+          "x": 802,
+          "y": 142
+        }
+      ],
+      "partition": "evaluation",
+      "include": true,
+      "visual_status": "verified",
+      "visual_method": "view_image full 1024x1024 original",
+      "visual_note": "Tiger in cell 2 has two visible eyes.",
+      "source_grid_entry": {
+        "target_object": "tiger",
+        "grid_size": [
+          2,
+          3
+        ],
+        "correct_patches": [
+          2
+        ],
+        "prompt": "Pick a tiger.\nIndexing Rules:\n- Indices are 0-based (starting from 0, not 1) and row-major\n- Index 0 is the first cell, index 1 is the second cell, etc.\n- Deduplicate and sort ascending",
+        "description": "A grid of 2x3 images containing different animals on buildings"
+      },
+      "source_eye_entry": {
+        "target_object": "tiger",
+        "target_position": [
+          [
+            746,
+            132
+          ],
+          [
+            802,
+            142
+          ]
+        ],
+        "tolerance": 15,
+        "prompt": "Click on all of the tiger's visible eyes.",
+        "description": "A grid of 2x3 images containing different animals on buildings"
+      },
+      "changes": []
+    },
+    {
+      "base_id": "image5",
+      "target": "robot",
+      "indices": [
+        0
+      ],
+      "points": [
+        {
+          "x": 163,
+          "y": 130
+        },
+        {
+          "x": 215,
+          "y": 130
+        }
+      ],
+      "partition": "evaluation",
+      "include": true,
+      "visual_status": "verified",
+      "visual_method": "view_image full 1024x1024 original",
+      "visual_note": "Robot in cell 0 has two depicted eyes. This source target is an anthropomorphic object, not an animal; retained as originally defined.",
+      "source_grid_entry": {
+        "target_object": "robot",
+        "grid_size": [
+          2,
+          3
+        ],
+        "correct_patches": [
+          0
+        ],
+        "prompt": "Pick a robot.\nIndexing Rules:\n- Indices are 0-based (starting from 0, not 1) and row-major\n- Index 0 is the first cell, index 1 is the second cell, etc.\n- Deduplicate and sort ascending",
+        "description": "A grid of 2x3 images containing different animals on buildings"
+      },
+      "source_eye_entry": {
+        "target_object": "robot",
+        "target_position": [
+          [
+            163,
+            130
+          ],
+          [
+            215,
+            130
+          ]
+        ],
+        "tolerance": 15,
+        "prompt": "Click on all of the robot's visible eyes.",
+        "description": "A grid of 2x3 images containing different animals on buildings"
+      },
+      "changes": []
+    },
+    {
+      "base_id": "image6",
+      "target": "star",
+      "indices": [
+        5
+      ],
+      "points": [
+        {
+          "x": 800,
+          "y": 666
+        },
+        {
+          "x": 853,
+          "y": 673
+        }
+      ],
+      "partition": "evaluation",
+      "include": true,
+      "visual_status": "verified",
+      "visual_method": "view_image full 1024x1024 original",
+      "visual_note": "Star in cell 5 has two depicted eyes. This source target is an anthropomorphic object, not an animal; retained as originally defined.",
+      "source_grid_entry": {
+        "target_object": "star",
+        "grid_size": [
+          2,
+          3
+        ],
+        "correct_patches": [
+          5
+        ],
+        "prompt": "Pick a star.\nIndexing Rules:\n- Indices are 0-based (starting from 0, not 1) and row-major\n- Index 0 is the first cell, index 1 is the second cell, etc.\n- Deduplicate and sort ascending",
+        "description": "A grid of 2x3 images containing different animals on buildings"
+      },
+      "source_eye_entry": {
+        "target_object": "star",
+        "target_position": [
+          [
+            800,
+            666
+          ],
+          [
+            853,
+            673
+          ]
+        ],
+        "tolerance": 15,
+        "prompt": "Click on all of the star's visible eyes.",
+        "description": "A grid of 2x3 images containing different animals on buildings"
+      },
+      "changes": []
+    },
+    {
+      "base_id": "image7",
+      "target": "panda",
+      "indices": [
+        0
+      ],
+      "points": [
+        {
+          "x": 192,
+          "y": 148
+        },
+        {
+          "x": 246,
+          "y": 148
+        }
+      ],
+      "partition": "development",
+      "include": true,
+      "visual_status": "verified",
+      "visual_method": "view_image full 1024x1024 original",
+      "visual_note": "Panda in cell 0 has two eyes inside the dark eye patches.",
+      "source_grid_entry": {
+        "target_object": "panda",
+        "grid_size": [
+          2,
+          3
+        ],
+        "correct_patches": [
+          0
+        ],
+        "prompt": "Pick a panda.\nIndexing Rules:\n- Indices are 0-based (starting from 0, not 1) and row-major\n- Index 0 is the first cell, index 1 is the second cell, etc.\n- Deduplicate and sort ascending",
+        "description": "A grid of 2x3 images containing different animals on buildings"
+      },
+      "source_eye_entry": {
+        "target_object": "panda",
+        "target_position": [
+          [
+            192,
+            148
+          ],
+          [
+            246,
+            148
+          ]
+        ],
+        "tolerance": 15,
+        "prompt": "Click on all of the panda's visible eyes.",
+        "description": "A grid of 2x3 images containing different animals on buildings"
+      },
+      "changes": []
+    },
+    {
+      "base_id": "image8",
+      "target": "squirrel",
+      "indices": [
+        4
+      ],
+      "points": [
+        {
+          "x": 465,
+          "y": 615
+        }
+      ],
+      "partition": "development",
+      "include": true,
+      "visual_status": "verified",
+      "visual_method": "view_image full 1024x1024 original",
+      "visual_note": "Squirrel in cell 4 is side-facing with one visible eye. The old first point is in cell 0 and does not belong to the squirrel.",
+      "source_grid_entry": {
+        "target_object": "squirrel",
+        "grid_size": [
+          2,
+          3
+        ],
+        "correct_patches": [
+          4
+        ],
+        "prompt": "Pick a squirrel.\nIndexing Rules:\n- Indices are 0-based (starting from 0, not 1) and row-major\n- Index 0 is the first cell, index 1 is the second cell, etc.\n- Deduplicate and sort ascending",
+        "description": "A grid of 2x3 images containing different animals on buildings"
+      },
+      "source_eye_entry": {
+        "target_object": "squirrel",
+        "target_position": [
+          [
+            192,
+            148
+          ],
+          [
+            465,
+            615
+          ]
+        ],
+        "tolerance": 15,
+        "prompt": "Click on all of the squirrel's visible eyes.",
+        "description": "A grid of 2x3 images containing different animals on buildings"
+      },
+      "changes": [
+        "Removed non-target point [192,148]; visible-eye count changes from 2 to 1."
+      ]
+    },
+    {
+      "base_id": "image9",
+      "target": "penguin",
+      "indices": [
+        4
+      ],
+      "points": [
+        {
+          "x": 494,
+          "y": 581
+        }
+      ],
+      "partition": "evaluation",
+      "include": true,
+      "visual_status": "verified",
+      "visual_method": "view_image full 1024x1024 original",
+      "visual_note": "Penguin in cell 4 is side-facing with one visible eye.",
+      "source_grid_entry": {
+        "target_object": "penguin",
+        "grid_size": [
+          2,
+          3
+        ],
+        "correct_patches": [
+          4
+        ],
+        "prompt": "Pick a penguin.\nIndexing Rules:\n- Indices are 0-based (starting from 0, not 1) and row-major\n- Index 0 is the first cell, index 1 is the second cell, etc.\n- Deduplicate and sort ascending",
+        "description": "A grid of 2x3 images containing different animals on buildings"
+      },
+      "source_eye_entry": {
+        "target_object": "penguin",
+        "target_position": [
+          [
+            494,
+            581
+          ]
+        ],
+        "tolerance": 15,
+        "prompt": "Click on all of the penguin's visible eyes.",
+        "description": "A grid of 2x3 images containing different animals on buildings"
+      },
+      "changes": []
+    },
+    {
+      "base_id": "image10",
+      "target": "frog",
+      "indices": [
+        4
+      ],
+      "points": [
+        {
+          "x": 436,
+          "y": 566
+        },
+        {
+          "x": 502,
+          "y": 575
+        }
+      ],
+      "partition": "evaluation",
+      "include": true,
+      "visual_status": "verified",
+      "visual_method": "view_image full 1024x1024 original",
+      "visual_note": "Frog in cell 4 has two visible pupils, including the small partially exposed far eye.",
+      "source_grid_entry": {
+        "target_object": "frog",
+        "grid_size": [
+          2,
+          3
+        ],
+        "correct_patches": [
+          4
+        ],
+        "prompt": "Pick a frog.\nIndexing Rules:\n- Indices are 0-based (starting from 0, not 1) and row-major\n- Index 0 is the first cell, index 1 is the second cell, etc.\n- Deduplicate and sort ascending",
+        "description": "A grid of 2x3 images containing different animals on buildings"
+      },
+      "source_eye_entry": {
+        "target_object": "frog",
+        "target_position": [
+          [
+            436,
+            566
+          ],
+          [
+            502,
+            575
+          ]
+        ],
+        "tolerance": 15,
+        "prompt": "Click on all of the frog's visible eyes.",
+        "description": "A grid of 2x3 images containing different animals on buildings"
+      },
+      "changes": []
+    },
+    {
+      "base_id": "image11",
+      "target": "elephant",
+      "indices": [
+        0
+      ],
+      "points": [
+        {
+          "x": 200,
+          "y": 130
+        },
+        {
+          "x": 240,
+          "y": 130
+        }
+      ],
+      "partition": "evaluation",
+      "include": true,
+      "visual_status": "verified",
+      "visual_method": "view_image full 1024x1024 original",
+      "visual_note": "Elephant in cell 0 has two visible eyes.",
+      "source_grid_entry": {
+        "target_object": "elephant",
+        "grid_size": [
+          2,
+          3
+        ],
+        "correct_patches": [
+          0
+        ],
+        "prompt": "Pick an elephant",
+        "description": "A grid of 2x3 images containing different animals on buildings"
+      },
+      "source_eye_entry": {
+        "target_object": "elephant",
+        "target_position": [
+          [
+            200,
+            130
+          ],
+          [
+            240,
+            130
+          ]
+        ],
+        "tolerance": 15,
+        "prompt": "Click on all of the elephant's visible eyes.",
+        "description": "A grid of 2x3 images containing different animals on buildings"
+      },
+      "changes": []
+    },
+    {
+      "base_id": "image12",
+      "target": "penguin",
+      "indices": [
+        1
+      ],
+      "points": [
+        {
+          "x": 488,
+          "y": 125
+        }
+      ],
+      "partition": "evaluation",
+      "include": true,
+      "visual_status": "verified",
+      "visual_method": "view_image full 1024x1024 original",
+      "visual_note": "Penguin in cell 1 is side-facing with one visible eye.",
+      "source_grid_entry": {
+        "target_object": "penguin",
+        "grid_size": [
+          2,
+          3
+        ],
+        "correct_patches": [
+          1
+        ],
+        "prompt": "Pick a penguin.\nIndexing Rules:\n- Indices are 0-based (starting from 0, not 1) and row-major\n- Index 0 is the first cell, index 1 is the second cell, etc.\n- Deduplicate and sort ascending",
+        "description": "A grid of 2x3 images containing different animals on buildings"
+      },
+      "source_eye_entry": {
+        "target_object": "penguin",
+        "target_position": [
+          [
+            488,
+            125
+          ]
+        ],
+        "tolerance": 15,
+        "prompt": "Click on all of the penguin's visible eyes.",
+        "description": "A grid of 2x3 images containing different animals on buildings"
+      },
+      "changes": []
+    },
+    {
+      "base_id": "image13",
+      "target": "lion",
+      "indices": [
+        2
+      ],
+      "points": [
+        {
+          "x": 772,
+          "y": 148
+        },
+        {
+          "x": 812,
+          "y": 150
+        }
+      ],
+      "partition": "evaluation",
+      "include": true,
+      "visual_status": "verified",
+      "visual_method": "view_image full 1024x1024 original",
+      "visual_note": "Lion in cell 2 has two visible eyes.",
+      "source_grid_entry": {
+        "target_object": "lion",
+        "grid_size": [
+          2,
+          3
+        ],
+        "correct_patches": [
+          2
+        ],
+        "prompt": "Pick a lion.\nIndexing Rules:\n- Indices are 0-based (starting from 0, not 1) and row-major\n- Index 0 is the first cell, index 1 is the second cell, etc.\n- Deduplicate and sort ascending",
+        "description": "A grid of 2x3 images containing different animals on buildings"
+      },
+      "source_eye_entry": {
+        "target_object": "lion",
+        "target_position": [
+          [
+            772,
+            148
+          ],
+          [
+            812,
+            150
+          ]
+        ],
+        "tolerance": 15,
+        "prompt": "Click on all of the lion's visible eyes.",
+        "description": "A grid of 2x3 images containing different animals on buildings"
+      },
+      "changes": []
+    },
+    {
+      "base_id": "image14",
+      "target": "giraffe",
+      "indices": [
+        3
+      ],
+      "points": [
+        {
+          "x": 194,
+          "y": 591
+        }
+      ],
+      "partition": "evaluation",
+      "include": true,
+      "visual_status": "verified",
+      "visual_method": "view_image full 1024x1024 original",
+      "visual_note": "Giraffe in cell 3 is side-facing with one visible eye.",
+      "source_grid_entry": {
+        "target_object": "giraffe",
+        "grid_size": [
+          2,
+          3
+        ],
+        "correct_patches": [
+          3
+        ],
+        "prompt": "Pick a giraffe.\nIndexing Rules:\n- Indices are 0-based (starting from 0, not 1) and row-major\n- Index 0 is the first cell, index 1 is the second cell, etc.\n- Deduplicate and sort ascending",
+        "description": "A grid of 2x3 images containing different animals on buildings"
+      },
+      "source_eye_entry": {
+        "target_object": "giraffe",
+        "target_position": [
+          [
+            194,
+            591
+          ]
+        ],
+        "tolerance": 15,
+        "prompt": "Click on all of the giraffe's visible eyes.",
+        "description": "A grid of 2x3 images containing different animals on buildings"
+      },
+      "changes": []
+    },
+    {
+      "base_id": "image15",
+      "target": "penguin",
+      "indices": [
+        4
+      ],
+      "points": [
+        {
+          "x": 507,
+          "y": 593
+        }
+      ],
+      "partition": "evaluation",
+      "include": true,
+      "visual_status": "verified",
+      "visual_method": "view_image full 1024x1024 original",
+      "visual_note": "Penguin in cell 4 is side-facing with one visible eye.",
+      "source_grid_entry": {
+        "target_object": "penguin",
+        "grid_size": [
+          2,
+          3
+        ],
+        "correct_patches": [
+          4
+        ],
+        "prompt": "Pick a penguin.\nIndexing Rules:\n- Indices are 0-based (starting from 0, not 1) and row-major\n- Index 0 is the first cell, index 1 is the second cell, etc.\n- Deduplicate and sort ascending",
+        "description": "A grid of 2x3 images containing different animals on buildings"
+      },
+      "source_eye_entry": {
+        "target_object": "penguin",
+        "target_position": [
+          [
+            507,
+            593
+          ]
+        ],
+        "tolerance": 15,
+        "prompt": "Click on all of the penguin's visible eyes.",
+        "description": "A grid of 2x3 images containing different animals on buildings"
+      },
+      "changes": []
+    },
+    {
+      "base_id": "image16",
+      "target": "monkey",
+      "indices": [
+        5
+      ],
+      "points": [
+        {
+          "x": 785,
+          "y": 614
+        },
+        {
+          "x": 825,
+          "y": 614
+        }
+      ],
+      "partition": "evaluation",
+      "include": true,
+      "visual_status": "verified",
+      "visual_method": "view_image full 1024x1024 original",
+      "visual_note": "Monkey in cell 5 has two visible eyes.",
+      "source_grid_entry": {
+        "target_object": "monkey",
+        "grid_size": [
+          2,
+          3
+        ],
+        "correct_patches": [
+          5
+        ],
+        "prompt": "Pick a monkey.\nIndexing Rules:\n- Indices are 0-based (starting from 0, not 1) and row-major\n- Index 0 is the first cell, index 1 is the second cell, etc.\n- Deduplicate and sort ascending",
+        "description": "A grid of 2x3 images containing different animals on buildings"
+      },
+      "source_eye_entry": {
+        "target_object": "monkey",
+        "target_position": [
+          [
+            785,
+            614
+          ],
+          [
+            825,
+            614
+          ]
+        ],
+        "tolerance": 15,
+        "prompt": "Click on all of the monkey's visible eyes.",
+        "description": "A grid of 2x3 images containing different animals on buildings"
+      },
+      "changes": []
+    },
+    {
+      "base_id": "image17",
+      "target": "bear",
+      "indices": [
+        0
+      ],
+      "points": [
+        {
+          "x": 183,
+          "y": 138
+        },
+        {
+          "x": 223,
+          "y": 134
+        }
+      ],
+      "partition": "evaluation",
+      "include": true,
+      "visual_status": "verified",
+      "visual_method": "view_image full 1024x1024 original",
+      "visual_note": "Bear in cell 0 has two visible eyes.",
+      "source_grid_entry": {
+        "target_object": "bear",
+        "grid_size": [
+          2,
+          3
+        ],
+        "correct_patches": [
+          0
+        ],
+        "prompt": "Pick a bear.\nIndexing Rules:\n- Indices are 0-based (starting from 0, not 1) and row-major\n- Index 0 is the first cell, index 1 is the second cell, etc.\n- Deduplicate and sort ascending",
+        "description": "A grid of 2x3 images containing different animals on buildings"
+      },
+      "source_eye_entry": {
+        "target_object": "bear",
+        "target_position": [
+          [
+            183,
+            138
+          ],
+          [
+            223,
+            134
+          ]
+        ],
+        "tolerance": 15,
+        "prompt": "Click on all of the bear's visible eyes.",
+        "description": "A grid of 2x3 images containing different animals on buildings"
+      },
+      "changes": []
+    },
+    {
+      "base_id": "image18",
+      "target": "fox",
+      "indices": [
+        1
+      ],
+      "points": [
+        {
+          "x": 487,
+          "y": 128
+        }
+      ],
+      "partition": "evaluation",
+      "include": true,
+      "visual_status": "verified",
+      "visual_method": "view_image full 1024x1024 original",
+      "visual_note": "Fox in cell 1 is side-facing with one visible eye.",
+      "source_grid_entry": {
+        "target_object": "fox",
+        "grid_size": [
+          2,
+          3
+        ],
+        "correct_patches": [
+          1
+        ],
+        "prompt": "Pick a fox.\nIndexing Rules:\n- Indices are 0-based (starting from 0, not 1) and row-major\n- Index 0 is the first cell, index 1 is the second cell, etc.\n- Deduplicate and sort ascending",
+        "description": "A grid of 2x3 images containing different animals on buildings"
+      },
+      "source_eye_entry": {
+        "target_object": "fox",
+        "target_position": [
+          [
+            487,
+            128
+          ]
+        ],
+        "tolerance": 15,
+        "prompt": "Click on all of the fox's visible eyes.",
+        "description": "A grid of 2x3 images containing different animals on buildings"
+      },
+      "changes": []
+    },
+    {
+      "base_id": "image19",
+      "target": "lion",
+      "indices": [
+        2
+      ],
+      "points": [
+        {
+          "x": 763,
+          "y": 146
+        },
+        {
+          "x": 798,
+          "y": 146
+        }
+      ],
+      "partition": "evaluation",
+      "include": true,
+      "visual_status": "verified",
+      "visual_method": "view_image full 1024x1024 original",
+      "visual_note": "Lion in cell 2 has two visible eyes.",
+      "source_grid_entry": {
+        "target_object": "lion",
+        "grid_size": [
+          2,
+          3
+        ],
+        "correct_patches": [
+          2
+        ],
+        "prompt": "Pick a lion.\nIndexing Rules:\n- Indices are 0-based (starting from 0, not 1) and row-major\n- Index 0 is the first cell, index 1 is the second cell, etc.\n- Deduplicate and sort ascending",
+        "description": "A grid of 2x3 images containing different animals on buildings"
+      },
+      "source_eye_entry": {
+        "target_object": "lion",
+        "target_position": [
+          [
+            763,
+            146
+          ],
+          [
+            798,
+            146
+          ]
+        ],
+        "tolerance": 15,
+        "prompt": "Click on all of the lion's visible eyes.",
+        "description": "A grid of 2x3 images containing different animals on buildings"
+      },
+      "changes": []
+    },
+    {
+      "base_id": "image20",
+      "target": "tiger",
+      "indices": [
+        3
+      ],
+      "points": [
+        {
+          "x": 242,
+          "y": 637
+        },
+        {
+          "x": 295,
+          "y": 635
+        }
+      ],
+      "partition": "evaluation",
+      "include": true,
+      "visual_status": "verified",
+      "visual_method": "view_image full 1024x1024 original",
+      "visual_note": "Tiger in cell 3 has two visible eyes.",
+      "source_grid_entry": {
+        "target_object": "tiger",
+        "grid_size": [
+          2,
+          3
+        ],
+        "correct_patches": [
+          3
+        ],
+        "prompt": "Pick a tiger.\nIndexing Rules:\n- Indices are 0-based (starting from 0, not 1) and row-major\n- Index 0 is the first cell, index 1 is the second cell, etc.\n- Deduplicate and sort ascending",
+        "description": "A grid of 2x3 images containing different animals on buildings"
+      },
+      "source_eye_entry": {
+        "target_object": "tiger",
+        "target_position": [
+          [
+            242,
+            637
+          ],
+          [
+            295,
+            635
+          ]
+        ],
+        "tolerance": 15,
+        "prompt": "Click on all of the tiger's visible eyes.",
+        "description": "A grid of 2x3 images containing different animals on buildings"
+      },
+      "changes": []
+    },
+    {
+      "base_id": "image21",
+      "target": "giraffe",
+      "indices": [
+        4
+      ],
+      "points": [
+        {
+          "x": 432,
+          "y": 587
+        }
+      ],
+      "partition": "evaluation",
+      "include": true,
+      "visual_status": "verified",
+      "visual_method": "view_image full 1024x1024 original",
+      "visual_note": "Giraffe in cell 4 is side-facing with one visible eye.",
+      "source_grid_entry": {
+        "target_object": "giraffe",
+        "grid_size": [
+          2,
+          3
+        ],
+        "correct_patches": [
+          4
+        ],
+        "prompt": "Pick a giraffe.\nIndexing Rules:\n- Indices are 0-based (starting from 0, not 1) and row-major\n- Index 0 is the first cell, index 1 is the second cell, etc.\n- Deduplicate and sort ascending",
+        "description": "A grid of 2x3 images containing different animals on buildings"
+      },
+      "source_eye_entry": {
+        "target_object": "giraffe",
+        "target_position": [
+          [
+            432,
+            587
+          ]
+        ],
+        "tolerance": 15,
+        "prompt": "Click on all of the giraffe's visible eyes.",
+        "description": "A grid of 2x3 images containing different animals on buildings"
+      },
+      "changes": []
+    },
+    {
+      "base_id": "image22",
+      "target": "panda",
+      "indices": [
+        5
+      ],
+      "points": [
+        {
+          "x": 779,
+          "y": 613
+        },
+        {
+          "x": 819,
+          "y": 620
+        }
+      ],
+      "partition": "evaluation",
+      "include": true,
+      "visual_status": "verified",
+      "visual_method": "view_image full 1024x1024 original",
+      "visual_note": "Panda in cell 5 has two visible eyes inside its dark eye patches.",
+      "source_grid_entry": {
+        "target_object": "panda",
+        "grid_size": [
+          2,
+          3
+        ],
+        "correct_patches": [
+          5
+        ],
+        "prompt": "Pick a panda.\nIndexing Rules:\n- Indices are 0-based (starting from 0, not 1) and row-major\n- Index 0 is the first cell, index 1 is the second cell, etc.\n- Deduplicate and sort ascending",
+        "description": "A grid of 2x3 images containing different animals on buildings"
+      },
+      "source_eye_entry": {
+        "target_object": "panda",
+        "target_position": [
+          [
+            779,
+            613
+          ],
+          [
+            819,
+            620
+          ]
+        ],
+        "tolerance": 15,
+        "prompt": "Click on all of the panda's visible eyes.",
+        "description": "A grid of 2x3 images containing different animals on buildings"
+      },
+      "changes": []
+    },
+    {
+      "base_id": "image23",
+      "target": "elephant",
+      "indices": [
+        0
+      ],
+      "points": [
+        {
+          "x": 190,
+          "y": 128
+        },
+        {
+          "x": 237,
+          "y": 128
+        }
+      ],
+      "partition": "development",
+      "include": true,
+      "visual_status": "verified",
+      "visual_method": "view_image full 1024x1024 original",
+      "visual_note": "Elephant in cell 0 has two visible eyes. The second old point lies away from the head; image inspection identifies the second eye at approximately (237,128).",
+      "source_grid_entry": {
+        "target_object": "elephant",
+        "grid_size": [
+          2,
+          3
+        ],
+        "correct_patches": [
+          0
+        ],
+        "prompt": "Pick an elephant.\nIndexing Rules:\n- Indices are 0-based (starting from 0, not 1) and row-major\n- Index 0 is the first cell, index 1 is the second cell, etc.\n- Deduplicate and sort ascending",
+        "description": "A grid of 2x3 images containing different animals on buildings"
+      },
+      "source_eye_entry": {
+        "target_object": "elephant",
+        "target_position": [
+          [
+            190,
+            128
+          ],
+          [
+            128,
+            237
+          ]
+        ],
+        "tolerance": 15,
+        "prompt": "Click on all of the elephant's visible eyes.",
+        "description": "A grid of 2x3 images containing different animals on buildings"
+      },
+      "changes": [
+        "Replaced second eye [128,237] with visually verified [237,128]."
+      ]
+    },
+    {
+      "base_id": "image24",
+      "target": "monkey",
+      "indices": [
+        1
+      ],
+      "points": [
+        {
+          "x": 466,
+          "y": 105
+        },
+        {
+          "x": 504,
+          "y": 105
+        }
+      ],
+      "partition": "evaluation",
+      "include": true,
+      "visual_status": "verified",
+      "visual_method": "view_image full 1024x1024 original",
+      "visual_note": "Monkey in cell 1 has two visible eyes.",
+      "source_grid_entry": {
+        "target_object": "monkey",
+        "grid_size": [
+          2,
+          3
+        ],
+        "correct_patches": [
+          1
+        ],
+        "prompt": "Pick a monkey.\nIndexing Rules:\n- Indices are 0-based (starting from 0, not 1) and row-major\n- Index 0 is the first cell, index 1 is the second cell, etc.\n- Deduplicate and sort ascending",
+        "description": "A grid of 2x3 images containing different animals on buildings"
+      },
+      "source_eye_entry": {
+        "target_object": "monkey",
+        "target_position": [
+          [
+            466,
+            105
+          ],
+          [
+            504,
+            105
+          ]
+        ],
+        "tolerance": 15,
+        "prompt": "Click on all of the monkey's visible eyes.",
+        "description": "A grid of 2x3 images containing different animals on buildings"
+      },
+      "changes": []
+    },
+    {
+      "base_id": "image25",
+      "target": "pig",
+      "indices": [
+        2
+      ],
+      "points": [
+        {
+          "x": 783,
+          "y": 136
+        }
+      ],
+      "partition": "evaluation",
+      "include": true,
+      "visual_status": "verified",
+      "visual_method": "view_image full 1024x1024 original",
+      "visual_note": "Pig in cell 2 is side-facing with one visible eye.",
+      "source_grid_entry": {
+        "target_object": "pig",
+        "grid_size": [
+          2,
+          3
+        ],
+        "correct_patches": [
+          2
+        ],
+        "prompt": "Pick a pig.\nIndexing Rules:\n- Indices are 0-based (starting from 0, not 1) and row-major\n- Index 0 is the first cell, index 1 is the second cell, etc.\n- Deduplicate and sort ascending",
+        "description": "A grid of 2x3 images containing different animals on buildings"
+      },
+      "source_eye_entry": {
+        "target_object": "pig",
+        "target_position": [
+          [
+            783,
+            136
+          ]
+        ],
+        "tolerance": 15,
+        "prompt": "Click on all of the pig's visible eyes.",
+        "description": "A grid of 2x3 images containing different animals on buildings"
+      },
+      "changes": []
+    },
+    {
+      "base_id": "image26",
+      "target": "cat",
+      "indices": [
+        3
+      ],
+      "points": [
+        {
+          "x": 199,
+          "y": 616
+        },
+        {
+          "x": 248,
+          "y": 616
+        }
+      ],
+      "partition": "evaluation",
+      "include": true,
+      "visual_status": "verified",
+      "visual_method": "view_image full 1024x1024 original",
+      "visual_note": "Cat in cell 3 has two visible eyes.",
+      "source_grid_entry": {
+        "target_object": "cat",
+        "grid_size": [
+          2,
+          3
+        ],
+        "correct_patches": [
+          3
+        ],
+        "prompt": "Pick a cat.\nIndexing Rules:\n- Indices are 0-based (starting from 0, not 1) and row-major\n- Index 0 is the first cell, index 1 is the second cell, etc.\n- Deduplicate and sort ascending",
+        "description": "A grid of 2x3 images containing different animals on buildings"
+      },
+      "source_eye_entry": {
+        "target_object": "cat",
+        "target_position": [
+          [
+            199,
+            616
+          ],
+          [
+            248,
+            616
+          ]
+        ],
+        "tolerance": 15,
+        "prompt": "Click on all of the cat's visible eyes.",
+        "description": "A grid of 2x3 images containing different animals on buildings"
+      },
+      "changes": []
+    },
+    {
+      "base_id": "image27",
+      "target": "tiger",
+      "indices": [
+        4
+      ],
+      "points": [
+        {
+          "x": 413,
+          "y": 583
+        },
+        {
+          "x": 444,
+          "y": 584
+        }
+      ],
+      "partition": "development",
+      "include": true,
+      "visual_status": "verified",
+      "visual_method": "view_image full 1024x1024 original",
+      "visual_note": "The original target is the tiger in cell 4, with two visible eyes at approximately (413,583) and (444,584). Prior optimized labels refer instead to the lion in cell 2.",
+      "source_grid_entry": {
+        "target_object": "tiger",
+        "grid_size": [
+          2,
+          3
+        ],
+        "correct_patches": [
+          4
+        ],
+        "prompt": "Pick a tiger.\nIndexing Rules:\n- Indices are 0-based (starting from 0, not 1) and row-major\n- Index 0 is the first cell, index 1 is the second cell, etc.\n- Deduplicate and sort ascending",
+        "description": "A grid of 2x3 images containing different animals on buildings"
+      },
+      "source_eye_entry": {
+        "target_object": "lion",
+        "target_position": [
+          [
+            754,
+            110
+          ],
+          [
+            790,
+            110
+          ]
+        ],
+        "tolerance": 15,
+        "prompt": "Click on all of the lion's visible eyes.",
+        "description": "A grid of 2x3 images containing different animals on buildings"
+      },
+      "changes": [
+        "Aligned target with original grid task: lion -> tiger.",
+        "Replaced lion eye points [[754,110],[790,110]] with tiger eye points [[413,583],[444,584]]."
+      ]
+    },
+    {
+      "base_id": "image28",
+      "target": "bear",
+      "indices": [
+        5
+      ],
+      "points": [
+        {
+          "x": 739,
+          "y": 603
+        },
+        {
+          "x": 774,
+          "y": 604
+        }
+      ],
+      "partition": "evaluation",
+      "include": true,
+      "visual_status": "verified",
+      "visual_method": "view_image full 1024x1024 original",
+      "visual_note": "Bear in cell 5 has two visible eyes.",
+      "source_grid_entry": {
+        "target_object": "bear",
+        "grid_size": [
+          2,
+          3
+        ],
+        "correct_patches": [
+          5
+        ],
+        "prompt": "Pick a bear.\nIndexing Rules:\n- Indices are 0-based (starting from 0, not 1) and row-major\n- Index 0 is the first cell, index 1 is the second cell, etc.\n- Deduplicate and sort ascending",
+        "description": "A grid of 2x3 images containing different animals on buildings"
+      },
+      "source_eye_entry": {
+        "target_object": "bear",
+        "target_position": [
+          [
+            739,
+            603
+          ],
+          [
+            774,
+            604
+          ]
+        ],
+        "tolerance": 15,
+        "prompt": "Click on all of the bear's visible eyes.",
+        "description": "A grid of 2x3 images containing different animals on buildings"
+      },
+      "changes": []
+    },
+    {
+      "base_id": "image29",
+      "target": "elephant",
+      "indices": [
+        0
+      ],
+      "points": [
+        {
+          "x": 198,
+          "y": 117
+        },
+        {
+          "x": 243,
+          "y": 117
+        }
+      ],
+      "partition": "evaluation",
+      "include": true,
+      "visual_status": "verified",
+      "visual_method": "view_image full 1024x1024 original",
+      "visual_note": "Elephant in cell 0 has two visible eyes.",
+      "source_grid_entry": {
+        "target_object": "elephant",
+        "grid_size": [
+          2,
+          3
+        ],
+        "correct_patches": [
+          0
+        ],
+        "prompt": "Pick an elephant.\nIndexing Rules:\n- Indices are 0-based (starting from 0, not 1) and row-major\n- Index 0 is the first cell, index 1 is the second cell, etc.\n- Deduplicate and sort ascending",
+        "description": "A grid of 2x3 images containing different animals on buildings"
+      },
+      "source_eye_entry": {
+        "target_object": "elephant",
+        "target_position": [
+          [
+            198,
+            117
+          ],
+          [
+            243,
+            117
+          ]
+        ],
+        "tolerance": 15,
+        "prompt": "Click on all of the elephant's visible eyes.",
+        "description": "A grid of 2x3 images containing different animals on buildings"
+      },
+      "changes": []
+    },
+    {
+      "base_id": "image30",
+      "target": "monkey",
+      "indices": [
+        1
+      ],
+      "points": [
+        {
+          "x": 469,
+          "y": 105
+        },
+        {
+          "x": 503,
+          "y": 105
+        }
+      ],
+      "partition": "development",
+      "include": true,
+      "visual_status": "verified",
+      "visual_method": "view_image full 1024x1024 original",
+      "visual_note": "Monkey in cell 1 has two visible eyes.",
+      "source_grid_entry": {
+        "target_object": "monkey",
+        "grid_size": [
+          2,
+          3
+        ],
+        "correct_patches": [
+          1
+        ],
+        "prompt": "Pick a monkey.\nIndexing Rules:\n- Indices are 0-based (starting from 0, not 1) and row-major\n- Index 0 is the first cell, index 1 is the second cell, etc.\n- Deduplicate and sort ascending",
+        "description": "A grid of 2x3 images containing different animals on buildings"
+      },
+      "source_eye_entry": {
+        "target_object": "monkey",
+        "target_position": [
+          [
+            469,
+            105
+          ],
+          [
+            503,
+            105
+          ]
+        ],
+        "tolerance": 15,
+        "prompt": "Click on all of the monkey's visible eyes.",
+        "description": "A grid of 2x3 images containing different animals on buildings"
+      },
+      "changes": []
+    }
+  ],
+  "blur": {
+    "library": "Pillow.ImageFilter.GaussianBlur",
+    "radius": 2.0,
+    "unit": "px",
+    "image_only": true
+  },
+  "matching_correction": "Maximum matching removes nearest-greedy order-dependent false negatives. The old nearest-greedy full-coverage success criterion is already monotone in radius; no nonmonotonicity claim is made."
+}

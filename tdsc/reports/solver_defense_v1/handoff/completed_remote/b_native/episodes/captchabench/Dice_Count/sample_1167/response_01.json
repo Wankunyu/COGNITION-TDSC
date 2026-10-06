@@ -1,0 +1,50 @@
+{
+  "raw_response": {
+    "id": "chatcmpl-499fdbc6-356d-4a04-8851-f502c36f1171",
+    "object": "chat.completion",
+    "created": 1789333165,
+    "model": "models/CaptchaMind-7B",
+    "choices": [
+      {
+        "index": 0,
+        "finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "<tool_call>{\"name\": \"enter_number\", \"arguments\": {\"number\": 28}}</tool_call>",
+          "reasoning_content": "First, I need to analyze the task. The goal is to sum up all the numbers on the dice across all the small images.\n\nI can see there are 6 images arranged in a grid. Let me count the dice values in each image:\n\nImage 1 has 1 dice: a dot of 4, sum = 4. \nImage 2 has 1 dice: a dot of 6, sum = 6. \nImage 3 has 1 dice: a number of 4, sum = 4. \nImage 4 has 2 dice: a dot of 3, a dot of 4, sum = 7. \nImage 5 has 1 dice: a number of 6, sum = 6. \nImage 6 has 1 dice: a dot of 1, sum = 1. \n\nNow I need to calculate the total sum: 4 + 6 + 4 + 7 + 6 + 1 = 28.\n\nI can see there is an input box with the text \"Enter the sum:\". I should enter the number 28.",
+          "reasoning": "First, I need to analyze the task. The goal is to sum up all the numbers on the dice across all the small images.\n\nI can see there are 6 images arranged in a grid. Let me count the dice values in each image:\n\nImage 1 has 1 dice: a dot of 4, sum = 4. \nImage 2 has 1 dice: a dot of 6, sum = 6. \nImage 3 has 1 dice: a number of 4, sum = 4. \nImage 4 has 2 dice: a dot of 3, a dot of 4, sum = 7. \nImage 5 has 1 dice: a number of 6, sum = 6. \nImage 6 has 1 dice: a dot of 1, sum = 1. \n\nNow I need to calculate the total sum: 4 + 6 + 4 + 7 + 6 + 1 = 28.\n\nI can see there is an input box with the text \"Enter the sum:\". I should enter the number 28.",
+          "tool_calls": null,
+          "tool_call_id": null,
+          "name": null
+        },
+        "logprobs": null
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1308,
+      "completion_tokens": 255,
+      "total_tokens": 1563,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "timings": {
+      "prompt_n": 1308,
+      "cache_n": 0,
+      "predicted_n": 257,
+      "prompt_ms": 1103.0672499909997,
+      "prompt_per_token_ms": 0.8433235856200304,
+      "prompt_per_second": 1185.7844569410183,
+      "predicted_ms": 5934.539593748923,
+      "predicted_per_token_ms": 23.09159374999581,
+      "predicted_per_second": 43.30580257156055,
+      "peak_memory": 19.988604016,
+      "draft_kind": null,
+      "draft_rounds": null,
+      "draft_n": null,
+      "draft_n_accepted": null
+    }
+  },
+  "elapsed_seconds": 7.24451020800916,
+  "received_at": "2026-09-13T20:59:25.091808+00:00"
+}

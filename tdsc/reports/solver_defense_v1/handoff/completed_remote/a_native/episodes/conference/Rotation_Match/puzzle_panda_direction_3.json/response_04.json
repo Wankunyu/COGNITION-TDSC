@@ -1,0 +1,50 @@
+{
+  "raw_response": {
+    "id": "chatcmpl-9a30c133-393b-41a0-8202-6a4ff20128ae",
+    "object": "chat.completion",
+    "created": 1789374605,
+    "model": "models/CaptchaMind-7B",
+    "choices": [
+      {
+        "index": 0,
+        "finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "<tool_call>{\"name\": \"enter_number\", \"arguments\": {\"number\": 180}}</tool_call>",
+          "reasoning_content": "I need to determine the additional clockwise rotation in degrees, within the range [0, 360), required to align the current object's facing direction with the reference direction.\n\nThe reference direction is indicated by the finger in image 1, which is pointing lower-left. The current object is the panda in image 2, and its facing direction is upper-left.\n\nThe reference direction (lower-left) and the current facing direction (upper-left) are not the same. I need to calculate the angle between these two directions.\n\nI can see that the reference direction (lower-left) is a 225-degree angle from the upward direction (0 degrees). The current facing direction (upper-left) is a 45-degree angle from the upward direction.\n\nThe difference between these two angles is 225 - 45 = 180 degrees. Since 180 degrees is already within the range [0, 360), this is the additional clockwise rotation needed.",
+          "reasoning": "I need to determine the additional clockwise rotation in degrees, within the range [0, 360), required to align the current object's facing direction with the reference direction.\n\nThe reference direction is indicated by the finger in image 1, which is pointing lower-left. The current object is the panda in image 2, and its facing direction is upper-left.\n\nThe reference direction (lower-left) and the current facing direction (upper-left) are not the same. I need to calculate the angle between these two directions.\n\nI can see that the reference direction (lower-left) is a 225-degree angle from the upward direction (0 degrees). The current facing direction (upper-left) is a 45-degree angle from the upward direction.\n\nThe difference between these two angles is 225 - 45 = 180 degrees. Since 180 degrees is already within the range [0, 360), this is the additional clockwise rotation needed.",
+          "tool_calls": null,
+          "tool_call_id": null,
+          "name": null
+        },
+        "logprobs": null
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 15390,
+      "completion_tokens": 225,
+      "total_tokens": 15615,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "timings": {
+      "prompt_n": 15390,
+      "cache_n": 0,
+      "predicted_n": 227,
+      "prompt_ms": 15453.424748993712,
+      "prompt_per_token_ms": 1.0041211662763945,
+      "prompt_per_second": 995.8957480284206,
+      "predicted_ms": 5699.884456149287,
+      "predicted_per_token_ms": 25.109623154842673,
+      "predicted_per_second": 39.82536869762375,
+      "peak_memory": 35.615165266,
+      "draft_kind": null,
+      "draft_rounds": null,
+      "draft_n": null,
+      "draft_n_accepted": null
+    }
+  },
+  "elapsed_seconds": 21.709149334026733,
+  "received_at": "2026-09-14T08:30:05.770634+00:00"
+}

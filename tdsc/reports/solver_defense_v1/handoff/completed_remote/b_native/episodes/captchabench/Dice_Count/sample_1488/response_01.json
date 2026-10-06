@@ -1,0 +1,50 @@
+{
+  "raw_response": {
+    "id": "chatcmpl-1b9ab030-b9fb-48f3-b438-6454847eeb89",
+    "object": "chat.completion",
+    "created": 1789333279,
+    "model": "models/CaptchaMind-7B",
+    "choices": [
+      {
+        "index": 0,
+        "finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "<tool_call>{\"name\": \"enter_number\", \"arguments\": {\"number\": 33}}</tool_call>",
+          "reasoning_content": "I need to sum up all the numbers on the dice across all the small images.\n\nI can see there are 6 images arranged in a grid. Let me count the dice values in each image:\n\nImage 1 has 1 dice: a dot of 1, sum = 1. \nImage 2 has 2 dice: a number of 5, a number of 4, sum = 9. \nImage 3 has 1 dice: a dot of 6, sum = 6. \nImage 4 has 2 dice: a dot of 1, a number of 6, sum = 7. \nImage 5 has 1 dice: a dot of 3, sum = 3. \nImage 6 has 2 dice: a dot of 2, a number of 5, sum = 7. \n\nNow I need to calculate the total sum: 1 + 9 + 6 + 7 + 3 + 7 = 33.",
+          "reasoning": "I need to sum up all the numbers on the dice across all the small images.\n\nI can see there are 6 images arranged in a grid. Let me count the dice values in each image:\n\nImage 1 has 1 dice: a dot of 1, sum = 1. \nImage 2 has 2 dice: a number of 5, a number of 4, sum = 9. \nImage 3 has 1 dice: a dot of 6, sum = 6. \nImage 4 has 2 dice: a dot of 1, a number of 6, sum = 7. \nImage 5 has 1 dice: a dot of 3, sum = 3. \nImage 6 has 2 dice: a dot of 2, a number of 5, sum = 7. \n\nNow I need to calculate the total sum: 1 + 9 + 6 + 7 + 3 + 7 = 33.",
+          "tool_calls": null,
+          "tool_call_id": null,
+          "name": null
+        },
+        "logprobs": null
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 1308,
+      "completion_tokens": 231,
+      "total_tokens": 1539,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "timings": {
+      "prompt_n": 1308,
+      "cache_n": 0,
+      "predicted_n": 233,
+      "prompt_ms": 1102.482583024539,
+      "prompt_per_token_ms": 0.842876592526406,
+      "prompt_per_second": 1186.4133004365897,
+      "predicted_ms": 5374.711975380768,
+      "predicted_per_token_ms": 23.06743337073291,
+      "predicted_per_second": 43.35116022351937,
+      "peak_memory": 19.988604016,
+      "draft_kind": null,
+      "draft_rounds": null,
+      "draft_n": null,
+      "draft_n_accepted": null
+    }
+  },
+  "elapsed_seconds": 6.583864959000493,
+  "received_at": "2026-09-13T21:01:19.440984+00:00"
+}

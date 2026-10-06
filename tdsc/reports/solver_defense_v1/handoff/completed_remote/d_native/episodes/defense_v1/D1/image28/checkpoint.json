@@ -1,0 +1,373 @@
+{
+  "id": "defense_v1/D1/image28",
+  "type": "Select_Animal_Optimized",
+  "source": "conference_defense",
+  "module": "D",
+  "condition": "D1",
+  "solver": "C-I",
+  "puzzle_id": "image28.png",
+  "group_id": "defense_v1/image28",
+  "partition": "evaluation",
+  "model": "models/CaptchaMind-7B",
+  "started_at": "2026-09-14T15:36:56.285421+00:00",
+  "started_unix": 1789400216.285418,
+  "budgets": {
+    "max_calls_per_episode": 30,
+    "max_output_tokens_per_call": 8192,
+    "max_output_tokens_per_episode": 65536,
+    "request_timeout_seconds": 600,
+    "episode_timeout_seconds": 1800
+  },
+  "protocol": "adapted_native_agent",
+  "action_parser": "lossless_single_action_v1",
+  "steps": [
+    {
+      "step": 1,
+      "text": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [855, 705]}}</tool_call>",
+      "usage": {
+        "prompt_tokens": 1928,
+        "completion_tokens": 119,
+        "total_tokens": 2047,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "input_tokens": 1928,
+      "output_tokens": 119,
+      "finish_reason": "stop",
+      "truncated": false,
+      "returned_model": "models/CaptchaMind-7B",
+      "elapsed_seconds": 4.549809458985692,
+      "raw_response": {
+        "id": "chatcmpl-f7f864b8-665b-431c-ab1d-a60b427f09dc",
+        "object": "chat.completion",
+        "created": 1789400220,
+        "model": "models/CaptchaMind-7B",
+        "choices": [
+          {
+            "index": 0,
+            "finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [855, 705]}}</tool_call>",
+              "reasoning_content": "I need to refer to the definition to complete this captcha task. The target is to mark all the actually visible eyes of the bear in the image. Looking at the image, I can see there is only one bear, and it is located in the bottom-right sub-image. Looking at the bear in this sub-image, I can see both of its eyes are actually visible. So I will click on this sub-image twice to mark both of its eyes.",
+              "reasoning": "I need to refer to the definition to complete this captcha task. The target is to mark all the actually visible eyes of the bear in the image. Looking at the image, I can see there is only one bear, and it is located in the bottom-right sub-image. Looking at the bear in this sub-image, I can see both of its eyes are actually visible. So I will click on this sub-image twice to mark both of its eyes.",
+              "tool_calls": null,
+              "tool_call_id": null,
+              "name": null
+            },
+            "logprobs": null
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 1928,
+          "completion_tokens": 119,
+          "total_tokens": 2047,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "timings": {
+          "prompt_n": 1928,
+          "cache_n": 0,
+          "predicted_n": 121,
+          "prompt_ms": 1602.6797089725733,
+          "prompt_per_token_ms": 0.8312654092181396,
+          "prompt_per_second": 1202.985218572449,
+          "predicted_ms": 2820.131958693431,
+          "predicted_per_token_ms": 23.30687569168125,
+          "predicted_per_second": 42.90579369061134,
+          "peak_memory": 35.615165266,
+          "draft_kind": null,
+          "draft_rounds": null,
+          "draft_n": null,
+          "draft_n_accepted": null
+        }
+      },
+      "response_file": "response_01.json",
+      "action": {
+        "name": "click",
+        "kwargs": {
+          "position": [
+            855,
+            705
+          ]
+        }
+      },
+      "done": false,
+      "reward": 0.0,
+      "observation": [
+        "./reports/solver_defense_v1/d_native/episodes/defense_v1/D1/image28/observations/step_01_00.png"
+      ],
+      "submitted": false
+    },
+    {
+      "step": 2,
+      "text": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [855, 705]}}</tool_call>",
+      "usage": {
+        "prompt_tokens": 3482,
+        "completion_tokens": 81,
+        "total_tokens": 3563,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "input_tokens": 3482,
+      "output_tokens": 81,
+      "finish_reason": "stop",
+      "truncated": false,
+      "returned_model": "models/CaptchaMind-7B",
+      "elapsed_seconds": 5.104014291020576,
+      "raw_response": {
+        "id": "chatcmpl-ba1b9005-745a-4bff-86f5-2dcb6113259f",
+        "object": "chat.completion",
+        "created": 1789400226,
+        "model": "models/CaptchaMind-7B",
+        "choices": [
+          {
+            "index": 0,
+            "finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [855, 705]}}</tool_call>",
+              "reasoning_content": "I need to refer to the target requirement: Identify all actually visible eyes of the bear. Include one point per visible eye; do not include hidden eyes. Order does not matter. So I need to mark all the actually visible eyes of the bear in the image.",
+              "reasoning": "I need to refer to the target requirement: Identify all actually visible eyes of the bear. Include one point per visible eye; do not include hidden eyes. Order does not matter. So I need to mark all the actually visible eyes of the bear in the image.",
+              "tool_calls": null,
+              "tool_call_id": null,
+              "name": null
+            },
+            "logprobs": null
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 3482,
+          "completion_tokens": 81,
+          "total_tokens": 3563,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "timings": {
+          "prompt_n": 3482,
+          "cache_n": 0,
+          "predicted_n": 83,
+          "prompt_ms": 3000.1268339983653,
+          "prompt_per_token_ms": 0.8616102337732238,
+          "prompt_per_second": 1160.6175980764876,
+          "predicted_ms": 1933.2997268133247,
+          "predicted_per_token_ms": 23.292767792931624,
+          "predicted_per_second": 42.93178075228389,
+          "peak_memory": 35.615165266,
+          "draft_kind": null,
+          "draft_rounds": null,
+          "draft_n": null,
+          "draft_n_accepted": null
+        }
+      },
+      "response_file": "response_02.json",
+      "action": {
+        "name": "click",
+        "kwargs": {
+          "position": [
+            855,
+            705
+          ]
+        }
+      },
+      "done": false,
+      "reward": 0.0,
+      "observation": [
+        "./reports/solver_defense_v1/d_native/episodes/defense_v1/D1/image28/observations/step_02_00.png"
+      ],
+      "submitted": false
+    },
+    {
+      "step": 3,
+      "text": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [929, 1102]}}</tool_call>",
+      "usage": {
+        "prompt_tokens": 5036,
+        "completion_tokens": 74,
+        "total_tokens": 5110,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "input_tokens": 5036,
+      "output_tokens": 74,
+      "finish_reason": "stop",
+      "truncated": false,
+      "returned_model": "models/CaptchaMind-7B",
+      "elapsed_seconds": 6.436512791988207,
+      "raw_response": {
+        "id": "chatcmpl-0ac460f1-02ee-4ab9-afc5-3aaae7363f66",
+        "object": "chat.completion",
+        "created": 1789400232,
+        "model": "models/CaptchaMind-7B",
+        "choices": [
+          {
+            "index": 0,
+            "finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [929, 1102]}}</tool_call>",
+              "reasoning_content": "I need to refer to the definition of the task to understand what I need to do: Identify all actually visible eyes of the bear. Include one point per visible eye; do not include hidden eyes. Order does not matter.",
+              "reasoning": "I need to refer to the definition of the task to understand what I need to do: Identify all actually visible eyes of the bear. Include one point per visible eye; do not include hidden eyes. Order does not matter.",
+              "tool_calls": null,
+              "tool_call_id": null,
+              "name": null
+            },
+            "logprobs": null
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 5036,
+          "completion_tokens": 74,
+          "total_tokens": 5110,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "timings": {
+          "prompt_n": 5036,
+          "cache_n": 0,
+          "predicted_n": 76,
+          "prompt_ms": 4435.43316598516,
+          "prompt_per_token_ms": 0.8807452672726687,
+          "prompt_per_second": 1135.4020704495156,
+          "predicted_ms": 1787.465069213261,
+          "predicted_per_token_ms": 23.519277226490274,
+          "predicted_per_second": 42.5183133975596,
+          "peak_memory": 35.615165266,
+          "draft_kind": null,
+          "draft_rounds": null,
+          "draft_n": null,
+          "draft_n_accepted": null
+        }
+      },
+      "response_file": "response_03.json",
+      "action": {
+        "name": "click",
+        "kwargs": {
+          "position": [
+            929,
+            1102
+          ]
+        }
+      },
+      "done": true,
+      "reward": 0.0,
+      "observation": [
+        "./reports/solver_defense_v1/d_native/episodes/defense_v1/D1/image28/observations/step_03_00.png"
+      ],
+      "submitted": true
+    }
+  ],
+  "model_calls": 3,
+  "input_tokens": 10446,
+  "output_tokens": 274,
+  "reward": 0.0,
+  "done": true,
+  "correct": false,
+  "status": "incorrect",
+  "submitted": true,
+  "images": [
+    "data/defense_v1/original/image28.png"
+  ],
+  "cost_usd": null,
+  "source_path": "../conference/captcha_data/Select_Animal/image28.png",
+  "training_exposure": "unknown; previously used conference material",
+  "scorer": "defense_v1_maximum_matching",
+  "split_evidence": "fixed_image_ids_before_new_model_calls",
+  "base_id": "image28",
+  "gt": {
+    "points": [
+      {
+        "x": 739,
+        "y": 603
+      },
+      {
+        "x": 774,
+        "y": 604
+      }
+    ]
+  },
+  "initial_observation": [
+    "./reports/solver_defense_v1/d_native/episodes/defense_v1/D1/image28/observations/step_00_00.png"
+  ],
+  "environment_metadata": {
+    "environment": "cognition_adapted_v1.1_numeric_input_box",
+    "main_image_index": 0,
+    "source_images": [
+      "./data/defense_v1/original/image28.png"
+    ],
+    "source_image_sizes": [
+      [
+        1024,
+        1024
+      ]
+    ],
+    "main_image_box": [
+      0,
+      0,
+      1024,
+      1024
+    ],
+    "observation_main_size": [
+      1024,
+      1152
+    ],
+    "coordinate_mapping": {
+      "scale": [
+        1,
+        1
+      ],
+      "offset": [
+        0,
+        0
+      ]
+    },
+    "controls": {
+      "submit": [
+        834,
+        1088,
+        1004,
+        1132
+      ],
+      "undo": [
+        20,
+        1088,
+        190,
+        1132
+      ]
+    },
+    "input_box": null,
+    "grid": null
+  },
+  "elapsed_seconds": 16.68361496925354,
+  "final_answer": {
+    "points": [
+      {
+        "x": 855,
+        "y": 705
+      },
+      {
+        "x": 855,
+        "y": 705
+      }
+    ]
+  },
+  "answer": {
+    "points": [
+      {
+        "x": 855,
+        "y": 705
+      },
+      {
+        "x": 855,
+        "y": 705
+      }
+    ]
+  },
+  "stop_reason": "incorrect",
+  "finished_at": "2026-09-14T15:37:12.968649+00:00"
+}

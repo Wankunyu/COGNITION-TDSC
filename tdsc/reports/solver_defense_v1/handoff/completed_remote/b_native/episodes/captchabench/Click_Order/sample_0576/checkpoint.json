@@ -1,0 +1,516 @@
+{
+  "id": "captchabench/Click_Order/sample_0576",
+  "type": "Click_Order",
+  "source": "captchabench",
+  "module": "B",
+  "condition": "native_actions",
+  "solver": "C-I",
+  "puzzle_id": "sample_0576",
+  "group_id": "click_background:sample_0437",
+  "partition": "evaluation",
+  "model": "models/CaptchaMind-7B",
+  "started_at": "2026-09-13T20:39:09.594649+00:00",
+  "started_unix": 1789331949.5946429,
+  "budgets": {
+    "max_calls_per_episode": 30,
+    "max_output_tokens_per_call": 8192,
+    "max_output_tokens_per_episode": 65536,
+    "request_timeout_seconds": 600,
+    "episode_timeout_seconds": 1800
+  },
+  "protocol": "source_native",
+  "action_parser": "lossless_single_action_v1",
+  "steps": [
+    {
+      "step": 1,
+      "text": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [186, 383]}}</tool_call>",
+      "usage": {
+        "prompt_tokens": 1000,
+        "completion_tokens": 64,
+        "total_tokens": 1064,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "input_tokens": 1000,
+      "output_tokens": 64,
+      "finish_reason": "stop",
+      "truncated": false,
+      "returned_model": "models/CaptchaMind-7B",
+      "elapsed_seconds": 2.5509983750089305,
+      "raw_response": {
+        "id": "chatcmpl-b2d0f955-6526-40f2-9dcd-855cc915c2ac",
+        "object": "chat.completion",
+        "created": 1789331952,
+        "model": "models/CaptchaMind-7B",
+        "choices": [
+          {
+            "index": 0,
+            "finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [186, 383]}}</tool_call>",
+              "reasoning_content": "I need to refer to the icon sequence at the bottom left of the image to determine the correct order of the icons in the image, and then click on them one by one.",
+              "reasoning": "I need to refer to the icon sequence at the bottom left of the image to determine the correct order of the icons in the image, and then click on them one by one.",
+              "tool_calls": null,
+              "tool_call_id": null,
+              "name": null
+            },
+            "logprobs": null
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 1000,
+          "completion_tokens": 64,
+          "total_tokens": 1064,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "timings": {
+          "prompt_n": 1000,
+          "cache_n": 0,
+          "predicted_n": 66,
+          "prompt_ms": 837.8363339870702,
+          "prompt_per_token_ms": 0.8378363339870702,
+          "prompt_per_second": 1193.5505294228888,
+          "predicted_ms": 1526.95395802685,
+          "predicted_per_token_ms": 23.135666030709846,
+          "predicted_per_second": 43.22330719472778,
+          "peak_memory": 19.988604016,
+          "draft_kind": null,
+          "draft_rounds": null,
+          "draft_n": null,
+          "draft_n_accepted": null
+        }
+      },
+      "response_file": "response_01.json",
+      "action": {
+        "name": "click",
+        "kwargs": {
+          "position": [
+            186,
+            383
+          ]
+        }
+      },
+      "done": false,
+      "reward": 0.0,
+      "observation": [
+        "./reports/solver_defense_v1/b_native/episodes/captchabench/Click_Order/sample_0576/observations/step_01_00.png"
+      ],
+      "submitted": false
+    },
+    {
+      "step": 2,
+      "text": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [707, 112]}}</tool_call>",
+      "usage": {
+        "prompt_tokens": 1762,
+        "completion_tokens": 40,
+        "total_tokens": 1802,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "input_tokens": 1762,
+      "output_tokens": 40,
+      "finish_reason": "stop",
+      "truncated": false,
+      "returned_model": "models/CaptchaMind-7B",
+      "elapsed_seconds": 2.863964832999045,
+      "raw_response": {
+        "id": "chatcmpl-4ac41d8c-c16e-4d1b-bd57-20d33f9bd773",
+        "object": "chat.completion",
+        "created": 1789331955,
+        "model": "models/CaptchaMind-7B",
+        "choices": [
+          {
+            "index": 0,
+            "finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [707, 112]}}</tool_call>",
+              "reasoning_content": "I have successfully clicked the first icon in the correct order.",
+              "reasoning": "I have successfully clicked the first icon in the correct order.",
+              "tool_calls": null,
+              "tool_call_id": null,
+              "name": null
+            },
+            "logprobs": null
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 1762,
+          "completion_tokens": 40,
+          "total_tokens": 1802,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "timings": {
+          "prompt_n": 1762,
+          "cache_n": 0,
+          "predicted_n": 42,
+          "prompt_ms": 1467.3745840264019,
+          "prompt_per_token_ms": 0.8327892077334857,
+          "prompt_per_second": 1200.7840528116283,
+          "predicted_ms": 979.0369024281616,
+          "predicted_per_token_ms": 23.310402438765752,
+          "predicted_per_second": 42.89930225901961,
+          "peak_memory": 19.988604016,
+          "draft_kind": null,
+          "draft_rounds": null,
+          "draft_n": null,
+          "draft_n_accepted": null
+        }
+      },
+      "response_file": "response_02.json",
+      "action": {
+        "name": "click",
+        "kwargs": {
+          "position": [
+            707,
+            112
+          ]
+        }
+      },
+      "done": false,
+      "reward": 0.0,
+      "observation": [
+        "./reports/solver_defense_v1/b_native/episodes/captchabench/Click_Order/sample_0576/observations/step_02_00.png"
+      ],
+      "submitted": false
+    },
+    {
+      "step": 3,
+      "text": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [515, 333]}}</tool_call>",
+      "usage": {
+        "prompt_tokens": 2524,
+        "completion_tokens": 41,
+        "total_tokens": 2565,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "input_tokens": 2524,
+      "output_tokens": 41,
+      "finish_reason": "stop",
+      "truncated": false,
+      "returned_model": "models/CaptchaMind-7B",
+      "elapsed_seconds": 3.656809665990295,
+      "raw_response": {
+        "id": "chatcmpl-8e3e1761-b2fa-4a40-99b3-4bdb87f258d8",
+        "object": "chat.completion",
+        "created": 1789331959,
+        "model": "models/CaptchaMind-7B",
+        "choices": [
+          {
+            "index": 0,
+            "finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [515, 333]}}</tool_call>",
+              "reasoning_content": "I have successfully clicked on the first icon in the correct order.",
+              "reasoning": "I have successfully clicked on the first icon in the correct order.",
+              "tool_calls": null,
+              "tool_call_id": null,
+              "name": null
+            },
+            "logprobs": null
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 2524,
+          "completion_tokens": 41,
+          "total_tokens": 2565,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "timings": {
+          "prompt_n": 2524,
+          "cache_n": 0,
+          "predicted_n": 43,
+          "prompt_ms": 2156.80066702771,
+          "prompt_per_token_ms": 0.8545169045276189,
+          "prompt_per_second": 1170.251863598655,
+          "predicted_ms": 1005.9624761973585,
+          "predicted_per_token_ms": 23.394476190636244,
+          "predicted_per_second": 42.74513316097477,
+          "peak_memory": 19.988604016,
+          "draft_kind": null,
+          "draft_rounds": null,
+          "draft_n": null,
+          "draft_n_accepted": null
+        }
+      },
+      "response_file": "response_03.json",
+      "action": {
+        "name": "click",
+        "kwargs": {
+          "position": [
+            515,
+            333
+          ]
+        }
+      },
+      "done": false,
+      "reward": 0.0,
+      "observation": [
+        "./reports/solver_defense_v1/b_native/episodes/captchabench/Click_Order/sample_0576/observations/step_03_00.png"
+      ],
+      "submitted": false
+    },
+    {
+      "step": 4,
+      "text": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [392, 157]}}</tool_call>",
+      "usage": {
+        "prompt_tokens": 3286,
+        "completion_tokens": 52,
+        "total_tokens": 3338,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "input_tokens": 3286,
+      "output_tokens": 52,
+      "finish_reason": "stop",
+      "truncated": false,
+      "returned_model": "models/CaptchaMind-7B",
+      "elapsed_seconds": 4.6795855420059524,
+      "raw_response": {
+        "id": "chatcmpl-24175218-2177-4a9f-8f1b-debe45f78a34",
+        "object": "chat.completion",
+        "created": 1789331964,
+        "model": "models/CaptchaMind-7B",
+        "choices": [
+          {
+            "index": 0,
+            "finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [392, 157]}}</tool_call>",
+              "reasoning_content": "I have successfully clicked on the icons in the correct order as indicated by the sequence at the bottom left of the image.",
+              "reasoning": "I have successfully clicked on the icons in the correct order as indicated by the sequence at the bottom left of the image.",
+              "tool_calls": null,
+              "tool_call_id": null,
+              "name": null
+            },
+            "logprobs": null
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 3286,
+          "completion_tokens": 52,
+          "total_tokens": 3338,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "timings": {
+          "prompt_n": 3286,
+          "cache_n": 0,
+          "predicted_n": 54,
+          "prompt_ms": 2825.1584579702467,
+          "prompt_per_token_ms": 0.8597560736367154,
+          "prompt_per_second": 1163.1205997418099,
+          "predicted_ms": 1270.394023237662,
+          "predicted_per_token_ms": 23.52581524514189,
+          "predicted_per_second": 42.50649720657401,
+          "peak_memory": 19.988604016,
+          "draft_kind": null,
+          "draft_rounds": null,
+          "draft_n": null,
+          "draft_n_accepted": null
+        }
+      },
+      "response_file": "response_04.json",
+      "action": {
+        "name": "click",
+        "kwargs": {
+          "position": [
+            392,
+            157
+          ]
+        }
+      },
+      "done": false,
+      "reward": 0.0,
+      "observation": [
+        "./reports/solver_defense_v1/b_native/episodes/captchabench/Click_Order/sample_0576/observations/step_04_00.png"
+      ],
+      "submitted": false
+    },
+    {
+      "step": 5,
+      "text": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [635, 630]}}</tool_call>",
+      "usage": {
+        "prompt_tokens": 4048,
+        "completion_tokens": 55,
+        "total_tokens": 4103,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "input_tokens": 4048,
+      "output_tokens": 55,
+      "finish_reason": "stop",
+      "truncated": false,
+      "returned_model": "models/CaptchaMind-7B",
+      "elapsed_seconds": 5.533635500003584,
+      "raw_response": {
+        "id": "chatcmpl-8a6e2659-3ba9-43f8-aa44-ceb5e6e8823b",
+        "object": "chat.completion",
+        "created": 1789331970,
+        "model": "models/CaptchaMind-7B",
+        "choices": [
+          {
+            "index": 0,
+            "finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [635, 630]}}</tool_call>",
+              "reasoning_content": "I have successfully clicked on the icons in the correct order as specified in the task. Now I will click submit to complete the captcha.",
+              "reasoning": "I have successfully clicked on the icons in the correct order as specified in the task. Now I will click submit to complete the captcha.",
+              "tool_calls": null,
+              "tool_call_id": null,
+              "name": null
+            },
+            "logprobs": null
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 4048,
+          "completion_tokens": 55,
+          "total_tokens": 4103,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "timings": {
+          "prompt_n": 4048,
+          "cache_n": 0,
+          "predicted_n": 57,
+          "prompt_ms": 3483.2096670288593,
+          "prompt_per_token_ms": 0.8604766964004099,
+          "prompt_per_second": 1162.1465220188427,
+          "predicted_ms": 1347.342250350526,
+          "predicted_per_token_ms": 23.637583339482912,
+          "predicted_per_second": 42.305509223933875,
+          "peak_memory": 19.988604016,
+          "draft_kind": null,
+          "draft_rounds": null,
+          "draft_n": null,
+          "draft_n_accepted": null
+        }
+      },
+      "response_file": "response_05.json",
+      "action": {
+        "name": "click",
+        "kwargs": {
+          "position": [
+            635,
+            630
+          ]
+        }
+      },
+      "done": true,
+      "reward": 1.0,
+      "observation": [],
+      "submitted": true
+    }
+  ],
+  "model_calls": 5,
+  "input_tokens": 12620,
+  "output_tokens": 252,
+  "reward": 1.0,
+  "done": true,
+  "correct": true,
+  "status": "correct",
+  "submitted": true,
+  "images": [
+    "data/external/captchabench/captcha/click_order/sample_0576/image.png"
+  ],
+  "cost_usd": null,
+  "source_revision": "960a521e842bd164b08344151b0a4253d23cfc2f",
+  "source_path": "captcha/click_order/sample_0576",
+  "training_exposure": "unknown",
+  "scorer": "ordered_boxes_v1",
+  "split_evidence": "paper_only",
+  "gt": {
+    "ordered_boxes": [
+      [
+        126,
+        328,
+        246,
+        448
+      ],
+      [
+        648,
+        52,
+        768,
+        172
+      ],
+      [
+        456,
+        272,
+        576,
+        392
+      ],
+      [
+        333,
+        99,
+        453,
+        219
+      ]
+    ]
+  },
+  "initial_observation": [
+    "./reports/solver_defense_v1/b_native/episodes/captchabench/Click_Order/sample_0576/observations/step_00_00.png"
+  ],
+  "elapsed_seconds": 20.865813970565796,
+  "final_answer": {
+    "answer_type": "click_order",
+    "points": [
+      {
+        "x": 186,
+        "y": 383
+      },
+      {
+        "x": 707,
+        "y": 112
+      },
+      {
+        "x": 515,
+        "y": 333
+      },
+      {
+        "x": 392,
+        "y": 157
+      }
+    ]
+  },
+  "answer": {
+    "answer_type": "click_order",
+    "points": [
+      {
+        "x": 186,
+        "y": 383
+      },
+      {
+        "x": 707,
+        "y": 112
+      },
+      {
+        "x": 515,
+        "y": 333
+      },
+      {
+        "x": 392,
+        "y": 157
+      }
+    ]
+  },
+  "stop_reason": "correct",
+  "finished_at": "2026-09-13T20:39:30.460274+00:00"
+}

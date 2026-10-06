@@ -1,0 +1,50 @@
+{
+  "raw_response": {
+    "id": "chatcmpl-75169a77-d265-4d3f-baa0-d478910c3f21",
+    "object": "chat.completion",
+    "created": 1789390111,
+    "model": "models/CaptchaMind-7B",
+    "choices": [
+      {
+        "index": 0,
+        "finish_reason": "stop",
+        "message": {
+          "role": "assistant",
+          "content": "<tool_call>{\"name\": \"enter_number\", \"arguments\": {\"number\": 180.0}}</tool_call>",
+          "reasoning_content": "I need to determine the additional clockwise rotation in degrees, relative to the reference image, that aligns the target object's facing direction with the reference direction.\n\nThe reference direction is indicated by the upper-right marker at (665, 591) in the reference image.\n\nThe current object's facing direction can be identified by the orientation of its main feature, which is the nose in this case. Looking at the current object in the candidate images, the target object's nose is facing lower-left.\n\nThe reference direction is upper-right. Looking at the marked directions, the difference between lower-left and upper-right is 270 degrees.\n\nThe current displayed angle in the interface is 90.0 degrees. To find the additional rotation needed, I calculate 270.0 - 90.0 = 180.0 degrees.",
+          "reasoning": "I need to determine the additional clockwise rotation in degrees, relative to the reference image, that aligns the target object's facing direction with the reference direction.\n\nThe reference direction is indicated by the upper-right marker at (665, 591) in the reference image.\n\nThe current object's facing direction can be identified by the orientation of its main feature, which is the nose in this case. Looking at the current object in the candidate images, the target object's nose is facing lower-left.\n\nThe reference direction is upper-right. Looking at the marked directions, the difference between lower-left and upper-right is 270 degrees.\n\nThe current displayed angle in the interface is 90.0 degrees. To find the additional rotation needed, I calculate 270.0 - 90.0 = 180.0 degrees.",
+          "tool_calls": null,
+          "tool_call_id": null,
+          "name": null
+        },
+        "logprobs": null
+      }
+    ],
+    "usage": {
+      "prompt_tokens": 16416,
+      "completion_tokens": 200,
+      "total_tokens": 16616,
+      "prompt_tokens_details": {
+        "cached_tokens": 0
+      }
+    },
+    "timings": {
+      "prompt_n": 16416,
+      "cache_n": 0,
+      "predicted_n": 202,
+      "prompt_ms": 16397.55391498329,
+      "prompt_per_token_ms": 0.9988763349770523,
+      "prompt_per_second": 1001.1249290663928,
+      "predicted_ms": 5173.1093683165955,
+      "predicted_per_token_ms": 25.609452318398986,
+      "predicted_per_second": 39.04808223023008,
+      "peak_memory": 35.615165266,
+      "draft_kind": null,
+      "draft_rounds": null,
+      "draft_n": null,
+      "draft_n_accepted": null
+    }
+  },
+  "elapsed_seconds": 22.172140749986283,
+  "received_at": "2026-09-14T12:48:31.864318+00:00"
+}

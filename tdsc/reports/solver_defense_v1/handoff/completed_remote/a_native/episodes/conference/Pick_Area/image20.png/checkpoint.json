@@ -1,0 +1,354 @@
+{
+  "id": "conference/Pick_Area/image20.png",
+  "type": "Pick_Area",
+  "source": "conference",
+  "module": "A",
+  "condition": "native_actions",
+  "solver": "C-I",
+  "puzzle_id": "image20.png",
+  "group_id": "conference:Pick_Area:image20.png",
+  "partition": "evaluation",
+  "model": "models/CaptchaMind-7B",
+  "started_at": "2026-09-13T23:12:36.549894+00:00",
+  "started_unix": 1789341156.5498922,
+  "budgets": {
+    "max_calls_per_episode": 30,
+    "max_output_tokens_per_call": 8192,
+    "max_output_tokens_per_episode": 65536,
+    "request_timeout_seconds": 600,
+    "episode_timeout_seconds": 1800
+  },
+  "protocol": "adapted_native_agent",
+  "action_parser": "lossless_single_action_v1",
+  "steps": [
+    {
+      "step": 1,
+      "text": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [250, 250]}}</tool_call>",
+      "usage": {
+        "prompt_tokens": 789,
+        "completion_tokens": 86,
+        "total_tokens": 875,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "input_tokens": 789,
+      "output_tokens": 86,
+      "finish_reason": "stop",
+      "truncated": false,
+      "returned_model": "models/CaptchaMind-7B",
+      "elapsed_seconds": 2.746172375016613,
+      "raw_response": {
+        "id": "chatcmpl-490e97bb-5036-4d48-8a23-aef690acf2f3",
+        "object": "chat.completion",
+        "created": 1789341159,
+        "model": "models/CaptchaMind-7B",
+        "choices": [
+          {
+            "index": 0,
+            "finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [250, 250]}}</tool_call>",
+              "reasoning_content": "I need to refer to the instruction to complete this captcha task. The goal is to click strictly inside the largest explicitly outlined area, near its geometric center. Looking at the image, there is only one outlined area, which is a irregular shape. So I will click on this outlined area.",
+              "reasoning": "I need to refer to the instruction to complete this captcha task. The goal is to click strictly inside the largest explicitly outlined area, near its geometric center. Looking at the image, there is only one outlined area, which is a irregular shape. So I will click on this outlined area.",
+              "tool_calls": null,
+              "tool_call_id": null,
+              "name": null
+            },
+            "logprobs": null
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 789,
+          "completion_tokens": 86,
+          "total_tokens": 875,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "timings": {
+          "prompt_n": 789,
+          "cache_n": 0,
+          "predicted_n": 88,
+          "prompt_ms": 633.1775410217233,
+          "prompt_per_token_ms": 0.8025063891276595,
+          "prompt_per_second": 1246.0959981727,
+          "predicted_ms": 2027.4170804742039,
+          "predicted_per_token_ms": 23.038830459934136,
+          "predicted_per_second": 43.40498107050434,
+          "peak_memory": 22.422571738,
+          "draft_kind": null,
+          "draft_rounds": null,
+          "draft_n": null,
+          "draft_n_accepted": null
+        }
+      },
+      "response_file": "response_01.json",
+      "action": {
+        "name": "click",
+        "kwargs": {
+          "position": [
+            250,
+            250
+          ]
+        }
+      },
+      "done": false,
+      "reward": 0.0,
+      "observation": [
+        "./reports/solver_defense_v1/a_native/episodes/conference/Pick_Area/image20.png/observations/step_01_00.png"
+      ],
+      "submitted": false
+    },
+    {
+      "step": 2,
+      "text": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [250, 250]}}</tool_call>",
+      "usage": {
+        "prompt_tokens": 1222,
+        "completion_tokens": 59,
+        "total_tokens": 1281,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "input_tokens": 1222,
+      "output_tokens": 59,
+      "finish_reason": "stop",
+      "truncated": false,
+      "returned_model": "models/CaptchaMind-7B",
+      "elapsed_seconds": 2.517141582997283,
+      "raw_response": {
+        "id": "chatcmpl-b80ec4f3-4f36-4215-9991-c4ed4d8a5cae",
+        "object": "chat.completion",
+        "created": 1789341161,
+        "model": "models/CaptchaMind-7B",
+        "choices": [
+          {
+            "index": 0,
+            "finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [250, 250]}}</tool_call>",
+              "reasoning_content": "I need to click strictly inside the LARGEST explicitly outlined area, near its geometric center. So I will click at the center of the largest area.",
+              "reasoning": "I need to click strictly inside the LARGEST explicitly outlined area, near its geometric center. So I will click at the center of the largest area.",
+              "tool_calls": null,
+              "tool_call_id": null,
+              "name": null
+            },
+            "logprobs": null
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 1222,
+          "completion_tokens": 59,
+          "total_tokens": 1281,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "timings": {
+          "prompt_n": 1222,
+          "cache_n": 0,
+          "predicted_n": 61,
+          "prompt_ms": 990.2710000169463,
+          "prompt_per_token_ms": 0.8103690671169773,
+          "prompt_per_second": 1234.0056408590053,
+          "predicted_ms": 1408.2207531333552,
+          "predicted_per_token_ms": 23.08558611694025,
+          "predicted_per_second": 43.3170721737144,
+          "peak_memory": 22.422571738,
+          "draft_kind": null,
+          "draft_rounds": null,
+          "draft_n": null,
+          "draft_n_accepted": null
+        }
+      },
+      "response_file": "response_02.json",
+      "action": {
+        "name": "click",
+        "kwargs": {
+          "position": [
+            250,
+            250
+          ]
+        }
+      },
+      "done": false,
+      "reward": 0.0,
+      "observation": [
+        "./reports/solver_defense_v1/a_native/episodes/conference/Pick_Area/image20.png/observations/step_02_00.png"
+      ],
+      "submitted": false
+    },
+    {
+      "step": 3,
+      "text": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [443, 578]}}</tool_call>",
+      "usage": {
+        "prompt_tokens": 1655,
+        "completion_tokens": 55,
+        "total_tokens": 1710,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "input_tokens": 1655,
+      "output_tokens": 55,
+      "finish_reason": "stop",
+      "truncated": false,
+      "returned_model": "models/CaptchaMind-7B",
+      "elapsed_seconds": 2.764194999996107,
+      "raw_response": {
+        "id": "chatcmpl-bf51d726-1ed1-48a8-866c-b7b9da733837",
+        "object": "chat.completion",
+        "created": 1789341164,
+        "model": "models/CaptchaMind-7B",
+        "choices": [
+          {
+            "index": 0,
+            "finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [443, 578]}}</tool_call>",
+              "reasoning_content": "I have successfully clicked strictly inside the largest explicitly outlined area, near its geometric center. The system has updated with my correct answer reflected.",
+              "reasoning": "I have successfully clicked strictly inside the largest explicitly outlined area, near its geometric center. The system has updated with my correct answer reflected.",
+              "tool_calls": null,
+              "tool_call_id": null,
+              "name": null
+            },
+            "logprobs": null
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 1655,
+          "completion_tokens": 55,
+          "total_tokens": 1710,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "timings": {
+          "prompt_n": 1655,
+          "cache_n": 0,
+          "predicted_n": 57,
+          "prompt_ms": 1316.23891700292,
+          "prompt_per_token_ms": 0.7953105238688338,
+          "prompt_per_second": 1257.3705112506777,
+          "predicted_ms": 1319.2475264492844,
+          "predicted_per_token_ms": 23.144693446478673,
+          "predicted_per_second": 43.206448264802745,
+          "peak_memory": 22.422571738,
+          "draft_kind": null,
+          "draft_rounds": null,
+          "draft_n": null,
+          "draft_n_accepted": null
+        }
+      },
+      "response_file": "response_03.json",
+      "action": {
+        "name": "click",
+        "kwargs": {
+          "position": [
+            443,
+            578
+          ]
+        }
+      },
+      "done": true,
+      "reward": 0.0,
+      "observation": [
+        "./reports/solver_defense_v1/a_native/episodes/conference/Pick_Area/image20.png/observations/step_03_00.png"
+      ],
+      "submitted": true
+    }
+  ],
+  "model_calls": 3,
+  "input_tokens": 3666,
+  "output_tokens": 200,
+  "reward": 0.0,
+  "done": true,
+  "correct": false,
+  "status": "incorrect",
+  "submitted": true,
+  "images": [
+    "data/conference/Pick_Area/image20.png"
+  ],
+  "cost_usd": null,
+  "scorer": "conference_v1",
+  "split_evidence": "historical_benchmark",
+  "gt": {
+    "area_box": [
+      [
+        100,
+        0
+      ],
+      [
+        496,
+        130
+      ]
+    ]
+  },
+  "initial_observation": [
+    "./reports/solver_defense_v1/a_native/episodes/conference/Pick_Area/image20.png/observations/step_00_00.png"
+  ],
+  "environment_metadata": {
+    "environment": "cognition_adapted_v1.1_numeric_input_box",
+    "main_image_index": 0,
+    "source_images": [
+      "./data/conference/Pick_Area/image20.png"
+    ],
+    "source_image_sizes": [
+      [
+        500,
+        500
+      ]
+    ],
+    "main_image_box": [
+      0,
+      0,
+      500,
+      500
+    ],
+    "observation_main_size": [
+      500,
+      620
+    ],
+    "coordinate_mapping": {
+      "scale": [
+        1,
+        1
+      ],
+      "offset": [
+        0,
+        0
+      ]
+    },
+    "controls": {
+      "submit": [
+        388,
+        560,
+        488,
+        608
+      ]
+    },
+    "input_box": null,
+    "grid": null
+  },
+  "elapsed_seconds": 8.34037470817566,
+  "final_answer": {
+    "answer_type": "single_point",
+    "point": {
+      "x": 250,
+      "y": 250
+    }
+  },
+  "answer": {
+    "answer_type": "single_point",
+    "point": {
+      "x": 250,
+      "y": 250
+    }
+  },
+  "stop_reason": "incorrect",
+  "finished_at": "2026-09-13T23:12:44.889648+00:00"
+}

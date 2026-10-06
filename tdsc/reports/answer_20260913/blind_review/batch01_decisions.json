@@ -1,0 +1,104 @@
+{
+  "case_001": {
+    "answer": {
+      "answer_type": "click_order",
+      "points": [{"x": 435, "y": 120}, {"x": 310, "y": 265}, {"x": 145, "y": 120}, {"x": 145, "y": 310}]
+    },
+    "classification": "representation_only",
+    "evidence": [
+      "<answer>[435, 120, 310, 265, 145, 120, 145, 310]</answer>",
+      "The lightbulb icon is at coordinates (435, 120).",
+      "The gear icon is at coordinates (310, 265).",
+      "The briefcase icon is at coordinates (145, 120).",
+      "The globe icon is at coordinates (145, 310)."
+    ],
+    "reason": "The response explicitly gives four coordinate pairs in reference order, and the final flat list repeats exactly those eight values in that order. Re-expressing them as four x/y objects changes only representation."
+  },
+  "case_002": {
+    "answer": {
+      "answer_type": "click_order",
+      "points": [{"x": 50, "y": 50}, {"x": 350, "y": 75}, {"x": 525, "y": 175}, {"x": 225, "y": 325}]
+    },
+    "classification": "representation_only",
+    "evidence": [
+      "<answer>[50, 50, 350, 75, 525, 175, 225, 325]</answer>",
+      "at coordinates around (50, 50)",
+      "at coordinates around (350, 75)",
+      "at coordinates around (525, 175)",
+      "at coordinates around (225, 325)"
+    ],
+    "reason": "The four numbered icon descriptions explicitly supply the same coordinate pairs as the final flattened list. Pairing adjacent final values preserves all coordinates and their stated order."
+  },
+  "case_003": {
+    "answer": {
+      "answer_type": "click_order",
+      "points": [{"x": 185, "y": 185}, {"x": 435, "y": 75}, {"x": 475, "y": 225}, {"x": 375, "y": 325}]
+    },
+    "classification": "representation_only",
+    "evidence": [
+      "<answer>[185, 185, 435, 75, 475, 225, 375, 325]</answer>",
+      "located at approximately (185, 185)",
+      "located at approximately (435, 75)",
+      "located at approximately (475, 225)",
+      "located at approximately (375, 325)"
+    ],
+    "reason": "The response lists all four coordinate pairs with explicit icon numbers, then repeats the same values in its final answer. The conversion only restores pair grouping."
+  },
+  "case_004": {
+    "answer": {
+      "answer_type": "click_order",
+      "points": [{"x": 145, "y": 70}, {"x": 475, "y": 70}, {"x": 475, "y": 320}, {"x": 225, "y": 320}]
+    },
+    "classification": "representation_only",
+    "evidence": [
+      "<answer>[145, 70, 475, 70, 475, 320, 225, 320]</answer>",
+      "Its center is at coordinates (145, 70).",
+      "Its center is at coordinates (475, 70).",
+      "Its center is at coordinates (475, 320).",
+      "Its center is at coordinates (225, 320)."
+    ],
+    "reason": "Four explicitly ordered coordinate pairs appear in the prose and are preserved by the final flat list. No coordinate, value, or order is inferred or changed."
+  },
+  "case_005": {
+    "answer": {
+      "answer_type": "click_order",
+      "points": [{"x": 450, "y": 310}, {"x": 435, "y": 85}, {"x": 525, "y": 235}, {"x": 310, "y": 310}]
+    },
+    "classification": "representation_only",
+    "evidence": [
+      "<answer>[[(450, 310), (435, 85), (525, 235), (310, 310)]]</answer>",
+      "It's located at approximately (450, 310).",
+      "It's located at approximately (435, 85).",
+      "It's located at approximately (525, 235).",
+      "It's located at approximately (310, 310)."
+    ],
+    "reason": "The final answer explicitly contains one complete ordered list of four coordinate tuples with one extra outer list wrapper. Removing that wrapper and naming x/y fields leaves all four tuples unchanged."
+  },
+  "case_006": {
+    "answer": {
+      "answer_type": "click_order",
+      "points": [{"x": 275, "y": 125}, {"x": 500, "y": 125}, {"x": 325, "y": 312.5}, {"x": 425, "y": 225}]
+    },
+    "classification": "representation_only",
+    "evidence": [
+      "<answer>[275, 125, 500, 125, 325, 312.5, 425, 225]</answer>",
+      "The lightbulb is located at coordinates (275, 125).",
+      "The magnifying glass is located at coordinates (500, 125).",
+      "The briefcase is located at coordinates (325, 312.5).",
+      "The tree is located at coordinates (425, 225)."
+    ],
+    "reason": "Each pair is explicitly stated in the four numbered icon descriptions and then repeated in the final flat list. Restoring the pairs preserves the decimal coordinate 312.5 exactly."
+  },
+  "case_007": {
+    "answer": null,
+    "classification": "incomplete",
+    "evidence": [
+      "the umbrella as the first icon",
+      "the swan as the second icon",
+      "the key as the third icon",
+      "the pine tree as the fourth icon",
+      "<answer>[310,205,575,365]</answer>"
+    ],
+    "reason": "The response describes four ordered targets but never supplies their coordinate pairs. The final answer contains only four scalars; interpreting them as flattened x/y values would supply only two points, while assigning one scalar to each of four targets would leave every point missing a coordinate. A complete four-point solution cannot be read without adding information."
+  }
+}

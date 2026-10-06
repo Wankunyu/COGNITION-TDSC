@@ -1,0 +1,25 @@
+% Generated from results/sota_baselines/paper_baseline_table.json.
+% Requires: \usepackage{booktabs,tabularx}
+\begin{table*}[t]
+\centering
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.08}
+\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{0.20\textwidth}>{\raggedright\arraybackslash}p{0.18\textwidth}>{\raggedright\arraybackslash}p{0.16\textwidth}>{\raggedright\arraybackslash}p{0.09\textwidth}>{\raggedright\arraybackslash}X@{}}
+\toprule
+System & Evidence & Reported metric & Direct? & Caveat tags / use \\
+\midrule
+Halligan & adapter-run; specialized solver & success rate 60.7\% & No & dataset mismatch; contextual larger-benchmark baseline \\
+Halligan / OpenCaptchaWorld & adapter-run; benchmark dataset & success rate 60.7\% & No & dataset and threat-model mismatch; external smoke/context row \\
+Oedipus & literature-only; specialized solver & average success rate 63.5\% & No & artifact unavailable, license unclear, metric mismatch \\
+VTTSolver & literature-only; specialized solver & not reported & No & dataset mismatch, license unclear \\
+PhishDecloaker & literature-only; specialized solver & not reported & No & threat-model mismatch, license unclear \\
+\bottomrule
+\end{tabularx}
+\vspace{0.5em}
+\scriptsize
+\textit{Notes.}
+Rows are generated from the Phase~4 baseline-comparison artifact chain. ``Direct?'' is \textit{No} for every row because the artifacts do not establish metric, sample, task, license/data-use, and threat-model parity with the local COGNITION runs. Reported rates are preserved as contextual baseline evidence, not as direct head-to-head solver accuracy on \texttt{captcha\_data}.
+\caption{Contextual baseline and larger-benchmark comparison evidence for the COGNITION revision.}
+\label{tab:phase4-baseline-comparison}
+\end{table*}

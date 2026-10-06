@@ -1,0 +1,1698 @@
+[
+  {
+    "id": "defense_v1/D0/image1",
+    "source": "conference_defense",
+    "module": "D",
+    "condition": "D0",
+    "base_id": "image1",
+    "target": "fox",
+    "type": "Select_Animal",
+    "puzzle_id": "image1.png",
+    "images": [
+      "data/defense_v1/original/image1.png"
+    ],
+    "image_sizes": [
+      [
+        1024,
+        1024
+      ]
+    ],
+    "prompt": "Select all grid cells containing the fox.",
+    "gt": {
+      "indices": [
+        5
+      ]
+    },
+    "schema": {
+      "type": "object",
+      "properties": {
+        "answer_type": {
+          "type": "string",
+          "enum": [
+            "multi_select"
+          ]
+        },
+        "indices": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        }
+      },
+      "required": [
+        "answer_type",
+        "indices"
+      ]
+    },
+    "scorer": "defense_v1_maximum_matching",
+    "group_id": "defense_v1/image1",
+    "partition": "development",
+    "split_evidence": "fixed_image_ids_before_new_model_calls",
+    "training_exposure": "unknown; previously used conference material",
+    "layout": {
+      "rows": 2,
+      "cols": 3,
+      "main_image_index": 0,
+      "grid_box": [
+        0,
+        0,
+        1024,
+        1024
+      ]
+    },
+    "source_path": "../conference/captcha_data/Select_Animal/image1.png",
+    "label_provenance": "data/defense_v1/annotations.json",
+    "image_transform": {
+      "name": "identity"
+    }
+  },
+  {
+    "id": "defense_v1/D1/image1",
+    "source": "conference_defense",
+    "module": "D",
+    "condition": "D1",
+    "base_id": "image1",
+    "target": "fox",
+    "type": "Select_Animal_Optimized",
+    "puzzle_id": "image1.png",
+    "images": [
+      "data/defense_v1/original/image1.png"
+    ],
+    "image_sizes": [
+      [
+        1024,
+        1024
+      ]
+    ],
+    "prompt": "Identify all actually visible eyes of the fox. Include one point per visible eye; do not include hidden eyes. Order does not matter.",
+    "gt": {
+      "points": [
+        {
+          "x": 792,
+          "y": 652
+        }
+      ]
+    },
+    "schema": {
+      "type": "object",
+      "properties": {
+        "answer_type": {
+          "type": "string",
+          "enum": [
+            "multi_point"
+          ]
+        },
+        "points": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "x": {
+                "type": "number"
+              },
+              "y": {
+                "type": "number"
+              }
+            },
+            "required": [
+              "x",
+              "y"
+            ]
+          }
+        }
+      },
+      "required": [
+        "answer_type",
+        "points"
+      ]
+    },
+    "scorer": "defense_v1_maximum_matching",
+    "group_id": "defense_v1/image1",
+    "partition": "development",
+    "split_evidence": "fixed_image_ids_before_new_model_calls",
+    "training_exposure": "unknown; previously used conference material",
+    "layout": {
+      "rows": 2,
+      "cols": 3,
+      "main_image_index": 0,
+      "grid_box": [
+        0,
+        0,
+        1024,
+        1024
+      ]
+    },
+    "source_path": "../conference/captcha_data/Select_Animal/image1.png",
+    "label_provenance": "data/defense_v1/annotations.json",
+    "image_transform": {
+      "name": "identity"
+    }
+  },
+  {
+    "id": "defense_v1/D2/image1",
+    "source": "conference_defense",
+    "module": "D",
+    "condition": "D2",
+    "base_id": "image1",
+    "target": "fox",
+    "type": "Visible_Eye_Count",
+    "puzzle_id": "image1.png",
+    "images": [
+      "data/defense_v1/original/image1.png"
+    ],
+    "image_sizes": [
+      [
+        1024,
+        1024
+      ]
+    ],
+    "prompt": "Count all actually visible eyes of the fox. Do not count hidden eyes.",
+    "gt": {
+      "value": 1
+    },
+    "schema": {
+      "type": "object",
+      "properties": {
+        "answer_type": {
+          "type": "string",
+          "enum": [
+            "number"
+          ]
+        },
+        "value": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "answer_type",
+        "value"
+      ]
+    },
+    "scorer": "defense_v1_maximum_matching",
+    "group_id": "defense_v1/image1",
+    "partition": "development",
+    "split_evidence": "fixed_image_ids_before_new_model_calls",
+    "training_exposure": "unknown; previously used conference material",
+    "layout": {
+      "rows": 2,
+      "cols": 3,
+      "main_image_index": 0,
+      "grid_box": [
+        0,
+        0,
+        1024,
+        1024
+      ]
+    },
+    "source_path": "../conference/captcha_data/Select_Animal/image1.png",
+    "label_provenance": "data/defense_v1/annotations.json",
+    "image_transform": {
+      "name": "identity"
+    }
+  },
+  {
+    "id": "defense_v1/D3/image1",
+    "source": "conference_defense",
+    "module": "D",
+    "condition": "D3",
+    "base_id": "image1",
+    "target": "fox",
+    "type": "Select_Animal",
+    "puzzle_id": "image1.png",
+    "images": [
+      "data/defense_v1/blur_radius2/image1.png"
+    ],
+    "image_sizes": [
+      [
+        1024,
+        1024
+      ]
+    ],
+    "prompt": "Select all grid cells containing the fox.",
+    "gt": {
+      "indices": [
+        5
+      ]
+    },
+    "schema": {
+      "type": "object",
+      "properties": {
+        "answer_type": {
+          "type": "string",
+          "enum": [
+            "multi_select"
+          ]
+        },
+        "indices": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        }
+      },
+      "required": [
+        "answer_type",
+        "indices"
+      ]
+    },
+    "scorer": "defense_v1_maximum_matching",
+    "group_id": "defense_v1/image1",
+    "partition": "development",
+    "split_evidence": "fixed_image_ids_before_new_model_calls",
+    "training_exposure": "unknown; previously used conference material",
+    "layout": {
+      "rows": 2,
+      "cols": 3,
+      "main_image_index": 0,
+      "grid_box": [
+        0,
+        0,
+        1024,
+        1024
+      ]
+    },
+    "source_path": "../conference/captcha_data/Select_Animal/image1.png",
+    "label_provenance": "data/defense_v1/annotations.json",
+    "image_transform": {
+      "name": "GaussianBlur",
+      "radius": 2.0,
+      "unit": "px"
+    }
+  },
+  {
+    "id": "defense_v1/D0/image7",
+    "source": "conference_defense",
+    "module": "D",
+    "condition": "D0",
+    "base_id": "image7",
+    "target": "panda",
+    "type": "Select_Animal",
+    "puzzle_id": "image7.png",
+    "images": [
+      "data/defense_v1/original/image7.png"
+    ],
+    "image_sizes": [
+      [
+        1024,
+        1024
+      ]
+    ],
+    "prompt": "Select all grid cells containing the panda.",
+    "gt": {
+      "indices": [
+        0
+      ]
+    },
+    "schema": {
+      "type": "object",
+      "properties": {
+        "answer_type": {
+          "type": "string",
+          "enum": [
+            "multi_select"
+          ]
+        },
+        "indices": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        }
+      },
+      "required": [
+        "answer_type",
+        "indices"
+      ]
+    },
+    "scorer": "defense_v1_maximum_matching",
+    "group_id": "defense_v1/image7",
+    "partition": "development",
+    "split_evidence": "fixed_image_ids_before_new_model_calls",
+    "training_exposure": "unknown; previously used conference material",
+    "layout": {
+      "rows": 2,
+      "cols": 3,
+      "main_image_index": 0,
+      "grid_box": [
+        0,
+        0,
+        1024,
+        1024
+      ]
+    },
+    "source_path": "../conference/captcha_data/Select_Animal/image7.png",
+    "label_provenance": "data/defense_v1/annotations.json",
+    "image_transform": {
+      "name": "identity"
+    }
+  },
+  {
+    "id": "defense_v1/D1/image7",
+    "source": "conference_defense",
+    "module": "D",
+    "condition": "D1",
+    "base_id": "image7",
+    "target": "panda",
+    "type": "Select_Animal_Optimized",
+    "puzzle_id": "image7.png",
+    "images": [
+      "data/defense_v1/original/image7.png"
+    ],
+    "image_sizes": [
+      [
+        1024,
+        1024
+      ]
+    ],
+    "prompt": "Identify all actually visible eyes of the panda. Include one point per visible eye; do not include hidden eyes. Order does not matter.",
+    "gt": {
+      "points": [
+        {
+          "x": 192,
+          "y": 148
+        },
+        {
+          "x": 246,
+          "y": 148
+        }
+      ]
+    },
+    "schema": {
+      "type": "object",
+      "properties": {
+        "answer_type": {
+          "type": "string",
+          "enum": [
+            "multi_point"
+          ]
+        },
+        "points": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "x": {
+                "type": "number"
+              },
+              "y": {
+                "type": "number"
+              }
+            },
+            "required": [
+              "x",
+              "y"
+            ]
+          }
+        }
+      },
+      "required": [
+        "answer_type",
+        "points"
+      ]
+    },
+    "scorer": "defense_v1_maximum_matching",
+    "group_id": "defense_v1/image7",
+    "partition": "development",
+    "split_evidence": "fixed_image_ids_before_new_model_calls",
+    "training_exposure": "unknown; previously used conference material",
+    "layout": {
+      "rows": 2,
+      "cols": 3,
+      "main_image_index": 0,
+      "grid_box": [
+        0,
+        0,
+        1024,
+        1024
+      ]
+    },
+    "source_path": "../conference/captcha_data/Select_Animal/image7.png",
+    "label_provenance": "data/defense_v1/annotations.json",
+    "image_transform": {
+      "name": "identity"
+    }
+  },
+  {
+    "id": "defense_v1/D2/image7",
+    "source": "conference_defense",
+    "module": "D",
+    "condition": "D2",
+    "base_id": "image7",
+    "target": "panda",
+    "type": "Visible_Eye_Count",
+    "puzzle_id": "image7.png",
+    "images": [
+      "data/defense_v1/original/image7.png"
+    ],
+    "image_sizes": [
+      [
+        1024,
+        1024
+      ]
+    ],
+    "prompt": "Count all actually visible eyes of the panda. Do not count hidden eyes.",
+    "gt": {
+      "value": 2
+    },
+    "schema": {
+      "type": "object",
+      "properties": {
+        "answer_type": {
+          "type": "string",
+          "enum": [
+            "number"
+          ]
+        },
+        "value": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "answer_type",
+        "value"
+      ]
+    },
+    "scorer": "defense_v1_maximum_matching",
+    "group_id": "defense_v1/image7",
+    "partition": "development",
+    "split_evidence": "fixed_image_ids_before_new_model_calls",
+    "training_exposure": "unknown; previously used conference material",
+    "layout": {
+      "rows": 2,
+      "cols": 3,
+      "main_image_index": 0,
+      "grid_box": [
+        0,
+        0,
+        1024,
+        1024
+      ]
+    },
+    "source_path": "../conference/captcha_data/Select_Animal/image7.png",
+    "label_provenance": "data/defense_v1/annotations.json",
+    "image_transform": {
+      "name": "identity"
+    }
+  },
+  {
+    "id": "defense_v1/D3/image7",
+    "source": "conference_defense",
+    "module": "D",
+    "condition": "D3",
+    "base_id": "image7",
+    "target": "panda",
+    "type": "Select_Animal",
+    "puzzle_id": "image7.png",
+    "images": [
+      "data/defense_v1/blur_radius2/image7.png"
+    ],
+    "image_sizes": [
+      [
+        1024,
+        1024
+      ]
+    ],
+    "prompt": "Select all grid cells containing the panda.",
+    "gt": {
+      "indices": [
+        0
+      ]
+    },
+    "schema": {
+      "type": "object",
+      "properties": {
+        "answer_type": {
+          "type": "string",
+          "enum": [
+            "multi_select"
+          ]
+        },
+        "indices": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        }
+      },
+      "required": [
+        "answer_type",
+        "indices"
+      ]
+    },
+    "scorer": "defense_v1_maximum_matching",
+    "group_id": "defense_v1/image7",
+    "partition": "development",
+    "split_evidence": "fixed_image_ids_before_new_model_calls",
+    "training_exposure": "unknown; previously used conference material",
+    "layout": {
+      "rows": 2,
+      "cols": 3,
+      "main_image_index": 0,
+      "grid_box": [
+        0,
+        0,
+        1024,
+        1024
+      ]
+    },
+    "source_path": "../conference/captcha_data/Select_Animal/image7.png",
+    "label_provenance": "data/defense_v1/annotations.json",
+    "image_transform": {
+      "name": "GaussianBlur",
+      "radius": 2.0,
+      "unit": "px"
+    }
+  },
+  {
+    "id": "defense_v1/D0/image8",
+    "source": "conference_defense",
+    "module": "D",
+    "condition": "D0",
+    "base_id": "image8",
+    "target": "squirrel",
+    "type": "Select_Animal",
+    "puzzle_id": "image8.png",
+    "images": [
+      "data/defense_v1/original/image8.png"
+    ],
+    "image_sizes": [
+      [
+        1024,
+        1024
+      ]
+    ],
+    "prompt": "Select all grid cells containing the squirrel.",
+    "gt": {
+      "indices": [
+        4
+      ]
+    },
+    "schema": {
+      "type": "object",
+      "properties": {
+        "answer_type": {
+          "type": "string",
+          "enum": [
+            "multi_select"
+          ]
+        },
+        "indices": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        }
+      },
+      "required": [
+        "answer_type",
+        "indices"
+      ]
+    },
+    "scorer": "defense_v1_maximum_matching",
+    "group_id": "defense_v1/image8",
+    "partition": "development",
+    "split_evidence": "fixed_image_ids_before_new_model_calls",
+    "training_exposure": "unknown; previously used conference material",
+    "layout": {
+      "rows": 2,
+      "cols": 3,
+      "main_image_index": 0,
+      "grid_box": [
+        0,
+        0,
+        1024,
+        1024
+      ]
+    },
+    "source_path": "../conference/captcha_data/Select_Animal/image8.png",
+    "label_provenance": "data/defense_v1/annotations.json",
+    "image_transform": {
+      "name": "identity"
+    }
+  },
+  {
+    "id": "defense_v1/D1/image8",
+    "source": "conference_defense",
+    "module": "D",
+    "condition": "D1",
+    "base_id": "image8",
+    "target": "squirrel",
+    "type": "Select_Animal_Optimized",
+    "puzzle_id": "image8.png",
+    "images": [
+      "data/defense_v1/original/image8.png"
+    ],
+    "image_sizes": [
+      [
+        1024,
+        1024
+      ]
+    ],
+    "prompt": "Identify all actually visible eyes of the squirrel. Include one point per visible eye; do not include hidden eyes. Order does not matter.",
+    "gt": {
+      "points": [
+        {
+          "x": 465,
+          "y": 615
+        }
+      ]
+    },
+    "schema": {
+      "type": "object",
+      "properties": {
+        "answer_type": {
+          "type": "string",
+          "enum": [
+            "multi_point"
+          ]
+        },
+        "points": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "x": {
+                "type": "number"
+              },
+              "y": {
+                "type": "number"
+              }
+            },
+            "required": [
+              "x",
+              "y"
+            ]
+          }
+        }
+      },
+      "required": [
+        "answer_type",
+        "points"
+      ]
+    },
+    "scorer": "defense_v1_maximum_matching",
+    "group_id": "defense_v1/image8",
+    "partition": "development",
+    "split_evidence": "fixed_image_ids_before_new_model_calls",
+    "training_exposure": "unknown; previously used conference material",
+    "layout": {
+      "rows": 2,
+      "cols": 3,
+      "main_image_index": 0,
+      "grid_box": [
+        0,
+        0,
+        1024,
+        1024
+      ]
+    },
+    "source_path": "../conference/captcha_data/Select_Animal/image8.png",
+    "label_provenance": "data/defense_v1/annotations.json",
+    "image_transform": {
+      "name": "identity"
+    }
+  },
+  {
+    "id": "defense_v1/D2/image8",
+    "source": "conference_defense",
+    "module": "D",
+    "condition": "D2",
+    "base_id": "image8",
+    "target": "squirrel",
+    "type": "Visible_Eye_Count",
+    "puzzle_id": "image8.png",
+    "images": [
+      "data/defense_v1/original/image8.png"
+    ],
+    "image_sizes": [
+      [
+        1024,
+        1024
+      ]
+    ],
+    "prompt": "Count all actually visible eyes of the squirrel. Do not count hidden eyes.",
+    "gt": {
+      "value": 1
+    },
+    "schema": {
+      "type": "object",
+      "properties": {
+        "answer_type": {
+          "type": "string",
+          "enum": [
+            "number"
+          ]
+        },
+        "value": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "answer_type",
+        "value"
+      ]
+    },
+    "scorer": "defense_v1_maximum_matching",
+    "group_id": "defense_v1/image8",
+    "partition": "development",
+    "split_evidence": "fixed_image_ids_before_new_model_calls",
+    "training_exposure": "unknown; previously used conference material",
+    "layout": {
+      "rows": 2,
+      "cols": 3,
+      "main_image_index": 0,
+      "grid_box": [
+        0,
+        0,
+        1024,
+        1024
+      ]
+    },
+    "source_path": "../conference/captcha_data/Select_Animal/image8.png",
+    "label_provenance": "data/defense_v1/annotations.json",
+    "image_transform": {
+      "name": "identity"
+    }
+  },
+  {
+    "id": "defense_v1/D3/image8",
+    "source": "conference_defense",
+    "module": "D",
+    "condition": "D3",
+    "base_id": "image8",
+    "target": "squirrel",
+    "type": "Select_Animal",
+    "puzzle_id": "image8.png",
+    "images": [
+      "data/defense_v1/blur_radius2/image8.png"
+    ],
+    "image_sizes": [
+      [
+        1024,
+        1024
+      ]
+    ],
+    "prompt": "Select all grid cells containing the squirrel.",
+    "gt": {
+      "indices": [
+        4
+      ]
+    },
+    "schema": {
+      "type": "object",
+      "properties": {
+        "answer_type": {
+          "type": "string",
+          "enum": [
+            "multi_select"
+          ]
+        },
+        "indices": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        }
+      },
+      "required": [
+        "answer_type",
+        "indices"
+      ]
+    },
+    "scorer": "defense_v1_maximum_matching",
+    "group_id": "defense_v1/image8",
+    "partition": "development",
+    "split_evidence": "fixed_image_ids_before_new_model_calls",
+    "training_exposure": "unknown; previously used conference material",
+    "layout": {
+      "rows": 2,
+      "cols": 3,
+      "main_image_index": 0,
+      "grid_box": [
+        0,
+        0,
+        1024,
+        1024
+      ]
+    },
+    "source_path": "../conference/captcha_data/Select_Animal/image8.png",
+    "label_provenance": "data/defense_v1/annotations.json",
+    "image_transform": {
+      "name": "GaussianBlur",
+      "radius": 2.0,
+      "unit": "px"
+    }
+  },
+  {
+    "id": "defense_v1/D0/image23",
+    "source": "conference_defense",
+    "module": "D",
+    "condition": "D0",
+    "base_id": "image23",
+    "target": "elephant",
+    "type": "Select_Animal",
+    "puzzle_id": "image23.png",
+    "images": [
+      "data/defense_v1/original/image23.png"
+    ],
+    "image_sizes": [
+      [
+        1024,
+        1024
+      ]
+    ],
+    "prompt": "Select all grid cells containing the elephant.",
+    "gt": {
+      "indices": [
+        0
+      ]
+    },
+    "schema": {
+      "type": "object",
+      "properties": {
+        "answer_type": {
+          "type": "string",
+          "enum": [
+            "multi_select"
+          ]
+        },
+        "indices": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        }
+      },
+      "required": [
+        "answer_type",
+        "indices"
+      ]
+    },
+    "scorer": "defense_v1_maximum_matching",
+    "group_id": "defense_v1/image23",
+    "partition": "development",
+    "split_evidence": "fixed_image_ids_before_new_model_calls",
+    "training_exposure": "unknown; previously used conference material",
+    "layout": {
+      "rows": 2,
+      "cols": 3,
+      "main_image_index": 0,
+      "grid_box": [
+        0,
+        0,
+        1024,
+        1024
+      ]
+    },
+    "source_path": "../conference/captcha_data/Select_Animal/image23.png",
+    "label_provenance": "data/defense_v1/annotations.json",
+    "image_transform": {
+      "name": "identity"
+    }
+  },
+  {
+    "id": "defense_v1/D1/image23",
+    "source": "conference_defense",
+    "module": "D",
+    "condition": "D1",
+    "base_id": "image23",
+    "target": "elephant",
+    "type": "Select_Animal_Optimized",
+    "puzzle_id": "image23.png",
+    "images": [
+      "data/defense_v1/original/image23.png"
+    ],
+    "image_sizes": [
+      [
+        1024,
+        1024
+      ]
+    ],
+    "prompt": "Identify all actually visible eyes of the elephant. Include one point per visible eye; do not include hidden eyes. Order does not matter.",
+    "gt": {
+      "points": [
+        {
+          "x": 190,
+          "y": 128
+        },
+        {
+          "x": 237,
+          "y": 128
+        }
+      ]
+    },
+    "schema": {
+      "type": "object",
+      "properties": {
+        "answer_type": {
+          "type": "string",
+          "enum": [
+            "multi_point"
+          ]
+        },
+        "points": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "x": {
+                "type": "number"
+              },
+              "y": {
+                "type": "number"
+              }
+            },
+            "required": [
+              "x",
+              "y"
+            ]
+          }
+        }
+      },
+      "required": [
+        "answer_type",
+        "points"
+      ]
+    },
+    "scorer": "defense_v1_maximum_matching",
+    "group_id": "defense_v1/image23",
+    "partition": "development",
+    "split_evidence": "fixed_image_ids_before_new_model_calls",
+    "training_exposure": "unknown; previously used conference material",
+    "layout": {
+      "rows": 2,
+      "cols": 3,
+      "main_image_index": 0,
+      "grid_box": [
+        0,
+        0,
+        1024,
+        1024
+      ]
+    },
+    "source_path": "../conference/captcha_data/Select_Animal/image23.png",
+    "label_provenance": "data/defense_v1/annotations.json",
+    "image_transform": {
+      "name": "identity"
+    }
+  },
+  {
+    "id": "defense_v1/D2/image23",
+    "source": "conference_defense",
+    "module": "D",
+    "condition": "D2",
+    "base_id": "image23",
+    "target": "elephant",
+    "type": "Visible_Eye_Count",
+    "puzzle_id": "image23.png",
+    "images": [
+      "data/defense_v1/original/image23.png"
+    ],
+    "image_sizes": [
+      [
+        1024,
+        1024
+      ]
+    ],
+    "prompt": "Count all actually visible eyes of the elephant. Do not count hidden eyes.",
+    "gt": {
+      "value": 2
+    },
+    "schema": {
+      "type": "object",
+      "properties": {
+        "answer_type": {
+          "type": "string",
+          "enum": [
+            "number"
+          ]
+        },
+        "value": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "answer_type",
+        "value"
+      ]
+    },
+    "scorer": "defense_v1_maximum_matching",
+    "group_id": "defense_v1/image23",
+    "partition": "development",
+    "split_evidence": "fixed_image_ids_before_new_model_calls",
+    "training_exposure": "unknown; previously used conference material",
+    "layout": {
+      "rows": 2,
+      "cols": 3,
+      "main_image_index": 0,
+      "grid_box": [
+        0,
+        0,
+        1024,
+        1024
+      ]
+    },
+    "source_path": "../conference/captcha_data/Select_Animal/image23.png",
+    "label_provenance": "data/defense_v1/annotations.json",
+    "image_transform": {
+      "name": "identity"
+    }
+  },
+  {
+    "id": "defense_v1/D3/image23",
+    "source": "conference_defense",
+    "module": "D",
+    "condition": "D3",
+    "base_id": "image23",
+    "target": "elephant",
+    "type": "Select_Animal",
+    "puzzle_id": "image23.png",
+    "images": [
+      "data/defense_v1/blur_radius2/image23.png"
+    ],
+    "image_sizes": [
+      [
+        1024,
+        1024
+      ]
+    ],
+    "prompt": "Select all grid cells containing the elephant.",
+    "gt": {
+      "indices": [
+        0
+      ]
+    },
+    "schema": {
+      "type": "object",
+      "properties": {
+        "answer_type": {
+          "type": "string",
+          "enum": [
+            "multi_select"
+          ]
+        },
+        "indices": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        }
+      },
+      "required": [
+        "answer_type",
+        "indices"
+      ]
+    },
+    "scorer": "defense_v1_maximum_matching",
+    "group_id": "defense_v1/image23",
+    "partition": "development",
+    "split_evidence": "fixed_image_ids_before_new_model_calls",
+    "training_exposure": "unknown; previously used conference material",
+    "layout": {
+      "rows": 2,
+      "cols": 3,
+      "main_image_index": 0,
+      "grid_box": [
+        0,
+        0,
+        1024,
+        1024
+      ]
+    },
+    "source_path": "../conference/captcha_data/Select_Animal/image23.png",
+    "label_provenance": "data/defense_v1/annotations.json",
+    "image_transform": {
+      "name": "GaussianBlur",
+      "radius": 2.0,
+      "unit": "px"
+    }
+  },
+  {
+    "id": "defense_v1/D0/image27",
+    "source": "conference_defense",
+    "module": "D",
+    "condition": "D0",
+    "base_id": "image27",
+    "target": "tiger",
+    "type": "Select_Animal",
+    "puzzle_id": "image27.png",
+    "images": [
+      "data/defense_v1/original/image27.png"
+    ],
+    "image_sizes": [
+      [
+        1024,
+        1024
+      ]
+    ],
+    "prompt": "Select all grid cells containing the tiger.",
+    "gt": {
+      "indices": [
+        4
+      ]
+    },
+    "schema": {
+      "type": "object",
+      "properties": {
+        "answer_type": {
+          "type": "string",
+          "enum": [
+            "multi_select"
+          ]
+        },
+        "indices": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        }
+      },
+      "required": [
+        "answer_type",
+        "indices"
+      ]
+    },
+    "scorer": "defense_v1_maximum_matching",
+    "group_id": "defense_v1/image27",
+    "partition": "development",
+    "split_evidence": "fixed_image_ids_before_new_model_calls",
+    "training_exposure": "unknown; previously used conference material",
+    "layout": {
+      "rows": 2,
+      "cols": 3,
+      "main_image_index": 0,
+      "grid_box": [
+        0,
+        0,
+        1024,
+        1024
+      ]
+    },
+    "source_path": "../conference/captcha_data/Select_Animal/image27.png",
+    "label_provenance": "data/defense_v1/annotations.json",
+    "image_transform": {
+      "name": "identity"
+    }
+  },
+  {
+    "id": "defense_v1/D1/image27",
+    "source": "conference_defense",
+    "module": "D",
+    "condition": "D1",
+    "base_id": "image27",
+    "target": "tiger",
+    "type": "Select_Animal_Optimized",
+    "puzzle_id": "image27.png",
+    "images": [
+      "data/defense_v1/original/image27.png"
+    ],
+    "image_sizes": [
+      [
+        1024,
+        1024
+      ]
+    ],
+    "prompt": "Identify all actually visible eyes of the tiger. Include one point per visible eye; do not include hidden eyes. Order does not matter.",
+    "gt": {
+      "points": [
+        {
+          "x": 413,
+          "y": 583
+        },
+        {
+          "x": 444,
+          "y": 584
+        }
+      ]
+    },
+    "schema": {
+      "type": "object",
+      "properties": {
+        "answer_type": {
+          "type": "string",
+          "enum": [
+            "multi_point"
+          ]
+        },
+        "points": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "x": {
+                "type": "number"
+              },
+              "y": {
+                "type": "number"
+              }
+            },
+            "required": [
+              "x",
+              "y"
+            ]
+          }
+        }
+      },
+      "required": [
+        "answer_type",
+        "points"
+      ]
+    },
+    "scorer": "defense_v1_maximum_matching",
+    "group_id": "defense_v1/image27",
+    "partition": "development",
+    "split_evidence": "fixed_image_ids_before_new_model_calls",
+    "training_exposure": "unknown; previously used conference material",
+    "layout": {
+      "rows": 2,
+      "cols": 3,
+      "main_image_index": 0,
+      "grid_box": [
+        0,
+        0,
+        1024,
+        1024
+      ]
+    },
+    "source_path": "../conference/captcha_data/Select_Animal/image27.png",
+    "label_provenance": "data/defense_v1/annotations.json",
+    "image_transform": {
+      "name": "identity"
+    }
+  },
+  {
+    "id": "defense_v1/D2/image27",
+    "source": "conference_defense",
+    "module": "D",
+    "condition": "D2",
+    "base_id": "image27",
+    "target": "tiger",
+    "type": "Visible_Eye_Count",
+    "puzzle_id": "image27.png",
+    "images": [
+      "data/defense_v1/original/image27.png"
+    ],
+    "image_sizes": [
+      [
+        1024,
+        1024
+      ]
+    ],
+    "prompt": "Count all actually visible eyes of the tiger. Do not count hidden eyes.",
+    "gt": {
+      "value": 2
+    },
+    "schema": {
+      "type": "object",
+      "properties": {
+        "answer_type": {
+          "type": "string",
+          "enum": [
+            "number"
+          ]
+        },
+        "value": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "answer_type",
+        "value"
+      ]
+    },
+    "scorer": "defense_v1_maximum_matching",
+    "group_id": "defense_v1/image27",
+    "partition": "development",
+    "split_evidence": "fixed_image_ids_before_new_model_calls",
+    "training_exposure": "unknown; previously used conference material",
+    "layout": {
+      "rows": 2,
+      "cols": 3,
+      "main_image_index": 0,
+      "grid_box": [
+        0,
+        0,
+        1024,
+        1024
+      ]
+    },
+    "source_path": "../conference/captcha_data/Select_Animal/image27.png",
+    "label_provenance": "data/defense_v1/annotations.json",
+    "image_transform": {
+      "name": "identity"
+    }
+  },
+  {
+    "id": "defense_v1/D3/image27",
+    "source": "conference_defense",
+    "module": "D",
+    "condition": "D3",
+    "base_id": "image27",
+    "target": "tiger",
+    "type": "Select_Animal",
+    "puzzle_id": "image27.png",
+    "images": [
+      "data/defense_v1/blur_radius2/image27.png"
+    ],
+    "image_sizes": [
+      [
+        1024,
+        1024
+      ]
+    ],
+    "prompt": "Select all grid cells containing the tiger.",
+    "gt": {
+      "indices": [
+        4
+      ]
+    },
+    "schema": {
+      "type": "object",
+      "properties": {
+        "answer_type": {
+          "type": "string",
+          "enum": [
+            "multi_select"
+          ]
+        },
+        "indices": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        }
+      },
+      "required": [
+        "answer_type",
+        "indices"
+      ]
+    },
+    "scorer": "defense_v1_maximum_matching",
+    "group_id": "defense_v1/image27",
+    "partition": "development",
+    "split_evidence": "fixed_image_ids_before_new_model_calls",
+    "training_exposure": "unknown; previously used conference material",
+    "layout": {
+      "rows": 2,
+      "cols": 3,
+      "main_image_index": 0,
+      "grid_box": [
+        0,
+        0,
+        1024,
+        1024
+      ]
+    },
+    "source_path": "../conference/captcha_data/Select_Animal/image27.png",
+    "label_provenance": "data/defense_v1/annotations.json",
+    "image_transform": {
+      "name": "GaussianBlur",
+      "radius": 2.0,
+      "unit": "px"
+    }
+  },
+  {
+    "id": "defense_v1/D0/image30",
+    "source": "conference_defense",
+    "module": "D",
+    "condition": "D0",
+    "base_id": "image30",
+    "target": "monkey",
+    "type": "Select_Animal",
+    "puzzle_id": "image30.png",
+    "images": [
+      "data/defense_v1/original/image30.png"
+    ],
+    "image_sizes": [
+      [
+        1024,
+        1024
+      ]
+    ],
+    "prompt": "Select all grid cells containing the monkey.",
+    "gt": {
+      "indices": [
+        1
+      ]
+    },
+    "schema": {
+      "type": "object",
+      "properties": {
+        "answer_type": {
+          "type": "string",
+          "enum": [
+            "multi_select"
+          ]
+        },
+        "indices": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        }
+      },
+      "required": [
+        "answer_type",
+        "indices"
+      ]
+    },
+    "scorer": "defense_v1_maximum_matching",
+    "group_id": "defense_v1/image30",
+    "partition": "development",
+    "split_evidence": "fixed_image_ids_before_new_model_calls",
+    "training_exposure": "unknown; previously used conference material",
+    "layout": {
+      "rows": 2,
+      "cols": 3,
+      "main_image_index": 0,
+      "grid_box": [
+        0,
+        0,
+        1024,
+        1024
+      ]
+    },
+    "source_path": "../conference/captcha_data/Select_Animal/image30.png",
+    "label_provenance": "data/defense_v1/annotations.json",
+    "image_transform": {
+      "name": "identity"
+    }
+  },
+  {
+    "id": "defense_v1/D1/image30",
+    "source": "conference_defense",
+    "module": "D",
+    "condition": "D1",
+    "base_id": "image30",
+    "target": "monkey",
+    "type": "Select_Animal_Optimized",
+    "puzzle_id": "image30.png",
+    "images": [
+      "data/defense_v1/original/image30.png"
+    ],
+    "image_sizes": [
+      [
+        1024,
+        1024
+      ]
+    ],
+    "prompt": "Identify all actually visible eyes of the monkey. Include one point per visible eye; do not include hidden eyes. Order does not matter.",
+    "gt": {
+      "points": [
+        {
+          "x": 469,
+          "y": 105
+        },
+        {
+          "x": 503,
+          "y": 105
+        }
+      ]
+    },
+    "schema": {
+      "type": "object",
+      "properties": {
+        "answer_type": {
+          "type": "string",
+          "enum": [
+            "multi_point"
+          ]
+        },
+        "points": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "x": {
+                "type": "number"
+              },
+              "y": {
+                "type": "number"
+              }
+            },
+            "required": [
+              "x",
+              "y"
+            ]
+          }
+        }
+      },
+      "required": [
+        "answer_type",
+        "points"
+      ]
+    },
+    "scorer": "defense_v1_maximum_matching",
+    "group_id": "defense_v1/image30",
+    "partition": "development",
+    "split_evidence": "fixed_image_ids_before_new_model_calls",
+    "training_exposure": "unknown; previously used conference material",
+    "layout": {
+      "rows": 2,
+      "cols": 3,
+      "main_image_index": 0,
+      "grid_box": [
+        0,
+        0,
+        1024,
+        1024
+      ]
+    },
+    "source_path": "../conference/captcha_data/Select_Animal/image30.png",
+    "label_provenance": "data/defense_v1/annotations.json",
+    "image_transform": {
+      "name": "identity"
+    }
+  },
+  {
+    "id": "defense_v1/D2/image30",
+    "source": "conference_defense",
+    "module": "D",
+    "condition": "D2",
+    "base_id": "image30",
+    "target": "monkey",
+    "type": "Visible_Eye_Count",
+    "puzzle_id": "image30.png",
+    "images": [
+      "data/defense_v1/original/image30.png"
+    ],
+    "image_sizes": [
+      [
+        1024,
+        1024
+      ]
+    ],
+    "prompt": "Count all actually visible eyes of the monkey. Do not count hidden eyes.",
+    "gt": {
+      "value": 2
+    },
+    "schema": {
+      "type": "object",
+      "properties": {
+        "answer_type": {
+          "type": "string",
+          "enum": [
+            "number"
+          ]
+        },
+        "value": {
+          "type": "integer"
+        }
+      },
+      "required": [
+        "answer_type",
+        "value"
+      ]
+    },
+    "scorer": "defense_v1_maximum_matching",
+    "group_id": "defense_v1/image30",
+    "partition": "development",
+    "split_evidence": "fixed_image_ids_before_new_model_calls",
+    "training_exposure": "unknown; previously used conference material",
+    "layout": {
+      "rows": 2,
+      "cols": 3,
+      "main_image_index": 0,
+      "grid_box": [
+        0,
+        0,
+        1024,
+        1024
+      ]
+    },
+    "source_path": "../conference/captcha_data/Select_Animal/image30.png",
+    "label_provenance": "data/defense_v1/annotations.json",
+    "image_transform": {
+      "name": "identity"
+    }
+  },
+  {
+    "id": "defense_v1/D3/image30",
+    "source": "conference_defense",
+    "module": "D",
+    "condition": "D3",
+    "base_id": "image30",
+    "target": "monkey",
+    "type": "Select_Animal",
+    "puzzle_id": "image30.png",
+    "images": [
+      "data/defense_v1/blur_radius2/image30.png"
+    ],
+    "image_sizes": [
+      [
+        1024,
+        1024
+      ]
+    ],
+    "prompt": "Select all grid cells containing the monkey.",
+    "gt": {
+      "indices": [
+        1
+      ]
+    },
+    "schema": {
+      "type": "object",
+      "properties": {
+        "answer_type": {
+          "type": "string",
+          "enum": [
+            "multi_select"
+          ]
+        },
+        "indices": {
+          "type": "array",
+          "items": {
+            "type": "integer"
+          }
+        }
+      },
+      "required": [
+        "answer_type",
+        "indices"
+      ]
+    },
+    "scorer": "defense_v1_maximum_matching",
+    "group_id": "defense_v1/image30",
+    "partition": "development",
+    "split_evidence": "fixed_image_ids_before_new_model_calls",
+    "training_exposure": "unknown; previously used conference material",
+    "layout": {
+      "rows": 2,
+      "cols": 3,
+      "main_image_index": 0,
+      "grid_box": [
+        0,
+        0,
+        1024,
+        1024
+      ]
+    },
+    "source_path": "../conference/captcha_data/Select_Animal/image30.png",
+    "label_provenance": "data/defense_v1/annotations.json",
+    "image_transform": {
+      "name": "GaussianBlur",
+      "radius": 2.0,
+      "unit": "px"
+    }
+  }
+]

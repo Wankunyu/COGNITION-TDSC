@@ -1,0 +1,1937 @@
+{
+  "created_at": "2026-09-14T05:31:44.380492+00:00",
+  "evidence": {
+    "policy": "episode_deadline_reconciliation_v1",
+    "episode_id": "conference/Rotation_Match/puzzle_gold_direction_8.json",
+    "pending_step": 23,
+    "request_file": "request_23.json",
+    "dispatch": {
+      "started_at": "2026-09-14T05:28:44.105942+00:00",
+      "timeout_seconds": 162.67665004730225,
+      "remaining_episode_seconds": 162.67665004730225
+    },
+    "transport_error": {
+      "error": "Transport failure: TimeoutError",
+      "http_status": null,
+      "elapsed_seconds": 162.6877805420081,
+      "received_at": "2026-09-14T05:31:26.887633+00:00"
+    },
+    "original_status": "pending_request",
+    "episode_deadline_unix": 1789363886.6071,
+    "response_available": false,
+    "request_resent": false,
+    "reason": "No action from this request was received or applied before the frozen episode deadline"
+  },
+  "runtime_idle": {
+    "confirmed_at": "2026-09-14T05:31:44.378597+00:00",
+    "event": "2026-09-14 00:31:43,491 - INFO - Request completed: endpoint=/chat/completions model=models/CaptchaMind-7B stream=False backend=continuous_batching prompt_tokens=95718 generated_tokens=28 elapsed=178.986s prefill=547.0 tok/s decode=26.4 tok/s finish_reason=stop in_flight=0"
+  },
+  "result": {
+    "id": "conference/Rotation_Match/puzzle_gold_direction_8.json",
+    "type": "Rotation_Match",
+    "source": "conference",
+    "module": "A",
+    "condition": "native_actions",
+    "solver": "C-I",
+    "puzzle_id": "puzzle_gold_direction_8.json",
+    "group_id": "conference:Rotation_Match:gold.png",
+    "partition": "evaluation",
+    "model": "models/CaptchaMind-7B",
+    "started_at": "2026-09-14T05:01:26.607102+00:00",
+    "started_unix": 1789362086.6071,
+    "budgets": {
+      "max_calls_per_episode": 30,
+      "max_output_tokens_per_call": 8192,
+      "max_output_tokens_per_episode": 65536,
+      "request_timeout_seconds": 600,
+      "episode_timeout_seconds": 1800
+    },
+    "protocol": "adapted_native_agent",
+    "action_parser": "lossless_single_action_v1",
+    "steps": [
+      {
+        "step": 1,
+        "text": "<tool_call>{\"name\": \"enter_number\", \"arguments\": {\"number\": 270}}</tool_call>",
+        "usage": {
+          "prompt_tokens": 4536,
+          "completion_tokens": 150,
+          "total_tokens": 4686,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "input_tokens": 4536,
+        "output_tokens": 150,
+        "finish_reason": "stop",
+        "truncated": false,
+        "returned_model": "models/CaptchaMind-7B",
+        "elapsed_seconds": 7.996211500023492,
+        "raw_response": {
+          "id": "chatcmpl-01777953-654f-4615-9e90-12370d0e5e70",
+          "object": "chat.completion",
+          "created": 1789362095,
+          "model": "models/CaptchaMind-7B",
+          "choices": [
+            {
+              "index": 0,
+              "finish_reason": "stop",
+              "message": {
+                "role": "assistant",
+                "content": "<tool_call>{\"name\": \"enter_number\", \"arguments\": {\"number\": 270}}</tool_call>",
+                "reasoning_content": "I need to determine the additional clockwise rotation in degrees, in the range [0, 360), required to align the current object's facing direction with the reference direction.\n\nThe reference direction is indicated by the finger in image 1, which is pointing downward. So, the target angle is 270 degrees.\n\nThe current object is the stack of gold bars in image 2. Looking at the current object, the target angle is 0 degrees.\n\nThe difference between the target angle and the current angle is 270 - 0 = 270 degrees.\n\nThis is the additional clockwise rotation needed.",
+                "reasoning": "I need to determine the additional clockwise rotation in degrees, in the range [0, 360), required to align the current object's facing direction with the reference direction.\n\nThe reference direction is indicated by the finger in image 1, which is pointing downward. So, the target angle is 270 degrees.\n\nThe current object is the stack of gold bars in image 2. Looking at the current object, the target angle is 0 degrees.\n\nThe difference between the target angle and the current angle is 270 - 0 = 270 degrees.\n\nThis is the additional clockwise rotation needed.",
+                "tool_calls": null,
+                "tool_call_id": null,
+                "name": null
+              },
+              "logprobs": null
+            }
+          ],
+          "usage": {
+            "prompt_tokens": 4536,
+            "completion_tokens": 150,
+            "total_tokens": 4686,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            }
+          },
+          "timings": {
+            "prompt_n": 4536,
+            "cache_n": 0,
+            "predicted_n": 152,
+            "prompt_ms": 4035.3726250177715,
+            "prompt_per_token_ms": 0.8896324129227892,
+            "prompt_per_second": 1124.0597638687761,
+            "predicted_ms": 3573.7111324472166,
+            "predicted_per_token_ms": 23.511257450310637,
+            "predicted_per_second": 42.53281655026017,
+            "peak_memory": 17.836165574,
+            "draft_kind": null,
+            "draft_rounds": null,
+            "draft_n": null,
+            "draft_n_accepted": null
+          }
+        },
+        "response_file": "response_01.json",
+        "action": {
+          "name": "enter_number",
+          "kwargs": {
+            "number": 270
+          }
+        },
+        "done": false,
+        "reward": 0.0,
+        "observation": [
+          "./reports/solver_defense_v1/a_native/episodes/conference/Rotation_Match/puzzle_gold_direction_8.json/observations/step_01_00.png",
+          "./reports/solver_defense_v1/a_native/episodes/conference/Rotation_Match/puzzle_gold_direction_8.json/observations/step_01_01.png"
+        ],
+        "submitted": false
+      },
+      {
+        "step": 2,
+        "text": "<tool_call>{\"name\": \"enter_number\", \"arguments\": {\"number\": 180}}</tool_call>",
+        "usage": {
+          "prompt_tokens": 8675,
+          "completion_tokens": 129,
+          "total_tokens": 8804,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "input_tokens": 8675,
+        "output_tokens": 129,
+        "finish_reason": "stop",
+        "truncated": false,
+        "returned_model": "models/CaptchaMind-7B",
+        "elapsed_seconds": 11.613449166005012,
+        "raw_response": {
+          "id": "chatcmpl-6a5078d8-15a6-4a30-b475-ab1775a84708",
+          "object": "chat.completion",
+          "created": 1789362106,
+          "model": "models/CaptchaMind-7B",
+          "choices": [
+            {
+              "index": 0,
+              "finish_reason": "stop",
+              "message": {
+                "role": "assistant",
+                "content": "<tool_call>{\"name\": \"enter_number\", \"arguments\": {\"number\": 180}}</tool_call>",
+                "reasoning_content": "I need to determine the angle rotation required for the current object to match the reference direction.\n\nThe reference direction is indicated by the finger in image 1, which is pointing downward. Looking at the current object in image 2, I can see that it is facing upward.\n\nThe reference direction and the current facing direction are in opposite directions. To calculate the angle, I can think of it as a 180-degree rotation to go from upward to downward.\n\nSo the additional clockwise rotation needed is 180 degrees.",
+                "reasoning": "I need to determine the angle rotation required for the current object to match the reference direction.\n\nThe reference direction is indicated by the finger in image 1, which is pointing downward. Looking at the current object in image 2, I can see that it is facing upward.\n\nThe reference direction and the current facing direction are in opposite directions. To calculate the angle, I can think of it as a 180-degree rotation to go from upward to downward.\n\nSo the additional clockwise rotation needed is 180 degrees.",
+                "tool_calls": null,
+                "tool_call_id": null,
+                "name": null
+              },
+              "logprobs": null
+            }
+          ],
+          "usage": {
+            "prompt_tokens": 8675,
+            "completion_tokens": 129,
+            "total_tokens": 8804,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            }
+          },
+          "timings": {
+            "prompt_n": 8675,
+            "cache_n": 0,
+            "predicted_n": 131,
+            "prompt_ms": 8130.102877039462,
+            "prompt_per_token_ms": 0.9371876515319265,
+            "prompt_per_second": 1067.022168255632,
+            "predicted_ms": 3159.483990397152,
+            "predicted_per_token_ms": 24.118198399978258,
+            "predicted_per_second": 41.462466781967485,
+            "peak_memory": 18.456161413,
+            "draft_kind": null,
+            "draft_rounds": null,
+            "draft_n": null,
+            "draft_n_accepted": null
+          }
+        },
+        "response_file": "response_02.json",
+        "action": {
+          "name": "enter_number",
+          "kwargs": {
+            "number": 180
+          }
+        },
+        "done": false,
+        "reward": 0.0,
+        "observation": [
+          "./reports/solver_defense_v1/a_native/episodes/conference/Rotation_Match/puzzle_gold_direction_8.json/observations/step_02_00.png",
+          "./reports/solver_defense_v1/a_native/episodes/conference/Rotation_Match/puzzle_gold_direction_8.json/observations/step_02_01.png"
+        ],
+        "submitted": false
+      },
+      {
+        "step": 3,
+        "text": "<tool_call>{\"name\": \"enter_number\", \"arguments\": {\"number\": 0}}</tool_call>",
+        "usage": {
+          "prompt_tokens": 12814,
+          "completion_tokens": 104,
+          "total_tokens": 12918,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "input_tokens": 12814,
+        "output_tokens": 104,
+        "finish_reason": "stop",
+        "truncated": false,
+        "returned_model": "models/CaptchaMind-7B",
+        "elapsed_seconds": 15.640410374995554,
+        "raw_response": {
+          "id": "chatcmpl-62260b80-3b37-49c9-8ef1-8f77af1b9bf5",
+          "object": "chat.completion",
+          "created": 1789362122,
+          "model": "models/CaptchaMind-7B",
+          "choices": [
+            {
+              "index": 0,
+              "finish_reason": "stop",
+              "message": {
+                "role": "assistant",
+                "content": "<tool_call>{\"name\": \"enter_number\", \"arguments\": {\"number\": 0}}</tool_call>",
+                "reasoning_content": "I need to determine the additional clockwise rotation in degrees, relative to the reference image, that aligns the current object's facing direction with the reference direction.\n\nThe reference direction is indicated by the finger in image 1, which is pointing downward. Looking at the current object in image 2, its facing direction is facing downward.\n\nThe directions already match. Therefore, the additional clockwise rotation needed is 0 degrees.",
+                "reasoning": "I need to determine the additional clockwise rotation in degrees, relative to the reference image, that aligns the current object's facing direction with the reference direction.\n\nThe reference direction is indicated by the finger in image 1, which is pointing downward. Looking at the current object in image 2, its facing direction is facing downward.\n\nThe directions already match. Therefore, the additional clockwise rotation needed is 0 degrees.",
+                "tool_calls": null,
+                "tool_call_id": null,
+                "name": null
+              },
+              "logprobs": null
+            }
+          ],
+          "usage": {
+            "prompt_tokens": 12814,
+            "completion_tokens": 104,
+            "total_tokens": 12918,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            }
+          },
+          "timings": {
+            "prompt_n": 12814,
+            "cache_n": 0,
+            "predicted_n": 106,
+            "prompt_ms": 12566.216625011293,
+            "prompt_per_token_ms": 0.9806630735922658,
+            "prompt_per_second": 1019.7182161013784,
+            "predicted_ms": 2626.5361004608817,
+            "predicted_per_token_ms": 24.77864245717813,
+            "predicted_per_second": 40.357336029533364,
+            "peak_memory": 19.348015988,
+            "draft_kind": null,
+            "draft_rounds": null,
+            "draft_n": null,
+            "draft_n_accepted": null
+          }
+        },
+        "response_file": "response_03.json",
+        "action": {
+          "name": "enter_number",
+          "kwargs": {
+            "number": 0
+          }
+        },
+        "done": false,
+        "reward": 0.0,
+        "observation": [
+          "./reports/solver_defense_v1/a_native/episodes/conference/Rotation_Match/puzzle_gold_direction_8.json/observations/step_03_00.png",
+          "./reports/solver_defense_v1/a_native/episodes/conference/Rotation_Match/puzzle_gold_direction_8.json/observations/step_03_01.png"
+        ],
+        "submitted": false
+      },
+      {
+        "step": 4,
+        "text": "<tool_call>{\"name\": \"enter_number\", \"arguments\": {\"number\": 270}}</tool_call>",
+        "usage": {
+          "prompt_tokens": 16951,
+          "completion_tokens": 119,
+          "total_tokens": 17070,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "input_tokens": 16951,
+        "output_tokens": 119,
+        "finish_reason": "stop",
+        "truncated": false,
+        "returned_model": "models/CaptchaMind-7B",
+        "elapsed_seconds": 20.941046541993273,
+        "raw_response": {
+          "id": "chatcmpl-564664fb-eb78-4e66-acac-2c24a8be0edb",
+          "object": "chat.completion",
+          "created": 1789362144,
+          "model": "models/CaptchaMind-7B",
+          "choices": [
+            {
+              "index": 0,
+              "finish_reason": "stop",
+              "message": {
+                "role": "assistant",
+                "content": "<tool_call>{\"name\": \"enter_number\", \"arguments\": {\"number\": 270}}</tool_call>",
+                "reasoning_content": "I need to determine the additional clockwise rotation in degrees, within the range [0, 360), required to align the current object's facing direction with the reference direction.\n\nThe reference image is at the upper-left. The reference direction is pointing upper-left.\n\nThe current object is the gold bar stack. Looking at the current object image, the facing direction of the current object is downward.\n\nThe angle difference between facing downward and facing upper-left is 270 degrees.",
+                "reasoning": "I need to determine the additional clockwise rotation in degrees, within the range [0, 360), required to align the current object's facing direction with the reference direction.\n\nThe reference image is at the upper-left. The reference direction is pointing upper-left.\n\nThe current object is the gold bar stack. Looking at the current object image, the facing direction of the current object is downward.\n\nThe angle difference between facing downward and facing upper-left is 270 degrees.",
+                "tool_calls": null,
+                "tool_call_id": null,
+                "name": null
+              },
+              "logprobs": null
+            }
+          ],
+          "usage": {
+            "prompt_tokens": 16951,
+            "completion_tokens": 119,
+            "total_tokens": 17070,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            }
+          },
+          "timings": {
+            "prompt_n": 16951,
+            "cache_n": 0,
+            "predicted_n": 121,
+            "prompt_ms": 17268.25683293282,
+            "prompt_per_token_ms": 1.01871611308671,
+            "prompt_per_second": 981.6277441317776,
+            "predicted_ms": 3118.6720239600013,
+            "predicted_per_token_ms": 25.77414895834712,
+            "predicted_per_second": 38.79856524520255,
+            "peak_memory": 20.268885938,
+            "draft_kind": null,
+            "draft_rounds": null,
+            "draft_n": null,
+            "draft_n_accepted": null
+          }
+        },
+        "response_file": "response_04.json",
+        "action": {
+          "name": "enter_number",
+          "kwargs": {
+            "number": 270
+          }
+        },
+        "done": false,
+        "reward": 0.0,
+        "observation": [
+          "./reports/solver_defense_v1/a_native/episodes/conference/Rotation_Match/puzzle_gold_direction_8.json/observations/step_04_00.png",
+          "./reports/solver_defense_v1/a_native/episodes/conference/Rotation_Match/puzzle_gold_direction_8.json/observations/step_04_01.png"
+        ],
+        "submitted": false
+      },
+      {
+        "step": 5,
+        "text": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [1154, 1260]}}</tool_call>",
+        "usage": {
+          "prompt_tokens": 21090,
+          "completion_tokens": 60,
+          "total_tokens": 21150,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "input_tokens": 21090,
+        "output_tokens": 60,
+        "finish_reason": "stop",
+        "truncated": false,
+        "returned_model": "models/CaptchaMind-7B",
+        "elapsed_seconds": 24.669324124988634,
+        "raw_response": {
+          "id": "chatcmpl-f05b203d-1912-4158-9cba-c8e1a884641d",
+          "object": "chat.completion",
+          "created": 1789362169,
+          "model": "models/CaptchaMind-7B",
+          "choices": [
+            {
+              "index": 0,
+              "finish_reason": "stop",
+              "message": {
+                "role": "assistant",
+                "content": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [1154, 1260]}}</tool_call>",
+                "reasoning_content": "The current angle of 270 degrees matches the reference direction. I can see that the current angle is correct, so I will click submit.",
+                "reasoning": "The current angle of 270 degrees matches the reference direction. I can see that the current angle is correct, so I will click submit.",
+                "tool_calls": null,
+                "tool_call_id": null,
+                "name": null
+              },
+              "logprobs": null
+            }
+          ],
+          "usage": {
+            "prompt_tokens": 21090,
+            "completion_tokens": 60,
+            "total_tokens": 21150,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            }
+          },
+          "timings": {
+            "prompt_n": 21090,
+            "cache_n": 0,
+            "predicted_n": 62,
+            "prompt_ms": 22362.28074799874,
+            "prompt_per_token_ms": 1.0603262564247862,
+            "prompt_per_second": 943.105948702813,
+            "predicted_ms": 1637.8640785668288,
+            "predicted_per_token_ms": 26.417162557529497,
+            "predicted_per_second": 37.85417899527506,
+            "peak_memory": 20.9993339,
+            "draft_kind": null,
+            "draft_rounds": null,
+            "draft_n": null,
+            "draft_n_accepted": null
+          }
+        },
+        "response_file": "response_05.json",
+        "action": {
+          "name": "click",
+          "kwargs": {
+            "position": [
+              1154,
+              1260
+            ]
+          }
+        },
+        "done": false,
+        "reward": 0.0,
+        "observation": [
+          "./reports/solver_defense_v1/a_native/episodes/conference/Rotation_Match/puzzle_gold_direction_8.json/observations/step_05_00.png",
+          "./reports/solver_defense_v1/a_native/episodes/conference/Rotation_Match/puzzle_gold_direction_8.json/observations/step_05_01.png"
+        ],
+        "submitted": false
+      },
+      {
+        "step": 6,
+        "text": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [1154, 1260]}}</tool_call>",
+        "usage": {
+          "prompt_tokens": 25236,
+          "completion_tokens": 28,
+          "total_tokens": 25264,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "input_tokens": 25236,
+        "output_tokens": 28,
+        "finish_reason": "stop",
+        "truncated": false,
+        "returned_model": "models/CaptchaMind-7B",
+        "elapsed_seconds": 29.37388133298373,
+        "raw_response": {
+          "id": "chatcmpl-d9cb8e0b-3434-4d64-b3eb-be37c2e9c615",
+          "object": "chat.completion",
+          "created": 1789362198,
+          "model": "models/CaptchaMind-7B",
+          "choices": [
+            {
+              "index": 0,
+              "finish_reason": "stop",
+              "message": {
+                "role": "assistant",
+                "content": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [1154, 1260]}}</tool_call>",
+                "reasoning_content": null,
+                "reasoning": null,
+                "tool_calls": null,
+                "tool_call_id": null,
+                "name": null
+              },
+              "logprobs": null
+            }
+          ],
+          "usage": {
+            "prompt_tokens": 25236,
+            "completion_tokens": 28,
+            "total_tokens": 25264,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            }
+          },
+          "timings": {
+            "prompt_n": 25236,
+            "cache_n": 0,
+            "predicted_n": 28,
+            "prompt_ms": 27830.454751005163,
+            "prompt_per_token_ms": 1.1028076854891886,
+            "prompt_per_second": 906.7764154694073,
+            "predicted_ms": 761.2779564569117,
+            "predicted_per_token_ms": 27.188498444889706,
+            "predicted_per_second": 36.78025846212033,
+            "peak_memory": 22.54019859,
+            "draft_kind": null,
+            "draft_rounds": null,
+            "draft_n": null,
+            "draft_n_accepted": null
+          }
+        },
+        "response_file": "response_06.json",
+        "action": {
+          "name": "click",
+          "kwargs": {
+            "position": [
+              1154,
+              1260
+            ]
+          }
+        },
+        "done": false,
+        "reward": 0.0,
+        "observation": [
+          "./reports/solver_defense_v1/a_native/episodes/conference/Rotation_Match/puzzle_gold_direction_8.json/observations/step_06_00.png",
+          "./reports/solver_defense_v1/a_native/episodes/conference/Rotation_Match/puzzle_gold_direction_8.json/observations/step_06_01.png"
+        ],
+        "submitted": false
+      },
+      {
+        "step": 7,
+        "text": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [1154, 1260]}}</tool_call>",
+        "usage": {
+          "prompt_tokens": 29382,
+          "completion_tokens": 28,
+          "total_tokens": 29410,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "input_tokens": 29382,
+        "output_tokens": 28,
+        "finish_reason": "stop",
+        "truncated": false,
+        "returned_model": "models/CaptchaMind-7B",
+        "elapsed_seconds": 35.26230554198264,
+        "raw_response": {
+          "id": "chatcmpl-29c4d7c5-7285-494a-ad0a-061466a0b307",
+          "object": "chat.completion",
+          "created": 1789362234,
+          "model": "models/CaptchaMind-7B",
+          "choices": [
+            {
+              "index": 0,
+              "finish_reason": "stop",
+              "message": {
+                "role": "assistant",
+                "content": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [1154, 1260]}}</tool_call>",
+                "reasoning_content": null,
+                "reasoning": null,
+                "tool_calls": null,
+                "tool_call_id": null,
+                "name": null
+              },
+              "logprobs": null
+            }
+          ],
+          "usage": {
+            "prompt_tokens": 29382,
+            "completion_tokens": 28,
+            "total_tokens": 29410,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            }
+          },
+          "timings": {
+            "prompt_n": 29382,
+            "cache_n": 0,
+            "predicted_n": 28,
+            "prompt_ms": 33534.5618739957,
+            "prompt_per_token_ms": 1.1413301298072187,
+            "prompt_per_second": 876.1706835592865,
+            "predicted_ms": 779.8757472644664,
+            "predicted_per_token_ms": 27.85270525944523,
+            "predicted_per_second": 35.903155211858156,
+            "peak_memory": 22.54019859,
+            "draft_kind": null,
+            "draft_rounds": null,
+            "draft_n": null,
+            "draft_n_accepted": null
+          }
+        },
+        "response_file": "response_07.json",
+        "action": {
+          "name": "click",
+          "kwargs": {
+            "position": [
+              1154,
+              1260
+            ]
+          }
+        },
+        "done": false,
+        "reward": 0.0,
+        "observation": [
+          "./reports/solver_defense_v1/a_native/episodes/conference/Rotation_Match/puzzle_gold_direction_8.json/observations/step_07_00.png",
+          "./reports/solver_defense_v1/a_native/episodes/conference/Rotation_Match/puzzle_gold_direction_8.json/observations/step_07_01.png"
+        ],
+        "submitted": false
+      },
+      {
+        "step": 8,
+        "text": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [1154, 1260]}}</tool_call>",
+        "usage": {
+          "prompt_tokens": 33528,
+          "completion_tokens": 28,
+          "total_tokens": 33556,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "input_tokens": 33528,
+        "output_tokens": 28,
+        "finish_reason": "stop",
+        "truncated": false,
+        "returned_model": "models/CaptchaMind-7B",
+        "elapsed_seconds": 41.45531579098315,
+        "raw_response": {
+          "id": "chatcmpl-9feb5592-3e0e-4863-9266-b77ee4596b27",
+          "object": "chat.completion",
+          "created": 1789362276,
+          "model": "models/CaptchaMind-7B",
+          "choices": [
+            {
+              "index": 0,
+              "finish_reason": "stop",
+              "message": {
+                "role": "assistant",
+                "content": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [1154, 1260]}}</tool_call>",
+                "reasoning_content": null,
+                "reasoning": null,
+                "tool_calls": null,
+                "tool_call_id": null,
+                "name": null
+              },
+              "logprobs": null
+            }
+          ],
+          "usage": {
+            "prompt_tokens": 33528,
+            "completion_tokens": 28,
+            "total_tokens": 33556,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            }
+          },
+          "timings": {
+            "prompt_n": 33528,
+            "cache_n": 0,
+            "predicted_n": 28,
+            "prompt_ms": 39610.91341791325,
+            "prompt_per_token_ms": 1.1814278638127311,
+            "prompt_per_second": 846.4333969344324,
+            "predicted_ms": 803.0261296252893,
+            "predicted_per_token_ms": 28.679504629474618,
+            "predicted_per_second": 34.86810574030194,
+            "peak_memory": 23.35314165,
+            "draft_kind": null,
+            "draft_rounds": null,
+            "draft_n": null,
+            "draft_n_accepted": null
+          }
+        },
+        "response_file": "response_08.json",
+        "action": {
+          "name": "click",
+          "kwargs": {
+            "position": [
+              1154,
+              1260
+            ]
+          }
+        },
+        "done": false,
+        "reward": 0.0,
+        "observation": [
+          "./reports/solver_defense_v1/a_native/episodes/conference/Rotation_Match/puzzle_gold_direction_8.json/observations/step_08_00.png",
+          "./reports/solver_defense_v1/a_native/episodes/conference/Rotation_Match/puzzle_gold_direction_8.json/observations/step_08_01.png"
+        ],
+        "submitted": false
+      },
+      {
+        "step": 9,
+        "text": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [1154, 1260]}}</tool_call>",
+        "usage": {
+          "prompt_tokens": 37674,
+          "completion_tokens": 28,
+          "total_tokens": 37702,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "input_tokens": 37674,
+        "output_tokens": 28,
+        "finish_reason": "stop",
+        "truncated": false,
+        "returned_model": "models/CaptchaMind-7B",
+        "elapsed_seconds": 48.027218290983,
+        "raw_response": {
+          "id": "chatcmpl-94f841da-21b6-4e56-a856-b0153f1c6719",
+          "object": "chat.completion",
+          "created": 1789362324,
+          "model": "models/CaptchaMind-7B",
+          "choices": [
+            {
+              "index": 0,
+              "finish_reason": "stop",
+              "message": {
+                "role": "assistant",
+                "content": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [1154, 1260]}}</tool_call>",
+                "reasoning_content": null,
+                "reasoning": null,
+                "tool_calls": null,
+                "tool_call_id": null,
+                "name": null
+              },
+              "logprobs": null
+            }
+          ],
+          "usage": {
+            "prompt_tokens": 37674,
+            "completion_tokens": 28,
+            "total_tokens": 37702,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            }
+          },
+          "timings": {
+            "prompt_n": 37674,
+            "cache_n": 0,
+            "predicted_n": 28,
+            "prompt_ms": 46046.16416801582,
+            "prompt_per_token_ms": 1.2222265798167389,
+            "prompt_per_second": 818.1789011248146,
+            "predicted_ms": 811.5908453560056,
+            "predicted_per_token_ms": 28.98538733414306,
+            "predicted_per_second": 34.50014272612668,
+            "peak_memory": 24.199195126,
+            "draft_kind": null,
+            "draft_rounds": null,
+            "draft_n": null,
+            "draft_n_accepted": null
+          }
+        },
+        "response_file": "response_09.json",
+        "action": {
+          "name": "click",
+          "kwargs": {
+            "position": [
+              1154,
+              1260
+            ]
+          }
+        },
+        "done": false,
+        "reward": 0.0,
+        "observation": [
+          "./reports/solver_defense_v1/a_native/episodes/conference/Rotation_Match/puzzle_gold_direction_8.json/observations/step_09_00.png",
+          "./reports/solver_defense_v1/a_native/episodes/conference/Rotation_Match/puzzle_gold_direction_8.json/observations/step_09_01.png"
+        ],
+        "submitted": false
+      },
+      {
+        "step": 10,
+        "text": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [1154, 1260]}}</tool_call>",
+        "usage": {
+          "prompt_tokens": 41820,
+          "completion_tokens": 28,
+          "total_tokens": 41848,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "input_tokens": 41820,
+        "output_tokens": 28,
+        "finish_reason": "stop",
+        "truncated": false,
+        "returned_model": "models/CaptchaMind-7B",
+        "elapsed_seconds": 54.93725383398123,
+        "raw_response": {
+          "id": "chatcmpl-44838a6c-ac6f-4578-bf9c-b7f05671c2e6",
+          "object": "chat.completion",
+          "created": 1789362380,
+          "model": "models/CaptchaMind-7B",
+          "choices": [
+            {
+              "index": 0,
+              "finish_reason": "stop",
+              "message": {
+                "role": "assistant",
+                "content": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [1154, 1260]}}</tool_call>",
+                "reasoning_content": null,
+                "reasoning": null,
+                "tool_calls": null,
+                "tool_call_id": null,
+                "name": null
+              },
+              "logprobs": null
+            }
+          ],
+          "usage": {
+            "prompt_tokens": 41820,
+            "completion_tokens": 28,
+            "total_tokens": 41848,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            }
+          },
+          "timings": {
+            "prompt_n": 41820,
+            "cache_n": 0,
+            "predicted_n": 28,
+            "prompt_ms": 52798.667585040675,
+            "prompt_per_token_ms": 1.2625219412970032,
+            "prompt_per_second": 792.0654424212926,
+            "predicted_ms": 829.0146666501338,
+            "predicted_per_token_ms": 29.607666666076206,
+            "predicted_per_second": 33.77503574591973,
+            "peak_memory": 25.045150298,
+            "draft_kind": null,
+            "draft_rounds": null,
+            "draft_n": null,
+            "draft_n_accepted": null
+          }
+        },
+        "response_file": "response_10.json",
+        "action": {
+          "name": "click",
+          "kwargs": {
+            "position": [
+              1154,
+              1260
+            ]
+          }
+        },
+        "done": false,
+        "reward": 0.0,
+        "observation": [
+          "./reports/solver_defense_v1/a_native/episodes/conference/Rotation_Match/puzzle_gold_direction_8.json/observations/step_10_00.png",
+          "./reports/solver_defense_v1/a_native/episodes/conference/Rotation_Match/puzzle_gold_direction_8.json/observations/step_10_01.png"
+        ],
+        "submitted": false
+      },
+      {
+        "step": 11,
+        "text": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [1154, 1260]}}</tool_call>",
+        "usage": {
+          "prompt_tokens": 45966,
+          "completion_tokens": 28,
+          "total_tokens": 45994,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "input_tokens": 45966,
+        "output_tokens": 28,
+        "finish_reason": "stop",
+        "truncated": false,
+        "returned_model": "models/CaptchaMind-7B",
+        "elapsed_seconds": 62.250977208983386,
+        "raw_response": {
+          "id": "chatcmpl-9cc6f864-68b5-424e-9aaa-abd3f4206c80",
+          "object": "chat.completion",
+          "created": 1789362442,
+          "model": "models/CaptchaMind-7B",
+          "choices": [
+            {
+              "index": 0,
+              "finish_reason": "stop",
+              "message": {
+                "role": "assistant",
+                "content": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [1154, 1260]}}</tool_call>",
+                "reasoning_content": null,
+                "reasoning": null,
+                "tool_calls": null,
+                "tool_call_id": null,
+                "name": null
+              },
+              "logprobs": null
+            }
+          ],
+          "usage": {
+            "prompt_tokens": 45966,
+            "completion_tokens": 28,
+            "total_tokens": 45994,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            }
+          },
+          "timings": {
+            "prompt_n": 45966,
+            "cache_n": 0,
+            "predicted_n": 28,
+            "prompt_ms": 59924.36762506259,
+            "prompt_per_token_ms": 1.303667224145294,
+            "prompt_per_second": 767.0669182126725,
+            "predicted_ms": 848.0674128729366,
+            "predicted_per_token_ms": 30.288121888319164,
+            "predicted_per_second": 33.0162432549394,
+            "peak_memory": 27.486917038,
+            "draft_kind": null,
+            "draft_rounds": null,
+            "draft_n": null,
+            "draft_n_accepted": null
+          }
+        },
+        "response_file": "response_11.json",
+        "action": {
+          "name": "click",
+          "kwargs": {
+            "position": [
+              1154,
+              1260
+            ]
+          }
+        },
+        "done": false,
+        "reward": 0.0,
+        "observation": [
+          "./reports/solver_defense_v1/a_native/episodes/conference/Rotation_Match/puzzle_gold_direction_8.json/observations/step_11_00.png",
+          "./reports/solver_defense_v1/a_native/episodes/conference/Rotation_Match/puzzle_gold_direction_8.json/observations/step_11_01.png"
+        ],
+        "submitted": false
+      },
+      {
+        "step": 12,
+        "text": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [1154, 1260]}}</tool_call>",
+        "usage": {
+          "prompt_tokens": 50112,
+          "completion_tokens": 28,
+          "total_tokens": 50140,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "input_tokens": 50112,
+        "output_tokens": 28,
+        "finish_reason": "stop",
+        "truncated": false,
+        "returned_model": "models/CaptchaMind-7B",
+        "elapsed_seconds": 69.79603595900699,
+        "raw_response": {
+          "id": "chatcmpl-775b1326-7da4-4605-a16c-dd35845e212b",
+          "object": "chat.completion",
+          "created": 1789362513,
+          "model": "models/CaptchaMind-7B",
+          "choices": [
+            {
+              "index": 0,
+              "finish_reason": "stop",
+              "message": {
+                "role": "assistant",
+                "content": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [1154, 1260]}}</tool_call>",
+                "reasoning_content": null,
+                "reasoning": null,
+                "tool_calls": null,
+                "tool_call_id": null,
+                "name": null
+              },
+              "logprobs": null
+            }
+          ],
+          "usage": {
+            "prompt_tokens": 50112,
+            "completion_tokens": 28,
+            "total_tokens": 50140,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            }
+          },
+          "timings": {
+            "prompt_n": 50112,
+            "cache_n": 0,
+            "predicted_n": 28,
+            "prompt_ms": 67341.91403791192,
+            "prompt_per_token_ms": 1.3438281058012436,
+            "prompt_per_second": 744.1427930276546,
+            "predicted_ms": 870.6351111048006,
+            "predicted_per_token_ms": 31.094111110885734,
+            "predicted_per_second": 32.160430521196346,
+            "peak_memory": 27.486917038,
+            "draft_kind": null,
+            "draft_rounds": null,
+            "draft_n": null,
+            "draft_n_accepted": null
+          }
+        },
+        "response_file": "response_12.json",
+        "action": {
+          "name": "click",
+          "kwargs": {
+            "position": [
+              1154,
+              1260
+            ]
+          }
+        },
+        "done": false,
+        "reward": 0.0,
+        "observation": [
+          "./reports/solver_defense_v1/a_native/episodes/conference/Rotation_Match/puzzle_gold_direction_8.json/observations/step_12_00.png",
+          "./reports/solver_defense_v1/a_native/episodes/conference/Rotation_Match/puzzle_gold_direction_8.json/observations/step_12_01.png"
+        ],
+        "submitted": false
+      },
+      {
+        "step": 13,
+        "text": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [1154, 1260]}}</tool_call>",
+        "usage": {
+          "prompt_tokens": 54258,
+          "completion_tokens": 28,
+          "total_tokens": 54286,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "input_tokens": 54258,
+        "output_tokens": 28,
+        "finish_reason": "stop",
+        "truncated": false,
+        "returned_model": "models/CaptchaMind-7B",
+        "elapsed_seconds": 77.78386500000488,
+        "raw_response": {
+          "id": "chatcmpl-a1cf7e29-9287-45b4-998e-11067247aeed",
+          "object": "chat.completion",
+          "created": 1789362591,
+          "model": "models/CaptchaMind-7B",
+          "choices": [
+            {
+              "index": 0,
+              "finish_reason": "stop",
+              "message": {
+                "role": "assistant",
+                "content": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [1154, 1260]}}</tool_call>",
+                "reasoning_content": null,
+                "reasoning": null,
+                "tool_calls": null,
+                "tool_call_id": null,
+                "name": null
+              },
+              "logprobs": null
+            }
+          ],
+          "usage": {
+            "prompt_tokens": 54258,
+            "completion_tokens": 28,
+            "total_tokens": 54286,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            }
+          },
+          "timings": {
+            "prompt_n": 54258,
+            "cache_n": 0,
+            "predicted_n": 28,
+            "prompt_ms": 75151.1754549283,
+            "prompt_per_token_ms": 1.385070873510419,
+            "prompt_per_second": 721.9847150965866,
+            "predicted_ms": 914.153937931621,
+            "predicted_per_token_ms": 32.64835492612932,
+            "predicted_per_second": 30.629414629392986,
+            "peak_memory": 27.583015848,
+            "draft_kind": null,
+            "draft_rounds": null,
+            "draft_n": null,
+            "draft_n_accepted": null
+          }
+        },
+        "response_file": "response_13.json",
+        "action": {
+          "name": "click",
+          "kwargs": {
+            "position": [
+              1154,
+              1260
+            ]
+          }
+        },
+        "done": false,
+        "reward": 0.0,
+        "observation": [
+          "./reports/solver_defense_v1/a_native/episodes/conference/Rotation_Match/puzzle_gold_direction_8.json/observations/step_13_00.png",
+          "./reports/solver_defense_v1/a_native/episodes/conference/Rotation_Match/puzzle_gold_direction_8.json/observations/step_13_01.png"
+        ],
+        "submitted": false
+      },
+      {
+        "step": 14,
+        "text": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [1154, 1260]}}</tool_call>",
+        "usage": {
+          "prompt_tokens": 58404,
+          "completion_tokens": 28,
+          "total_tokens": 58432,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "input_tokens": 58404,
+        "output_tokens": 28,
+        "finish_reason": "stop",
+        "truncated": false,
+        "returned_model": "models/CaptchaMind-7B",
+        "elapsed_seconds": 86.32388462501694,
+        "raw_response": {
+          "id": "chatcmpl-1479dcbe-8f57-4844-a177-18c221250c37",
+          "object": "chat.completion",
+          "created": 1789362678,
+          "model": "models/CaptchaMind-7B",
+          "choices": [
+            {
+              "index": 0,
+              "finish_reason": "stop",
+              "message": {
+                "role": "assistant",
+                "content": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [1154, 1260]}}</tool_call>",
+                "reasoning_content": null,
+                "reasoning": null,
+                "tool_calls": null,
+                "tool_call_id": null,
+                "name": null
+              },
+              "logprobs": null
+            }
+          ],
+          "usage": {
+            "prompt_tokens": 58404,
+            "completion_tokens": 28,
+            "total_tokens": 58432,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            }
+          },
+          "timings": {
+            "prompt_n": 58404,
+            "cache_n": 0,
+            "predicted_n": 28,
+            "prompt_ms": 83431.92299909424,
+            "prompt_per_token_ms": 1.4285309738903884,
+            "prompt_per_second": 700.019823355073,
+            "predicted_ms": 908.5150054716332,
+            "predicted_per_token_ms": 32.44696448112976,
+            "predicted_per_second": 30.81952398294675,
+            "peak_memory": 28.428856334,
+            "draft_kind": null,
+            "draft_rounds": null,
+            "draft_n": null,
+            "draft_n_accepted": null
+          }
+        },
+        "response_file": "response_14.json",
+        "action": {
+          "name": "click",
+          "kwargs": {
+            "position": [
+              1154,
+              1260
+            ]
+          }
+        },
+        "done": false,
+        "reward": 0.0,
+        "observation": [
+          "./reports/solver_defense_v1/a_native/episodes/conference/Rotation_Match/puzzle_gold_direction_8.json/observations/step_14_00.png",
+          "./reports/solver_defense_v1/a_native/episodes/conference/Rotation_Match/puzzle_gold_direction_8.json/observations/step_14_01.png"
+        ],
+        "submitted": false
+      },
+      {
+        "step": 15,
+        "text": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [1154, 1260]}}</tool_call>",
+        "usage": {
+          "prompt_tokens": 62550,
+          "completion_tokens": 28,
+          "total_tokens": 62578,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "input_tokens": 62550,
+        "output_tokens": 28,
+        "finish_reason": "stop",
+        "truncated": false,
+        "returned_model": "models/CaptchaMind-7B",
+        "elapsed_seconds": 95.02013187500415,
+        "raw_response": {
+          "id": "chatcmpl-5ae3895c-ea0a-43dd-a9ac-84c268f54777",
+          "object": "chat.completion",
+          "created": 1789362774,
+          "model": "models/CaptchaMind-7B",
+          "choices": [
+            {
+              "index": 0,
+              "finish_reason": "stop",
+              "message": {
+                "role": "assistant",
+                "content": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [1154, 1260]}}</tool_call>",
+                "reasoning_content": null,
+                "reasoning": null,
+                "tool_calls": null,
+                "tool_call_id": null,
+                "name": null
+              },
+              "logprobs": null
+            }
+          ],
+          "usage": {
+            "prompt_tokens": 62550,
+            "completion_tokens": 28,
+            "total_tokens": 62578,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            }
+          },
+          "timings": {
+            "prompt_n": 62550,
+            "cache_n": 0,
+            "predicted_n": 28,
+            "prompt_ms": 91954.77845997084,
+            "prompt_per_token_ms": 1.4701003750594859,
+            "prompt_per_second": 680.2256614345372,
+            "predicted_ms": 929.0179629654934,
+            "predicted_per_token_ms": 33.17921296305334,
+            "predicted_per_second": 30.139352645692608,
+            "peak_memory": 29.274877006,
+            "draft_kind": null,
+            "draft_rounds": null,
+            "draft_n": null,
+            "draft_n_accepted": null
+          }
+        },
+        "response_file": "response_15.json",
+        "action": {
+          "name": "click",
+          "kwargs": {
+            "position": [
+              1154,
+              1260
+            ]
+          }
+        },
+        "done": false,
+        "reward": 0.0,
+        "observation": [
+          "./reports/solver_defense_v1/a_native/episodes/conference/Rotation_Match/puzzle_gold_direction_8.json/observations/step_15_00.png",
+          "./reports/solver_defense_v1/a_native/episodes/conference/Rotation_Match/puzzle_gold_direction_8.json/observations/step_15_01.png"
+        ],
+        "submitted": false
+      },
+      {
+        "step": 16,
+        "text": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [1154, 1260]}}</tool_call>",
+        "usage": {
+          "prompt_tokens": 66696,
+          "completion_tokens": 28,
+          "total_tokens": 66724,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "input_tokens": 66696,
+        "output_tokens": 28,
+        "finish_reason": "stop",
+        "truncated": false,
+        "returned_model": "models/CaptchaMind-7B",
+        "elapsed_seconds": 104.49141495799995,
+        "raw_response": {
+          "id": "chatcmpl-1c019038-b5c0-4fad-a0b6-efdd62f0e3e9",
+          "object": "chat.completion",
+          "created": 1789362879,
+          "model": "models/CaptchaMind-7B",
+          "choices": [
+            {
+              "index": 0,
+              "finish_reason": "stop",
+              "message": {
+                "role": "assistant",
+                "content": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [1154, 1260]}}</tool_call>",
+                "reasoning_content": null,
+                "reasoning": null,
+                "tool_calls": null,
+                "tool_call_id": null,
+                "name": null
+              },
+              "logprobs": null
+            }
+          ],
+          "usage": {
+            "prompt_tokens": 66696,
+            "completion_tokens": 28,
+            "total_tokens": 66724,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            }
+          },
+          "timings": {
+            "prompt_n": 66696,
+            "cache_n": 0,
+            "predicted_n": 28,
+            "prompt_ms": 101244.89317100962,
+            "prompt_per_token_ms": 1.5180054751560756,
+            "prompt_per_second": 658.7591522996212,
+            "predicted_ms": 910.1607407296628,
+            "predicted_per_token_ms": 32.505740740345104,
+            "predicted_per_second": 30.76379670864819,
+            "peak_memory": 30.120750058,
+            "draft_kind": null,
+            "draft_rounds": null,
+            "draft_n": null,
+            "draft_n_accepted": null
+          }
+        },
+        "response_file": "response_16.json",
+        "action": {
+          "name": "click",
+          "kwargs": {
+            "position": [
+              1154,
+              1260
+            ]
+          }
+        },
+        "done": false,
+        "reward": 0.0,
+        "observation": [
+          "./reports/solver_defense_v1/a_native/episodes/conference/Rotation_Match/puzzle_gold_direction_8.json/observations/step_16_00.png",
+          "./reports/solver_defense_v1/a_native/episodes/conference/Rotation_Match/puzzle_gold_direction_8.json/observations/step_16_01.png"
+        ],
+        "submitted": false
+      },
+      {
+        "step": 17,
+        "text": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [1154, 1260]}}</tool_call>",
+        "usage": {
+          "prompt_tokens": 70842,
+          "completion_tokens": 28,
+          "total_tokens": 70870,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "input_tokens": 70842,
+        "output_tokens": 28,
+        "finish_reason": "stop",
+        "truncated": false,
+        "returned_model": "models/CaptchaMind-7B",
+        "elapsed_seconds": 113.92944520901074,
+        "raw_response": {
+          "id": "chatcmpl-5e5d4f48-4b94-45ed-95bc-c33389aed2d8",
+          "object": "chat.completion",
+          "created": 1789362993,
+          "model": "models/CaptchaMind-7B",
+          "choices": [
+            {
+              "index": 0,
+              "finish_reason": "stop",
+              "message": {
+                "role": "assistant",
+                "content": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [1154, 1260]}}</tool_call>",
+                "reasoning_content": null,
+                "reasoning": null,
+                "tool_calls": null,
+                "tool_call_id": null,
+                "name": null
+              },
+              "logprobs": null
+            }
+          ],
+          "usage": {
+            "prompt_tokens": 70842,
+            "completion_tokens": 28,
+            "total_tokens": 70870,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            }
+          },
+          "timings": {
+            "prompt_n": 70842,
+            "cache_n": 0,
+            "predicted_n": 28,
+            "prompt_ms": 110597.32828795679,
+            "prompt_per_token_ms": 1.5611830310826458,
+            "prompt_per_second": 640.5398855165126,
+            "predicted_ms": 926.8609259225843,
+            "predicted_per_token_ms": 33.102175925806584,
+            "predicted_per_second": 30.20949445261078,
+            "peak_memory": 30.65510917,
+            "draft_kind": null,
+            "draft_rounds": null,
+            "draft_n": null,
+            "draft_n_accepted": null
+          }
+        },
+        "response_file": "response_17.json",
+        "action": {
+          "name": "click",
+          "kwargs": {
+            "position": [
+              1154,
+              1260
+            ]
+          }
+        },
+        "done": false,
+        "reward": 0.0,
+        "observation": [
+          "./reports/solver_defense_v1/a_native/episodes/conference/Rotation_Match/puzzle_gold_direction_8.json/observations/step_17_00.png",
+          "./reports/solver_defense_v1/a_native/episodes/conference/Rotation_Match/puzzle_gold_direction_8.json/observations/step_17_01.png"
+        ],
+        "submitted": false
+      },
+      {
+        "step": 18,
+        "text": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [1154, 1260]}}</tool_call>",
+        "usage": {
+          "prompt_tokens": 74988,
+          "completion_tokens": 28,
+          "total_tokens": 75016,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "input_tokens": 74988,
+        "output_tokens": 28,
+        "finish_reason": "stop",
+        "truncated": false,
+        "returned_model": "models/CaptchaMind-7B",
+        "elapsed_seconds": 123.9408519580029,
+        "raw_response": {
+          "id": "chatcmpl-b8040dfd-22ac-4d5e-b151-45ee5ebb28a0",
+          "object": "chat.completion",
+          "created": 1789363118,
+          "model": "models/CaptchaMind-7B",
+          "choices": [
+            {
+              "index": 0,
+              "finish_reason": "stop",
+              "message": {
+                "role": "assistant",
+                "content": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [1154, 1260]}}</tool_call>",
+                "reasoning_content": null,
+                "reasoning": null,
+                "tool_calls": null,
+                "tool_call_id": null,
+                "name": null
+              },
+              "logprobs": null
+            }
+          ],
+          "usage": {
+            "prompt_tokens": 74988,
+            "completion_tokens": 28,
+            "total_tokens": 75016,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            }
+          },
+          "timings": {
+            "prompt_n": 74988,
+            "cache_n": 0,
+            "predicted_n": 28,
+            "prompt_ms": 120372.3638729716,
+            "prompt_per_token_ms": 1.6052216871095588,
+            "prompt_per_second": 622.9669135611101,
+            "predicted_ms": 1001.0098082927503,
+            "predicted_per_token_ms": 35.75035029616966,
+            "predicted_per_second": 27.971753890958137,
+            "peak_memory": 31.481869842,
+            "draft_kind": null,
+            "draft_rounds": null,
+            "draft_n": null,
+            "draft_n_accepted": null
+          }
+        },
+        "response_file": "response_18.json",
+        "action": {
+          "name": "click",
+          "kwargs": {
+            "position": [
+              1154,
+              1260
+            ]
+          }
+        },
+        "done": false,
+        "reward": 0.0,
+        "observation": [
+          "./reports/solver_defense_v1/a_native/episodes/conference/Rotation_Match/puzzle_gold_direction_8.json/observations/step_18_00.png",
+          "./reports/solver_defense_v1/a_native/episodes/conference/Rotation_Match/puzzle_gold_direction_8.json/observations/step_18_01.png"
+        ],
+        "submitted": false
+      },
+      {
+        "step": 19,
+        "text": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [1154, 1260]}}</tool_call>",
+        "usage": {
+          "prompt_tokens": 79134,
+          "completion_tokens": 28,
+          "total_tokens": 79162,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "input_tokens": 79134,
+        "output_tokens": 28,
+        "finish_reason": "stop",
+        "truncated": false,
+        "returned_model": "models/CaptchaMind-7B",
+        "elapsed_seconds": 134.2233651659917,
+        "raw_response": {
+          "id": "chatcmpl-6966dc5e-e6fe-4225-b34e-ea7c363212f6",
+          "object": "chat.completion",
+          "created": 1789363253,
+          "model": "models/CaptchaMind-7B",
+          "choices": [
+            {
+              "index": 0,
+              "finish_reason": "stop",
+              "message": {
+                "role": "assistant",
+                "content": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [1154, 1260]}}</tool_call>",
+                "reasoning_content": null,
+                "reasoning": null,
+                "tool_calls": null,
+                "tool_call_id": null,
+                "name": null
+              },
+              "logprobs": null
+            }
+          ],
+          "usage": {
+            "prompt_tokens": 79134,
+            "completion_tokens": 28,
+            "total_tokens": 79162,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            }
+          },
+          "timings": {
+            "prompt_n": 79134,
+            "cache_n": 0,
+            "predicted_n": 28,
+            "prompt_ms": 130573.55271006236,
+            "prompt_per_token_ms": 1.6500309943900517,
+            "prompt_per_second": 606.0492217418368,
+            "predicted_ms": 962.4108583580149,
+            "predicted_per_token_ms": 34.37181636992911,
+            "predicted_per_second": 29.093603586072646,
+            "peak_memory": 32.308442646,
+            "draft_kind": null,
+            "draft_rounds": null,
+            "draft_n": null,
+            "draft_n_accepted": null
+          }
+        },
+        "response_file": "response_19.json",
+        "action": {
+          "name": "click",
+          "kwargs": {
+            "position": [
+              1154,
+              1260
+            ]
+          }
+        },
+        "done": false,
+        "reward": 0.0,
+        "observation": [
+          "./reports/solver_defense_v1/a_native/episodes/conference/Rotation_Match/puzzle_gold_direction_8.json/observations/step_19_00.png",
+          "./reports/solver_defense_v1/a_native/episodes/conference/Rotation_Match/puzzle_gold_direction_8.json/observations/step_19_01.png"
+        ],
+        "submitted": false
+      },
+      {
+        "step": 20,
+        "text": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [1154, 1260]}}</tool_call>",
+        "usage": {
+          "prompt_tokens": 83280,
+          "completion_tokens": 28,
+          "total_tokens": 83308,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "input_tokens": 83280,
+        "output_tokens": 28,
+        "finish_reason": "stop",
+        "truncated": false,
+        "returned_model": "models/CaptchaMind-7B",
+        "elapsed_seconds": 144.96522804099368,
+        "raw_response": {
+          "id": "chatcmpl-dc36d7c3-0beb-438e-ae34-009329088abe",
+          "object": "chat.completion",
+          "created": 1789363398,
+          "model": "models/CaptchaMind-7B",
+          "choices": [
+            {
+              "index": 0,
+              "finish_reason": "stop",
+              "message": {
+                "role": "assistant",
+                "content": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [1154, 1260]}}</tool_call>",
+                "reasoning_content": null,
+                "reasoning": null,
+                "tool_calls": null,
+                "tool_call_id": null,
+                "name": null
+              },
+              "logprobs": null
+            }
+          ],
+          "usage": {
+            "prompt_tokens": 83280,
+            "completion_tokens": 28,
+            "total_tokens": 83308,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            }
+          },
+          "timings": {
+            "prompt_n": 83280,
+            "cache_n": 0,
+            "predicted_n": 28,
+            "prompt_ms": 141178.06862317957,
+            "prompt_per_token_ms": 1.695221765408016,
+            "prompt_per_second": 589.8933227531527,
+            "predicted_ms": 975.4004814765519,
+            "predicted_per_token_ms": 34.83573148130542,
+            "predicted_per_second": 28.706157657020906,
+            "peak_memory": 33.13519895,
+            "draft_kind": null,
+            "draft_rounds": null,
+            "draft_n": null,
+            "draft_n_accepted": null
+          }
+        },
+        "response_file": "response_20.json",
+        "action": {
+          "name": "click",
+          "kwargs": {
+            "position": [
+              1154,
+              1260
+            ]
+          }
+        },
+        "done": false,
+        "reward": 0.0,
+        "observation": [
+          "./reports/solver_defense_v1/a_native/episodes/conference/Rotation_Match/puzzle_gold_direction_8.json/observations/step_20_00.png",
+          "./reports/solver_defense_v1/a_native/episodes/conference/Rotation_Match/puzzle_gold_direction_8.json/observations/step_20_01.png"
+        ],
+        "submitted": false
+      },
+      {
+        "step": 21,
+        "text": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [1154, 1260]}}</tool_call>",
+        "usage": {
+          "prompt_tokens": 87426,
+          "completion_tokens": 28,
+          "total_tokens": 87454,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "input_tokens": 87426,
+        "output_tokens": 28,
+        "finish_reason": "stop",
+        "truncated": false,
+        "returned_model": "models/CaptchaMind-7B",
+        "elapsed_seconds": 155.80534070800059,
+        "raw_response": {
+          "id": "chatcmpl-38510682-15c3-4127-bcf5-10bd6852d41f",
+          "object": "chat.completion",
+          "created": 1789363555,
+          "model": "models/CaptchaMind-7B",
+          "choices": [
+            {
+              "index": 0,
+              "finish_reason": "stop",
+              "message": {
+                "role": "assistant",
+                "content": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [1154, 1260]}}</tool_call>",
+                "reasoning_content": null,
+                "reasoning": null,
+                "tool_calls": null,
+                "tool_call_id": null,
+                "name": null
+              },
+              "logprobs": null
+            }
+          ],
+          "usage": {
+            "prompt_tokens": 87426,
+            "completion_tokens": 28,
+            "total_tokens": 87454,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            }
+          },
+          "timings": {
+            "prompt_n": 87426,
+            "cache_n": 0,
+            "predicted_n": 28,
+            "prompt_ms": 151834.03916703537,
+            "prompt_per_token_ms": 1.7367149265325574,
+            "prompt_per_second": 575.7997381853293,
+            "predicted_ms": 992.0266906566986,
+            "predicted_per_token_ms": 35.42952466631066,
+            "predicted_per_second": 28.22504703120906,
+            "peak_memory": 33.58454135,
+            "draft_kind": null,
+            "draft_rounds": null,
+            "draft_n": null,
+            "draft_n_accepted": null
+          }
+        },
+        "response_file": "response_21.json",
+        "action": {
+          "name": "click",
+          "kwargs": {
+            "position": [
+              1154,
+              1260
+            ]
+          }
+        },
+        "done": false,
+        "reward": 0.0,
+        "observation": [
+          "./reports/solver_defense_v1/a_native/episodes/conference/Rotation_Match/puzzle_gold_direction_8.json/observations/step_21_00.png",
+          "./reports/solver_defense_v1/a_native/episodes/conference/Rotation_Match/puzzle_gold_direction_8.json/observations/step_21_01.png"
+        ],
+        "submitted": false
+      },
+      {
+        "step": 22,
+        "text": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [1154, 1260]}}</tool_call>",
+        "usage": {
+          "prompt_tokens": 91572,
+          "completion_tokens": 28,
+          "total_tokens": 91600,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "input_tokens": 91572,
+        "output_tokens": 28,
+        "finish_reason": "stop",
+        "truncated": false,
+        "returned_model": "models/CaptchaMind-7B",
+        "elapsed_seconds": 167.52140050000162,
+        "raw_response": {
+          "id": "chatcmpl-e86a491e-2b4c-46b3-afa5-bfa90a99a1f2",
+          "object": "chat.completion",
+          "created": 1789363723,
+          "model": "models/CaptchaMind-7B",
+          "choices": [
+            {
+              "index": 0,
+              "finish_reason": "stop",
+              "message": {
+                "role": "assistant",
+                "content": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [1154, 1260]}}</tool_call>",
+                "reasoning_content": null,
+                "reasoning": null,
+                "tool_calls": null,
+                "tool_call_id": null,
+                "name": null
+              },
+              "logprobs": null
+            }
+          ],
+          "usage": {
+            "prompt_tokens": 91572,
+            "completion_tokens": 28,
+            "total_tokens": 91600,
+            "prompt_tokens_details": {
+              "cached_tokens": 0
+            }
+          },
+          "timings": {
+            "prompt_n": 91572,
+            "cache_n": 0,
+            "predicted_n": 28,
+            "prompt_ms": 163391.14666712703,
+            "prompt_per_token_ms": 1.7842915592880688,
+            "prompt_per_second": 560.4465227639139,
+            "predicted_ms": 1008.7205250359452,
+            "predicted_per_token_ms": 36.02573303699804,
+            "predicted_per_second": 27.757936222227894,
+            "peak_memory": 34.78845649,
+            "draft_kind": null,
+            "draft_rounds": null,
+            "draft_n": null,
+            "draft_n_accepted": null
+          }
+        },
+        "response_file": "response_22.json",
+        "action": {
+          "name": "click",
+          "kwargs": {
+            "position": [
+              1154,
+              1260
+            ]
+          }
+        },
+        "done": false,
+        "reward": 0.0,
+        "observation": [
+          "./reports/solver_defense_v1/a_native/episodes/conference/Rotation_Match/puzzle_gold_direction_8.json/observations/step_22_00.png",
+          "./reports/solver_defense_v1/a_native/episodes/conference/Rotation_Match/puzzle_gold_direction_8.json/observations/step_22_01.png"
+        ],
+        "submitted": false
+      }
+    ],
+    "model_calls": 23,
+    "input_tokens": null,
+    "output_tokens": null,
+    "reward": 0.0,
+    "done": false,
+    "correct": false,
+    "status": "episode_time_budget_exhausted",
+    "submitted": false,
+    "images": [
+      "data/conference/Rotation_Match/direction_8.png",
+      "data/conference/Rotation_Match/gold.png"
+    ],
+    "cost_usd": null,
+    "scorer": "conference_v1",
+    "split_evidence": "historical_benchmark",
+    "gt": {
+      "correct_angle": 180.0,
+      "angle_tol_deg": 5.0
+    },
+    "initial_observation": [
+      "./reports/solver_defense_v1/a_native/episodes/conference/Rotation_Match/puzzle_gold_direction_8.json/observations/step_00_00.png",
+      "./reports/solver_defense_v1/a_native/episodes/conference/Rotation_Match/puzzle_gold_direction_8.json/observations/step_00_01.png"
+    ],
+    "environment_metadata": {
+      "environment": "cognition_adapted_v1.1_numeric_input_box",
+      "main_image_index": 1,
+      "source_images": [
+        "./data/conference/Rotation_Match/direction_8.png",
+        "./data/conference/Rotation_Match/gold.png"
+      ],
+      "source_image_sizes": [
+        [
+          1024,
+          1536
+        ],
+        [
+          1280,
+          1102
+        ]
+      ],
+      "main_image_box": [
+        0,
+        0,
+        1280,
+        1102
+      ],
+      "observation_main_size": [
+        1280,
+        1262
+      ],
+      "coordinate_mapping": {
+        "scale": [
+          1,
+          1
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      "controls": {
+        "submit": [
+          1042,
+          1182,
+          1255,
+          1237
+        ]
+      },
+      "input_box": [
+        25,
+        1182,
+        1017,
+        1237
+      ],
+      "grid": null
+    },
+    "elapsed_seconds": 1800.2848930358887,
+    "final_answer": {
+      "answer_type": "rotation",
+      "angle": 270
+    },
+    "answer": {
+      "answer_type": "rotation",
+      "angle": 270
+    },
+    "stop_reason": "episode_time_budget_exhausted",
+    "finished_at": "2026-09-14T05:31:26.890861+00:00",
+    "error": "Transport failure: TimeoutError",
+    "execution_resolution": {
+      "policy": "episode_deadline_reconciliation_v1",
+      "episode_id": "conference/Rotation_Match/puzzle_gold_direction_8.json",
+      "pending_step": 23,
+      "request_file": "request_23.json",
+      "dispatch": {
+        "started_at": "2026-09-14T05:28:44.105942+00:00",
+        "timeout_seconds": 162.67665004730225,
+        "remaining_episode_seconds": 162.67665004730225
+      },
+      "transport_error": {
+        "error": "Transport failure: TimeoutError",
+        "http_status": null,
+        "elapsed_seconds": 162.6877805420081,
+        "received_at": "2026-09-14T05:31:26.887633+00:00"
+      },
+      "original_status": "pending_request",
+      "episode_deadline_unix": 1789363886.6071,
+      "response_available": false,
+      "request_resent": false,
+      "reason": "No action from this request was received or applied before the frozen episode deadline"
+    },
+    "usage_complete": false,
+    "observed_input_tokens": 1056934,
+    "observed_output_tokens": 1038
+  }
+}

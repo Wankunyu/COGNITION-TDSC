@@ -1,0 +1,97 @@
+{
+  "checked_at_utc": "2026-09-13T19:43:09.597113+00:00",
+  "mode": "Read-only offline blank-image preprocessing; no inference, no service or code modification.",
+  "preprocessor_config": {
+    "crop_size": null,
+    "data_format": "channels_first",
+    "default_to_square": true,
+    "device": null,
+    "disable_grouping": null,
+    "do_center_crop": null,
+    "do_convert_rgb": true,
+    "do_normalize": true,
+    "do_rescale": true,
+    "do_resize": true,
+    "image_mean": [
+      0.48145466,
+      0.4578275,
+      0.40821073
+    ],
+    "image_processor_type": "Qwen2VLImageProcessorFast",
+    "image_std": [
+      0.26862954,
+      0.26130258,
+      0.27577711
+    ],
+    "input_data_format": null,
+    "max_pixels": 12845056,
+    "merge_size": 2,
+    "min_pixels": 3136,
+    "patch_size": 14,
+    "processor_class": "Qwen2_5_VLProcessor",
+    "resample": 3,
+    "rescale_factor": 0.00392156862745098,
+    "return_tensors": null,
+    "size": {
+      "longest_edge": 12845056,
+      "shortest_edge": 3136
+    },
+    "temporal_patch_size": 2
+  },
+  "processor_class": "mlx_vlm.models.qwen2_5_vl.processing_qwen2_5_vl.Qwen2_5_VLProcessor",
+  "image_processor_class": "mlx_vlm.models.qwen3_vl.processing_qwen3_vl.Qwen3VLImageProcessor",
+  "input_size_wh": [
+    400,
+    420
+  ],
+  "image_grid_thw": [
+    [
+      1,
+      30,
+      28
+    ]
+  ],
+  "patch_size": 14,
+  "resized_size_wh": [
+    392,
+    420
+  ],
+  "merged_visual_tokens": 210,
+  "declared_click_xy": [
+    338,
+    384
+  ],
+  "click_in_resized_pixel_frame": [
+    331.24,
+    384.0
+  ],
+  "reported_model_click_xy": [
+    363,
+    410
+  ],
+  "disk": {
+    "total_bytes": 3996329328640,
+    "free_bytes": 3738692325376,
+    "free_GiB": 3481.9285621643066
+  },
+  "source_evidence": [
+    {
+      "file": "./.venv/lib/python3.14/site-packages/mlx_vlm/models/qwen2_5_vl/processing_qwen2_5_vl.py",
+      "start_line": 156,
+      "end_line": 200,
+      "text": "    @classmethod\n    def from_pretrained(cls, pretrained_model_name_or_path, **kwargs):\n        from transformers import AutoTokenizer\n\n        from ..base import load_chat_template\n        from ..qwen3_vl.processing_qwen3_vl import (\n            Qwen3VLImageProcessor,\n            Qwen3VLVideoProcessor,\n            _load_qwen_vl_json,\n            _qwen_vl_image_kwargs,\n            _qwen_vl_video_kwargs,\n        )\n\n        kwargs.pop(\"use_fast\", None)\n        tokenizer = AutoTokenizer.from_pretrained(\n            pretrained_model_name_or_path, **kwargs\n        )\n        load_chat_template(tokenizer, pretrained_model_name_or_path)\n\n        # Qwen2.5 default: patch_size=14.\n        image_processor = Qwen3VLImageProcessor(\n            **_qwen_vl_image_kwargs(\n                pretrained_model_name_or_path, default_patch_size=14\n            )\n        )\n        video_processor = Qwen3VLVideoProcessor(\n            **_qwen_vl_video_kwargs(\n                pretrained_model_name_or_path, default_patch_size=14\n            )\n        )\n\n        proc_cfg = (\n            _load_qwen_vl_json(pretrained_model_name_or_path, \"processor_config.json\")\n            or {}\n        )\n        chat_template = proc_cfg.get(\n            \"chat_template\", getattr(tokenizer, \"chat_template\", None)\n        )\n\n        return cls(\n            image_processor=image_processor,\n            tokenizer=tokenizer,\n            video_processor=video_processor,\n            chat_template=chat_template,\n        )\n"
+    },
+    {
+      "file": "./.venv/lib/python3.14/site-packages/mlx_vlm/models/qwen3_vl/processing_qwen3_vl.py",
+      "start_line": 619,
+      "end_line": 652,
+      "text": "def _qwen_vl_image_kwargs(pretrained_model_name_or_path, default_patch_size: int = 16):\n    \"\"\"Read Qwen-VL image processor kwargs out of a checkpoint.\"\"\"\n    proc_cfg = (\n        _load_qwen_vl_json(pretrained_model_name_or_path, \"processor_config.json\") or {}\n    )\n    raw = (\n        _load_qwen_vl_json(pretrained_model_name_or_path, \"preprocessor_config.json\")\n        or {}\n    )\n    raw.update(proc_cfg.get(\"image_processor\", {}) or {})\n    out = {\"patch_size\": default_patch_size}\n    for k in (\n        \"patch_size\",\n        \"temporal_patch_size\",\n        \"merge_size\",\n        \"image_mean\",\n        \"image_std\",\n        \"rescale_factor\",\n        \"do_rescale\",\n        \"do_normalize\",\n        \"do_convert_rgb\",\n    ):\n        if k in raw:\n            out[k] = raw[k]\n    size = raw.get(\"size\") or {}\n    if size.get(\"shortest_edge\") is not None:\n        out[\"min_pixels\"] = size[\"shortest_edge\"]\n    if size.get(\"longest_edge\") is not None:\n        out[\"max_pixels\"] = size[\"longest_edge\"]\n    if raw.get(\"min_pixels\") is not None:\n        out[\"min_pixels\"] = raw[\"min_pixels\"]\n    if raw.get(\"max_pixels\") is not None:\n        out[\"max_pixels\"] = raw[\"max_pixels\"]\n    return out\n"
+    },
+    {
+      "file": "./.venv/lib/python3.14/site-packages/mlx_vlm/models/qwen3_vl/processing_qwen3_vl.py",
+      "start_line": 208,
+      "end_line": 231,
+      "text": "def _smart_resize_image(\n    height: int,\n    width: int,\n    factor: int = 32,\n    min_pixels: int = 56 * 56,\n    max_pixels: int = 14 * 14 * 4 * 1280,\n) -> Tuple[int, int]:\n    \"\"\"Image variant of ``smart_resize`` \u2014 ports HF's qwen2_vl ``smart_resize``.\"\"\"\n    if max(height, width) / min(height, width) > 200:\n        raise ValueError(\n            f\"absolute aspect ratio must be smaller than 200, got \"\n            f\"{max(height, width) / min(height, width)}\"\n        )\n    h_bar = round(height / factor) * factor\n    w_bar = round(width / factor) * factor\n    if h_bar * w_bar > max_pixels:\n        beta = math.sqrt((height * width) / max_pixels)\n        h_bar = max(factor, math.floor(height / beta / factor) * factor)\n        w_bar = max(factor, math.floor(width / beta / factor) * factor)\n    elif h_bar * w_bar < min_pixels:\n        beta = math.sqrt(min_pixels / (height * width))\n        h_bar = math.ceil(height * beta / factor) * factor\n        w_bar = math.ceil(width * beta / factor) * factor\n    return h_bar, w_bar\n"
+    }
+  ]
+}

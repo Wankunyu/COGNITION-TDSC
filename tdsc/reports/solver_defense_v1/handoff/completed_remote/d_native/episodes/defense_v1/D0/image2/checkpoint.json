@@ -1,0 +1,436 @@
+{
+  "id": "defense_v1/D0/image2",
+  "type": "Select_Animal",
+  "source": "conference_defense",
+  "module": "D",
+  "condition": "D0",
+  "solver": "C-I",
+  "puzzle_id": "image2.png",
+  "group_id": "defense_v1/image2",
+  "partition": "evaluation",
+  "model": "models/CaptchaMind-7B",
+  "started_at": "2026-09-14T14:54:00.317011+00:00",
+  "started_unix": 1789397640.3170009,
+  "budgets": {
+    "max_calls_per_episode": 30,
+    "max_output_tokens_per_call": 8192,
+    "max_output_tokens_per_episode": 65536,
+    "request_timeout_seconds": 600,
+    "episode_timeout_seconds": 1800
+  },
+  "protocol": "adapted_native_agent",
+  "action_parser": "lossless_single_action_v1",
+  "steps": [
+    {
+      "step": 1,
+      "text": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [512, 728]}}</tool_call>",
+      "usage": {
+        "prompt_tokens": 1900,
+        "completion_tokens": 89,
+        "total_tokens": 1989,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "input_tokens": 1900,
+      "output_tokens": 89,
+      "finish_reason": "stop",
+      "truncated": false,
+      "returned_model": "models/CaptchaMind-7B",
+      "elapsed_seconds": 3.829570749978302,
+      "raw_response": {
+        "id": "chatcmpl-6f5037e8-288f-4348-909f-4e4107cf01bc",
+        "object": "chat.completion",
+        "created": 1789397644,
+        "model": "models/CaptchaMind-7B",
+        "choices": [
+          {
+            "index": 0,
+            "finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [512, 728]}}</tool_call>",
+              "reasoning_content": "I need to refer to the task requirement to understand that I need to select all the grid cells containing the lion. Looking at the image, I can see there is only one grid cell that has the lion, which is in the third column of the second row. So I will click on this cell.",
+              "reasoning": "I need to refer to the task requirement to understand that I need to select all the grid cells containing the lion. Looking at the image, I can see there is only one grid cell that has the lion, which is in the third column of the second row. So I will click on this cell.",
+              "tool_calls": null,
+              "tool_call_id": null,
+              "name": null
+            },
+            "logprobs": null
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 1900,
+          "completion_tokens": 89,
+          "total_tokens": 1989,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "timings": {
+          "prompt_n": 1900,
+          "cache_n": 0,
+          "predicted_n": 91,
+          "prompt_ms": 1592.061665985966,
+          "prompt_per_token_ms": 0.8379271926241927,
+          "prompt_per_second": 1193.4211096172128,
+          "predicted_ms": 2102.494754965301,
+          "predicted_per_token_ms": 23.10433796665166,
+          "predicted_per_second": 43.28191534608696,
+          "peak_memory": 35.615165266,
+          "draft_kind": null,
+          "draft_rounds": null,
+          "draft_n": null,
+          "draft_n_accepted": null
+        }
+      },
+      "response_file": "response_01.json",
+      "action": {
+        "name": "click",
+        "kwargs": {
+          "position": [
+            512,
+            728
+          ]
+        }
+      },
+      "done": false,
+      "reward": 0.0,
+      "observation": [
+        "./reports/solver_defense_v1/d_native/episodes/defense_v1/D0/image2/observations/step_01_00.png"
+      ],
+      "submitted": false
+    },
+    {
+      "step": 2,
+      "text": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [512, 728]}}</tool_call>",
+      "usage": {
+        "prompt_tokens": 3454,
+        "completion_tokens": 73,
+        "total_tokens": 3527,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "input_tokens": 3454,
+      "output_tokens": 73,
+      "finish_reason": "stop",
+      "truncated": false,
+      "returned_model": "models/CaptchaMind-7B",
+      "elapsed_seconds": 4.8892075839976314,
+      "raw_response": {
+        "id": "chatcmpl-21c46708-58a9-443e-afd0-c410eada4a50",
+        "object": "chat.completion",
+        "created": 1789397649,
+        "model": "models/CaptchaMind-7B",
+        "choices": [
+          {
+            "index": 0,
+            "finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [512, 728]}}</tool_call>",
+              "reasoning_content": "I need to select all grid cells containing the lion. Looking at the image, I can see there is only one cell with the lion, which is in the bottom middle grid cell. So I will click on this cell.",
+              "reasoning": "I need to select all grid cells containing the lion. Looking at the image, I can see there is only one cell with the lion, which is in the bottom middle grid cell. So I will click on this cell.",
+              "tool_calls": null,
+              "tool_call_id": null,
+              "name": null
+            },
+            "logprobs": null
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 3454,
+          "completion_tokens": 73,
+          "total_tokens": 3527,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "timings": {
+          "prompt_n": 3454,
+          "cache_n": 0,
+          "predicted_n": 75,
+          "prompt_ms": 2952.74141599657,
+          "prompt_per_token_ms": 0.8548759166174205,
+          "prompt_per_second": 1169.7604068164742,
+          "predicted_ms": 1748.9497469599687,
+          "predicted_per_token_ms": 23.31932995946625,
+          "predicted_per_second": 42.882878785033874,
+          "peak_memory": 35.615165266,
+          "draft_kind": null,
+          "draft_rounds": null,
+          "draft_n": null,
+          "draft_n_accepted": null
+        }
+      },
+      "response_file": "response_02.json",
+      "action": {
+        "name": "click",
+        "kwargs": {
+          "position": [
+            512,
+            728
+          ]
+        }
+      },
+      "done": false,
+      "reward": 0.0,
+      "observation": [
+        "./reports/solver_defense_v1/d_native/episodes/defense_v1/D0/image2/observations/step_02_00.png"
+      ],
+      "submitted": false
+    },
+    {
+      "step": 3,
+      "text": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [512, 728]}}</tool_call>",
+      "usage": {
+        "prompt_tokens": 5008,
+        "completion_tokens": 66,
+        "total_tokens": 5074,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "input_tokens": 5008,
+      "output_tokens": 66,
+      "finish_reason": "stop",
+      "truncated": false,
+      "returned_model": "models/CaptchaMind-7B",
+      "elapsed_seconds": 6.28027991601266,
+      "raw_response": {
+        "id": "chatcmpl-773719d3-1b0a-4244-bdb3-832c4dfbc823",
+        "object": "chat.completion",
+        "created": 1789397655,
+        "model": "models/CaptchaMind-7B",
+        "choices": [
+          {
+            "index": 0,
+            "finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [512, 728]}}</tool_call>",
+              "reasoning_content": "I need to select all grid cells containing the lion. Looking at the image, I can see there is only one cell with the lion, which is in the bottom-left of the grid.",
+              "reasoning": "I need to select all grid cells containing the lion. Looking at the image, I can see there is only one cell with the lion, which is in the bottom-left of the grid.",
+              "tool_calls": null,
+              "tool_call_id": null,
+              "name": null
+            },
+            "logprobs": null
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 5008,
+          "completion_tokens": 66,
+          "total_tokens": 5074,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "timings": {
+          "prompt_n": 5008,
+          "cache_n": 0,
+          "predicted_n": 68,
+          "prompt_ms": 4433.1780829816125,
+          "prompt_per_token_ms": 0.8852192657710888,
+          "prompt_per_second": 1129.6636197009666,
+          "predicted_ms": 1600.4452942297169,
+          "predicted_per_token_ms": 23.53596020926054,
+          "predicted_per_second": 42.488175162980454,
+          "peak_memory": 35.615165266,
+          "draft_kind": null,
+          "draft_rounds": null,
+          "draft_n": null,
+          "draft_n_accepted": null
+        }
+      },
+      "response_file": "response_03.json",
+      "action": {
+        "name": "click",
+        "kwargs": {
+          "position": [
+            512,
+            728
+          ]
+        }
+      },
+      "done": false,
+      "reward": 0.0,
+      "observation": [
+        "./reports/solver_defense_v1/d_native/episodes/defense_v1/D0/image2/observations/step_03_00.png"
+      ],
+      "submitted": false
+    },
+    {
+      "step": 4,
+      "text": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [930, 1103]}}</tool_call>",
+      "usage": {
+        "prompt_tokens": 6562,
+        "completion_tokens": 75,
+        "total_tokens": 6637,
+        "prompt_tokens_details": {
+          "cached_tokens": 0
+        }
+      },
+      "input_tokens": 6562,
+      "output_tokens": 75,
+      "finish_reason": "stop",
+      "truncated": false,
+      "returned_model": "models/CaptchaMind-7B",
+      "elapsed_seconds": 8.047396333015058,
+      "raw_response": {
+        "id": "chatcmpl-5229f3a5-389c-4461-b6c0-23186c0ef70f",
+        "object": "chat.completion",
+        "created": 1789397663,
+        "model": "models/CaptchaMind-7B",
+        "choices": [
+          {
+            "index": 0,
+            "finish_reason": "stop",
+            "message": {
+              "role": "assistant",
+              "content": "<tool_call>{\"name\": \"click\", \"arguments\": {\"position\": [930, 1103]}}</tool_call>",
+              "reasoning_content": "I need to refer to the target description: Select all grid cells containing the lion. Looking at the image, the lion is located in the grid cell at row 2, column 1. I have successfully selected this cell.",
+              "reasoning": "I need to refer to the target description: Select all grid cells containing the lion. Looking at the image, the lion is located in the grid cell at row 2, column 1. I have successfully selected this cell.",
+              "tool_calls": null,
+              "tool_call_id": null,
+              "name": null
+            },
+            "logprobs": null
+          }
+        ],
+        "usage": {
+          "prompt_tokens": 6562,
+          "completion_tokens": 75,
+          "total_tokens": 6637,
+          "prompt_tokens_details": {
+            "cached_tokens": 0
+          }
+        },
+        "timings": {
+          "prompt_n": 6562,
+          "cache_n": 0,
+          "predicted_n": 77,
+          "prompt_ms": 5920.617790019605,
+          "prompt_per_token_ms": 0.9022581210026829,
+          "prompt_per_second": 1108.330284562799,
+          "predicted_ms": 1827.858800975695,
+          "predicted_per_token_ms": 23.738425986697337,
+          "predicted_per_second": 42.12579218859689,
+          "peak_memory": 35.615165266,
+          "draft_kind": null,
+          "draft_rounds": null,
+          "draft_n": null,
+          "draft_n_accepted": null
+        }
+      },
+      "response_file": "response_04.json",
+      "action": {
+        "name": "click",
+        "kwargs": {
+          "position": [
+            930,
+            1103
+          ]
+        }
+      },
+      "done": true,
+      "reward": 1.0,
+      "observation": [
+        "./reports/solver_defense_v1/d_native/episodes/defense_v1/D0/image2/observations/step_04_00.png"
+      ],
+      "submitted": true
+    }
+  ],
+  "model_calls": 4,
+  "input_tokens": 16924,
+  "output_tokens": 303,
+  "reward": 1.0,
+  "done": true,
+  "correct": true,
+  "status": "correct",
+  "submitted": true,
+  "images": [
+    "data/defense_v1/original/image2.png"
+  ],
+  "cost_usd": null,
+  "source_path": "../conference/captcha_data/Select_Animal/image2.png",
+  "training_exposure": "unknown; previously used conference material",
+  "scorer": "defense_v1_maximum_matching",
+  "split_evidence": "fixed_image_ids_before_new_model_calls",
+  "base_id": "image2",
+  "gt": {
+    "indices": [
+      4
+    ]
+  },
+  "initial_observation": [
+    "./reports/solver_defense_v1/d_native/episodes/defense_v1/D0/image2/observations/step_00_00.png"
+  ],
+  "environment_metadata": {
+    "environment": "cognition_adapted_v1.1_numeric_input_box",
+    "main_image_index": 0,
+    "source_images": [
+      "./data/defense_v1/original/image2.png"
+    ],
+    "source_image_sizes": [
+      [
+        1024,
+        1024
+      ]
+    ],
+    "main_image_box": [
+      0,
+      0,
+      1024,
+      1024
+    ],
+    "observation_main_size": [
+      1024,
+      1152
+    ],
+    "coordinate_mapping": {
+      "scale": [
+        1,
+        1
+      ],
+      "offset": [
+        0,
+        0
+      ]
+    },
+    "controls": {
+      "submit": [
+        834,
+        1088,
+        1004,
+        1132
+      ]
+    },
+    "input_box": null,
+    "grid": {
+      "rows": 2,
+      "cols": 3,
+      "grid_box": [
+        0,
+        0,
+        1024,
+        1024
+      ],
+      "source": "manifest.layout"
+    }
+  },
+  "elapsed_seconds": 23.793068170547485,
+  "final_answer": {
+    "indices": [
+      4
+    ]
+  },
+  "answer": {
+    "indices": [
+      4
+    ]
+  },
+  "stop_reason": "correct",
+  "finished_at": "2026-09-14T14:54:24.109605+00:00"
+}
